@@ -1,7 +1,9 @@
 {
   "name": "awesome-string",
   "description": "The ultimate JavaScript string library",
-  "main": "index.js",
+  "main": [
+    "dist"
+  ],
   "authors": [
     "Hyeonil Jeong"
   ],
@@ -26,6 +28,10 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "test_runner",
+    "jsdoc",
+    "config",
+    ".github"
   ]
 }
