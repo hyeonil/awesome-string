@@ -1,0 +1,31 @@
+{
+  "name": "awesome-string",
+  "description": "The ultimate JavaScript string library",
+  "main": "index.js",
+  "authors": [
+    "Hyeonil Jeong"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "string",
+    "sprintf",
+    "trim",
+    "truncate",
+    "pad",
+    "slugify",
+    "latinise",
+    "escape",
+    "word",
+    "wrap",
+    "case",
+    "strip"
+  ],
+  "homepage": "https://github.com/hyeonil/awesome-string",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
