@@ -71,6 +71,7 @@
     "grunt": "1.0.1",
     "grunt-contrib-connect": "1.0.2",
     "grunt-saucelabs": "9.0.0",
+    "grunt-sonar-runner": "2.4.8",
     "husky": "0.12.0",
     "istanbul": "1.1.0-alpha.1",
     "jsdoc": "3.4.3",

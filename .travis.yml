@@ -19,6 +19,12 @@ matrix:
       env:
     - node_js: "7"
       env:
+addons:
+  sonarqube:
+    token:
+      secure: pMggT48hITF1Hd/ouNFXeBzwOdeZunO2x17SPA1k7/1e12NNYanzaQsEJURAkKAfexxgFUxU55UVjYMoMrfOBoM+DwkVP653JTzV2VmhF7R61vnxpTJzeW1FFKfKPReL2EPGyvQbBx07eujI+Fxa+1yd2iv+zoSYe4SBHPdz5IUMo8CbpRW/l7sZ9ZpDsj2ZPyZjDmEb8yYDKMOczsRfyPt98k9kwIcxtzaLpegF9WWc0LklGslm1hgvlpuB5cm0RWTmwCid7ZHZBueIqDxMYVOnTkFgK6O3cX+6C6t7KGlytBIzzs1IbmNtD2kdWiGN/h4ggKl1ggS3MzhOwDBQpjzJqqMARGRnFUUfztrXBLtDUbtwkrivqDuqBqTBm8ga0bgvQqeFclXkTijIDy68aW9p7sBZiRh+vwtEJr7n36puKGWGTan/bQPnO1MdeE847SqXd6EY/BaHZ5VFzVxlq5YVd0RSLD+40trxSbAwB8TeB7txE95dwtsHynMGTo8O2X5Y84tXYcx/I+uEz7UfcCAeCHu+uYQOUHENgxFyRVKKqPQjtqvFxQI9u2kGS9+6+nm1s7jRxXqieb15vSEWOtU01IW0Ve1NcXd2geIEWuDhcQO9ySTPSFlJI9Kv2dyjV3edVsjV5FWHRaVWo2gUgxdoxlF9/69+vxptmBsLRXg=
+  branches:
+    - master
 before_script:
   - npm prune
 script:
@@ -26,6 +32,7 @@ script:
   - npm run build
   - npm run coverage
   - npm run test-npm-package
+  - sonar-scanner
   - "[ $DETAILED == false ] || [ $TRAVIS_PULL_REQUEST == true] || npm run test-sl || true"
 after_success:
   - "[ $DETAILED == false ] || [ $TRAVIS_PULL_REQUEST == true] || npm run report-coverage"
