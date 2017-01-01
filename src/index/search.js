@@ -15,10 +15,10 @@ import toInteger from 'helper/number/to_integer';
  * @param {number} [fromIndex=0] The index to start searching.
  * @return {number} Returns the first match index or `-1` if not found.
  * @example
- * v.search('morning', /rn/);
+ * as.search('morning', /rn/);
  * // => 2
  *
- * v.search('evening', '/\d/');
+ * as.search('evening', '/\d/');
  * // => -1
  */
 export default function search(subject, pattern, fromIndex) {

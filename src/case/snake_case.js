@@ -12,13 +12,13 @@ import words from 'split/words';
  * @param  {string} [subject=''] The string to convert to snake case.
  * @return {string}              Returns the snake case string.
  * @example
- * v.snakeCase('learning to fly');
+ * as.snakeCase('learning to fly');
  * // => 'learning_to_fly'
  *
- * v.snakeCase('LearningToFly');
+ * as.snakeCase('LearningToFly');
  * // => 'learning_to_fly'
  *
- * v.snakeCase('-Learning-To-Fly-');
+ * as.snakeCase('-Learning-To-Fly-');
  * // => 'learning_to_fly'
  */
 export default function snakeCase(subject) {

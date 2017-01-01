@@ -9,7 +9,7 @@ export default {
   targets: [{
     dest: 'dist_mod/index.es2015.js',
     format: 'es',
-    moduleName: 'v',
+    moduleName: 'as',
     sourceMap: false,
     banner: banner
   }]

@@ -9,7 +9,7 @@ export default {
   targets: [{
     dest: 'dist_mod/index.js',
     format: 'umd',
-    moduleName: 'v',
+    moduleName: 'as',
     sourceMap: false,
     banner: banner
   }]

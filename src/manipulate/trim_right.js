@@ -17,10 +17,10 @@ const reduceRight = Array.prototype.reduceRight;
  * @param {string} [whitespace=whitespace] The whitespace characters to trim. List all characters that you want to be stripped.
  * @return {string} Returns the trimmed string.
  * @example
- * v.trimRight('the fire rises   ');
+ * as.trimRight('the fire rises   ');
  * // => 'the fire rises'
  *
- * v.trimRight('do you feel in charge?!!!', '!');
+ * as.trimRight('do you feel in charge?!!!', '!');
  * // => 'do you feel in charge?'
  */
 export default function trimRight(subject, whitespace) {

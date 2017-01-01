@@ -7,9 +7,9 @@ export default {
     babelConfig
   ],
   targets: [{
-    dest: 'dist/voca.js',
+    dest: 'dist/awesome-string.js',
     format: 'umd',
-    moduleName: 'v',
+    moduleName: 'as',
     sourceMap: false,
     banner: banner
   }]

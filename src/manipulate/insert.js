@@ -13,10 +13,10 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @param {number} [position=0] The position to insert.
  * @return {string} Returns the string after insertion.
  * @example
- * v.insert('ct', 'a', 1);
+ * as.insert('ct', 'a', 1);
  * // => 'cat'
  *
- * v.insert('sunny', ' day', 5);
+ * as.insert('sunny', ' day', 5);
  * // => 'sunny day'
  */
 export default function insert(subject, toInsert, position) {

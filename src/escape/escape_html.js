@@ -31,7 +31,7 @@ function replaceSpecialCharacter(character) {
  * @param {string} [subject=''] The string to escape.
  * @return {string} Returns the escaped string.
  * @example
- * v.escapeHtml('<p>wonderful world</p>');
+ * as.escapeHtml('<p>wonderful world</p>');
  * // => '&lt;p&gt;wonderful world&lt;/p&gt;'
  */
 export default function escapeHtml(subject) {

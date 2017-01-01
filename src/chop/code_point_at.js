@@ -18,10 +18,10 @@ import nanDefault from 'helper/number/nan_default';
  * @param  {number} position The position to get the code point number.
  * @return {number} Returns a non-negative number less than or equal to `0x10FFFF`.
  * @example
- * v.codePointAt('rain', 1);
+ * as.codePointAt('rain', 1);
  * // => 97, or 0x0061
  *
- * v.codePointAt('\uD83D\uDE00 is smile', 0); // or '😀 is smile'
+ * as.codePointAt('\uD83D\uDE00 is smile', 0); // or '😀 is smile'
  * // => 128512, or 0x1F600
  */
 export default function codePointAt(subject, position) {

@@ -11,10 +11,10 @@ import isAlpha from 'query/is_alpha';
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is upper case or `false` otherwise.
  * @example
- * v.isUpperCase('ACDC');
+ * as.isUpperCase('ACDC');
  * // => true
  *
- * v.isUpperCase('Morning');
+ * as.isUpperCase('Morning');
  * // => false
  */
 export default function isUpperCase(subject) {

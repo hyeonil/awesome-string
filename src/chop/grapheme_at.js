@@ -16,10 +16,10 @@ import { REGEXP_UNICODE_CHARACTER } from 'helper/reg_exp/const';
  * @param  {number} position The position to get the grapheme.
  * @return {string} Returns the grapheme at specified position.
  * @example
- * v.graphemeAt('\uD835\uDC00\uD835\uDC01', 0); // or '𝐀𝐁'
+ * as.graphemeAt('\uD835\uDC00\uD835\uDC01', 0); // or '𝐀𝐁'
  * // => 'A'
  *
- * v.graphemeAt('cafe\u0301', 3); // or 'café'
+ * as.graphemeAt('cafe\u0301', 3); // or 'café'
  * // => 'é'
  */
 export default function graphemeAt(subject, position) {

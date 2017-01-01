@@ -11,7 +11,7 @@ import { REGEXP_SPECIAL_CHARACTERS } from 'helper/reg_exp/const';
  * @param {string} [subject=''] The string to escape.
  * @return {string} Returns the escaped string.
  * @example
- * v.escapeRegExp('(hours)[minutes]{seconds}');
+ * as.escapeRegExp('(hours)[minutes]{seconds}');
  * // => '\(hours\)\[minutes\]\{seconds\}'
  */
 export default function escapeRegExp(subject) {

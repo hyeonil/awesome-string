@@ -10,7 +10,7 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @param {string} [subject=''] The string to reverse.
  * @return {string} Returns the reversed string.
  * @example
- * v.reverse('winter');
+ * as.reverse('winter');
  * // => 'retniw'
  */
 export default function reverse(subject) {

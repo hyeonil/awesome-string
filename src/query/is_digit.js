@@ -11,13 +11,13 @@ import { REGEXP_DIGIT } from 'helper/reg_exp/const';
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` contains only digit characters or `false` otherwise.
  * @example
- * v.isDigit('35');
+ * as.isDigit('35');
  * // => true
  *
- * v.isDigit('1.5');
+ * as.isDigit('1.5');
  * // => false
  *
- * v.isDigit('ten');
+ * as.isDigit('ten');
  * // => false
  */
 export default function isDigit(subject) {

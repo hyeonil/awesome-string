@@ -1,30 +1,30 @@
 import { expect } from 'chai';
-import v from '../voca';
+import as from '../awesome-string';
 
 describe('insert', function() {
 
   it('should insert into a string at specified position', function() {
-    expect(v.insert('autumn', 'nice ', 0)).to.be.equal('nice autumn');
-    expect(v.insert('autumn', 'nice ')).to.be.equal('nice autumn');
-    expect(v.insert('autumn', 'nice', 1)).to.be.equal('aniceutumn');
-    expect(v.insert('autumn', 'nice', 5)).to.be.equal('autumnicen');
-    expect(v.insert('autumn', ' is nice', 6)).to.be.equal('autumn is nice');
-    expect(v.insert('', 'nice', 0)).to.be.equal('nice');
-    expect(v.insert('autumn', '', 1)).to.be.equal('autumn');
-    expect(v.insert('autumn', '', 6)).to.be.equal('autumn');
+    expect(as.insert('autumn', 'nice ', 0)).to.be.equal('nice autumn');
+    expect(as.insert('autumn', 'nice ')).to.be.equal('nice autumn');
+    expect(as.insert('autumn', 'nice', 1)).to.be.equal('aniceutumn');
+    expect(as.insert('autumn', 'nice', 5)).to.be.equal('autumnicen');
+    expect(as.insert('autumn', ' is nice', 6)).to.be.equal('autumn is nice');
+    expect(as.insert('', 'nice', 0)).to.be.equal('nice');
+    expect(as.insert('autumn', '', 1)).to.be.equal('autumn');
+    expect(as.insert('autumn', '', 6)).to.be.equal('autumn');
   });
 
   it('should not insert into a string when position is out of bounds', function() {
-    expect(v.insert('autumn', 'nice ', 100)).to.be.equal('autumn');
-    expect(v.insert('autumn', 'nice', -100)).to.be.equal('autumn');
-    expect(v.insert('autumn', 'nice', 7)).to.be.equal('autumn');
-    expect(v.insert('autumn', 'nice', -1)).to.be.equal('autumn');
-    expect(v.insert('', 'nice', 1)).to.be.equal('');
+    expect(as.insert('autumn', 'nice ', 100)).to.be.equal('autumn');
+    expect(as.insert('autumn', 'nice', -100)).to.be.equal('autumn');
+    expect(as.insert('autumn', 'nice', 7)).to.be.equal('autumn');
+    expect(as.insert('autumn', 'nice', -1)).to.be.equal('autumn');
+    expect(as.insert('', 'nice', 1)).to.be.equal('');
   });
 
   it('should insert into a string representation of an object at specified position', function() {
-    expect(v.insert(['paradise'], '**', 2)).to.be.equal('pa**radise');
-    expect(v.insert({
+    expect(as.insert(['paradise'], '**', 2)).to.be.equal('pa**radise');
+    expect(as.insert({
       toString: function() {
         return 'Tony';
       }
@@ -32,10 +32,10 @@ describe('insert', function() {
   });
 
   it('should not insert into a string on null or undefined arguments', function() {
-    expect(v.insert()).to.be.equal('');
-    expect(v.insert(null)).to.be.equal('');
-    expect(v.insert(undefined)).to.be.equal('');
-    expect(v.insert(undefined, undefined)).to.be.equal('');
+    expect(as.insert()).to.be.equal('');
+    expect(as.insert(null)).to.be.equal('');
+    expect(as.insert(undefined)).to.be.equal('');
+    expect(as.insert(undefined, undefined)).to.be.equal('');
   });
 
 });

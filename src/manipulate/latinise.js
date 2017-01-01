@@ -24,13 +24,13 @@ function removeCombiningMarks(character, cleanCharacter) {
  * @param {string} [subject=''] The string to latinise.
  * @return {string} Returns the latinised string.
  * @example
- * v.latinise('cafe\u0301'); // or 'café'
+ * as.latinise('cafe\u0301'); // or 'café'
  * // => 'cafe'
  *
- * v.latinise('août décembre');
+ * as.latinise('août décembre');
  * // => 'aout decembre'
  *
- * v.latinise('как прекрасен этот мир');
+ * as.latinise('как прекрасен этот мир');
  * // => 'kak prekrasen etot mir'
  */
 export default function latinise(subject) {

@@ -73,7 +73,7 @@ ChainWrapper.prototype.toString = function() {
 
 /**
  * Creates a new chain object that enables <i>explicit</i> chain sequences.
- * Use `v.prototype.value()` to unwrap the result. <br/>
+ * Use `as.prototype.value()` to unwrap the result. <br/>
  * Does not modify the wrapped value.
  *
  * @memberof Chain
@@ -135,7 +135,7 @@ ChainWrapper.prototype.thru = function(changer) {
 ChainWrapper.prototype._explicitChain = true;
 
 /**
- * Make a voca function chainable.
+ * Make a AwesomeString function chainable.
  *
  * @ignore
  * @param  {Function} functionInstance The function to make chainable

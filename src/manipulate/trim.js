@@ -15,10 +15,10 @@ import trimRight from 'manipulate/trim_right';
  * @param {string} [whitespace=whitespace] The whitespace characters to trim. List all characters that you want to be stripped.
  * @return {string} Returns the trimmed string.
  * @example
- * v.trim(' Mother nature ');
+ * as.trim(' Mother nature ');
  * // => 'Mother nature'
  *
- * v.trim('--Earth--', '-');
+ * as.trim('--Earth--', '-');
  * // => 'Earth'
  */
 export default function trim(subject, whitespace) {

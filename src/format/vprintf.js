@@ -14,10 +14,10 @@ import sprintf from 'format/sprintf';
  * @param  {Array} replacements The array of replacements to produce the string.
  * @return {string}             Returns the produced string.
  * @example
- * v.vprintf('%s', ['Welcome'])
+ * as.vprintf('%s', ['Welcome'])
  * // => 'Welcome'
  *
- * v.vprintf('%s has %d apples', ['Alexandra', 3]);
+ * as.vprintf('%s has %d apples', ['Alexandra', 3]);
  * // => 'Alexandra has 3 apples'
  */
 export default function vprintf(format, replacements) {

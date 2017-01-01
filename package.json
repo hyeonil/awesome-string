@@ -1,12 +1,12 @@
 {
-  "name": "voca",
+  "name": "awesome-string",
   "version": "1.1.0",
   "description": "The ultimate JavaScript string library",
-  "homepage": "https://vocajs.com",
+  "homepage": "https://hyeonil.github.io",
   "author": {
-    "name": "Dmitri Pavlutin",
-    "email": "dmitri@rainsoft.io",
-    "url": "https://rainsoft.io/about-me/"
+    "name": "Hyeonil Jeong",
+    "email": "dev.nuti0102@gmail.com",
+    "url": "https://hyeonil.github.io/about/"
   },
   "license": "MIT",
   "keywords": [
@@ -25,11 +25,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/panzerdp/voca.git"
+    "url": "git+https://github.com/hyeonil/awesome-string.git"
   },
   "bugs": {
-    "url": "https://github.com/panzerdp/voca/issues",
-    "email": "dmitri@rainsoft.io"
+    "url": "https://github.com/hyeonil/awesome-string/issues",
+    "email": "dev.nuti0102@gmail.com"
   },
   "main": "index.js",
   "jsnext:main": "index.es2015.js",
@@ -46,7 +46,7 @@
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "verify": "npm run eslint && npm run coverage",
     "jsdoc": "jsdoc --configure .jsdoc.json",
-    "deploy": "rollup -c config/rollup_dist.js && cp dist/voca.js docs/scripts && scp -r docs/* rainishere:/home/rainishere/webapps/voca_docs",
+    "deploy": "rollup -c config/rollup_dist.js && cp dist/awesome-string.js docs/scripts && scp -r docs/* hyeonil:/home/hyeonil/webapps/awesome_string_docs",
     "precommit": "npm run eslint && npm run test"
   },
   "devDependencies": {

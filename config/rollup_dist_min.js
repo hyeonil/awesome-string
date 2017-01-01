@@ -13,9 +13,9 @@ export default {
     })
   ],
   targets: [{
-    dest: 'dist/voca.min.js',
+    dest: 'dist/awesome-string.min.js',
     format: 'umd',
-    moduleName: 'v',
+    moduleName: 'as',
     sourceMap: true,
     banner: banner
   }]

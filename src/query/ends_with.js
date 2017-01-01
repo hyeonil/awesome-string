@@ -15,13 +15,13 @@ import toInteger from 'helper/number/to_integer';
  * @param {number} [position=subject.length] Search within `subject` as if the string were only `position` long.
  * @return {boolean} Returns `true` if `subject` ends with `end` or `false` otherwise.
  * @example
- * v.endsWith('red alert', 'alert');
+ * as.endsWith('red alert', 'alert');
  * // => true
  *
- * v.endsWith('metro south', 'metro');
+ * as.endsWith('metro south', 'metro');
  * // => false
  *
- * v.endsWith('Murphy', 'ph', 5);
+ * as.endsWith('Murphy', 'ph', 5);
  * // => true
  */
 export default function endsWith(subject, end, position) {

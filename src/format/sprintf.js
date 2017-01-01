@@ -140,40 +140,40 @@ import replacementMatch from 'helper/format/replacement/match';
  * @param  {...*}               replacements The replacements to produce the string.
  * @return {string}             Returns the produced string.
  * @example
- * v.sprintf('%s, %s!', 'Hello', 'World');
+ * as.sprintf('%s, %s!', 'Hello', 'World');
  * // => 'Hello World!'
  *
- * v.sprintf('%s costs $%d', 'coffee', 2);
+ * as.sprintf('%s costs $%d', 'coffee', 2);
  * // => 'coffee costs $2'
  *
- * v.sprintf('%1$s %2$s %1$s %2$s, watcha gonna %3$s', 'bad', 'boys', 'do')
+ * as.sprintf('%1$s %2$s %1$s %2$s, watcha gonna %3$s', 'bad', 'boys', 'do')
  * // => 'bad boys bad boys, watcha gonna do'
  *
- * v.sprintf('% 6s', 'bird');
+ * as.sprintf('% 6s', 'bird');
  * // => '  bird'
  *
- * v.sprintf('% -6s', 'crab');
+ * as.sprintf('% -6s', 'crab');
  * // => 'crab  '
  *
- * v.sprintf("%'*5s", 'cat');
+ * as.sprintf("%'*5s", 'cat');
  * // => '**cat'
  *
- * v.sprintf("%'*-6s", 'duck');
+ * as.sprintf("%'*-6s", 'duck');
  * // => 'duck**'
  *
- * v.sprintf('%d %i %+d', 15, -2, 25);
+ * as.sprintf('%d %i %+d', 15, -2, 25);
  * // => '15 -2 +25'
  *
- * v.sprintf("%06d", 15);
+ * as.sprintf("%06d", 15);
  * // => '000015'
  *
- * v.sprintf('0b%b 0o%o 0x%X', 12, 9, 155);
+ * as.sprintf('0b%b 0o%o 0x%X', 12, 9, 155);
  * // => '0b1100 0o11 0x9B'
  *
- * v.sprintf('%.2f', 10.469);
+ * as.sprintf('%.2f', 10.469);
  * // => '10.47'
  *
- * v.sprintf('%.2e %g', 100.5, 0.455);
+ * as.sprintf('%.2e %g', 100.5, 0.455);
  * // => '1.01e+2 0.455'
  * 
  */

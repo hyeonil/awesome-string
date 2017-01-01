@@ -15,10 +15,10 @@ import toInteger from 'helper/number/to_integer';
  * @param {number} [times=1] The number of times to repeat.
  * @return {string} Returns the repeated string.
  * @example
- * v.repeat('w', 3);
+ * as.repeat('w', 3);
  * // => 'www'
  *
- * v.repeat('world', 0);
+ * as.repeat('world', 0);
  * // => ''
  */
 export default function repeat(subject, times) {

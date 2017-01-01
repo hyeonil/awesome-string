@@ -397,7 +397,7 @@ describe('CommonJS modules', function() {
   // Entire library
 
   it('should require the entire library', function() {
-    expect(v.sprintf('%d yellow %s', 5, 'apples')).to.be.equal('5 yellow apples');
+    expect(sprintf('%d yellow %s', 5, 'apples')).to.be.equal('5 yellow apples');
   });
 
 });

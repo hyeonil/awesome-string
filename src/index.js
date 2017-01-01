@@ -9,11 +9,11 @@ import functions from './functions';
  *
  * @memberOf Chain
  * @since 1.0.0
- * @function v
+ * @function as
  * @param {string} subject The string to wrap.
  * @return {Object}  Returns the new wrapper object.
  * @example
- * v('Back to School')
+ * as('Back to School')
  *  .lowerCase()
  *  .words()
  * // => ['back', 'to', 'school']
@@ -24,12 +24,12 @@ import functions from './functions';
  *  .value()
  * // => 'Back...'
  */
-function Voca(subject) {
+function AwesomeString(subject) {
   return new ChainWrapper(subject, false);
 }
 
-Object.assign(Voca, functions, {
+Object.assign(AwesomeString, functions, {
   chain: chain
 });
 
-export default Voca;
+export default AwesomeString;

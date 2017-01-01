@@ -16,13 +16,13 @@ import toInteger from 'helper/number/to_integer';
  * @param  {string} [end='...']  The string to be added at the end.
  * @return {string}              Returns the truncated string.
  * @example
- * v.truncate('Once upon a time', 7);
+ * as.truncate('Once upon a time', 7);
  * // => 'Once...'
  *
- * v.truncate('Good day, Little Red Riding Hood', 14, ' (...)');
+ * as.truncate('Good day, Little Red Riding Hood', 14, ' (...)');
  * // => 'Good day (...)'
  *
- * v.truncate('Once upon', 10);
+ * as.truncate('Once upon', 10);
  * // => 'Once upon'
  */
 export default function truncate(subject, length, end) {

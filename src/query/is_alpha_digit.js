@@ -11,13 +11,13 @@ import { REGEXP_ALPHA_DIGIT } from 'helper/reg_exp/const_extended';
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` contains only alpha and digit characters or `false` otherwise.
  * @example
- * v.isAlphaDigit('year2020');
+ * as.isAlphaDigit('year2020');
  * // => true
  *
- * v.isAlphaDigit('1448');
+ * as.isAlphaDigit('1448');
  * // => true
  *
- * v.isAlphaDigit('40-20');
+ * as.isAlphaDigit('40-20');
  * // => false
  */
 export default function isAlphaDigit(subject) {

@@ -17,10 +17,10 @@ const reduce = Array.prototype.reduce;
  * @param {string} [whitespace=whitespace] The whitespace characters to trim. List all characters that you want to be stripped.
  * @return {string} Returns the trimmed string.
  * @example
- * v.trimLeft('  Starship Troopers');
+ * as.trimLeft('  Starship Troopers');
  * // => 'Starship Troopers'
  *
- * v.trimLeft('***Mobile Infantry', '*');
+ * as.trimLeft('***Mobile Infantry', '*');
  * // => 'Mobile Infantry'
  */
 export default function trimLeft(subject, whitespace) {

@@ -361,8 +361,8 @@ describe('CommonJS modules', function() {
   // Entire library
 
   it('should require the entire library', function() {
-    const v = require('../dist_mod/index');
-    expect(v.sprintf('%d yellow %s', 5, 'apples')).to.be.equal('5 yellow apples');
+    const as = require('../dist_mod/index');
+    expect(as.sprintf('%d yellow %s', 5, 'apples')).to.be.equal('5 yellow apples');
   });
 
 });

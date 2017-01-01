@@ -13,10 +13,10 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @param  {boolean} [restToLower=false] Convert the rest of `subject` to lower case.
  * @return {string}                      Returns the capitalized string.
  * @example
- * v.capitalize('apple');
+ * as.capitalize('apple');
  * // => 'Apple'
  *
- * v.capitalize('aPPle', true);
+ * as.capitalize('aPPle', true);
  * // => 'Apple'
  */
 export default function capitalize(subject, restToLower) {

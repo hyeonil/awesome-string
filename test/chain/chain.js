@@ -1,29 +1,25 @@
 import { expect } from 'chai';
-import v from '../voca';
+import as from '../awesome-string';
 
 describe('chain', function() {
 
   it('should calculate the result using explicit chaining', function() {
     expect(
-      v
-        .chain('Hello world')
+      as.chain('Hello world')
         .value()
     ).to.equal('Hello world');
     expect(
-      v
-        .chain('  Hello world  ')
+      as.chain('  Hello world  ')
         .trim()
         .value()
     ).to.equal('Hello world');
     expect(
-      v
-        .chain('world')
+      as.chain('world')
         .isAlpha()
         .value()
     ).to.equal(true);
     expect(
-      v
-        .chain('Hello world')
+      as.chain('Hello world')
         .lowerCase()
         .replace('hello', 'hi')
         .upperCase()
@@ -33,22 +29,22 @@ describe('chain', function() {
 
   it('should calculate the result using implicit chaining', function() {
     expect(
-      v('Hello world')
+      as('Hello world')
         .lowerCase()
         .words()
     ).to.eql(['hello', 'world']);
     expect(
-      v('  Hello world  ')
+      as('  Hello world  ')
         .trimLeft()
         .count()
     ).to.equal(13);
     expect(
-      v('7 days')
+      as('7 days')
         .replace(/\sdays/, '')
         .isDigit()
     ).to.equal(true);
     expect(
-      v('7 days')
+      as('7 days')
         .replace(/\sdays/, '')
         .value()
     ).to.equal('7');
@@ -56,20 +52,20 @@ describe('chain', function() {
 
   it('should transform implicit into explicit chaining', function() {
     expect(
-      v('Hello world')
+      as('Hello world')
         .chain()
         .lowerCase()
         .words()
         .value()
     ).to.eql(['hello', 'world']);
     expect(
-      v('15')
+      as('15')
         .chain()
         .isNumeric()
         .value()
     ).to.equal(true);
     expect(
-      v('15')
+      as('15')
         .chain()
         .isNumeric()
         .thru(function(isNumeric) {
@@ -81,7 +77,7 @@ describe('chain', function() {
 
   it('should allow to pass thru the wrapped value', function() {
     expect(
-      v('Hello world')
+      as('Hello world')
         .chain()
         .lowerCase()
         .words()
@@ -91,7 +87,7 @@ describe('chain', function() {
         .value()
     ).to.equal('hello');
     expect(
-      v.chain('15')
+      as.chain('15')
         .isNumeric()
         .thru()
         .value()
@@ -100,25 +96,25 @@ describe('chain', function() {
 
   it('wrapper object should coerce to a primitive', function() {
     expect(
-      'nice' + v.chain(' evening ').trimRight()
+      'nice' + as.chain(' evening ').trimRight()
     ).to.be.equal('nice evening');
     expect(
-      v('clouds').upperCase() == 'CLOUDS'
+      as('clouds').upperCase() == 'CLOUDS'
     ).to.be.true;
   });
 
   it('wrapper object should coerce to a string', function() {
     expect(
-      'nice ' + v.chain('hello world').words()
+      'nice ' + as.chain('hello world').words()
     ).to.be.equal('nice hello,world');
     expect(
-      v('green tree').split(' ') == 'green,tree'
+      as('green tree').split(' ') == 'green,tree'
     ).to.be.true;
   });
 
   it('wrapper object should provide toJSON method', function() {
     expect(
-      JSON.stringify(v.chain('happy coding').upperCase().split(' '))
+      JSON.stringify(as.chain('happy coding').upperCase().split(' '))
     ).to.be.equal('["HAPPY","CODING"]');
   });
 

@@ -15,13 +15,13 @@ import toInteger from 'helper/number/to_integer';
  * @param  {int}    [length=1]   The number of characters to extract.
  * @return {string}              Returns the last characters string.
  * @example
- * v.last('helicopter');
+ * as.last('helicopter');
  * // => 'r'
  *
- * v.last('vehicle', 2);
+ * as.last('vehicle', 2);
  * // => 'le'
  *
- * v.last('car', 5);
+ * as.last('car', 5);
  * // => 'car'
  */
 export default function last(subject, length) {

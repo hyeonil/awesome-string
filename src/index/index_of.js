@@ -12,10 +12,10 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @param {number} [fromIndex=0] The index to start searching.
  * @return {number} Returns the first occurrence index or `-1` if not found.
  * @example
- * v.indexOf('morning', 'n');
+ * as.indexOf('morning', 'n');
  * // => 3
  *
- * v.indexOf('evening', 'o');
+ * as.indexOf('evening', 'o');
  * // => -1
  */
 export default function indexOf(subject, search, fromIndex) {

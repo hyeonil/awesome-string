@@ -10,16 +10,16 @@ import isNil from 'helper/object/is_nil';
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is numeric or `false` otherwise.
  * @example
- * v.isNumeric('350');
+ * as.isNumeric('350');
  * // => true
  *
- * v.isNumeric('-20.5');
+ * as.isNumeric('-20.5');
  * // => true
  *
- * v.isNumeric('1.5E+2');
+ * as.isNumeric('1.5E+2');
  * // => true
  *
- * v.isNumeric('five');
+ * as.isNumeric('five');
  * // => false
  */
 export default function isNumeric(subject) {

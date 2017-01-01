@@ -11,13 +11,13 @@ import { REGEXP_ALPHA } from 'helper/reg_exp/const_extended';
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` contains only alpha characters or `false` otherwise.
  * @example
- * v.isAlpha('bart');
+ * as.isAlpha('bart');
  * // => true
  *
- * v.isAlpha('lisa!');
+ * as.isAlpha('lisa!');
  * // => false
  *
- * v.isAlpha('lisa and bart');
+ * as.isAlpha('lisa and bart');
  * // => false
  */
 export default function isAlpha(subject) {

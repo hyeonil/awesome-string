@@ -10,13 +10,13 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is empty or contains only whitespaces or `false` otherwise.
  * @example
- * v.isBlank('');
+ * as.isBlank('');
  * // => true
  *
- * v.isBlank('  ');
+ * as.isBlank('  ');
  * // => true
  *
- * v.isBlank('World');
+ * as.isBlank('World');
  * // => false
  */
 export default function isBlank(subject) {

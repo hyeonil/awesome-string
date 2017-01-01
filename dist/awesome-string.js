@@ -1,15 +1,15 @@
 /*! 
- * Voca string library 1.1.0
- * https://vocajs.com
+ * Awesome String string library 1.1.0
+ * It forked from Voca Library.
  *
- * Copyright Dmitri Pavlutin and other contributors
+ * Copyright Hyeonil Jeong and other contributors
  * Released under the MIT license
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global.v = factory());
+  (global.as = factory());
 }(this, (function () { 'use strict';
 
 /**
@@ -52,10 +52,10 @@ function coerceToBoolean(value) {
  * @param {string} subject The value to verify.
  * @return {boolean} Returns `true` if `subject` is string primitive type or `false` otherwise.
  * @example
- * v.isString('vacation');
+ * as.isString('vacation');
  * // => true
  *
- * v.isString(560);
+ * as.isString(560);
  * // => false
  */
 function isString(subject) {
@@ -98,10 +98,10 @@ function coerceToString(value) {
  * @param  {boolean} [restToLower=false] Convert the rest of `subject` to lower case.
  * @return {string}                      Returns the capitalized string.
  * @example
- * v.capitalize('apple');
+ * as.capitalize('apple');
  * // => 'Apple'
  *
- * v.capitalize('aPPle', true);
+ * as.capitalize('aPPle', true);
  * // => 'Apple'
  */
 function capitalize(subject, restToLower) {
@@ -126,10 +126,10 @@ function capitalize(subject, restToLower) {
  * @param  {string} [subject=''] The string to convert to lower case.
  * @return {string}              Returns the lower case string.
  * @example
- * v.lowerCase('Green');
+ * as.lowerCase('Green');
  * // => 'green'
  *
- * v.lowerCase('BLUE');
+ * as.lowerCase('BLUE');
  * // => 'blue'
  */
 function lowerCase(subject) {
@@ -434,16 +434,16 @@ function toString(value) {
  * @param {string} [flags=''] The regular expression flags. Applies when `pattern` is string type.
  * @return {Array} Returns the array of words.
  * @example
- * v.words('gravity can cross dimensions');
+ * as.words('gravity can cross dimensions');
  * // => ['gravity', 'can', 'cross', 'dimensions']
  *
- * v.words('GravityCanCrossDimensions');
+ * as.words('GravityCanCrossDimensions');
  * // => ['Gravity', 'Can', 'Cross', 'Dimensions']
  *
- * v.words('Gravity - can cross dimensions!');
+ * as.words('Gravity - can cross dimensions!');
  * // => ['Gravity', 'can', 'cross', 'dimensions']
  *
- * v.words('Earth gravity', /[^\s]+/g);
+ * as.words('Earth gravity', /[^\s]+/g);
  * // => ['Earth', 'gravity']
  */
 function words(subject, pattern, flags) {
@@ -482,13 +482,13 @@ function wordToCamel(word, index) {
  * @param  {string} [subject=''] The string to convert to camel case.
  * @return {string}              The camel case string.
  * @example
- * v.camelCase('bird flight');
+ * as.camelCase('bird flight');
  * // => 'birdFlight'
  *
- * v.camelCase('BirdFlight');
+ * as.camelCase('BirdFlight');
  * // => 'birdFlight'
  *
- * v.camelCase('-BIRD-FLIGHT-');
+ * as.camelCase('-BIRD-FLIGHT-');
  * // => 'birdFlight'
  */
 function camelCase(subject) {
@@ -509,10 +509,10 @@ function camelCase(subject) {
  * @param  {string} [subject=''] The string to decapitalize.
  * @return {string}              Returns the decapitalized string.
  * @example
- * v.decapitalize('Sun');
+ * as.decapitalize('Sun');
  * // => 'sun'
  *
- * v.decapitalize('moon');
+ * as.decapitalize('moon');
  * // => 'moon'
  */
 function decapitalize(subject) {
@@ -534,13 +534,13 @@ function decapitalize(subject) {
  * @param  {string} [subject=''] The string to convert to kebab case.
  * @return {string}              Returns the kebab case string.
  * @example
- * v.kebabCase('goodbye blue sky');
+ * as.kebabCase('goodbye blue sky');
  * // => 'goodbye-blue-sky'
  *
- * v.kebabCase('GoodbyeBlueSky');
+ * as.kebabCase('GoodbyeBlueSky');
  * // => 'goodbye-blue-sky'
  *
- * v.kebabCase('-Goodbye-Blue-Sky-');
+ * as.kebabCase('-Goodbye-Blue-Sky-');
  * // => 'goodbye-blue-sky'
  */
 function kebabCase(subject) {
@@ -561,13 +561,13 @@ function kebabCase(subject) {
  * @param  {string} [subject=''] The string to convert to snake case.
  * @return {string}              Returns the snake case string.
  * @example
- * v.snakeCase('learning to fly');
+ * as.snakeCase('learning to fly');
  * // => 'learning_to_fly'
  *
- * v.snakeCase('LearningToFly');
+ * as.snakeCase('LearningToFly');
  * // => 'learning_to_fly'
  *
- * v.snakeCase('-Learning-To-Fly-');
+ * as.snakeCase('-Learning-To-Fly-');
  * // => 'learning_to_fly'
  */
 function snakeCase(subject) {
@@ -588,7 +588,7 @@ function snakeCase(subject) {
  * @param  {string} [subject=''] The string to convert to upper case.
  * @return {string}              Returns the upper case string.
  * @example
- * v.upperCase('school');
+ * as.upperCase('school');
  * // => 'SCHOOL'
  */
 function upperCase(subject) {
@@ -654,13 +654,13 @@ function toInteger(value) {
  * @param  {string} [end='...']  The string to be added at the end.
  * @return {string}              Returns the truncated string.
  * @example
- * v.truncate('Once upon a time', 7);
+ * as.truncate('Once upon a time', 7);
  * // => 'Once...'
  *
- * v.truncate('Good day, Little Red Riding Hood', 14, ' (...)');
+ * as.truncate('Good day, Little Red Riding Hood', 14, ' (...)');
  * // => 'Good day (...)'
  *
- * v.truncate('Once upon', 10);
+ * as.truncate('Once upon', 10);
  * // => 'Once upon'
  */
 function truncate(subject, length, end) {
@@ -684,10 +684,10 @@ function truncate(subject, length, end) {
  * @param  {numbers} position The position to get the character.
  * @return {string} Returns the character at specified position.
  * @example
- * v.charAt('helicopter', 0);
+ * as.charAt('helicopter', 0);
  * // => 'h'
  *
- * v.charAt('helicopter', 1);
+ * as.charAt('helicopter', 1);
  * // => 'e'
  */
 function charAt(subject, position) {
@@ -786,10 +786,10 @@ function nanDefault(value, defaultValue) {
  * @param  {number} position The position to get the code point number.
  * @return {number} Returns a non-negative number less than or equal to `0x10FFFF`.
  * @example
- * v.codePointAt('rain', 1);
+ * as.codePointAt('rain', 1);
  * // => 97, or 0x0061
  *
- * v.codePointAt('\uD83D\uDE00 is smile', 0); // or '😀 is smile'
+ * as.codePointAt('\uD83D\uDE00 is smile', 0); // or '😀 is smile'
  * // => 128512, or 0x1F600
  */
 function codePointAt(subject, position) {
@@ -822,13 +822,13 @@ function codePointAt(subject, position) {
  * @param  {int}    [length=1]   The number of characters to extract.
  * @return {string}              Returns the first characters string.
  * @example
- * v.first('helicopter');
+ * as.first('helicopter');
  * // => 'h'
  *
- * v.first('vehicle', 2);
+ * as.first('vehicle', 2);
  * // => 've'
  *
- * v.first('car', 5);
+ * as.first('car', 5);
  * // => 'car'
  */
 function first(subject, length) {
@@ -853,10 +853,10 @@ function first(subject, length) {
  * @param  {number} position The position to get the grapheme.
  * @return {string} Returns the grapheme at specified position.
  * @example
- * v.graphemeAt('\uD835\uDC00\uD835\uDC01', 0); // or '𝐀𝐁'
+ * as.graphemeAt('\uD835\uDC00\uD835\uDC01', 0); // or '𝐀𝐁'
  * // => 'A'
  *
- * v.graphemeAt('cafe\u0301', 3); // or 'café'
+ * as.graphemeAt('cafe\u0301', 3); // or 'café'
  * // => 'é'
  */
 function graphemeAt(subject, position) {
@@ -886,13 +886,13 @@ function graphemeAt(subject, position) {
  * @param  {int}    [length=1]   The number of characters to extract.
  * @return {string}              Returns the last characters string.
  * @example
- * v.last('helicopter');
+ * as.last('helicopter');
  * // => 'r'
  *
- * v.last('vehicle', 2);
+ * as.last('vehicle', 2);
  * // => 'le'
  *
- * v.last('car', 5);
+ * as.last('car', 5);
  * // => 'car'
  */
 function last(subject, length) {
@@ -917,13 +917,13 @@ function last(subject, length) {
  * @param  {string} [end='...']  The string to be added at the end.
  * @return {string}              Returns the pruned string.
  * @example
- * v.prune('Once upon a time', 7);
+ * as.prune('Once upon a time', 7);
  * // => 'Once...'
  *
- * v.prune('Good day, Little Red Riding Hood', 16, ' (more)');
+ * as.prune('Good day, Little Red Riding Hood', 16, ' (more)');
  * // => 'Good day (more)'
  *
- * v.prune('Once upon', 10);
+ * as.prune('Once upon', 10);
  * // => 'Once upon'
  */
 function prune(subject, length, end) {
@@ -958,13 +958,13 @@ function prune(subject, length, end) {
  * @return {string}                      Returns the extracted string.
  * @note Uses native `String.prototype.slice()`
  * @example
- * v.slice('miami', 1);
+ * as.slice('miami', 1);
  * // => 'iami'
  *
- * v.slice('florida', -4);
+ * as.slice('florida', -4);
  * // => 'rida'
  *
- * v.slice('florida', 1, 4);
+ * as.slice('florida', 1, 4);
  * // => "lor"
  */
 function slice(subject, start, end) {
@@ -984,10 +984,10 @@ function slice(subject, start, end) {
  * @return {string}                              Returns the extracted string.
  * @note Uses native `String.prototype.substr()`
  * @example
- * v.substr('infinite loop', 9);
+ * as.substr('infinite loop', 9);
  * // => 'loop'
  *
- * v.substr('dreams', 2, 2);
+ * as.substr('dreams', 2, 2);
  * // => 'ea'
  */
 function substr(subject, start, length) {
@@ -1008,10 +1008,10 @@ function substr(subject, start, length) {
  * @return {string}                      Returns the extracted string.
  * @note Uses native `String.prototype.substring()`
  * @example
- * v.substring('beach', 1);
+ * as.substring('beach', 1);
  * // => 'each'
  *
- * v.substring('ocean', 1, 3);
+ * as.substring('ocean', 1, 3);
  * // => 'ea'
  */
 function substring(subject, start, end) {
@@ -1028,7 +1028,7 @@ function substring(subject, start, end) {
  * @param  {string} [subject=''] The string to count characters.
  * @return {number}              Returns the number of characters in `subject`.
  * @example
- * v.count('rain');
+ * as.count('rain');
  * // => 4
  */
 function count(subject) {
@@ -1047,13 +1047,13 @@ function count(subject) {
  * @param  {string} [subject=''] The string to count graphemes.
  * @return {number}              Returns the number of graphemes in `subject`.
  * @example
- * v.countGraphemes('cafe\u0301'); // or 'café'
+ * as.countGraphemes('cafe\u0301'); // or 'café'
  * // => 4
  *
- * v.countGraphemes('\uD835\uDC00\uD835\uDC01'); // or '𝐀𝐁'
+ * as.countGraphemes('\uD835\uDC00\uD835\uDC01'); // or '𝐀𝐁'
  * // => 2
  *
- * v.countGraphemes('rain');
+ * as.countGraphemes('rain');
  * // => 4
  */
 function countGrapheme(subject) {
@@ -1071,10 +1071,10 @@ function countGrapheme(subject) {
  * @param  {string} substring    The substring to be counted.
  * @return {number}              Returns the number of `substring` appearances.
  * @example
- * v.countSubstrings('bad boys, bad boys whatcha gonna do?', 'boys');
+ * as.countSubstrings('bad boys, bad boys whatcha gonna do?', 'boys');
  * // => 2
  *
- * v.countSubstrings('every dog has its day', 'cat');
+ * as.countSubstrings('every dog has its day', 'cat');
  * // => 0
  */
 function countSubstrings(subject, substring) {
@@ -1110,10 +1110,10 @@ var reduce = Array.prototype.reduce;
  * @param  {Object}   [context]    The context to invoke the `predicate`.
  * @return {number}                Returns the number of characters for which `predicate` returns truthy.
  * @example
- * v.countWhere('hola!', v.isAlpha);
+ * as.countWhere('hola!', as.isAlpha);
  * // => 4
  *
- * v.countWhere('2022', function(character, index, str) {
+ * as.countWhere('2022', function(character, index, str) {
  *   return character === '2';
  * });
  * // => 3
@@ -1141,16 +1141,16 @@ function countWhere(subject, predicate, context) {
  * @param {string} [flags=''] The regular expression flags. Applies when `pattern` is string type.
  * @return {number} Returns the number of words.
  * @example
- * v.countWords('gravity can cross dimensions');
+ * as.countWords('gravity can cross dimensions');
  * // => 4
  *
- * v.countWords('GravityCanCrossDimensions');
+ * as.countWords('GravityCanCrossDimensions');
  * // => 4
  *
- * v.countWords('Gravity - can cross dimensions!');
+ * as.countWords('Gravity - can cross dimensions!');
  * // => 4
  *
- * v.words('Earth gravity', /[^\s]+/g);
+ * as.words('Earth gravity', /[^\s]+/g);
  * // => 2
  */
 function countWords(subject, pattern, flags) {
@@ -1245,10 +1245,10 @@ var Const = Object.freeze({
  * @param {number} [times=1] The number of times to repeat.
  * @return {string} Returns the repeated string.
  * @example
- * v.repeat('w', 3);
+ * as.repeat('w', 3);
  * // => 'www'
  *
- * v.repeat('world', 0);
+ * as.repeat('world', 0);
  * // => ''
  */
 function repeat(subject, times) {
@@ -1293,13 +1293,13 @@ function buildPadding(padCharacters, length) {
  * @param {string} [pad=' '] The string to be used for padding.
  * @return {string} Returns the left padded string.
  * @example
- * v.padLeft('dog', 5);
+ * as.padLeft('dog', 5);
  * // => '  dog'
  *
- * v.padLeft('bird', 6, '-');
+ * as.padLeft('bird', 6, '-');
  * // => '--bird'
  *
- * v.padLeft('cat', 6, '-=');
+ * as.padLeft('cat', 6, '-=');
  * // => '-=-cat'
  */
 function padLeft(subject, length, pad) {
@@ -1324,13 +1324,13 @@ function padLeft(subject, length, pad) {
  * @param {string} [pad=' '] The string to be used for padding.
  * @return {string} Returns the right padded string.
  * @example
- * v.padRight('dog', 5);
+ * as.padRight('dog', 5);
  * // => 'dog  '
  *
- * v.padRight('bird', 6, '-');
+ * as.padRight('bird', 6, '-');
  * // => 'bird--'
  *
- * v.padRight('cat', 6, '-=');
+ * as.padRight('cat', 6, '-=');
  * // => 'cat-=-'
  */
 function padRight(subject, length, pad) {
@@ -1834,40 +1834,40 @@ function match(replacementIndex, replacements, conversionSpecification, percent,
  * @param  {...*}               replacements The replacements to produce the string.
  * @return {string}             Returns the produced string.
  * @example
- * v.sprintf('%s, %s!', 'Hello', 'World');
+ * as.sprintf('%s, %s!', 'Hello', 'World');
  * // => 'Hello World!'
  *
- * v.sprintf('%s costs $%d', 'coffee', 2);
+ * as.sprintf('%s costs $%d', 'coffee', 2);
  * // => 'coffee costs $2'
  *
- * v.sprintf('%1$s %2$s %1$s %2$s, watcha gonna %3$s', 'bad', 'boys', 'do')
+ * as.sprintf('%1$s %2$s %1$s %2$s, watcha gonna %3$s', 'bad', 'boys', 'do')
  * // => 'bad boys bad boys, watcha gonna do'
  *
- * v.sprintf('% 6s', 'bird');
+ * as.sprintf('% 6s', 'bird');
  * // => '  bird'
  *
- * v.sprintf('% -6s', 'crab');
+ * as.sprintf('% -6s', 'crab');
  * // => 'crab  '
  *
- * v.sprintf("%'*5s", 'cat');
+ * as.sprintf("%'*5s", 'cat');
  * // => '**cat'
  *
- * v.sprintf("%'*-6s", 'duck');
+ * as.sprintf("%'*-6s", 'duck');
  * // => 'duck**'
  *
- * v.sprintf('%d %i %+d', 15, -2, 25);
+ * as.sprintf('%d %i %+d', 15, -2, 25);
  * // => '15 -2 +25'
  *
- * v.sprintf("%06d", 15);
+ * as.sprintf("%06d", 15);
  * // => '000015'
  *
- * v.sprintf('0b%b 0o%o 0x%X', 12, 9, 155);
+ * as.sprintf('0b%b 0o%o 0x%X', 12, 9, 155);
  * // => '0b1100 0o11 0x9B'
  *
- * v.sprintf('%.2f', 10.469);
+ * as.sprintf('%.2f', 10.469);
  * // => '10.47'
  *
- * v.sprintf('%.2e %g', 100.5, 0.455);
+ * as.sprintf('%.2e %g', 100.5, 0.455);
  * // => '1.01e+2 0.455'
  * 
  */
@@ -1900,10 +1900,10 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
  * @param  {Array} replacements The array of replacements to produce the string.
  * @return {string}             Returns the produced string.
  * @example
- * v.vprintf('%s', ['Welcome'])
+ * as.vprintf('%s', ['Welcome'])
  * // => 'Welcome'
  *
- * v.vprintf('%s has %d apples', ['Alexandra', 3]);
+ * as.vprintf('%s has %d apples', ['Alexandra', 3]);
  * // => 'Alexandra has 3 apples'
  */
 function vprintf(format, replacements) {
@@ -1940,7 +1940,7 @@ function replaceSpecialCharacter(character) {
  * @param {string} [subject=''] The string to escape.
  * @return {string} Returns the escaped string.
  * @example
- * v.escapeHtml('<p>wonderful world</p>');
+ * as.escapeHtml('<p>wonderful world</p>');
  * // => '&lt;p&gt;wonderful world&lt;/p&gt;'
  */
 function escapeHtml(subject) {
@@ -1957,7 +1957,7 @@ function escapeHtml(subject) {
  * @param {string} [subject=''] The string to escape.
  * @return {string} Returns the escaped string.
  * @example
- * v.escapeRegExp('(hours)[minutes]{seconds}');
+ * as.escapeRegExp('(hours)[minutes]{seconds}');
  * // => '\(hours\)\[minutes\]\{seconds\}'
  */
 function escapeRegExp(subject) {
@@ -1997,7 +1997,7 @@ function reduceUnescapedString(string, key) {
  * @param  {string} [subject=''] The string to unescape.
  * @return {string}              Returns the unescaped string.
  * @example
- * v.unescapeHtml('&lt;p&gt;wonderful world&lt;/p&gt;');
+ * as.unescapeHtml('&lt;p&gt;wonderful world&lt;/p&gt;');
  * // => '<p>wonderful world</p>'
  */
 function unescapeHtml(subject) {
@@ -2017,10 +2017,10 @@ function unescapeHtml(subject) {
  * @param {number} [fromIndex=0] The index to start searching.
  * @return {number} Returns the first occurrence index or `-1` if not found.
  * @example
- * v.indexOf('morning', 'n');
+ * as.indexOf('morning', 'n');
  * // => 3
  *
- * v.indexOf('evening', 'o');
+ * as.indexOf('evening', 'o');
  * // => -1
  */
 function indexOf(subject, search, fromIndex) {
@@ -2040,10 +2040,10 @@ function indexOf(subject, search, fromIndex) {
  * @param {number} [fromIndex=subject.length - 1] The index to start searching backward in the string.
  * @return {number} Returns the last occurrence index or `-1` if not found.
  * @example
- * v.lastIndexOf('morning', 'n');
+ * as.lastIndexOf('morning', 'n');
  * // => 5
  *
- * v.lastIndexOf('evening', 'o');
+ * as.lastIndexOf('evening', 'o');
  * // => -1
  */
 function lastIndexOf(subject, search, fromIndex) {
@@ -2063,10 +2063,10 @@ function lastIndexOf(subject, search, fromIndex) {
  * @param {number} [fromIndex=0] The index to start searching.
  * @return {number} Returns the first match index or `-1` if not found.
  * @example
- * v.search('morning', /rn/);
+ * as.search('morning', /rn/);
  * // => 2
  *
- * v.search('evening', '/\d/');
+ * as.search('evening', '/\d/');
  * // => -1
  */
 function search(subject, pattern, fromIndex) {
@@ -2091,10 +2091,10 @@ function search(subject, pattern, fromIndex) {
  * @param {number} [position=0] The position to insert.
  * @return {string} Returns the string after insertion.
  * @example
- * v.insert('ct', 'a', 1);
+ * as.insert('ct', 'a', 1);
  * // => 'cat'
  *
- * v.insert('sunny', ' day', 5);
+ * as.insert('sunny', ' day', 5);
  * // => 'sunny day'
  */
 function insert(subject, toInsert, position) {
@@ -2283,13 +2283,13 @@ function removeCombiningMarks(character, cleanCharacter) {
  * @param {string} [subject=''] The string to latinise.
  * @return {string} Returns the latinised string.
  * @example
- * v.latinise('cafe\u0301'); // or 'café'
+ * as.latinise('cafe\u0301'); // or 'café'
  * // => 'cafe'
  *
- * v.latinise('août décembre');
+ * as.latinise('août décembre');
  * // => 'aout decembre'
  *
- * v.latinise('как прекрасен этот мир');
+ * as.latinise('как прекрасен этот мир');
  * // => 'kak prekrasen etot mir'
  */
 function latinise(subject) {
@@ -2312,13 +2312,13 @@ function latinise(subject) {
  * @param {string} [pad=' '] The string to be used for padding.
  * @return {string} Returns the padded string.
  * @example
- * v.pad('dog', 5);
+ * as.pad('dog', 5);
  * // => ' dog '
  *
- * v.pad('bird', 6, '-');
+ * as.pad('bird', 6, '-');
  * // => '-bird-'
  *
- * v.pad('cat', 6, '-=');
+ * as.pad('cat', 6, '-=');
  * // => '-cat-='
  */
 function pad(subject, length, pad) {
@@ -2347,13 +2347,13 @@ function pad(subject, length, pad) {
  * @param {string|Function} replacement The string or function which invocation result replaces `pattern` match.
  * @return {string} Returns the replacement result.
  * @example
- * v.replace('swan', 'wa', 'u');
+ * as.replace('swan', 'wa', 'u');
  * // => 'sun'
  *
- * v.replace('domestic duck', /domestic\s/, '');
+ * as.replace('domestic duck', /domestic\s/, '');
  * // => 'duck'
  *
- * v.replace('nice duck', /(nice)(duck)/, function(match, nice, duck) {
+ * as.replace('nice duck', /(nice)(duck)/, function(match, nice, duck) {
  *   return 'the ' + duck + ' is ' + nice;
  * });
  * // => 'the duck is nice'
@@ -2386,10 +2386,10 @@ function getRegExpFlags(regExp) {
  * @param {number} [position=0] The position to start searching.
  * @return {boolean} Returns `true` if `subject` includes `search` or `false` otherwise.
  * @example
- * v.includes('starship', 'star');
+ * as.includes('starship', 'star');
  * // => true
  *
- * v.includes('galaxy', 'g', 1);
+ * as.includes('galaxy', 'g', 1);
  * // => false
  */
 function includes(subject, search, position) {
@@ -2434,9 +2434,9 @@ function appendFlagToRegExp(pattern, appendFlag) {
  * @param {string|Function} replacement The string or function which invocation result replaces `pattern` match.
  * @return {string} Returns the replacement result.
  * @example
- * v.replaceAll('good morning', 'o', '*');
+ * as.replaceAll('good morning', 'o', '*');
  * // => 'g**d m*rning'
- * v.replaceAll('evening', /n/, 's');
+ * as.replaceAll('evening', /n/, 's');
  * // => 'evesisg'
  *
  */
@@ -2461,7 +2461,7 @@ function replaceAll(subject, pattern, replacement) {
  * @param {string} [subject=''] The string to reverse.
  * @return {string} Returns the reversed string.
  * @example
- * v.reverse('winter');
+ * as.reverse('winter');
  * // => 'retniw'
  */
 function reverse(subject) {
@@ -2481,10 +2481,10 @@ function reverse(subject) {
  * @param {string} [subject=''] The string to reverse.
  * @return {string} Returns the reversed string.
  * @example
- * v.reverseGrapheme('summer');
+ * as.reverseGrapheme('summer');
  * // => 'remmus'
  *
- * v.reverseGrapheme('𝌆 bar mañana mañana');
+ * as.reverseGrapheme('𝌆 bar mañana mañana');
  * // => 'anañam anañam rab 𝌆'
  */
 function reverseGrapheme(subject) {
@@ -2513,13 +2513,13 @@ function reverseGrapheme(subject) {
  * @param {string} [subject=''] The string to slugify.
  * @return {string} Returns the slugified string.
  * @example
- * v.slugify('Italian cappuccino drink');
+ * as.slugify('Italian cappuccino drink');
  * // => 'italian-cappuccino-drink'
  *
- * v.slugify('caffé latté');
+ * as.slugify('caffé latté');
  * // => 'caffe-latte'
  *
- * v.slugify('хорошая погода');
+ * as.slugify('хорошая погода');
  * // => 'horoshaya-pogoda'
  */
 function slugify(subject) {
@@ -2546,13 +2546,13 @@ function slugify(subject) {
  * @param {string} [toAdd=''] The string to be added instead of deleted characters.
  * @return {string} Returns the modified string.
  * @example
- * v.splice('new year', 0, 4);
+ * as.splice('new year', 0, 4);
  * // => 'year'
  *
- * v.splice('new year', 0, 3, 'happy');
+ * as.splice('new year', 0, 3, 'happy');
  * // => 'happy year'
  *
- * v.splice('new year', -4, 4, 'day');
+ * as.splice('new year', -4, 4, 'day');
  * // => 'new day'
  */
 function splice(subject, start, deleteCount, toAdd) {
@@ -2574,6 +2574,8 @@ function splice(subject, start, deleteCount, toAdd) {
   return subjectString.slice(0, startPosition) + toAddString + subjectString.slice(startPosition + deleteCountNumber);
 }
 
+var reduce$1 = Array.prototype.reduce;
+
 /**
  * Removes whitespaces from the left side of the `subject`.
  *
@@ -2582,13 +2584,13 @@ function splice(subject, start, deleteCount, toAdd) {
  * @since 1.0.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to trim.
- * @param {string} [whitespace=whitespace] The whitespace characters to trim.
+ * @param {string} [whitespace=whitespace] The whitespace characters to trim. List all characters that you want to be stripped.
  * @return {string} Returns the trimmed string.
  * @example
- * v.trimLeft('  Starship Troopers');
+ * as.trimLeft('  Starship Troopers');
  * // => 'Starship Troopers'
  *
- * v.trimLeft('***Mobile Infantry', '*');
+ * as.trimLeft('***Mobile Infantry', '*');
  * // => 'Mobile Infantry'
  */
 function trimLeft(subject, whitespace$$1) {
@@ -2600,18 +2602,17 @@ function trimLeft(subject, whitespace$$1) {
   if (isNil(whitespaceString)) {
     return subjectString.replace(REGEXP_TRIM_LEFT, '');
   }
-  var whitespaceLength = whitespaceString.length;
   var matchWhitespace = true;
-  var totalWhitespaceLength = 0;
-  while (matchWhitespace) {
-    if (subjectString.indexOf(whitespaceString, totalWhitespaceLength) === totalWhitespaceLength) {
-      totalWhitespaceLength += whitespaceLength;
-    } else {
-      matchWhitespace = false;
+  return reduce$1.call(subjectString, function (trimmed, character) {
+    if (matchWhitespace && includes(whitespaceString, character)) {
+      return trimmed;
     }
-  }
-  return subjectString.substring(totalWhitespaceLength);
+    matchWhitespace = false;
+    return trimmed + character;
+  }, '');
 }
+
+var reduceRight = Array.prototype.reduceRight;
 
 /**
  * Removes whitespaces from the right side of the `subject`.
@@ -2621,13 +2622,13 @@ function trimLeft(subject, whitespace$$1) {
  * @since 1.0.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to trim.
- * @param {string} [whitespace=whitespace] The whitespace characters to trim.
+ * @param {string} [whitespace=whitespace] The whitespace characters to trim. List all characters that you want to be stripped.
  * @return {string} Returns the trimmed string.
  * @example
- * v.trimRight('the fire rises   ');
+ * as.trimRight('the fire rises   ');
  * // => 'the fire rises'
  *
- * v.trimRight('do you feel in charge?!!!', '!');
+ * as.trimRight('do you feel in charge?!!!', '!');
  * // => 'do you feel in charge?'
  */
 function trimRight(subject, whitespace$$1) {
@@ -2639,20 +2640,14 @@ function trimRight(subject, whitespace$$1) {
   if (isNil(whitespaceString)) {
     return subjectString.replace(REGEXP_TRIM_RIGHT, '');
   }
-  var whitespaceLength = whitespaceString.length;
-  var subjectLength = subjectString.length;
   var matchWhitespace = true;
-  var totalWhitespaceLength = 0;
-  var position = void 0;
-  while (matchWhitespace) {
-    position = subjectLength - totalWhitespaceLength - whitespaceLength;
-    if (subjectString.indexOf(whitespaceString, position) === position) {
-      totalWhitespaceLength += whitespaceLength;
-    } else {
-      matchWhitespace = false;
+  return reduceRight.call(subjectString, function (trimmed, character) {
+    if (matchWhitespace && includes(whitespaceString, character)) {
+      return trimmed;
     }
-  }
-  return subjectString.substring(0, subjectLength - totalWhitespaceLength);
+    matchWhitespace = false;
+    return character + trimmed;
+  }, '');
 }
 
 /**
@@ -2663,13 +2658,13 @@ function trimRight(subject, whitespace$$1) {
  * @since 1.0.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to trim.
- * @param {string} [whitespace=whitespace] The whitespace characters to trim.
+ * @param {string} [whitespace=whitespace] The whitespace characters to trim. List all characters that you want to be stripped.
  * @return {string} Returns the trimmed string.
  * @example
- * v.trim(' Mother nature ');
+ * as.trim(' Mother nature ');
  * // => 'Mother nature'
  *
- * v.trim('--Earth--', '-');
+ * as.trim('--Earth--', '-');
  * // => 'Earth'
  */
 function trim(subject, whitespace) {
@@ -2722,19 +2717,19 @@ function determineOptions(options) {
  *
  * @return {string} Returns wrapped string.
  * @example
- * v.wordWrap('Hello world', {
+ * as.wordWrap('Hello world', {
  *   width: 5
  * });
  * // => 'Hello\nworld'
  *
- * v.wordWrap('Hello world', {
+ * as.wordWrap('Hello world', {
  *   width: 5,
  *   newLine: '<br/>',
  *   indent: '__'
  * });
  * // => '__Hello<br/>__world'
  *
- * v.wordWrap('Wonderful world', {
+ * as.wordWrap('Wonderful world', {
  *   width: 5,
  *   cut: true
  * });
@@ -2802,13 +2797,13 @@ function wordWrap(subject) {
  * @param {number} [position=subject.length] Search within `subject` as if the string were only `position` long.
  * @return {boolean} Returns `true` if `subject` ends with `end` or `false` otherwise.
  * @example
- * v.endsWith('red alert', 'alert');
+ * as.endsWith('red alert', 'alert');
  * // => true
  *
- * v.endsWith('metro south', 'metro');
+ * as.endsWith('metro south', 'metro');
  * // => false
  *
- * v.endsWith('Murphy', 'ph', 5);
+ * as.endsWith('Murphy', 'ph', 5);
  * // => true
  */
 function endsWith(subject, end, position) {
@@ -2836,13 +2831,13 @@ function endsWith(subject, end, position) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` contains only alpha characters or `false` otherwise.
  * @example
- * v.isAlpha('bart');
+ * as.isAlpha('bart');
  * // => true
  *
- * v.isAlpha('lisa!');
+ * as.isAlpha('lisa!');
  * // => false
  *
- * v.isAlpha('lisa and bart');
+ * as.isAlpha('lisa and bart');
  * // => false
  */
 function isAlpha(subject) {
@@ -2860,13 +2855,13 @@ function isAlpha(subject) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` contains only alpha and digit characters or `false` otherwise.
  * @example
- * v.isAlphaDigit('year2020');
+ * as.isAlphaDigit('year2020');
  * // => true
  *
- * v.isAlphaDigit('1448');
+ * as.isAlphaDigit('1448');
  * // => true
  *
- * v.isAlphaDigit('40-20');
+ * as.isAlphaDigit('40-20');
  * // => false
  */
 function isAlphaDigit(subject) {
@@ -2884,13 +2879,13 @@ function isAlphaDigit(subject) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is empty or contains only whitespaces or `false` otherwise.
  * @example
- * v.isBlank('');
+ * as.isBlank('');
  * // => true
  *
- * v.isBlank('  ');
+ * as.isBlank('  ');
  * // => true
  *
- * v.isBlank('World');
+ * as.isBlank('World');
  * // => false
  */
 function isBlank(subject) {
@@ -2908,13 +2903,13 @@ function isBlank(subject) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` contains only digit characters or `false` otherwise.
  * @example
- * v.isDigit('35');
+ * as.isDigit('35');
  * // => true
  *
- * v.isDigit('1.5');
+ * as.isDigit('1.5');
  * // => false
  *
- * v.isDigit('ten');
+ * as.isDigit('ten');
  * // => false
  */
 function isDigit(subject) {
@@ -2932,13 +2927,13 @@ function isDigit(subject) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is empty or `false` otherwise
  * @example
- * v.isEmpty('');
+ * as.isEmpty('');
  * // => true
  *
- * v.isEmpty('  ');
+ * as.isEmpty('  ');
  * // => false
  *
- * v.isEmpty('sun');
+ * as.isEmpty('sun');
  * // => false
  */
 function isEmpty(subject) {
@@ -2956,13 +2951,13 @@ function isEmpty(subject) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is lower case or `false` otherwise.
  * @example
- * v.isLowerCase('motorcycle');
+ * as.isLowerCase('motorcycle');
  * // => true
  *
- * v.isLowerCase('John');
+ * as.isLowerCase('John');
  * // => false
  *
- * v.isLowerCase('T1000');
+ * as.isLowerCase('T1000');
  * // => false
  */
 function isLowerCase(subject) {
@@ -2980,16 +2975,16 @@ function isLowerCase(subject) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is numeric or `false` otherwise.
  * @example
- * v.isNumeric('350');
+ * as.isNumeric('350');
  * // => true
  *
- * v.isNumeric('-20.5');
+ * as.isNumeric('-20.5');
  * // => true
  *
- * v.isNumeric('1.5E+2');
+ * as.isNumeric('1.5E+2');
  * // => true
  *
- * v.isNumeric('five');
+ * as.isNumeric('five');
  * // => false
  */
 function isNumeric(subject) {
@@ -3007,10 +3002,10 @@ function isNumeric(subject) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is upper case or `false` otherwise.
  * @example
- * v.isUpperCase('ACDC');
+ * as.isUpperCase('ACDC');
  * // => true
  *
- * v.isUpperCase('Morning');
+ * as.isUpperCase('Morning');
  * // => false
  */
 function isUpperCase(subject) {
@@ -3030,13 +3025,13 @@ function isUpperCase(subject) {
  * @param {string} [flags=''] The regular expression flags. Applies when `pattern` is string type.
  * @return {boolean} Returns `true` if `subject` matches `pattern` or `false` otherwise.
  * @example
- * v.matches('pluto', /plu.{2}/);
+ * as.matches('pluto', /plu.{2}/);
  * // => true
  *
- * v.matches('sun', 'S', 'i');
+ * as.matches('sun', 'S', 'i');
  * // => true
  *
- * v.matches('apollo 11', '\\d{3}');
+ * as.matches('apollo 11', '\\d{3}');
  * // => false
  */
 function matches(subject, pattern, flags) {
@@ -3065,13 +3060,13 @@ function matches(subject, pattern, flags) {
  * @param {number} [position=0] The position to start searching.
  * @return {boolean} Returns `true` if `subject` starts with `start` or `false` otherwise.
  * @example
- * v.startsWith('say hello to my little friend', 'say hello');
+ * as.startsWith('say hello to my little friend', 'say hello');
  * // => true
  *
- * v.startsWith('tony', 'on', 1);
+ * as.startsWith('tony', 'on', 1);
  * // => true
  *
- * v.startsWith('the world is yours', 'world');
+ * as.startsWith('the world is yours', 'world');
  * // => false
  */
 function startsWith(subject, start, position) {
@@ -3097,7 +3092,7 @@ function startsWith(subject, start, position) {
  * @param {string} [subject=''] The string to split into characters.
  * @return {Array} Returns the array of characters.
  * @example
- * v.chars('cloud');
+ * as.chars('cloud');
  * // => ['c', 'l', 'o', 'u', 'd']
  */
 function chars(subject) {
@@ -3115,11 +3110,11 @@ function chars(subject) {
  * @param  {string} [subject=''] The string to extract from.
  * @return {Array} Returns an array of non-negative numbers less than or equal to `0x10FFFF`.
  * @example
- * v.codePoints('rain');
+ * as.codePoints('rain');
  * // => [114, 97, 105, 110], or
  * //    [0x72, 0x61, 0x69, 0x6E]
  *
- * v.codePoints('\uD83D\uDE00 smile'); // or '😀 smile'
+ * as.codePoints('\uD83D\uDE00 smile'); // or '😀 smile'
  * // => [128512, 32, 115, 109, 105, 108, 101], or
  * //    [0x1F600, 0x20, 0x73, 0x6D, 0x69, 0x6C, 0x65]
  */
@@ -3149,11 +3144,11 @@ function codePoints(subject) {
  * @param {string} [subject=''] The string to split into characters.
  * @return {Array} Returns the array of graphemes.
  * @example
- * v.graphemes('\uD835\uDC00\uD835\uDC01'); // or '𝐀𝐁'
+ * as.graphemes('\uD835\uDC00\uD835\uDC01'); // or '𝐀𝐁'
  * // => ['\uD835\uDC00', '\uD835\uDC01'], or
  * //    ['𝐀', '𝐁']
  *
- * v.graphemes('cafe\u0301'); // or 'café'
+ * as.graphemes('cafe\u0301'); // or 'café'
  * // => ['c', 'a', 'f', 'e\u0301'], or
  * //    ['c', 'a', 'f', 'é']
  */
@@ -3174,10 +3169,10 @@ function graphemes(subject) {
  * @param {number} [limit] Limit the number of chunks to be found.
  * @return {Array} Returns the array of chunks.
  * @example
- * v.split('rage against the dying of the light', ' ');
+ * as.split('rage against the dying of the light', ' ');
  * // => ['rage', 'against', 'the', 'dying', 'of', 'the', 'light']
  *
- * v.split('the dying of the light', /\s/, 3);
+ * as.split('the dying of the light', /\s/, 3);
  * // => ['the', 'dying', 'of']
  */
 function split(subject, separator, limit) {
@@ -3227,10 +3222,11 @@ var STATE_NON_WHITESPACE = 1;
 var STATE_DONE = 2;
 
 /**
- * Parses the tag name from html content
+ * Parses the tag name from html content.
  *
- * @param {string} tagContent The tag content
- * @return {string} Returns the tag name
+ * @ignore
+ * @param {string} tagContent The tag content.
+ * @return {string} Returns the tag name.
  */
 function parseTagName(tagContent) {
   var state = STATE_START_TAG;
@@ -3281,13 +3277,13 @@ var STATE_COMMENT = 3;
  * @return {string} Returns the stripped string.
  * @example
  *
- * v.stripTags('<span><a href="#">Summer</a> is nice</span>');
+ * as.stripTags('<span><a href="#">Summer</a> is nice</span>');
  * // => 'Summer is nice'
  *
- * v.stripTags('<span><i>Winter</i> is <b>cold</b></span>', ['b', 'i']);
+ * as.stripTags('<span><i>Winter</i> is <b>cold</b></span>', ['b', 'i']);
  * // => '<i>Winter</i> is <b>cold</b>'
  *
- * v.stripTags('Sun<br/>set', '', '-');
+ * as.stripTags('Sun<br/>set', '', '-');
  * // => 'Sun-set'
  */
 function trim$1(subject, allowableTags, replacement) {
@@ -3413,7 +3409,6 @@ function trim$1(subject, allowableTags, replacement) {
       }
     }
   }
-
   return output;
 }
 
@@ -3439,24 +3434,24 @@ function getGlobalObject() {
 }
 
 var globalObject = getGlobalObject();
-var previousV = globalObject.v;
+var previousAS = globalObject.as;
 
 /**
- * Restores `v` variable to previous value and returns Voca library instance.
+ * Restores `as` variable to previous value and returns Awesome String library instance.
  *
  * @function noConflict
  * @static
  * @since 1.0.0
  * @memberOf Util
- * @return {Object} Returns Voca library instance.
+ * @return {Object} Returns AwesomeString library instance.
  * @example
- * var voca = v.noConflict();
- * voca.isAlpha('Hello');
+ * var awesomeString = as.noConflict();
+ * awesomeString.isAlpha('Hello');
  * // => true
  */
 function noConflict() {
-  if (this === globalObject.v) {
-    globalObject.v = previousV;
+  if (this === globalObject.as) {
+    globalObject.as = previousAS;
   }
   return this;
 }
@@ -3469,7 +3464,7 @@ function noConflict() {
  * @memberOf Util
  * @type string
  * @example
- * v.version
+ * as.version
  * // => '1.1.0'
  */
 var version = '1.1.0';
@@ -3677,7 +3672,7 @@ ChainWrapper.prototype.toString = function () {
 
 /**
  * Creates a new chain object that enables <i>explicit</i> chain sequences.
- * Use `v.prototype.value()` to unwrap the result. <br/>
+ * Use `as.prototype.value()` to unwrap the result. <br/>
  * Does not modify the wrapped value.
  *
  * @memberof Chain
@@ -3766,7 +3761,7 @@ Object.keys(functions).forEach(function (name) {
 
 /**
  * Creates a chain object that wraps `subject`, enabling <i>explicit</i> chain sequences. <br/>
- * Use `v.prototype.value()` to unwrap the result.
+ * Use `as.prototype.value()` to unwrap the result.
  *
  * @memberOf Chain
  * @since 1.0.0
@@ -3794,11 +3789,11 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
  *
  * @memberOf Chain
  * @since 1.0.0
- * @function v
+ * @function as
  * @param {string} subject The string to wrap.
  * @return {Object}  Returns the new wrapper object.
  * @example
- * v('Back to School')
+ * as('Back to School')
  *  .lowerCase()
  *  .words()
  * // => ['back', 'to', 'school']
@@ -3809,14 +3804,14 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
  *  .value()
  * // => 'Back...'
  */
-function Voca(subject) {
+function AwesomeString(subject) {
   return new ChainWrapper(subject, false);
 }
 
-_extends(Voca, functions, {
+_extends(AwesomeString, functions, {
   chain: chain
 });
 
-return Voca;
+return AwesomeString;
 
 })));

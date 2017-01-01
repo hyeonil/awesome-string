@@ -11,10 +11,10 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @param  {string} substring    The substring to be counted.
  * @return {number}              Returns the number of `substring` appearances.
  * @example
- * v.countSubstrings('bad boys, bad boys whatcha gonna do?', 'boys');
+ * as.countSubstrings('bad boys, bad boys whatcha gonna do?', 'boys');
  * // => 2
  *
- * v.countSubstrings('every dog has its day', 'cat');
+ * as.countSubstrings('every dog has its day', 'cat');
  * // => 0
  */
 export default function countSubstrings(subject, substring) {

@@ -25,13 +25,13 @@ function wordToCamel(word, index) {
  * @param  {string} [subject=''] The string to convert to camel case.
  * @return {string}              The camel case string.
  * @example
- * v.camelCase('bird flight');
+ * as.camelCase('bird flight');
  * // => 'birdFlight'
  *
- * v.camelCase('BirdFlight');
+ * as.camelCase('BirdFlight');
  * // => 'birdFlight'
  *
- * v.camelCase('-BIRD-FLIGHT-');
+ * as.camelCase('-BIRD-FLIGHT-');
  * // => 'birdFlight'
  */
 export default function camelCase(subject) {

@@ -16,13 +16,13 @@ import toString from 'helper/string/to_string';
  * @param {number} [position=0] The position to start searching.
  * @return {boolean} Returns `true` if `subject` starts with `start` or `false` otherwise.
  * @example
- * v.startsWith('say hello to my little friend', 'say hello');
+ * as.startsWith('say hello to my little friend', 'say hello');
  * // => true
  *
- * v.startsWith('tony', 'on', 1);
+ * as.startsWith('tony', 'on', 1);
  * // => true
  *
- * v.startsWith('the world is yours', 'world');
+ * as.startsWith('the world is yours', 'world');
  * // => false
  */
 export default function startsWith(subject, start, position) {

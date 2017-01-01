@@ -21,13 +21,13 @@ const STATE_COMMENT = 3;
  * @return {string} Returns the stripped string.
  * @example
  *
- * v.stripTags('<span><a href="#">Summer</a> is nice</span>');
+ * as.stripTags('<span><a href="#">Summer</a> is nice</span>');
  * // => 'Summer is nice'
  *
- * v.stripTags('<span><i>Winter</i> is <b>cold</b></span>', ['b', 'i']);
+ * as.stripTags('<span><i>Winter</i> is <b>cold</b></span>', ['b', 'i']);
  * // => '<i>Winter</i> is <b>cold</b>'
  *
- * v.stripTags('Sun<br/>set', '', '-');
+ * as.stripTags('Sun<br/>set', '', '-');
  * // => 'Sun-set'
  */
 export default function trim(subject, allowableTags, replacement) {

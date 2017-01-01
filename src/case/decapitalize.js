@@ -10,10 +10,10 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @param  {string} [subject=''] The string to decapitalize.
  * @return {string}              Returns the decapitalized string.
  * @example
- * v.decapitalize('Sun');
+ * as.decapitalize('Sun');
  * // => 'sun'
  *
- * v.decapitalize('moon');
+ * as.decapitalize('moon');
  * // => 'moon'
  */
 export default function decapitalize(subject) {

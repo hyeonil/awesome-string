@@ -13,13 +13,13 @@ import { REGEXP_NON_LATIN } from 'helper/reg_exp/const';
  * @param {string} [subject=''] The string to slugify.
  * @return {string} Returns the slugified string.
  * @example
- * v.slugify('Italian cappuccino drink');
+ * as.slugify('Italian cappuccino drink');
  * // => 'italian-cappuccino-drink'
  *
- * v.slugify('caffé latté');
+ * as.slugify('caffé latté');
  * // => 'caffe-latte'
  *
- * v.slugify('хорошая погода');
+ * as.slugify('хорошая погода');
  * // => 'horoshaya-pogoda'
  */
 export default function slugify(subject) {

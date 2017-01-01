@@ -16,10 +16,10 @@ import toString from 'helper/string/to_string';
  * @param {number} [position=0] The position to start searching.
  * @return {boolean} Returns `true` if `subject` includes `search` or `false` otherwise.
  * @example
- * v.includes('starship', 'star');
+ * as.includes('starship', 'star');
  * // => true
  *
- * v.includes('galaxy', 'g', 1);
+ * as.includes('galaxy', 'g', 1);
  * // => false
  */
 export default function includes(subject, search, position) {

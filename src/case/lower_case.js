@@ -10,10 +10,10 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @param  {string} [subject=''] The string to convert to lower case.
  * @return {string}              Returns the lower case string.
  * @example
- * v.lowerCase('Green');
+ * as.lowerCase('Green');
  * // => 'green'
  *
- * v.lowerCase('BLUE');
+ * as.lowerCase('BLUE');
  * // => 'blue'
  */
 export default function lowerCase(subject) {

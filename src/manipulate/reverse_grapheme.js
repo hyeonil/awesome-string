@@ -13,10 +13,10 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @param {string} [subject=''] The string to reverse.
  * @return {string} Returns the reversed string.
  * @example
- * v.reverseGrapheme('summer');
+ * as.reverseGrapheme('summer');
  * // => 'remmus'
  *
- * v.reverseGrapheme('𝌆 bar mañana mañana');
+ * as.reverseGrapheme('𝌆 bar mañana mañana');
  * // => 'anañam anañam rab 𝌆'
  */
 export default function reverseGrapheme(subject) {

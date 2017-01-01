@@ -13,13 +13,13 @@ import toString from 'helper/string/to_string';
  * @param {string} [flags=''] The regular expression flags. Applies when `pattern` is string type.
  * @return {boolean} Returns `true` if `subject` matches `pattern` or `false` otherwise.
  * @example
- * v.matches('pluto', /plu.{2}/);
+ * as.matches('pluto', /plu.{2}/);
  * // => true
  *
- * v.matches('sun', 'S', 'i');
+ * as.matches('sun', 'S', 'i');
  * // => true
  *
- * v.matches('apollo 11', '\\d{3}');
+ * as.matches('apollo 11', '\\d{3}');
  * // => false
  */
 export default function matches(subject, pattern, flags) {

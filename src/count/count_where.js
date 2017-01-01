@@ -14,10 +14,10 @@ const reduce = Array.prototype.reduce;
  * @param  {Object}   [context]    The context to invoke the `predicate`.
  * @return {number}                Returns the number of characters for which `predicate` returns truthy.
  * @example
- * v.countWhere('hola!', v.isAlpha);
+ * as.countWhere('hola!', as.isAlpha);
  * // => 4
  *
- * v.countWhere('2022', function(character, index, str) {
+ * as.countWhere('2022', function(character, index, str) {
  *   return character === '2';
  * });
  * // => 3

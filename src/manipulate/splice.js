@@ -16,13 +16,13 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @param {string} [toAdd=''] The string to be added instead of deleted characters.
  * @return {string} Returns the modified string.
  * @example
- * v.splice('new year', 0, 4);
+ * as.splice('new year', 0, 4);
  * // => 'year'
  *
- * v.splice('new year', 0, 3, 'happy');
+ * as.splice('new year', 0, 3, 'happy');
  * // => 'happy year'
  *
- * v.splice('new year', -4, 4, 'day');
+ * as.splice('new year', -4, 4, 'day');
  * // => 'new day'
  */
 export default function splice(subject, start, deleteCount, toAdd) {

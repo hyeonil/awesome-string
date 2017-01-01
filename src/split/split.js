@@ -12,10 +12,10 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @param {number} [limit] Limit the number of chunks to be found.
  * @return {Array} Returns the array of chunks.
  * @example
- * v.split('rage against the dying of the light', ' ');
+ * as.split('rage against the dying of the light', ' ');
  * // => ['rage', 'against', 'the', 'dying', 'of', 'the', 'light']
  *
- * v.split('the dying of the light', /\s/, 3);
+ * as.split('the dying of the light', /\s/, 3);
  * // => ['the', 'dying', 'of']
  */
 export default function split(subject, separator, limit) {

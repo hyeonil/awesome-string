@@ -10,7 +10,7 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @param {string} [subject=''] The string to split into characters.
  * @return {Array} Returns the array of characters.
  * @example
- * v.chars('cloud');
+ * as.chars('cloud');
  * // => ['c', 'l', 'o', 'u', 'd']
  */
 export default function chars(subject) {

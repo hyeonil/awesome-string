@@ -15,13 +15,13 @@ import toInteger from 'helper/number/to_integer';
  * @param  {int}    [length=1]   The number of characters to extract.
  * @return {string}              Returns the first characters string.
  * @example
- * v.first('helicopter');
+ * as.first('helicopter');
  * // => 'h'
  *
- * v.first('vehicle', 2);
+ * as.first('vehicle', 2);
  * // => 've'
  *
- * v.first('car', 5);
+ * as.first('car', 5);
  * // => 'car'
  */
 export default function first(subject, length) {

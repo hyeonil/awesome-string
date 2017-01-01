@@ -15,9 +15,9 @@ import escapeRegExp from 'escape/escape_reg_exp';
  * @param {string|Function} replacement The string or function which invocation result replaces `pattern` match.
  * @return {string} Returns the replacement result.
  * @example
- * v.replaceAll('good morning', 'o', '*');
+ * as.replaceAll('good morning', 'o', '*');
  * // => 'g**d m*rning'
- * v.replaceAll('evening', /n/, 's');
+ * as.replaceAll('evening', /n/, 's');
  * // => 'evesisg'
  *
  */

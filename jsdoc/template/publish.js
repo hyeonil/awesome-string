@@ -16,7 +16,7 @@ var resolveAuthorLinks = helper.resolveAuthorLinks;
 var scopeToPunc = helper.scopeToPunc;
 var hasOwnProp = Object.prototype.hasOwnProperty;
 
-var v = require('../../dist/voca');
+var as = require('../../dist/awesome-string');
 
 var data;
 var view;
@@ -314,9 +314,9 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
         if (method.memberof) {
           method.orig_name = method.name;
           var methodName = method.name.replace('__proto__', 'prototype.');
-          method.name = methodName === 'v' ? 'v' : 'v.' + methodName;  /*method.memberof*/
+          method.name = methodName === 'as' ? 'as' : 'as.' + methodName;  /*method.memberof*/
           if (method.memberof === 'Chain' && method.orig_name !== 'chain') {
-            var isV = method.orig_name === 'v';
+            var isV = method.orig_name === 'as';
             method.github_source = getRepositoryUrl('src', isV ? '' : 'chain', isV ? 'index': 'wrapper');
             method.github_test = getRepositoryUrl('test', 'chain', 'chain');
           } else {
@@ -369,8 +369,8 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
 }
 
 function getRepositoryUrl(baseDirectory, memberof, name) {
-  var template = 'https://github.com/panzerdp/voca/tree/master/%s/%s/%s.js';
-  return v.sprintf(template, baseDirectory, v.snakeCase(memberof), v.snakeCase(name));
+  var template = 'https://github.com/hyeonil/awesome-string/tree/master/%s/%s/%s.js';
+  return as.sprintf(template, baseDirectory, as.snakeCase(memberof), as.snakeCase(name));
 }
 
 function linktoTutorial(longName, name) {
@@ -651,7 +651,7 @@ exports.publish = function (taffyData, opts, tutorials) {
     return el;
   });
 
-  generate('Namespace', 'Voca', listOfNamespaces, 'index.html');//helper.longnameToUrl[longname]);
+  generate('Namespace', 'AwesomeString', listOfNamespaces, 'index.html');//helper.longnameToUrl[longname]);
   return;
 
   Object.keys(helper.longnameToUrl).forEach(function (longname) {

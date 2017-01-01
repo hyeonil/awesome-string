@@ -2,7 +2,7 @@ import ChainWrapper from 'chain/wrapper';
 
 /**
  * Creates a chain object that wraps `subject`, enabling <i>explicit</i> chain sequences. <br/>
- * Use `v.prototype.value()` to unwrap the result.
+ * Use `as.prototype.value()` to unwrap the result.
  *
  * @memberOf Chain
  * @since 1.0.0

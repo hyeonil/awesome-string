@@ -2,10 +2,10 @@ const packageInfo = require('../package.json');
 
 export default
 `/*! 
- * Voca string library ${packageInfo.version}
- * https://vocajs.com
+ * Awesome String string library ${packageInfo.version}
+ * It forked from Voca Library.
  *
- * Copyright Dmitri Pavlutin and other contributors
+ * Copyright Hyeonil Jeong and other contributors
  * Released under the MIT license
  */
 `;

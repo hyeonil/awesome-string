@@ -8,10 +8,10 @@
  * @param {string} subject The value to verify.
  * @return {boolean} Returns `true` if `subject` is string primitive type or `false` otherwise.
  * @example
- * v.isString('vacation');
+ * as.isString('vacation');
  * // => true
  *
- * v.isString(560);
+ * as.isString(560);
  * // => false
  */
 export default function isString(subject) {

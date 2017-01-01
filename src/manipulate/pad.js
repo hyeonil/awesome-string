@@ -17,13 +17,13 @@ import toInteger from 'helper/number/to_integer';
  * @param {string} [pad=' '] The string to be used for padding.
  * @return {string} Returns the padded string.
  * @example
- * v.pad('dog', 5);
+ * as.pad('dog', 5);
  * // => ' dog '
  *
- * v.pad('bird', 6, '-');
+ * as.pad('bird', 6, '-');
  * // => '-bird-'
  *
- * v.pad('cat', 6, '-=');
+ * as.pad('cat', 6, '-=');
  * // => '-cat-='
  */
 export default function pad(subject, length, pad) {

@@ -13,13 +13,13 @@ import words from 'split/words';
  * @param  {string} [subject=''] The string to convert to kebab case.
  * @return {string}              Returns the kebab case string.
  * @example
- * v.kebabCase('goodbye blue sky');
+ * as.kebabCase('goodbye blue sky');
  * // => 'goodbye-blue-sky'
  *
- * v.kebabCase('GoodbyeBlueSky');
+ * as.kebabCase('GoodbyeBlueSky');
  * // => 'goodbye-blue-sky'
  *
- * v.kebabCase('-Goodbye-Blue-Sky-');
+ * as.kebabCase('-Goodbye-Blue-Sky-');
  * // => 'goodbye-blue-sky'
  */
 export default function kebabCase(subject) {

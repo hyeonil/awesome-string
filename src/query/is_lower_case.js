@@ -11,13 +11,13 @@ import isAlpha from 'query/is_alpha';
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is lower case or `false` otherwise.
  * @example
- * v.isLowerCase('motorcycle');
+ * as.isLowerCase('motorcycle');
  * // => true
  *
- * v.isLowerCase('John');
+ * as.isLowerCase('John');
  * // => false
  *
- * v.isLowerCase('T1000');
+ * as.isLowerCase('T1000');
  * // => false
  */
 export default function isLowerCase(subject) {

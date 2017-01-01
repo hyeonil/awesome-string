@@ -13,13 +13,13 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @param {string|Function} replacement The string or function which invocation result replaces `pattern` match.
  * @return {string} Returns the replacement result.
  * @example
- * v.replace('swan', 'wa', 'u');
+ * as.replace('swan', 'wa', 'u');
  * // => 'sun'
  *
- * v.replace('domestic duck', /domestic\s/, '');
+ * as.replace('domestic duck', /domestic\s/, '');
  * // => 'duck'
  *
- * v.replace('nice duck', /(nice)(duck)/, function(match, nice, duck) {
+ * as.replace('nice duck', /(nice)(duck)/, function(match, nice, duck) {
  *   return 'the ' + duck + ' is ' + nice;
  * });
  * // => 'the duck is nice'

@@ -1,28 +1,28 @@
 import { expect } from 'chai';
 import { PRINTABLE_ASCII } from '../const';
-import v from '../voca';
+import as from '../awesome-string';
 
 describe('substr', function() {
 
   it('should substract a string', function() {
-    expect(v.substr('infinite loop', 9)).to.be.equal('loop');
-    expect(v.substr('infinite loop', 0)).to.be.equal('infinite loop');
-    expect(v.substr('infinite loop')).to.be.equal('infinite loop');
-    expect(v.substr('infinite loop', 1)).to.be.equal('nfinite loop');
-    expect(v.substr('infinite loop', -4)).to.be.equal('loop');
-    expect(v.substr(PRINTABLE_ASCII, 0)).to.be.equal(PRINTABLE_ASCII);
+    expect(as.substr('infinite loop', 9)).to.be.equal('loop');
+    expect(as.substr('infinite loop', 0)).to.be.equal('infinite loop');
+    expect(as.substr('infinite loop')).to.be.equal('infinite loop');
+    expect(as.substr('infinite loop', 1)).to.be.equal('nfinite loop');
+    expect(as.substr('infinite loop', -4)).to.be.equal('loop');
+    expect(as.substr(PRINTABLE_ASCII, 0)).to.be.equal(PRINTABLE_ASCII);
   });
 
   it('should substract a string with a length', function() {
-    expect(v.substr('infinite loop', 9, 3)).to.be.equal('loo');
-    expect(v.substr('infinite loop', 0, 'infinite loop'.length)).to.be.equal('infinite loop');
-    expect(v.substr('infinite loop', 1, 1)).to.be.equal('n');
-    expect(v.substr('infinite loop', -4, 1)).to.be.equal('l');
+    expect(as.substr('infinite loop', 9, 3)).to.be.equal('loo');
+    expect(as.substr('infinite loop', 0, 'infinite loop'.length)).to.be.equal('infinite loop');
+    expect(as.substr('infinite loop', 1, 1)).to.be.equal('n');
+    expect(as.substr('infinite loop', -4, 1)).to.be.equal('l');
   });
 
   it('should substract a string representation of an object', function() {
-    expect(v.substr(['infinite loop'], 10)).to.be.equal('oop');
-    expect(v.substr({
+    expect(as.substr(['infinite loop'], 10)).to.be.equal('oop');
+    expect(as.substr({
       toString: function() {
         return 'loop';
       }
@@ -30,7 +30,7 @@ describe('substr', function() {
   });
 
   it('should substract a string from a number', function() {
-    expect(v.substr(12345, 3)).to.be.equal('45');
-    expect(v.substr(987, 1, 1)).to.be.equal('8');
+    expect(as.substr(12345, 3)).to.be.equal('45');
+    expect(as.substr(987, 1, 1)).to.be.equal('8');
   });
 });

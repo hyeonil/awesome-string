@@ -14,10 +14,10 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @return {string}                      Returns the extracted string.
  * @note Uses native `String.prototype.substring()`
  * @example
- * v.substring('beach', 1);
+ * as.substring('beach', 1);
  * // => 'each'
  *
- * v.substring('ocean', 1, 3);
+ * as.substring('ocean', 1, 3);
  * // => 'ea'
  */
 export default function substring(subject, start, end) {

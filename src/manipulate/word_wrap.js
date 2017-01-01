@@ -40,19 +40,19 @@ function determineOptions(options) {
  *
  * @return {string} Returns wrapped string.
  * @example
- * v.wordWrap('Hello world', {
+ * as.wordWrap('Hello world', {
  *   width: 5
  * });
  * // => 'Hello\nworld'
  *
- * v.wordWrap('Hello world', {
+ * as.wordWrap('Hello world', {
  *   width: 5,
  *   newLine: '<br/>',
  *   indent: '__'
  * });
  * // => '__Hello<br/>__world'
  *
- * v.wordWrap('Wonderful world', {
+ * as.wordWrap('Wonderful world', {
  *   width: 5,
  *   cut: true
  * });

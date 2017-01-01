@@ -33,7 +33,7 @@ function reduceUnescapedString(string, key) {
  * @param  {string} [subject=''] The string to unescape.
  * @return {string}              Returns the unescaped string.
  * @example
- * v.unescapeHtml('&lt;p&gt;wonderful world&lt;/p&gt;');
+ * as.unescapeHtml('&lt;p&gt;wonderful world&lt;/p&gt;');
  * // => '<p>wonderful world</p>'
  */
 export default function unescapeHtml(subject) {

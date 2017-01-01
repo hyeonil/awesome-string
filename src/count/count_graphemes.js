@@ -13,13 +13,13 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @param  {string} [subject=''] The string to count graphemes.
  * @return {number}              Returns the number of graphemes in `subject`.
  * @example
- * v.countGraphemes('cafe\u0301'); // or 'café'
+ * as.countGraphemes('cafe\u0301'); // or 'café'
  * // => 4
  *
- * v.countGraphemes('\uD835\uDC00\uD835\uDC01'); // or '𝐀𝐁'
+ * as.countGraphemes('\uD835\uDC00\uD835\uDC01'); // or '𝐀𝐁'
  * // => 2
  *
- * v.countGraphemes('rain');
+ * as.countGraphemes('rain');
  * // => 4
  */
 export default function countGrapheme(subject) {

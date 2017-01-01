@@ -6,7 +6,7 @@
  * @memberOf Util
  * @type string
  * @example
- * v.version
+ * as.version
  * // => '1.1.0'
  */
 const version = '1.1.0';

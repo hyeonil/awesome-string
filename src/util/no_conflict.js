@@ -1,24 +1,24 @@
 import getGlobalObject from 'helper/object/get_global';
 
 const globalObject = getGlobalObject();
-const previousV = globalObject.v;
+const previousAS = globalObject.as;
 
 /**
- * Restores `v` variable to previous value and returns Voca library instance.
+ * Restores `as` variable to previous value and returns Awesome String library instance.
  *
  * @function noConflict
  * @static
  * @since 1.0.0
  * @memberOf Util
- * @return {Object} Returns Voca library instance.
+ * @return {Object} Returns AwesomeString library instance.
  * @example
- * var voca = v.noConflict();
- * voca.isAlpha('Hello');
+ * var awesomeString = as.noConflict();
+ * awesomeString.isAlpha('Hello');
  * // => true
  */
 export default function noConflict() {
-  if (this === globalObject.v) {
-    globalObject.v = previousV;
+  if (this === globalObject.as) {
+    globalObject.as = previousAS;
   }
   return this;
 }

@@ -14,13 +14,13 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @return {string}                      Returns the extracted string.
  * @note Uses native `String.prototype.slice()`
  * @example
- * v.slice('miami', 1);
+ * as.slice('miami', 1);
  * // => 'iami'
  *
- * v.slice('florida', -4);
+ * as.slice('florida', -4);
  * // => 'rida'
  *
- * v.slice('florida', 1, 4);
+ * as.slice('florida', 1, 4);
  * // => "lor"
  */
 export default function slice(subject, start, end) {

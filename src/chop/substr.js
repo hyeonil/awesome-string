@@ -13,10 +13,10 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @return {string}                              Returns the extracted string.
  * @note Uses native `String.prototype.substr()`
  * @example
- * v.substr('infinite loop', 9);
+ * as.substr('infinite loop', 9);
  * // => 'loop'
  *
- * v.substr('dreams', 2, 2);
+ * as.substr('dreams', 2, 2);
  * // => 'ea'
  */
 export default function substr(subject, start, length) {

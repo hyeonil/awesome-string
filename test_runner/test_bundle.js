@@ -62,10 +62,10 @@ function coerceToBoolean(value) {
  * @param {string} subject The value to verify.
  * @return {boolean} Returns `true` if `subject` is string primitive type or `false` otherwise.
  * @example
- * v.isString('vacation');
+ * as.isString('vacation');
  * // => true
  *
- * v.isString(560);
+ * as.isString(560);
  * // => false
  */
 function isString(subject) {
@@ -108,10 +108,10 @@ function coerceToString(value) {
  * @param  {boolean} [restToLower=false] Convert the rest of `subject` to lower case.
  * @return {string}                      Returns the capitalized string.
  * @example
- * v.capitalize('apple');
+ * as.capitalize('apple');
  * // => 'Apple'
  *
- * v.capitalize('aPPle', true);
+ * as.capitalize('aPPle', true);
  * // => 'Apple'
  */
 function capitalize(subject, restToLower) {
@@ -136,10 +136,10 @@ function capitalize(subject, restToLower) {
  * @param  {string} [subject=''] The string to convert to lower case.
  * @return {string}              Returns the lower case string.
  * @example
- * v.lowerCase('Green');
+ * as.lowerCase('Green');
  * // => 'green'
  *
- * v.lowerCase('BLUE');
+ * as.lowerCase('BLUE');
  * // => 'blue'
  */
 function lowerCase(subject) {
@@ -444,16 +444,16 @@ function toString(value) {
  * @param {string} [flags=''] The regular expression flags. Applies when `pattern` is string type.
  * @return {Array} Returns the array of words.
  * @example
- * v.words('gravity can cross dimensions');
+ * as.words('gravity can cross dimensions');
  * // => ['gravity', 'can', 'cross', 'dimensions']
  *
- * v.words('GravityCanCrossDimensions');
+ * as.words('GravityCanCrossDimensions');
  * // => ['Gravity', 'Can', 'Cross', 'Dimensions']
  *
- * v.words('Gravity - can cross dimensions!');
+ * as.words('Gravity - can cross dimensions!');
  * // => ['Gravity', 'can', 'cross', 'dimensions']
  *
- * v.words('Earth gravity', /[^\s]+/g);
+ * as.words('Earth gravity', /[^\s]+/g);
  * // => ['Earth', 'gravity']
  */
 function words(subject, pattern, flags) {
@@ -492,13 +492,13 @@ function wordToCamel(word, index) {
  * @param  {string} [subject=''] The string to convert to camel case.
  * @return {string}              The camel case string.
  * @example
- * v.camelCase('bird flight');
+ * as.camelCase('bird flight');
  * // => 'birdFlight'
  *
- * v.camelCase('BirdFlight');
+ * as.camelCase('BirdFlight');
  * // => 'birdFlight'
  *
- * v.camelCase('-BIRD-FLIGHT-');
+ * as.camelCase('-BIRD-FLIGHT-');
  * // => 'birdFlight'
  */
 function camelCase(subject) {
@@ -519,10 +519,10 @@ function camelCase(subject) {
  * @param  {string} [subject=''] The string to decapitalize.
  * @return {string}              Returns the decapitalized string.
  * @example
- * v.decapitalize('Sun');
+ * as.decapitalize('Sun');
  * // => 'sun'
  *
- * v.decapitalize('moon');
+ * as.decapitalize('moon');
  * // => 'moon'
  */
 function decapitalize(subject) {
@@ -544,13 +544,13 @@ function decapitalize(subject) {
  * @param  {string} [subject=''] The string to convert to kebab case.
  * @return {string}              Returns the kebab case string.
  * @example
- * v.kebabCase('goodbye blue sky');
+ * as.kebabCase('goodbye blue sky');
  * // => 'goodbye-blue-sky'
  *
- * v.kebabCase('GoodbyeBlueSky');
+ * as.kebabCase('GoodbyeBlueSky');
  * // => 'goodbye-blue-sky'
  *
- * v.kebabCase('-Goodbye-Blue-Sky-');
+ * as.kebabCase('-Goodbye-Blue-Sky-');
  * // => 'goodbye-blue-sky'
  */
 function kebabCase(subject) {
@@ -571,13 +571,13 @@ function kebabCase(subject) {
  * @param  {string} [subject=''] The string to convert to snake case.
  * @return {string}              Returns the snake case string.
  * @example
- * v.snakeCase('learning to fly');
+ * as.snakeCase('learning to fly');
  * // => 'learning_to_fly'
  *
- * v.snakeCase('LearningToFly');
+ * as.snakeCase('LearningToFly');
  * // => 'learning_to_fly'
  *
- * v.snakeCase('-Learning-To-Fly-');
+ * as.snakeCase('-Learning-To-Fly-');
  * // => 'learning_to_fly'
  */
 function snakeCase(subject) {
@@ -598,7 +598,7 @@ function snakeCase(subject) {
  * @param  {string} [subject=''] The string to convert to upper case.
  * @return {string}              Returns the upper case string.
  * @example
- * v.upperCase('school');
+ * as.upperCase('school');
  * // => 'SCHOOL'
  */
 function upperCase(subject) {
@@ -664,13 +664,13 @@ function toInteger(value) {
  * @param  {string} [end='...']  The string to be added at the end.
  * @return {string}              Returns the truncated string.
  * @example
- * v.truncate('Once upon a time', 7);
+ * as.truncate('Once upon a time', 7);
  * // => 'Once...'
  *
- * v.truncate('Good day, Little Red Riding Hood', 14, ' (...)');
+ * as.truncate('Good day, Little Red Riding Hood', 14, ' (...)');
  * // => 'Good day (...)'
  *
- * v.truncate('Once upon', 10);
+ * as.truncate('Once upon', 10);
  * // => 'Once upon'
  */
 function truncate(subject, length, end) {
@@ -694,10 +694,10 @@ function truncate(subject, length, end) {
  * @param  {numbers} position The position to get the character.
  * @return {string} Returns the character at specified position.
  * @example
- * v.charAt('helicopter', 0);
+ * as.charAt('helicopter', 0);
  * // => 'h'
  *
- * v.charAt('helicopter', 1);
+ * as.charAt('helicopter', 1);
  * // => 'e'
  */
 function charAt(subject, position) {
@@ -796,10 +796,10 @@ function nanDefault(value, defaultValue) {
  * @param  {number} position The position to get the code point number.
  * @return {number} Returns a non-negative number less than or equal to `0x10FFFF`.
  * @example
- * v.codePointAt('rain', 1);
+ * as.codePointAt('rain', 1);
  * // => 97, or 0x0061
  *
- * v.codePointAt('\uD83D\uDE00 is smile', 0); // or '😀 is smile'
+ * as.codePointAt('\uD83D\uDE00 is smile', 0); // or '😀 is smile'
  * // => 128512, or 0x1F600
  */
 function codePointAt(subject, position) {
@@ -832,13 +832,13 @@ function codePointAt(subject, position) {
  * @param  {int}    [length=1]   The number of characters to extract.
  * @return {string}              Returns the first characters string.
  * @example
- * v.first('helicopter');
+ * as.first('helicopter');
  * // => 'h'
  *
- * v.first('vehicle', 2);
+ * as.first('vehicle', 2);
  * // => 've'
  *
- * v.first('car', 5);
+ * as.first('car', 5);
  * // => 'car'
  */
 function first(subject, length) {
@@ -863,10 +863,10 @@ function first(subject, length) {
  * @param  {number} position The position to get the grapheme.
  * @return {string} Returns the grapheme at specified position.
  * @example
- * v.graphemeAt('\uD835\uDC00\uD835\uDC01', 0); // or '𝐀𝐁'
+ * as.graphemeAt('\uD835\uDC00\uD835\uDC01', 0); // or '𝐀𝐁'
  * // => 'A'
  *
- * v.graphemeAt('cafe\u0301', 3); // or 'café'
+ * as.graphemeAt('cafe\u0301', 3); // or 'café'
  * // => 'é'
  */
 function graphemeAt(subject, position) {
@@ -896,13 +896,13 @@ function graphemeAt(subject, position) {
  * @param  {int}    [length=1]   The number of characters to extract.
  * @return {string}              Returns the last characters string.
  * @example
- * v.last('helicopter');
+ * as.last('helicopter');
  * // => 'r'
  *
- * v.last('vehicle', 2);
+ * as.last('vehicle', 2);
  * // => 'le'
  *
- * v.last('car', 5);
+ * as.last('car', 5);
  * // => 'car'
  */
 function last(subject, length) {
@@ -927,13 +927,13 @@ function last(subject, length) {
  * @param  {string} [end='...']  The string to be added at the end.
  * @return {string}              Returns the pruned string.
  * @example
- * v.prune('Once upon a time', 7);
+ * as.prune('Once upon a time', 7);
  * // => 'Once...'
  *
- * v.prune('Good day, Little Red Riding Hood', 16, ' (more)');
+ * as.prune('Good day, Little Red Riding Hood', 16, ' (more)');
  * // => 'Good day (more)'
  *
- * v.prune('Once upon', 10);
+ * as.prune('Once upon', 10);
  * // => 'Once upon'
  */
 function prune(subject, length, end) {
@@ -968,13 +968,13 @@ function prune(subject, length, end) {
  * @return {string}                      Returns the extracted string.
  * @note Uses native `String.prototype.slice()`
  * @example
- * v.slice('miami', 1);
+ * as.slice('miami', 1);
  * // => 'iami'
  *
- * v.slice('florida', -4);
+ * as.slice('florida', -4);
  * // => 'rida'
  *
- * v.slice('florida', 1, 4);
+ * as.slice('florida', 1, 4);
  * // => "lor"
  */
 function slice(subject, start, end) {
@@ -994,10 +994,10 @@ function slice(subject, start, end) {
  * @return {string}                              Returns the extracted string.
  * @note Uses native `String.prototype.substr()`
  * @example
- * v.substr('infinite loop', 9);
+ * as.substr('infinite loop', 9);
  * // => 'loop'
  *
- * v.substr('dreams', 2, 2);
+ * as.substr('dreams', 2, 2);
  * // => 'ea'
  */
 function substr(subject, start, length) {
@@ -1018,10 +1018,10 @@ function substr(subject, start, length) {
  * @return {string}                      Returns the extracted string.
  * @note Uses native `String.prototype.substring()`
  * @example
- * v.substring('beach', 1);
+ * as.substring('beach', 1);
  * // => 'each'
  *
- * v.substring('ocean', 1, 3);
+ * as.substring('ocean', 1, 3);
  * // => 'ea'
  */
 function substring(subject, start, end) {
@@ -1038,7 +1038,7 @@ function substring(subject, start, end) {
  * @param  {string} [subject=''] The string to count characters.
  * @return {number}              Returns the number of characters in `subject`.
  * @example
- * v.count('rain');
+ * as.count('rain');
  * // => 4
  */
 function count(subject) {
@@ -1057,13 +1057,13 @@ function count(subject) {
  * @param  {string} [subject=''] The string to count graphemes.
  * @return {number}              Returns the number of graphemes in `subject`.
  * @example
- * v.countGraphemes('cafe\u0301'); // or 'café'
+ * as.countGraphemes('cafe\u0301'); // or 'café'
  * // => 4
  *
- * v.countGraphemes('\uD835\uDC00\uD835\uDC01'); // or '𝐀𝐁'
+ * as.countGraphemes('\uD835\uDC00\uD835\uDC01'); // or '𝐀𝐁'
  * // => 2
  *
- * v.countGraphemes('rain');
+ * as.countGraphemes('rain');
  * // => 4
  */
 function countGrapheme(subject) {
@@ -1081,10 +1081,10 @@ function countGrapheme(subject) {
  * @param  {string} substring    The substring to be counted.
  * @return {number}              Returns the number of `substring` appearances.
  * @example
- * v.countSubstrings('bad boys, bad boys whatcha gonna do?', 'boys');
+ * as.countSubstrings('bad boys, bad boys whatcha gonna do?', 'boys');
  * // => 2
  *
- * v.countSubstrings('every dog has its day', 'cat');
+ * as.countSubstrings('every dog has its day', 'cat');
  * // => 0
  */
 function countSubstrings(subject, substring) {
@@ -1120,10 +1120,10 @@ var reduce = Array.prototype.reduce;
  * @param  {Object}   [context]    The context to invoke the `predicate`.
  * @return {number}                Returns the number of characters for which `predicate` returns truthy.
  * @example
- * v.countWhere('hola!', v.isAlpha);
+ * as.countWhere('hola!', as.isAlpha);
  * // => 4
  *
- * v.countWhere('2022', function(character, index, str) {
+ * as.countWhere('2022', function(character, index, str) {
  *   return character === '2';
  * });
  * // => 3
@@ -1151,16 +1151,16 @@ function countWhere(subject, predicate, context) {
  * @param {string} [flags=''] The regular expression flags. Applies when `pattern` is string type.
  * @return {number} Returns the number of words.
  * @example
- * v.countWords('gravity can cross dimensions');
+ * as.countWords('gravity can cross dimensions');
  * // => 4
  *
- * v.countWords('GravityCanCrossDimensions');
+ * as.countWords('GravityCanCrossDimensions');
  * // => 4
  *
- * v.countWords('Gravity - can cross dimensions!');
+ * as.countWords('Gravity - can cross dimensions!');
  * // => 4
  *
- * v.words('Earth gravity', /[^\s]+/g);
+ * as.words('Earth gravity', /[^\s]+/g);
  * // => 2
  */
 function countWords(subject, pattern, flags) {
@@ -1255,10 +1255,10 @@ var Const = Object.freeze({
  * @param {number} [times=1] The number of times to repeat.
  * @return {string} Returns the repeated string.
  * @example
- * v.repeat('w', 3);
+ * as.repeat('w', 3);
  * // => 'www'
  *
- * v.repeat('world', 0);
+ * as.repeat('world', 0);
  * // => ''
  */
 function repeat(subject, times) {
@@ -1303,13 +1303,13 @@ function buildPadding(padCharacters, length) {
  * @param {string} [pad=' '] The string to be used for padding.
  * @return {string} Returns the left padded string.
  * @example
- * v.padLeft('dog', 5);
+ * as.padLeft('dog', 5);
  * // => '  dog'
  *
- * v.padLeft('bird', 6, '-');
+ * as.padLeft('bird', 6, '-');
  * // => '--bird'
  *
- * v.padLeft('cat', 6, '-=');
+ * as.padLeft('cat', 6, '-=');
  * // => '-=-cat'
  */
 function padLeft(subject, length, pad) {
@@ -1334,13 +1334,13 @@ function padLeft(subject, length, pad) {
  * @param {string} [pad=' '] The string to be used for padding.
  * @return {string} Returns the right padded string.
  * @example
- * v.padRight('dog', 5);
+ * as.padRight('dog', 5);
  * // => 'dog  '
  *
- * v.padRight('bird', 6, '-');
+ * as.padRight('bird', 6, '-');
  * // => 'bird--'
  *
- * v.padRight('cat', 6, '-=');
+ * as.padRight('cat', 6, '-=');
  * // => 'cat-=-'
  */
 function padRight(subject, length, pad) {
@@ -1844,40 +1844,40 @@ function match(replacementIndex, replacements, conversionSpecification, percent,
  * @param  {...*}               replacements The replacements to produce the string.
  * @return {string}             Returns the produced string.
  * @example
- * v.sprintf('%s, %s!', 'Hello', 'World');
+ * as.sprintf('%s, %s!', 'Hello', 'World');
  * // => 'Hello World!'
  *
- * v.sprintf('%s costs $%d', 'coffee', 2);
+ * as.sprintf('%s costs $%d', 'coffee', 2);
  * // => 'coffee costs $2'
  *
- * v.sprintf('%1$s %2$s %1$s %2$s, watcha gonna %3$s', 'bad', 'boys', 'do')
+ * as.sprintf('%1$s %2$s %1$s %2$s, watcha gonna %3$s', 'bad', 'boys', 'do')
  * // => 'bad boys bad boys, watcha gonna do'
  *
- * v.sprintf('% 6s', 'bird');
+ * as.sprintf('% 6s', 'bird');
  * // => '  bird'
  *
- * v.sprintf('% -6s', 'crab');
+ * as.sprintf('% -6s', 'crab');
  * // => 'crab  '
  *
- * v.sprintf("%'*5s", 'cat');
+ * as.sprintf("%'*5s", 'cat');
  * // => '**cat'
  *
- * v.sprintf("%'*-6s", 'duck');
+ * as.sprintf("%'*-6s", 'duck');
  * // => 'duck**'
  *
- * v.sprintf('%d %i %+d', 15, -2, 25);
+ * as.sprintf('%d %i %+d', 15, -2, 25);
  * // => '15 -2 +25'
  *
- * v.sprintf("%06d", 15);
+ * as.sprintf("%06d", 15);
  * // => '000015'
  *
- * v.sprintf('0b%b 0o%o 0x%X', 12, 9, 155);
+ * as.sprintf('0b%b 0o%o 0x%X', 12, 9, 155);
  * // => '0b1100 0o11 0x9B'
  *
- * v.sprintf('%.2f', 10.469);
+ * as.sprintf('%.2f', 10.469);
  * // => '10.47'
  *
- * v.sprintf('%.2e %g', 100.5, 0.455);
+ * as.sprintf('%.2e %g', 100.5, 0.455);
  * // => '1.01e+2 0.455'
  * 
  */
@@ -1910,10 +1910,10 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
  * @param  {Array} replacements The array of replacements to produce the string.
  * @return {string}             Returns the produced string.
  * @example
- * v.vprintf('%s', ['Welcome'])
+ * as.vprintf('%s', ['Welcome'])
  * // => 'Welcome'
  *
- * v.vprintf('%s has %d apples', ['Alexandra', 3]);
+ * as.vprintf('%s has %d apples', ['Alexandra', 3]);
  * // => 'Alexandra has 3 apples'
  */
 function vprintf(format, replacements) {
@@ -1950,7 +1950,7 @@ function replaceSpecialCharacter(character) {
  * @param {string} [subject=''] The string to escape.
  * @return {string} Returns the escaped string.
  * @example
- * v.escapeHtml('<p>wonderful world</p>');
+ * as.escapeHtml('<p>wonderful world</p>');
  * // => '&lt;p&gt;wonderful world&lt;/p&gt;'
  */
 function escapeHtml(subject) {
@@ -1967,7 +1967,7 @@ function escapeHtml(subject) {
  * @param {string} [subject=''] The string to escape.
  * @return {string} Returns the escaped string.
  * @example
- * v.escapeRegExp('(hours)[minutes]{seconds}');
+ * as.escapeRegExp('(hours)[minutes]{seconds}');
  * // => '\(hours\)\[minutes\]\{seconds\}'
  */
 function escapeRegExp(subject) {
@@ -2007,7 +2007,7 @@ function reduceUnescapedString(string, key) {
  * @param  {string} [subject=''] The string to unescape.
  * @return {string}              Returns the unescaped string.
  * @example
- * v.unescapeHtml('&lt;p&gt;wonderful world&lt;/p&gt;');
+ * as.unescapeHtml('&lt;p&gt;wonderful world&lt;/p&gt;');
  * // => '<p>wonderful world</p>'
  */
 function unescapeHtml(subject) {
@@ -2027,10 +2027,10 @@ function unescapeHtml(subject) {
  * @param {number} [fromIndex=0] The index to start searching.
  * @return {number} Returns the first occurrence index or `-1` if not found.
  * @example
- * v.indexOf('morning', 'n');
+ * as.indexOf('morning', 'n');
  * // => 3
  *
- * v.indexOf('evening', 'o');
+ * as.indexOf('evening', 'o');
  * // => -1
  */
 function indexOf(subject, search, fromIndex) {
@@ -2050,10 +2050,10 @@ function indexOf(subject, search, fromIndex) {
  * @param {number} [fromIndex=subject.length - 1] The index to start searching backward in the string.
  * @return {number} Returns the last occurrence index or `-1` if not found.
  * @example
- * v.lastIndexOf('morning', 'n');
+ * as.lastIndexOf('morning', 'n');
  * // => 5
  *
- * v.lastIndexOf('evening', 'o');
+ * as.lastIndexOf('evening', 'o');
  * // => -1
  */
 function lastIndexOf(subject, search, fromIndex) {
@@ -2073,10 +2073,10 @@ function lastIndexOf(subject, search, fromIndex) {
  * @param {number} [fromIndex=0] The index to start searching.
  * @return {number} Returns the first match index or `-1` if not found.
  * @example
- * v.search('morning', /rn/);
+ * as.search('morning', /rn/);
  * // => 2
  *
- * v.search('evening', '/\d/');
+ * as.search('evening', '/\d/');
  * // => -1
  */
 function search(subject, pattern, fromIndex) {
@@ -2101,10 +2101,10 @@ function search(subject, pattern, fromIndex) {
  * @param {number} [position=0] The position to insert.
  * @return {string} Returns the string after insertion.
  * @example
- * v.insert('ct', 'a', 1);
+ * as.insert('ct', 'a', 1);
  * // => 'cat'
  *
- * v.insert('sunny', ' day', 5);
+ * as.insert('sunny', ' day', 5);
  * // => 'sunny day'
  */
 function insert(subject, toInsert, position) {
@@ -2293,13 +2293,13 @@ function removeCombiningMarks(character, cleanCharacter) {
  * @param {string} [subject=''] The string to latinise.
  * @return {string} Returns the latinised string.
  * @example
- * v.latinise('cafe\u0301'); // or 'café'
+ * as.latinise('cafe\u0301'); // or 'café'
  * // => 'cafe'
  *
- * v.latinise('août décembre');
+ * as.latinise('août décembre');
  * // => 'aout decembre'
  *
- * v.latinise('как прекрасен этот мир');
+ * as.latinise('как прекрасен этот мир');
  * // => 'kak prekrasen etot mir'
  */
 function latinise(subject) {
@@ -2322,13 +2322,13 @@ function latinise(subject) {
  * @param {string} [pad=' '] The string to be used for padding.
  * @return {string} Returns the padded string.
  * @example
- * v.pad('dog', 5);
+ * as.pad('dog', 5);
  * // => ' dog '
  *
- * v.pad('bird', 6, '-');
+ * as.pad('bird', 6, '-');
  * // => '-bird-'
  *
- * v.pad('cat', 6, '-=');
+ * as.pad('cat', 6, '-=');
  * // => '-cat-='
  */
 function pad(subject, length, pad) {
@@ -2357,13 +2357,13 @@ function pad(subject, length, pad) {
  * @param {string|Function} replacement The string or function which invocation result replaces `pattern` match.
  * @return {string} Returns the replacement result.
  * @example
- * v.replace('swan', 'wa', 'u');
+ * as.replace('swan', 'wa', 'u');
  * // => 'sun'
  *
- * v.replace('domestic duck', /domestic\s/, '');
+ * as.replace('domestic duck', /domestic\s/, '');
  * // => 'duck'
  *
- * v.replace('nice duck', /(nice)(duck)/, function(match, nice, duck) {
+ * as.replace('nice duck', /(nice)(duck)/, function(match, nice, duck) {
  *   return 'the ' + duck + ' is ' + nice;
  * });
  * // => 'the duck is nice'
@@ -2396,10 +2396,10 @@ function getRegExpFlags(regExp) {
  * @param {number} [position=0] The position to start searching.
  * @return {boolean} Returns `true` if `subject` includes `search` or `false` otherwise.
  * @example
- * v.includes('starship', 'star');
+ * as.includes('starship', 'star');
  * // => true
  *
- * v.includes('galaxy', 'g', 1);
+ * as.includes('galaxy', 'g', 1);
  * // => false
  */
 function includes(subject, search, position) {
@@ -2444,9 +2444,9 @@ function appendFlagToRegExp(pattern, appendFlag) {
  * @param {string|Function} replacement The string or function which invocation result replaces `pattern` match.
  * @return {string} Returns the replacement result.
  * @example
- * v.replaceAll('good morning', 'o', '*');
+ * as.replaceAll('good morning', 'o', '*');
  * // => 'g**d m*rning'
- * v.replaceAll('evening', /n/, 's');
+ * as.replaceAll('evening', /n/, 's');
  * // => 'evesisg'
  *
  */
@@ -2471,7 +2471,7 @@ function replaceAll(subject, pattern, replacement) {
  * @param {string} [subject=''] The string to reverse.
  * @return {string} Returns the reversed string.
  * @example
- * v.reverse('winter');
+ * as.reverse('winter');
  * // => 'retniw'
  */
 function reverse(subject) {
@@ -2491,10 +2491,10 @@ function reverse(subject) {
  * @param {string} [subject=''] The string to reverse.
  * @return {string} Returns the reversed string.
  * @example
- * v.reverseGrapheme('summer');
+ * as.reverseGrapheme('summer');
  * // => 'remmus'
  *
- * v.reverseGrapheme('𝌆 bar mañana mañana');
+ * as.reverseGrapheme('𝌆 bar mañana mañana');
  * // => 'anañam anañam rab 𝌆'
  */
 function reverseGrapheme(subject) {
@@ -2523,13 +2523,13 @@ function reverseGrapheme(subject) {
  * @param {string} [subject=''] The string to slugify.
  * @return {string} Returns the slugified string.
  * @example
- * v.slugify('Italian cappuccino drink');
+ * as.slugify('Italian cappuccino drink');
  * // => 'italian-cappuccino-drink'
  *
- * v.slugify('caffé latté');
+ * as.slugify('caffé latté');
  * // => 'caffe-latte'
  *
- * v.slugify('хорошая погода');
+ * as.slugify('хорошая погода');
  * // => 'horoshaya-pogoda'
  */
 function slugify(subject) {
@@ -2556,13 +2556,13 @@ function slugify(subject) {
  * @param {string} [toAdd=''] The string to be added instead of deleted characters.
  * @return {string} Returns the modified string.
  * @example
- * v.splice('new year', 0, 4);
+ * as.splice('new year', 0, 4);
  * // => 'year'
  *
- * v.splice('new year', 0, 3, 'happy');
+ * as.splice('new year', 0, 3, 'happy');
  * // => 'happy year'
  *
- * v.splice('new year', -4, 4, 'day');
+ * as.splice('new year', -4, 4, 'day');
  * // => 'new day'
  */
 function splice(subject, start, deleteCount, toAdd) {
@@ -2584,6 +2584,8 @@ function splice(subject, start, deleteCount, toAdd) {
   return subjectString.slice(0, startPosition) + toAddString + subjectString.slice(startPosition + deleteCountNumber);
 }
 
+var reduce$1 = Array.prototype.reduce;
+
 /**
  * Removes whitespaces from the left side of the `subject`.
  *
@@ -2592,13 +2594,13 @@ function splice(subject, start, deleteCount, toAdd) {
  * @since 1.0.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to trim.
- * @param {string} [whitespace=whitespace] The whitespace characters to trim.
+ * @param {string} [whitespace=whitespace] The whitespace characters to trim. List all characters that you want to be stripped.
  * @return {string} Returns the trimmed string.
  * @example
- * v.trimLeft('  Starship Troopers');
+ * as.trimLeft('  Starship Troopers');
  * // => 'Starship Troopers'
  *
- * v.trimLeft('***Mobile Infantry', '*');
+ * as.trimLeft('***Mobile Infantry', '*');
  * // => 'Mobile Infantry'
  */
 function trimLeft(subject, whitespace$$1) {
@@ -2610,18 +2612,17 @@ function trimLeft(subject, whitespace$$1) {
   if (isNil(whitespaceString)) {
     return subjectString.replace(REGEXP_TRIM_LEFT, '');
   }
-  var whitespaceLength = whitespaceString.length;
   var matchWhitespace = true;
-  var totalWhitespaceLength = 0;
-  while (matchWhitespace) {
-    if (subjectString.indexOf(whitespaceString, totalWhitespaceLength) === totalWhitespaceLength) {
-      totalWhitespaceLength += whitespaceLength;
-    } else {
-      matchWhitespace = false;
+  return reduce$1.call(subjectString, function (trimmed, character) {
+    if (matchWhitespace && includes(whitespaceString, character)) {
+      return trimmed;
     }
-  }
-  return subjectString.substring(totalWhitespaceLength);
+    matchWhitespace = false;
+    return trimmed + character;
+  }, '');
 }
+
+var reduceRight = Array.prototype.reduceRight;
 
 /**
  * Removes whitespaces from the right side of the `subject`.
@@ -2631,13 +2632,13 @@ function trimLeft(subject, whitespace$$1) {
  * @since 1.0.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to trim.
- * @param {string} [whitespace=whitespace] The whitespace characters to trim.
+ * @param {string} [whitespace=whitespace] The whitespace characters to trim. List all characters that you want to be stripped.
  * @return {string} Returns the trimmed string.
  * @example
- * v.trimRight('the fire rises   ');
+ * as.trimRight('the fire rises   ');
  * // => 'the fire rises'
  *
- * v.trimRight('do you feel in charge?!!!', '!');
+ * as.trimRight('do you feel in charge?!!!', '!');
  * // => 'do you feel in charge?'
  */
 function trimRight(subject, whitespace$$1) {
@@ -2649,20 +2650,14 @@ function trimRight(subject, whitespace$$1) {
   if (isNil(whitespaceString)) {
     return subjectString.replace(REGEXP_TRIM_RIGHT, '');
   }
-  var whitespaceLength = whitespaceString.length;
-  var subjectLength = subjectString.length;
   var matchWhitespace = true;
-  var totalWhitespaceLength = 0;
-  var position = void 0;
-  while (matchWhitespace) {
-    position = subjectLength - totalWhitespaceLength - whitespaceLength;
-    if (subjectString.indexOf(whitespaceString, position) === position) {
-      totalWhitespaceLength += whitespaceLength;
-    } else {
-      matchWhitespace = false;
+  return reduceRight.call(subjectString, function (trimmed, character) {
+    if (matchWhitespace && includes(whitespaceString, character)) {
+      return trimmed;
     }
-  }
-  return subjectString.substring(0, subjectLength - totalWhitespaceLength);
+    matchWhitespace = false;
+    return character + trimmed;
+  }, '');
 }
 
 /**
@@ -2673,13 +2668,13 @@ function trimRight(subject, whitespace$$1) {
  * @since 1.0.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to trim.
- * @param {string} [whitespace=whitespace] The whitespace characters to trim.
+ * @param {string} [whitespace=whitespace] The whitespace characters to trim. List all characters that you want to be stripped.
  * @return {string} Returns the trimmed string.
  * @example
- * v.trim(' Mother nature ');
+ * as.trim(' Mother nature ');
  * // => 'Mother nature'
  *
- * v.trim('--Earth--', '-');
+ * as.trim('--Earth--', '-');
  * // => 'Earth'
  */
 function trim(subject, whitespace) {
@@ -2732,19 +2727,19 @@ function determineOptions(options) {
  *
  * @return {string} Returns wrapped string.
  * @example
- * v.wordWrap('Hello world', {
+ * as.wordWrap('Hello world', {
  *   width: 5
  * });
  * // => 'Hello\nworld'
  *
- * v.wordWrap('Hello world', {
+ * as.wordWrap('Hello world', {
  *   width: 5,
  *   newLine: '<br/>',
  *   indent: '__'
  * });
  * // => '__Hello<br/>__world'
  *
- * v.wordWrap('Wonderful world', {
+ * as.wordWrap('Wonderful world', {
  *   width: 5,
  *   cut: true
  * });
@@ -2812,13 +2807,13 @@ function wordWrap(subject) {
  * @param {number} [position=subject.length] Search within `subject` as if the string were only `position` long.
  * @return {boolean} Returns `true` if `subject` ends with `end` or `false` otherwise.
  * @example
- * v.endsWith('red alert', 'alert');
+ * as.endsWith('red alert', 'alert');
  * // => true
  *
- * v.endsWith('metro south', 'metro');
+ * as.endsWith('metro south', 'metro');
  * // => false
  *
- * v.endsWith('Murphy', 'ph', 5);
+ * as.endsWith('Murphy', 'ph', 5);
  * // => true
  */
 function endsWith(subject, end, position) {
@@ -2846,13 +2841,13 @@ function endsWith(subject, end, position) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` contains only alpha characters or `false` otherwise.
  * @example
- * v.isAlpha('bart');
+ * as.isAlpha('bart');
  * // => true
  *
- * v.isAlpha('lisa!');
+ * as.isAlpha('lisa!');
  * // => false
  *
- * v.isAlpha('lisa and bart');
+ * as.isAlpha('lisa and bart');
  * // => false
  */
 function isAlpha(subject) {
@@ -2870,13 +2865,13 @@ function isAlpha(subject) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` contains only alpha and digit characters or `false` otherwise.
  * @example
- * v.isAlphaDigit('year2020');
+ * as.isAlphaDigit('year2020');
  * // => true
  *
- * v.isAlphaDigit('1448');
+ * as.isAlphaDigit('1448');
  * // => true
  *
- * v.isAlphaDigit('40-20');
+ * as.isAlphaDigit('40-20');
  * // => false
  */
 function isAlphaDigit(subject) {
@@ -2894,13 +2889,13 @@ function isAlphaDigit(subject) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is empty or contains only whitespaces or `false` otherwise.
  * @example
- * v.isBlank('');
+ * as.isBlank('');
  * // => true
  *
- * v.isBlank('  ');
+ * as.isBlank('  ');
  * // => true
  *
- * v.isBlank('World');
+ * as.isBlank('World');
  * // => false
  */
 function isBlank(subject) {
@@ -2918,13 +2913,13 @@ function isBlank(subject) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` contains only digit characters or `false` otherwise.
  * @example
- * v.isDigit('35');
+ * as.isDigit('35');
  * // => true
  *
- * v.isDigit('1.5');
+ * as.isDigit('1.5');
  * // => false
  *
- * v.isDigit('ten');
+ * as.isDigit('ten');
  * // => false
  */
 function isDigit(subject) {
@@ -2942,13 +2937,13 @@ function isDigit(subject) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is empty or `false` otherwise
  * @example
- * v.isEmpty('');
+ * as.isEmpty('');
  * // => true
  *
- * v.isEmpty('  ');
+ * as.isEmpty('  ');
  * // => false
  *
- * v.isEmpty('sun');
+ * as.isEmpty('sun');
  * // => false
  */
 function isEmpty(subject) {
@@ -2966,13 +2961,13 @@ function isEmpty(subject) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is lower case or `false` otherwise.
  * @example
- * v.isLowerCase('motorcycle');
+ * as.isLowerCase('motorcycle');
  * // => true
  *
- * v.isLowerCase('John');
+ * as.isLowerCase('John');
  * // => false
  *
- * v.isLowerCase('T1000');
+ * as.isLowerCase('T1000');
  * // => false
  */
 function isLowerCase(subject) {
@@ -2990,16 +2985,16 @@ function isLowerCase(subject) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is numeric or `false` otherwise.
  * @example
- * v.isNumeric('350');
+ * as.isNumeric('350');
  * // => true
  *
- * v.isNumeric('-20.5');
+ * as.isNumeric('-20.5');
  * // => true
  *
- * v.isNumeric('1.5E+2');
+ * as.isNumeric('1.5E+2');
  * // => true
  *
- * v.isNumeric('five');
+ * as.isNumeric('five');
  * // => false
  */
 function isNumeric(subject) {
@@ -3017,10 +3012,10 @@ function isNumeric(subject) {
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is upper case or `false` otherwise.
  * @example
- * v.isUpperCase('ACDC');
+ * as.isUpperCase('ACDC');
  * // => true
  *
- * v.isUpperCase('Morning');
+ * as.isUpperCase('Morning');
  * // => false
  */
 function isUpperCase(subject) {
@@ -3040,13 +3035,13 @@ function isUpperCase(subject) {
  * @param {string} [flags=''] The regular expression flags. Applies when `pattern` is string type.
  * @return {boolean} Returns `true` if `subject` matches `pattern` or `false` otherwise.
  * @example
- * v.matches('pluto', /plu.{2}/);
+ * as.matches('pluto', /plu.{2}/);
  * // => true
  *
- * v.matches('sun', 'S', 'i');
+ * as.matches('sun', 'S', 'i');
  * // => true
  *
- * v.matches('apollo 11', '\\d{3}');
+ * as.matches('apollo 11', '\\d{3}');
  * // => false
  */
 function matches(subject, pattern, flags) {
@@ -3075,13 +3070,13 @@ function matches(subject, pattern, flags) {
  * @param {number} [position=0] The position to start searching.
  * @return {boolean} Returns `true` if `subject` starts with `start` or `false` otherwise.
  * @example
- * v.startsWith('say hello to my little friend', 'say hello');
+ * as.startsWith('say hello to my little friend', 'say hello');
  * // => true
  *
- * v.startsWith('tony', 'on', 1);
+ * as.startsWith('tony', 'on', 1);
  * // => true
  *
- * v.startsWith('the world is yours', 'world');
+ * as.startsWith('the world is yours', 'world');
  * // => false
  */
 function startsWith(subject, start, position) {
@@ -3107,7 +3102,7 @@ function startsWith(subject, start, position) {
  * @param {string} [subject=''] The string to split into characters.
  * @return {Array} Returns the array of characters.
  * @example
- * v.chars('cloud');
+ * as.chars('cloud');
  * // => ['c', 'l', 'o', 'u', 'd']
  */
 function chars(subject) {
@@ -3125,11 +3120,11 @@ function chars(subject) {
  * @param  {string} [subject=''] The string to extract from.
  * @return {Array} Returns an array of non-negative numbers less than or equal to `0x10FFFF`.
  * @example
- * v.codePoints('rain');
+ * as.codePoints('rain');
  * // => [114, 97, 105, 110], or
  * //    [0x72, 0x61, 0x69, 0x6E]
  *
- * v.codePoints('\uD83D\uDE00 smile'); // or '😀 smile'
+ * as.codePoints('\uD83D\uDE00 smile'); // or '😀 smile'
  * // => [128512, 32, 115, 109, 105, 108, 101], or
  * //    [0x1F600, 0x20, 0x73, 0x6D, 0x69, 0x6C, 0x65]
  */
@@ -3159,11 +3154,11 @@ function codePoints(subject) {
  * @param {string} [subject=''] The string to split into characters.
  * @return {Array} Returns the array of graphemes.
  * @example
- * v.graphemes('\uD835\uDC00\uD835\uDC01'); // or '𝐀𝐁'
+ * as.graphemes('\uD835\uDC00\uD835\uDC01'); // or '𝐀𝐁'
  * // => ['\uD835\uDC00', '\uD835\uDC01'], or
  * //    ['𝐀', '𝐁']
  *
- * v.graphemes('cafe\u0301'); // or 'café'
+ * as.graphemes('cafe\u0301'); // or 'café'
  * // => ['c', 'a', 'f', 'e\u0301'], or
  * //    ['c', 'a', 'f', 'é']
  */
@@ -3184,10 +3179,10 @@ function graphemes(subject) {
  * @param {number} [limit] Limit the number of chunks to be found.
  * @return {Array} Returns the array of chunks.
  * @example
- * v.split('rage against the dying of the light', ' ');
+ * as.split('rage against the dying of the light', ' ');
  * // => ['rage', 'against', 'the', 'dying', 'of', 'the', 'light']
  *
- * v.split('the dying of the light', /\s/, 3);
+ * as.split('the dying of the light', /\s/, 3);
  * // => ['the', 'dying', 'of']
  */
 function split(subject, separator, limit) {
@@ -3292,13 +3287,13 @@ var STATE_COMMENT = 3;
  * @return {string} Returns the stripped string.
  * @example
  *
- * v.stripTags('<span><a href="#">Summer</a> is nice</span>');
+ * as.stripTags('<span><a href="#">Summer</a> is nice</span>');
  * // => 'Summer is nice'
  *
- * v.stripTags('<span><i>Winter</i> is <b>cold</b></span>', ['b', 'i']);
+ * as.stripTags('<span><i>Winter</i> is <b>cold</b></span>', ['b', 'i']);
  * // => '<i>Winter</i> is <b>cold</b>'
  *
- * v.stripTags('Sun<br/>set', '', '-');
+ * as.stripTags('Sun<br/>set', '', '-');
  * // => 'Sun-set'
  */
 function trim$1(subject, allowableTags, replacement) {
@@ -3424,7 +3419,6 @@ function trim$1(subject, allowableTags, replacement) {
       }
     }
   }
-
   return output;
 }
 
@@ -3450,24 +3444,24 @@ function getGlobalObject() {
 }
 
 var globalObject = getGlobalObject();
-var previousV = globalObject.v;
+var previousAS = globalObject.as;
 
 /**
- * Restores `v` variable to previous value and returns Voca library instance.
+ * Restores `as` variable to previous value and returns Awesome String library instance.
  *
  * @function noConflict
  * @static
  * @since 1.0.0
  * @memberOf Util
- * @return {Object} Returns Voca library instance.
+ * @return {Object} Returns AwesomeString library instance.
  * @example
- * var voca = v.noConflict();
- * voca.isAlpha('Hello');
+ * var awesomeString = as.noConflict();
+ * awesomeString.isAlpha('Hello');
  * // => true
  */
 function noConflict() {
-  if (this === globalObject.v) {
-    globalObject.v = previousV;
+  if (this === globalObject.as) {
+    globalObject.as = previousAS;
   }
   return this;
 }
@@ -3480,7 +3474,7 @@ function noConflict() {
  * @memberOf Util
  * @type string
  * @example
- * v.version
+ * as.version
  * // => '1.1.0'
  */
 var version = '1.1.0';
@@ -3688,7 +3682,7 @@ ChainWrapper.prototype.toString = function () {
 
 /**
  * Creates a new chain object that enables <i>explicit</i> chain sequences.
- * Use `v.prototype.value()` to unwrap the result. <br/>
+ * Use `as.prototype.value()` to unwrap the result. <br/>
  * Does not modify the wrapped value.
  *
  * @memberof Chain
@@ -3777,7 +3771,7 @@ Object.keys(functions).forEach(function (name) {
 
 /**
  * Creates a chain object that wraps `subject`, enabling <i>explicit</i> chain sequences. <br/>
- * Use `v.prototype.value()` to unwrap the result.
+ * Use `as.prototype.value()` to unwrap the result.
  *
  * @memberOf Chain
  * @since 1.0.0
@@ -3805,11 +3799,11 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
  *
  * @memberOf Chain
  * @since 1.0.0
- * @function v
+ * @function as
  * @param {string} subject The string to wrap.
  * @return {Object}  Returns the new wrapper object.
  * @example
- * v('Back to School')
+ * as('Back to School')
  *  .lowerCase()
  *  .words()
  * // => ['back', 'to', 'school']
@@ -3820,53 +3814,53 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
  *  .value()
  * // => 'Back...'
  */
-function Voca(subject) {
+function AwesomeString(subject) {
   return new ChainWrapper(subject, false);
 }
 
-_extends(Voca, functions, {
+_extends(AwesomeString, functions, {
   chain: chain
 });
 
 describe('camelCase', function () {
 
   it('should return the camel case of a string', function () {
-    chai.expect(Voca.camelCase('bird')).to.be.equal('bird');
-    chai.expect(Voca.camelCase('BIRD')).to.be.equal('bird');
-    chai.expect(Voca.camelCase('BirdFlight')).to.be.equal('birdFlight');
-    chai.expect(Voca.camelCase('bird flight')).to.be.equal('birdFlight');
-    chai.expect(Voca.camelCase('San Diego Zoo Safari Park')).to.be.equal('sanDiegoZooSafariPark');
-    chai.expect(Voca.camelCase('-BIRD-FLIGHT-')).to.be.equal('birdFlight');
-    chai.expect(Voca.camelCase('__BIRD___FLIGHT___')).to.be.equal('birdFlight');
-    chai.expect(Voca.camelCase('Restless flycatcher')).to.be.equal('restlessFlycatcher');
-    chai.expect(Voca.camelCase('XMLHttpRequest')).to.be.equal('xmlHttpRequest');
-    chai.expect(Voca.camelCase('weight of up to 12 kg')).to.be.equal('weightOfUpTo12Kg');
-    chai.expect(Voca.camelCase('/home/dmitri/projects/voca')).to.be.equal('homeDmitriProjectsVoca');
-    chai.expect(Voca.camelCase(PRINTABLE_ASCII)).to.be.equal('0123456789AbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuvwxyz');
-    chai.expect(Voca.camelCase('****')).to.be.equal('');
-    chai.expect(Voca.camelCase('****')).to.be.equal('');
-    chai.expect(Voca.camelCase('-----')).to.be.equal('');
-    chai.expect(Voca.camelCase('     ')).to.be.equal('');
-    chai.expect(Voca.camelCase('\n\n\n\n   ***\t\t')).to.be.equal('');
-    chai.expect(Voca.camelCase('')).to.be.equal('');
+    chai.expect(AwesomeString.camelCase('bird')).to.be.equal('bird');
+    chai.expect(AwesomeString.camelCase('BIRD')).to.be.equal('bird');
+    chai.expect(AwesomeString.camelCase('BirdFlight')).to.be.equal('birdFlight');
+    chai.expect(AwesomeString.camelCase('bird flight')).to.be.equal('birdFlight');
+    chai.expect(AwesomeString.camelCase('San Diego Zoo Safari Park')).to.be.equal('sanDiegoZooSafariPark');
+    chai.expect(AwesomeString.camelCase('-BIRD-FLIGHT-')).to.be.equal('birdFlight');
+    chai.expect(AwesomeString.camelCase('__BIRD___FLIGHT___')).to.be.equal('birdFlight');
+    chai.expect(AwesomeString.camelCase('Restless flycatcher')).to.be.equal('restlessFlycatcher');
+    chai.expect(AwesomeString.camelCase('XMLHttpRequest')).to.be.equal('xmlHttpRequest');
+    chai.expect(AwesomeString.camelCase('weight of up to 12 kg')).to.be.equal('weightOfUpTo12Kg');
+    chai.expect(AwesomeString.camelCase('/home/dmitri/projects/voca')).to.be.equal('homeDmitriProjectsVoca');
+    chai.expect(AwesomeString.camelCase(PRINTABLE_ASCII)).to.be.equal('0123456789AbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuvwxyz');
+    chai.expect(AwesomeString.camelCase('****')).to.be.equal('');
+    chai.expect(AwesomeString.camelCase('****')).to.be.equal('');
+    chai.expect(AwesomeString.camelCase('-----')).to.be.equal('');
+    chai.expect(AwesomeString.camelCase('     ')).to.be.equal('');
+    chai.expect(AwesomeString.camelCase('\n\n\n\n   ***\t\t')).to.be.equal('');
+    chai.expect(AwesomeString.camelCase('')).to.be.equal('');
   });
 
   it('should return the camel case of a non-latin string', function () {
-    chai.expect(Voca.camelCase('zborul păsării')).to.be.equal('zborulPăsării');
-    chai.expect(Voca.camelCase('полет птицы')).to.be.equal('полетПтицы');
-    chai.expect(Voca.camelCase('fuerza de sustentación')).to.be.equal('fuerzaDeSustentación');
-    chai.expect(Voca.camelCase('skrzydło ptaka składa się')).to.be.equal('skrzydłoPtakaSkładaSię');
+    chai.expect(AwesomeString.camelCase('zborul păsării')).to.be.equal('zborulPăsării');
+    chai.expect(AwesomeString.camelCase('полет птицы')).to.be.equal('полетПтицы');
+    chai.expect(AwesomeString.camelCase('fuerza de sustentación')).to.be.equal('fuerzaDeSustentación');
+    chai.expect(AwesomeString.camelCase('skrzydło ptaka składa się')).to.be.equal('skrzydłoPtakaSkładaSię');
   });
 
   it('should not modify numbers', function () {
-    chai.expect(Voca.camelCase(0)).to.be.equal('0');
-    chai.expect(Voca.camelCase(1200)).to.be.equal('1200');
-    chai.expect(Voca.camelCase('8965')).to.be.equal('8965');
+    chai.expect(AwesomeString.camelCase(0)).to.be.equal('0');
+    chai.expect(AwesomeString.camelCase(1200)).to.be.equal('1200');
+    chai.expect(AwesomeString.camelCase('8965')).to.be.equal('8965');
   });
 
   it('should return the camel case of a string representation of an object', function () {
-    chai.expect(Voca.camelCase(['bird flight'])).to.be.equal('birdFlight');
-    chai.expect(Voca.camelCase({
+    chai.expect(AwesomeString.camelCase(['bird flight'])).to.be.equal('birdFlight');
+    chai.expect(AwesomeString.camelCase({
       toString: function () {
         return 'bird flight';
       }
@@ -3874,37 +3868,37 @@ describe('camelCase', function () {
   });
 
   it('should return empty string for null or undefined', function () {
-    chai.expect(Voca.camelCase()).to.be.equal('');
-    chai.expect(Voca.camelCase(undefined)).to.be.equal('');
-    chai.expect(Voca.camelCase(null)).to.be.equal('');
+    chai.expect(AwesomeString.camelCase()).to.be.equal('');
+    chai.expect(AwesomeString.camelCase(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.camelCase(null)).to.be.equal('');
   });
 });
 
 describe('capitalize', function () {
 
   it('should capitalize the first character in a string', function () {
-    chai.expect(Voca.capitalize('APPLE')).to.be.equal('APPLE');
-    chai.expect(Voca.capitalize('apple')).to.be.equal('Apple');
-    chai.expect(Voca.capitalize('macBook')).to.be.equal('MacBook');
-    chai.expect(Voca.capitalize('f')).to.be.equal('F');
-    chai.expect(Voca.capitalize('')).to.be.equal('');
-    chai.expect(Voca.capitalize('*apple')).to.be.equal('*apple');
-    chai.expect(Voca.capitalize(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.capitalize('APPLE')).to.be.equal('APPLE');
+    chai.expect(AwesomeString.capitalize('apple')).to.be.equal('Apple');
+    chai.expect(AwesomeString.capitalize('macBook')).to.be.equal('MacBook');
+    chai.expect(AwesomeString.capitalize('f')).to.be.equal('F');
+    chai.expect(AwesomeString.capitalize('')).to.be.equal('');
+    chai.expect(AwesomeString.capitalize('*apple')).to.be.equal('*apple');
+    chai.expect(AwesomeString.capitalize(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
   });
 
   it('should capitalize the first character in a string and keep the rest unmodified', function () {
-    chai.expect(Voca.capitalize('apple', true)).to.be.equal('Apple');
-    chai.expect(Voca.capitalize('APPLE', true)).to.be.equal('Apple');
-    chai.expect(Voca.capitalize('яблоко', true)).to.be.equal('Яблоко');
-    chai.expect(Voca.capitalize('f', true)).to.be.equal('F');
-    chai.expect(Voca.capitalize('', true)).to.be.equal('');
-    chai.expect(Voca.capitalize('100', true)).to.be.equal('100');
-    chai.expect(Voca.capitalize('  ', true)).to.be.equal('  ');
+    chai.expect(AwesomeString.capitalize('apple', true)).to.be.equal('Apple');
+    chai.expect(AwesomeString.capitalize('APPLE', true)).to.be.equal('Apple');
+    chai.expect(AwesomeString.capitalize('яблоко', true)).to.be.equal('Яблоко');
+    chai.expect(AwesomeString.capitalize('f', true)).to.be.equal('F');
+    chai.expect(AwesomeString.capitalize('', true)).to.be.equal('');
+    chai.expect(AwesomeString.capitalize('100', true)).to.be.equal('100');
+    chai.expect(AwesomeString.capitalize('  ', true)).to.be.equal('  ');
   });
 
   it('should capitalize the first character in a string representation of an object', function () {
-    chai.expect(Voca.capitalize(['grape'])).to.be.equal('Grape');
-    chai.expect(Voca.capitalize({
+    chai.expect(AwesomeString.capitalize(['grape'])).to.be.equal('Grape');
+    chai.expect(AwesomeString.capitalize({
       toString: function () {
         return 'oRaNgE';
       }
@@ -3912,34 +3906,34 @@ describe('capitalize', function () {
   });
 
   it('should not modify numbers', function () {
-    chai.expect(Voca.capitalize(100)).to.be.equal('100');
-    chai.expect(Voca.capitalize(812, false)).to.be.equal('812');
+    chai.expect(AwesomeString.capitalize(100)).to.be.equal('100');
+    chai.expect(AwesomeString.capitalize(812, false)).to.be.equal('812');
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.capitalize()).to.be.equal('');
-    chai.expect(Voca.capitalize(undefined)).to.be.equal('');
-    chai.expect(Voca.capitalize(null)).to.be.equal('');
-    chai.expect(Voca.capitalize(undefined, true)).to.be.equal('');
-    chai.expect(Voca.capitalize(undefined, false)).to.be.equal('');
+    chai.expect(AwesomeString.capitalize()).to.be.equal('');
+    chai.expect(AwesomeString.capitalize(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.capitalize(null)).to.be.equal('');
+    chai.expect(AwesomeString.capitalize(undefined, true)).to.be.equal('');
+    chai.expect(AwesomeString.capitalize(undefined, false)).to.be.equal('');
   });
 });
 
 describe('decapitalize', function () {
 
   it('should decapitalize the first character in a string', function () {
-    chai.expect(Voca.decapitalize('Light')).to.be.equal('light');
-    chai.expect(Voca.decapitalize('light')).to.be.equal('light');
-    chai.expect(Voca.decapitalize('Sun')).to.be.equal('sun');
-    chai.expect(Voca.decapitalize('f')).to.be.equal('f');
-    chai.expect(Voca.decapitalize('')).to.be.equal('');
-    chai.expect(Voca.decapitalize('*light')).to.be.equal('*light');
-    chai.expect(Voca.decapitalize(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.decapitalize('Light')).to.be.equal('light');
+    chai.expect(AwesomeString.decapitalize('light')).to.be.equal('light');
+    chai.expect(AwesomeString.decapitalize('Sun')).to.be.equal('sun');
+    chai.expect(AwesomeString.decapitalize('f')).to.be.equal('f');
+    chai.expect(AwesomeString.decapitalize('')).to.be.equal('');
+    chai.expect(AwesomeString.decapitalize('*light')).to.be.equal('*light');
+    chai.expect(AwesomeString.decapitalize(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
   });
 
   it('should decapitalize the first character in a string representation of an object', function () {
-    chai.expect(Voca.decapitalize(['Fruit'])).to.be.equal('fruit');
-    chai.expect(Voca.decapitalize({
+    chai.expect(AwesomeString.decapitalize(['Fruit'])).to.be.equal('fruit');
+    chai.expect(AwesomeString.decapitalize({
       toString: function () {
         return 'CaRrOt';
       }
@@ -3947,56 +3941,56 @@ describe('decapitalize', function () {
   });
 
   it('should not modify numbers', function () {
-    chai.expect(Voca.decapitalize(100)).to.be.equal('100');
-    chai.expect(Voca.decapitalize(812, false)).to.be.equal('812');
+    chai.expect(AwesomeString.decapitalize(100)).to.be.equal('100');
+    chai.expect(AwesomeString.decapitalize(812, false)).to.be.equal('812');
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.decapitalize()).to.be.equal('');
-    chai.expect(Voca.decapitalize(undefined)).to.be.equal('');
-    chai.expect(Voca.decapitalize(null)).to.be.equal('');
+    chai.expect(AwesomeString.decapitalize()).to.be.equal('');
+    chai.expect(AwesomeString.decapitalize(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.decapitalize(null)).to.be.equal('');
   });
 });
 
 describe('kebabCase', function () {
 
   it('should return the kebab case of a string', function () {
-    chai.expect(Voca.kebabCase('bird')).to.be.equal('bird');
-    chai.expect(Voca.kebabCase('BIRD')).to.be.equal('bird');
-    chai.expect(Voca.kebabCase('BirdFlight')).to.be.equal('bird-flight');
-    chai.expect(Voca.kebabCase('bird flight')).to.be.equal('bird-flight');
-    chai.expect(Voca.kebabCase('San Diego Zoo Safari Park')).to.be.equal('san-diego-zoo-safari-park');
-    chai.expect(Voca.kebabCase('-BIRD-FLIGHT-')).to.be.equal('bird-flight');
-    chai.expect(Voca.kebabCase('__BIRD___FLIGHT___')).to.be.equal('bird-flight');
-    chai.expect(Voca.kebabCase('Restless flycatcher')).to.be.equal('restless-flycatcher');
-    chai.expect(Voca.kebabCase('XMLHttpRequest')).to.be.equal('xml-http-request');
-    chai.expect(Voca.kebabCase('weight of up to 12 kg')).to.be.equal('weight-of-up-to-12-kg');
-    chai.expect(Voca.kebabCase('/home/dmitri/projects/voca')).to.be.equal('home-dmitri-projects-voca');
-    chai.expect(Voca.kebabCase(PRINTABLE_ASCII)).to.be.equal('0123456789-abcdefghijklmnopqrstuvwxyz-abcdefghijklmnopqrstuvwxyz');
-    chai.expect(Voca.kebabCase('****')).to.be.equal('');
-    chai.expect(Voca.kebabCase('****')).to.be.equal('');
-    chai.expect(Voca.kebabCase('-----')).to.be.equal('');
-    chai.expect(Voca.kebabCase('     ')).to.be.equal('');
-    chai.expect(Voca.kebabCase('\n\n\n\n   ***\t\t')).to.be.equal('');
-    chai.expect(Voca.kebabCase('')).to.be.equal('');
+    chai.expect(AwesomeString.kebabCase('bird')).to.be.equal('bird');
+    chai.expect(AwesomeString.kebabCase('BIRD')).to.be.equal('bird');
+    chai.expect(AwesomeString.kebabCase('BirdFlight')).to.be.equal('bird-flight');
+    chai.expect(AwesomeString.kebabCase('bird flight')).to.be.equal('bird-flight');
+    chai.expect(AwesomeString.kebabCase('San Diego Zoo Safari Park')).to.be.equal('san-diego-zoo-safari-park');
+    chai.expect(AwesomeString.kebabCase('-BIRD-FLIGHT-')).to.be.equal('bird-flight');
+    chai.expect(AwesomeString.kebabCase('__BIRD___FLIGHT___')).to.be.equal('bird-flight');
+    chai.expect(AwesomeString.kebabCase('Restless flycatcher')).to.be.equal('restless-flycatcher');
+    chai.expect(AwesomeString.kebabCase('XMLHttpRequest')).to.be.equal('xml-http-request');
+    chai.expect(AwesomeString.kebabCase('weight of up to 12 kg')).to.be.equal('weight-of-up-to-12-kg');
+    chai.expect(AwesomeString.kebabCase('/home/dmitri/projects/voca')).to.be.equal('home-dmitri-projects-voca');
+    chai.expect(AwesomeString.kebabCase(PRINTABLE_ASCII)).to.be.equal('0123456789-abcdefghijklmnopqrstuvwxyz-abcdefghijklmnopqrstuvwxyz');
+    chai.expect(AwesomeString.kebabCase('****')).to.be.equal('');
+    chai.expect(AwesomeString.kebabCase('****')).to.be.equal('');
+    chai.expect(AwesomeString.kebabCase('-----')).to.be.equal('');
+    chai.expect(AwesomeString.kebabCase('     ')).to.be.equal('');
+    chai.expect(AwesomeString.kebabCase('\n\n\n\n   ***\t\t')).to.be.equal('');
+    chai.expect(AwesomeString.kebabCase('')).to.be.equal('');
   });
 
   it('should return the kebab case of a non-latin string', function () {
-    chai.expect(Voca.kebabCase('zborul păsării')).to.be.equal('zborul-păsării');
-    chai.expect(Voca.kebabCase('полет птицы')).to.be.equal('полет-птицы');
-    chai.expect(Voca.kebabCase('fuerza de sustentación')).to.be.equal('fuerza-de-sustentación');
-    chai.expect(Voca.kebabCase('skrzydło ptaka składa się')).to.be.equal('skrzydło-ptaka-składa-się');
+    chai.expect(AwesomeString.kebabCase('zborul păsării')).to.be.equal('zborul-păsării');
+    chai.expect(AwesomeString.kebabCase('полет птицы')).to.be.equal('полет-птицы');
+    chai.expect(AwesomeString.kebabCase('fuerza de sustentación')).to.be.equal('fuerza-de-sustentación');
+    chai.expect(AwesomeString.kebabCase('skrzydło ptaka składa się')).to.be.equal('skrzydło-ptaka-składa-się');
   });
 
   it('should not modify numbers', function () {
-    chai.expect(Voca.kebabCase(0)).to.be.equal('0');
-    chai.expect(Voca.kebabCase(1200)).to.be.equal('1200');
-    chai.expect(Voca.kebabCase('8965')).to.be.equal('8965');
+    chai.expect(AwesomeString.kebabCase(0)).to.be.equal('0');
+    chai.expect(AwesomeString.kebabCase(1200)).to.be.equal('1200');
+    chai.expect(AwesomeString.kebabCase('8965')).to.be.equal('8965');
   });
 
   it('should return the kebab case of a string representation of an object', function () {
-    chai.expect(Voca.kebabCase(['bird flight'])).to.be.equal('bird-flight');
-    chai.expect(Voca.kebabCase({
+    chai.expect(AwesomeString.kebabCase(['bird flight'])).to.be.equal('bird-flight');
+    chai.expect(AwesomeString.kebabCase({
       toString: function () {
         return 'bird flight';
       }
@@ -4004,24 +3998,24 @@ describe('kebabCase', function () {
   });
 
   it('should return empty string for null or undefined', function () {
-    chai.expect(Voca.kebabCase()).to.be.equal('');
-    chai.expect(Voca.kebabCase(undefined)).to.be.equal('');
-    chai.expect(Voca.kebabCase(null)).to.be.equal('');
+    chai.expect(AwesomeString.kebabCase()).to.be.equal('');
+    chai.expect(AwesomeString.kebabCase(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.kebabCase(null)).to.be.equal('');
   });
 });
 
 describe('lowerCase', function () {
 
   it('should return the lower case of a string', function () {
-    chai.expect(Voca.lowerCase('Saturn')).to.be.equal('saturn');
-    chai.expect(Voca.lowerCase('EARTH')).to.be.equal('earth');
-    chai.expect(Voca.lowerCase('456')).to.be.equal('456');
-    chai.expect(Voca.lowerCase('')).to.be.equal('');
+    chai.expect(AwesomeString.lowerCase('Saturn')).to.be.equal('saturn');
+    chai.expect(AwesomeString.lowerCase('EARTH')).to.be.equal('earth');
+    chai.expect(AwesomeString.lowerCase('456')).to.be.equal('456');
+    chai.expect(AwesomeString.lowerCase('')).to.be.equal('');
   });
 
   it('should return the lower case of a string representation of an object', function () {
-    chai.expect(Voca.lowerCase(['Venus'])).to.be.equal('venus');
-    chai.expect(Voca.lowerCase({
+    chai.expect(AwesomeString.lowerCase(['Venus'])).to.be.equal('venus');
+    chai.expect(AwesomeString.lowerCase({
       toString: function () {
         return 'Venus';
       }
@@ -4029,51 +4023,51 @@ describe('lowerCase', function () {
   });
 
   it('should return empty string for null or undefined', function () {
-    chai.expect(Voca.lowerCase()).to.be.equal('');
-    chai.expect(Voca.lowerCase(undefined)).to.be.equal('');
-    chai.expect(Voca.lowerCase(null)).to.be.equal('');
+    chai.expect(AwesomeString.lowerCase()).to.be.equal('');
+    chai.expect(AwesomeString.lowerCase(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.lowerCase(null)).to.be.equal('');
   });
 });
 
 describe('snakeCase', function () {
 
   it('should return the snake case of a string', function () {
-    chai.expect(Voca.snakeCase('bird')).to.be.equal('bird');
-    chai.expect(Voca.snakeCase('BIRD')).to.be.equal('bird');
-    chai.expect(Voca.snakeCase('BirdFlight')).to.be.equal('bird_flight');
-    chai.expect(Voca.snakeCase('bird flight')).to.be.equal('bird_flight');
-    chai.expect(Voca.snakeCase('San Diego Zoo Safari Park')).to.be.equal('san_diego_zoo_safari_park');
-    chai.expect(Voca.snakeCase('-BIRD-FLIGHT-')).to.be.equal('bird_flight');
-    chai.expect(Voca.snakeCase('__BIRD___FLIGHT___')).to.be.equal('bird_flight');
-    chai.expect(Voca.snakeCase('Restless flycatcher')).to.be.equal('restless_flycatcher');
-    chai.expect(Voca.snakeCase('XMLHttpRequest')).to.be.equal('xml_http_request');
-    chai.expect(Voca.snakeCase('weight of up to 12 kg')).to.be.equal('weight_of_up_to_12_kg');
-    chai.expect(Voca.snakeCase('/home/dmitri/projects/voca')).to.be.equal('home_dmitri_projects_voca');
-    chai.expect(Voca.snakeCase(PRINTABLE_ASCII)).to.be.equal('0123456789_abcdefghijklmnopqrstuvwxyz_abcdefghijklmnopqrstuvwxyz');
-    chai.expect(Voca.snakeCase('****')).to.be.equal('');
-    chai.expect(Voca.snakeCase('****')).to.be.equal('');
-    chai.expect(Voca.snakeCase('-----')).to.be.equal('');
-    chai.expect(Voca.snakeCase('     ')).to.be.equal('');
-    chai.expect(Voca.snakeCase('\n\n\n\n   ***\t\t')).to.be.equal('');
-    chai.expect(Voca.snakeCase('')).to.be.equal('');
+    chai.expect(AwesomeString.snakeCase('bird')).to.be.equal('bird');
+    chai.expect(AwesomeString.snakeCase('BIRD')).to.be.equal('bird');
+    chai.expect(AwesomeString.snakeCase('BirdFlight')).to.be.equal('bird_flight');
+    chai.expect(AwesomeString.snakeCase('bird flight')).to.be.equal('bird_flight');
+    chai.expect(AwesomeString.snakeCase('San Diego Zoo Safari Park')).to.be.equal('san_diego_zoo_safari_park');
+    chai.expect(AwesomeString.snakeCase('-BIRD-FLIGHT-')).to.be.equal('bird_flight');
+    chai.expect(AwesomeString.snakeCase('__BIRD___FLIGHT___')).to.be.equal('bird_flight');
+    chai.expect(AwesomeString.snakeCase('Restless flycatcher')).to.be.equal('restless_flycatcher');
+    chai.expect(AwesomeString.snakeCase('XMLHttpRequest')).to.be.equal('xml_http_request');
+    chai.expect(AwesomeString.snakeCase('weight of up to 12 kg')).to.be.equal('weight_of_up_to_12_kg');
+    chai.expect(AwesomeString.snakeCase('/home/dmitri/projects/voca')).to.be.equal('home_dmitri_projects_voca');
+    chai.expect(AwesomeString.snakeCase(PRINTABLE_ASCII)).to.be.equal('0123456789_abcdefghijklmnopqrstuvwxyz_abcdefghijklmnopqrstuvwxyz');
+    chai.expect(AwesomeString.snakeCase('****')).to.be.equal('');
+    chai.expect(AwesomeString.snakeCase('****')).to.be.equal('');
+    chai.expect(AwesomeString.snakeCase('-----')).to.be.equal('');
+    chai.expect(AwesomeString.snakeCase('     ')).to.be.equal('');
+    chai.expect(AwesomeString.snakeCase('\n\n\n\n   ***\t\t')).to.be.equal('');
+    chai.expect(AwesomeString.snakeCase('')).to.be.equal('');
   });
 
   it('should return the snake case of a non-latin string', function () {
-    chai.expect(Voca.snakeCase('zborul păsării')).to.be.equal('zborul_păsării');
-    chai.expect(Voca.snakeCase('полет птицы')).to.be.equal('полет_птицы');
-    chai.expect(Voca.snakeCase('fuerza de sustentación')).to.be.equal('fuerza_de_sustentación');
-    chai.expect(Voca.snakeCase('skrzydło ptaka składa się')).to.be.equal('skrzydło_ptaka_składa_się');
+    chai.expect(AwesomeString.snakeCase('zborul păsării')).to.be.equal('zborul_păsării');
+    chai.expect(AwesomeString.snakeCase('полет птицы')).to.be.equal('полет_птицы');
+    chai.expect(AwesomeString.snakeCase('fuerza de sustentación')).to.be.equal('fuerza_de_sustentación');
+    chai.expect(AwesomeString.snakeCase('skrzydło ptaka składa się')).to.be.equal('skrzydło_ptaka_składa_się');
   });
 
   it('should not modify numbers', function () {
-    chai.expect(Voca.snakeCase(0)).to.be.equal('0');
-    chai.expect(Voca.snakeCase(1200)).to.be.equal('1200');
-    chai.expect(Voca.snakeCase('8965')).to.be.equal('8965');
+    chai.expect(AwesomeString.snakeCase(0)).to.be.equal('0');
+    chai.expect(AwesomeString.snakeCase(1200)).to.be.equal('1200');
+    chai.expect(AwesomeString.snakeCase('8965')).to.be.equal('8965');
   });
 
   it('should return the snake case of a string representation of an object', function () {
-    chai.expect(Voca.snakeCase(['bird flight'])).to.be.equal('bird_flight');
-    chai.expect(Voca.snakeCase({
+    chai.expect(AwesomeString.snakeCase(['bird flight'])).to.be.equal('bird_flight');
+    chai.expect(AwesomeString.snakeCase({
       toString: function () {
         return 'bird flight';
       }
@@ -4081,24 +4075,24 @@ describe('snakeCase', function () {
   });
 
   it('should return empty string for null or undefined', function () {
-    chai.expect(Voca.snakeCase()).to.be.equal('');
-    chai.expect(Voca.snakeCase(undefined)).to.be.equal('');
-    chai.expect(Voca.snakeCase(null)).to.be.equal('');
+    chai.expect(AwesomeString.snakeCase()).to.be.equal('');
+    chai.expect(AwesomeString.snakeCase(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.snakeCase(null)).to.be.equal('');
   });
 });
 
 describe('upperCase', function () {
 
   it('should return the upper case of a string', function () {
-    chai.expect(Voca.upperCase('Saturn')).to.be.equal('SATURN');
-    chai.expect(Voca.upperCase('Earth')).to.be.equal('EARTH');
-    chai.expect(Voca.upperCase('456')).to.be.equal('456');
-    chai.expect(Voca.upperCase('')).to.be.equal('');
+    chai.expect(AwesomeString.upperCase('Saturn')).to.be.equal('SATURN');
+    chai.expect(AwesomeString.upperCase('Earth')).to.be.equal('EARTH');
+    chai.expect(AwesomeString.upperCase('456')).to.be.equal('456');
+    chai.expect(AwesomeString.upperCase('')).to.be.equal('');
   });
 
   it('should return the upper case of a string representation of an object', function () {
-    chai.expect(Voca.upperCase(['Venus'])).to.be.equal('VENUS');
-    chai.expect(Voca.upperCase({
+    chai.expect(AwesomeString.upperCase(['Venus'])).to.be.equal('VENUS');
+    chai.expect(AwesomeString.upperCase({
       toString: function () {
         return 'Venus';
       }
@@ -4106,80 +4100,80 @@ describe('upperCase', function () {
   });
 
   it('should return empty string for null or undefined', function () {
-    chai.expect(Voca.upperCase()).to.be.equal('');
-    chai.expect(Voca.upperCase(undefined)).to.be.equal('');
-    chai.expect(Voca.upperCase(null)).to.be.equal('');
+    chai.expect(AwesomeString.upperCase()).to.be.equal('');
+    chai.expect(AwesomeString.upperCase(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.upperCase(null)).to.be.equal('');
   });
 });
 
 describe('chain', function () {
 
   it('should calculate the result using explicit chaining', function () {
-    chai.expect(Voca.chain('Hello world').value()).to.equal('Hello world');
-    chai.expect(Voca.chain('  Hello world  ').trim().value()).to.equal('Hello world');
-    chai.expect(Voca.chain('world').isAlpha().value()).to.equal(true);
-    chai.expect(Voca.chain('Hello world').lowerCase().replace('hello', 'hi').upperCase().value()).to.equal('HI WORLD');
+    chai.expect(AwesomeString.chain('Hello world').value()).to.equal('Hello world');
+    chai.expect(AwesomeString.chain('  Hello world  ').trim().value()).to.equal('Hello world');
+    chai.expect(AwesomeString.chain('world').isAlpha().value()).to.equal(true);
+    chai.expect(AwesomeString.chain('Hello world').lowerCase().replace('hello', 'hi').upperCase().value()).to.equal('HI WORLD');
   });
 
   it('should calculate the result using implicit chaining', function () {
-    chai.expect(Voca('Hello world').lowerCase().words()).to.eql(['hello', 'world']);
-    chai.expect(Voca('  Hello world  ').trimLeft().count()).to.equal(13);
-    chai.expect(Voca('7 days').replace(/\sdays/, '').isDigit()).to.equal(true);
-    chai.expect(Voca('7 days').replace(/\sdays/, '').value()).to.equal('7');
+    chai.expect(AwesomeString('Hello world').lowerCase().words()).to.eql(['hello', 'world']);
+    chai.expect(AwesomeString('  Hello world  ').trimLeft().count()).to.equal(13);
+    chai.expect(AwesomeString('7 days').replace(/\sdays/, '').isDigit()).to.equal(true);
+    chai.expect(AwesomeString('7 days').replace(/\sdays/, '').value()).to.equal('7');
   });
 
   it('should transform implicit into explicit chaining', function () {
-    chai.expect(Voca('Hello world').chain().lowerCase().words().value()).to.eql(['hello', 'world']);
-    chai.expect(Voca('15').chain().isNumeric().value()).to.equal(true);
-    chai.expect(Voca('15').chain().isNumeric().thru(function (isNumeric) {
+    chai.expect(AwesomeString('Hello world').chain().lowerCase().words().value()).to.eql(['hello', 'world']);
+    chai.expect(AwesomeString('15').chain().isNumeric().value()).to.equal(true);
+    chai.expect(AwesomeString('15').chain().isNumeric().thru(function (isNumeric) {
       return isNumeric ? 1 : 0;
     }).value()).to.be.equal(1);
   });
 
   it('should allow to pass thru the wrapped value', function () {
-    chai.expect(Voca('Hello world').chain().lowerCase().words().thru(function (words) {
+    chai.expect(AwesomeString('Hello world').chain().lowerCase().words().thru(function (words) {
       return words[0];
     }).value()).to.equal('hello');
-    chai.expect(Voca.chain('15').isNumeric().thru().value()).to.equal(true);
+    chai.expect(AwesomeString.chain('15').isNumeric().thru().value()).to.equal(true);
   });
 
   it('wrapper object should coerce to a primitive', function () {
-    chai.expect('nice' + Voca.chain(' evening ').trimRight()).to.be.equal('nice evening');
-    chai.expect(Voca('clouds').upperCase() == 'CLOUDS').to.be.true;
+    chai.expect('nice' + AwesomeString.chain(' evening ').trimRight()).to.be.equal('nice evening');
+    chai.expect(AwesomeString('clouds').upperCase() == 'CLOUDS').to.be.true;
   });
 
   it('wrapper object should coerce to a string', function () {
-    chai.expect('nice ' + Voca.chain('hello world').words()).to.be.equal('nice hello,world');
-    chai.expect(Voca('green tree').split(' ') == 'green,tree').to.be.true;
+    chai.expect('nice ' + AwesomeString.chain('hello world').words()).to.be.equal('nice hello,world');
+    chai.expect(AwesomeString('green tree').split(' ') == 'green,tree').to.be.true;
   });
 
   it('wrapper object should provide toJSON method', function () {
-    chai.expect(JSON.stringify(Voca.chain('happy coding').upperCase().split(' '))).to.be.equal('["HAPPY","CODING"]');
+    chai.expect(JSON.stringify(AwesomeString.chain('happy coding').upperCase().split(' '))).to.be.equal('["HAPPY","CODING"]');
   });
 });
 
 describe('charAt', function () {
 
   it('should return the character by index', function () {
-    chai.expect(Voca.charAt('Good day', 0)).to.be.equal('G');
-    chai.expect(Voca.charAt('Good day', 1)).to.be.equal('o');
-    chai.expect(Voca.charAt('Good day', 7)).to.be.equal('y');
-    chai.expect(Voca.charAt(PRINTABLE_ASCII, 0)).to.be.equal(' ');
-    chai.expect(Voca.charAt('', 0)).to.be.equal('');
-    chai.expect(Voca.charAt('Good day')).to.be.equal('G');
-    chai.expect(Voca.charAt('Good day', undefined)).to.be.equal('G');
-    chai.expect(Voca.charAt('Good day', null)).to.be.equal('G');
-    chai.expect(Voca.charAt('Good day', NaN)).to.be.equal('G');
+    chai.expect(AwesomeString.charAt('Good day', 0)).to.be.equal('G');
+    chai.expect(AwesomeString.charAt('Good day', 1)).to.be.equal('o');
+    chai.expect(AwesomeString.charAt('Good day', 7)).to.be.equal('y');
+    chai.expect(AwesomeString.charAt(PRINTABLE_ASCII, 0)).to.be.equal(' ');
+    chai.expect(AwesomeString.charAt('', 0)).to.be.equal('');
+    chai.expect(AwesomeString.charAt('Good day')).to.be.equal('G');
+    chai.expect(AwesomeString.charAt('Good day', undefined)).to.be.equal('G');
+    chai.expect(AwesomeString.charAt('Good day', null)).to.be.equal('G');
+    chai.expect(AwesomeString.charAt('Good day', NaN)).to.be.equal('G');
   });
 
   it('should return an empty string for out of bounds index', function () {
-    chai.expect(Voca.charAt('Good day', -1)).to.be.equal('');
-    chai.expect(Voca.charAt('Good day', 100)).to.be.equal('');
+    chai.expect(AwesomeString.charAt('Good day', -1)).to.be.equal('');
+    chai.expect(AwesomeString.charAt('Good day', 100)).to.be.equal('');
   });
 
   it('should return the character by index of a string representation of an object', function () {
-    chai.expect(Voca.charAt(['Good evening'], 5)).to.be.equal('e');
-    chai.expect(Voca.charAt({
+    chai.expect(AwesomeString.charAt(['Good evening'], 5)).to.be.equal('e');
+    chai.expect(AwesomeString.charAt({
       toString: function () {
         return 'Morning';
       }
@@ -4187,51 +4181,51 @@ describe('charAt', function () {
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.charAt()).to.be.equal('');
-    chai.expect(Voca.charAt(undefined)).to.be.equal('');
-    chai.expect(Voca.charAt(null)).to.be.equal('');
-    chai.expect(Voca.charAt(null, null)).to.be.equal('');
-    chai.expect(Voca.charAt(undefined, undefined)).to.be.equal('');
+    chai.expect(AwesomeString.charAt()).to.be.equal('');
+    chai.expect(AwesomeString.charAt(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.charAt(null)).to.be.equal('');
+    chai.expect(AwesomeString.charAt(null, null)).to.be.equal('');
+    chai.expect(AwesomeString.charAt(undefined, undefined)).to.be.equal('');
   });
 });
 
 describe('codePointAt', function () {
 
   it('should return the code pount number by position', function () {
-    chai.expect(Voca.codePointAt('Good day', 0)).to.be.equal(0x0047);
-    chai.expect(Voca.codePointAt('Good day', 1)).to.be.equal(0x006F);
-    chai.expect(Voca.codePointAt('Good day', 7)).to.be.equal(0x0079);
-    chai.expect(Voca.codePointAt(PRINTABLE_ASCII, 0)).to.be.equal(0x0020);
-    chai.expect(Voca.codePointAt('man\u0303ana', 2)).to.equal(0x006E);
-    chai.expect(Voca.codePointAt('\u00E9\u20DD', 0)).to.equal(0x00E9);
-    chai.expect(Voca.codePointAt('\uD835\uDC00\uD835\uDC01', 0)).to.equal(0x1D400);
-    chai.expect(Voca.codePointAt('\uD835\uDC00\uD835\uDC01', 1)).to.equal(0xDC00);
-    chai.expect(Voca.codePointAt('\uD835\uDC00\uD835\uDC01', 2)).to.equal(0x1D401);
-    chai.expect(Voca.codePointAt('\uD835\uDC00\uD835\uDC01', 3)).to.equal(0xDC01);
-    chai.expect(Voca.codePointAt('cafe\u0301', 3)).to.equal(0x0065);
-    chai.expect(Voca.codePointAt('cafe\u0301', 4)).to.equal(0x0301);
-    chai.expect(Voca.codePointAt('foo\u0303\u035C\u035D\u035Ebar', 2)).to.equal(0x006F);
-    chai.expect(Voca.codePointAt('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar\uD834\uDF06\u0303\u035C\u035D', 3)).to.equal(0x1D306);
-    chai.expect(Voca.codePointAt('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar\uD834\uDF06\u0303\u035C\u035D', 12)).to.equal(0x1D306);
-    chai.expect(Voca.codePointAt('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar\uD834\uDF06\u0303\u035C\u035D', 13)).to.equal(0xDF06);
-    chai.expect(Voca.codePointAt('Good day')).to.be.equal(0x0047);
-    chai.expect(Voca.codePointAt('Good day', undefined)).to.be.equal(0x0047);
-    chai.expect(Voca.codePointAt('Good day', null)).to.be.equal(0x0047);
-    chai.expect(Voca.codePointAt('Good day', NaN)).to.be.equal(0x0047);
-    chai.expect(Voca.codePointAt(String.fromCharCode(0xD835) + '0', 0)).to.be.equal(0xD835);
+    chai.expect(AwesomeString.codePointAt('Good day', 0)).to.be.equal(0x0047);
+    chai.expect(AwesomeString.codePointAt('Good day', 1)).to.be.equal(0x006F);
+    chai.expect(AwesomeString.codePointAt('Good day', 7)).to.be.equal(0x0079);
+    chai.expect(AwesomeString.codePointAt(PRINTABLE_ASCII, 0)).to.be.equal(0x0020);
+    chai.expect(AwesomeString.codePointAt('man\u0303ana', 2)).to.equal(0x006E);
+    chai.expect(AwesomeString.codePointAt('\u00E9\u20DD', 0)).to.equal(0x00E9);
+    chai.expect(AwesomeString.codePointAt('\uD835\uDC00\uD835\uDC01', 0)).to.equal(0x1D400);
+    chai.expect(AwesomeString.codePointAt('\uD835\uDC00\uD835\uDC01', 1)).to.equal(0xDC00);
+    chai.expect(AwesomeString.codePointAt('\uD835\uDC00\uD835\uDC01', 2)).to.equal(0x1D401);
+    chai.expect(AwesomeString.codePointAt('\uD835\uDC00\uD835\uDC01', 3)).to.equal(0xDC01);
+    chai.expect(AwesomeString.codePointAt('cafe\u0301', 3)).to.equal(0x0065);
+    chai.expect(AwesomeString.codePointAt('cafe\u0301', 4)).to.equal(0x0301);
+    chai.expect(AwesomeString.codePointAt('foo\u0303\u035C\u035D\u035Ebar', 2)).to.equal(0x006F);
+    chai.expect(AwesomeString.codePointAt('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar\uD834\uDF06\u0303\u035C\u035D', 3)).to.equal(0x1D306);
+    chai.expect(AwesomeString.codePointAt('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar\uD834\uDF06\u0303\u035C\u035D', 12)).to.equal(0x1D306);
+    chai.expect(AwesomeString.codePointAt('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar\uD834\uDF06\u0303\u035C\u035D', 13)).to.equal(0xDF06);
+    chai.expect(AwesomeString.codePointAt('Good day')).to.be.equal(0x0047);
+    chai.expect(AwesomeString.codePointAt('Good day', undefined)).to.be.equal(0x0047);
+    chai.expect(AwesomeString.codePointAt('Good day', null)).to.be.equal(0x0047);
+    chai.expect(AwesomeString.codePointAt('Good day', NaN)).to.be.equal(0x0047);
+    chai.expect(AwesomeString.codePointAt(String.fromCharCode(0xD835) + '0', 0)).to.be.equal(0xD835);
   });
 
   it('should return undefined for out of bounds position', function () {
-    chai.expect(Voca.codePointAt('Good day', -1)).to.be.equal(undefined);
-    chai.expect(Voca.codePointAt('Good day', 100)).to.be.equal(undefined);
-    chai.expect(Voca.codePointAt('cafe\u0301', 5)).to.be.equal(undefined);
-    chai.expect(Voca.codePointAt('\uD835\uDC00\uD835\uDC01', 4)).to.equal(undefined);
-    chai.expect(Voca.codePointAt('', 0)).to.be.equal(undefined);
+    chai.expect(AwesomeString.codePointAt('Good day', -1)).to.be.equal(undefined);
+    chai.expect(AwesomeString.codePointAt('Good day', 100)).to.be.equal(undefined);
+    chai.expect(AwesomeString.codePointAt('cafe\u0301', 5)).to.be.equal(undefined);
+    chai.expect(AwesomeString.codePointAt('\uD835\uDC00\uD835\uDC01', 4)).to.equal(undefined);
+    chai.expect(AwesomeString.codePointAt('', 0)).to.be.equal(undefined);
   });
 
   it('should return the code point number by position in a string representation of an object', function () {
-    chai.expect(Voca.codePointAt(['Good evening'], 5)).to.be.equal(0x0065);
-    chai.expect(Voca.codePointAt({
+    chai.expect(AwesomeString.codePointAt(['Good evening'], 5)).to.be.equal(0x0065);
+    chai.expect(AwesomeString.codePointAt({
       toString: function () {
         return 'Morning';
       }
@@ -4239,44 +4233,44 @@ describe('codePointAt', function () {
   });
 
   it('should return undefined for null or undefined', function () {
-    chai.expect(Voca.codePointAt()).to.be.equal(undefined);
-    chai.expect(Voca.codePointAt(undefined)).to.be.equal(undefined);
-    chai.expect(Voca.codePointAt(null)).to.be.equal(undefined);
-    chai.expect(Voca.codePointAt(null, null)).to.be.equal(undefined);
-    chai.expect(Voca.codePointAt(undefined, undefined)).to.be.equal(undefined);
+    chai.expect(AwesomeString.codePointAt()).to.be.equal(undefined);
+    chai.expect(AwesomeString.codePointAt(undefined)).to.be.equal(undefined);
+    chai.expect(AwesomeString.codePointAt(null)).to.be.equal(undefined);
+    chai.expect(AwesomeString.codePointAt(null, null)).to.be.equal(undefined);
+    chai.expect(AwesomeString.codePointAt(undefined, undefined)).to.be.equal(undefined);
   });
 });
 
 describe('graphemeAt', function () {
 
   it('should return the grapheme by index', function () {
-    chai.expect(Voca.graphemeAt('Good day', 0)).to.be.equal('G');
-    chai.expect(Voca.graphemeAt('Good day', 1)).to.be.equal('o');
-    chai.expect(Voca.graphemeAt('Good day', 7)).to.be.equal('y');
-    chai.expect(Voca.graphemeAt(PRINTABLE_ASCII, 0)).to.be.equal(' ');
-    chai.expect(Voca.graphemeAt('man\u0303ana', 2)).to.equal('n\u0303');
-    chai.expect(Voca.graphemeAt('\u00E9\u20DD', 0)).to.equal('\u00E9\u20DD');
-    chai.expect(Voca.graphemeAt('\uD835\uDC00\uD835\uDC01', 1)).to.equal('\uD835\uDC01');
-    chai.expect(Voca.graphemeAt('cafe\u0301', 3)).to.equal('e\u0301');
-    chai.expect(Voca.graphemeAt('foo\u0303\u035C\u035D\u035Ebar', 2)).to.equal('o\u0303\u035C\u035D\u035E');
-    chai.expect(Voca.graphemeAt('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar\uD834\uDF06\u0303\u035C\u035D', 3)).to.equal('\uD834\uDF06\u0303\u035C\u035D\u035E');
-    chai.expect(Voca.graphemeAt('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar\uD834\uDF06\u0303\u035C\u035D', 7)).to.equal('\uD834\uDF06\u0303\u035C\u035D');
-    chai.expect(Voca.graphemeAt('', 0)).to.be.equal('');
-    chai.expect(Voca.graphemeAt('Good day')).to.be.equal('G');
-    chai.expect(Voca.graphemeAt('Good day', undefined)).to.be.equal('G');
-    chai.expect(Voca.graphemeAt('Good day', null)).to.be.equal('G');
-    chai.expect(Voca.graphemeAt('Good day', NaN)).to.be.equal('G');
+    chai.expect(AwesomeString.graphemeAt('Good day', 0)).to.be.equal('G');
+    chai.expect(AwesomeString.graphemeAt('Good day', 1)).to.be.equal('o');
+    chai.expect(AwesomeString.graphemeAt('Good day', 7)).to.be.equal('y');
+    chai.expect(AwesomeString.graphemeAt(PRINTABLE_ASCII, 0)).to.be.equal(' ');
+    chai.expect(AwesomeString.graphemeAt('man\u0303ana', 2)).to.equal('n\u0303');
+    chai.expect(AwesomeString.graphemeAt('\u00E9\u20DD', 0)).to.equal('\u00E9\u20DD');
+    chai.expect(AwesomeString.graphemeAt('\uD835\uDC00\uD835\uDC01', 1)).to.equal('\uD835\uDC01');
+    chai.expect(AwesomeString.graphemeAt('cafe\u0301', 3)).to.equal('e\u0301');
+    chai.expect(AwesomeString.graphemeAt('foo\u0303\u035C\u035D\u035Ebar', 2)).to.equal('o\u0303\u035C\u035D\u035E');
+    chai.expect(AwesomeString.graphemeAt('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar\uD834\uDF06\u0303\u035C\u035D', 3)).to.equal('\uD834\uDF06\u0303\u035C\u035D\u035E');
+    chai.expect(AwesomeString.graphemeAt('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar\uD834\uDF06\u0303\u035C\u035D', 7)).to.equal('\uD834\uDF06\u0303\u035C\u035D');
+    chai.expect(AwesomeString.graphemeAt('', 0)).to.be.equal('');
+    chai.expect(AwesomeString.graphemeAt('Good day')).to.be.equal('G');
+    chai.expect(AwesomeString.graphemeAt('Good day', undefined)).to.be.equal('G');
+    chai.expect(AwesomeString.graphemeAt('Good day', null)).to.be.equal('G');
+    chai.expect(AwesomeString.graphemeAt('Good day', NaN)).to.be.equal('G');
   });
 
   it('should return an empty string for out of bounds index', function () {
-    chai.expect(Voca.graphemeAt('Good day', -1)).to.be.equal('');
-    chai.expect(Voca.graphemeAt('Good day', 100)).to.be.equal('');
-    chai.expect(Voca.graphemeAt('cafe\u0301', 4)).to.be.equal('');
+    chai.expect(AwesomeString.graphemeAt('Good day', -1)).to.be.equal('');
+    chai.expect(AwesomeString.graphemeAt('Good day', 100)).to.be.equal('');
+    chai.expect(AwesomeString.graphemeAt('cafe\u0301', 4)).to.be.equal('');
   });
 
   it('should return the grapheme by index of a string representation of an object', function () {
-    chai.expect(Voca.graphemeAt(['Good evening'], 5)).to.be.equal('e');
-    chai.expect(Voca.graphemeAt({
+    chai.expect(AwesomeString.graphemeAt(['Good evening'], 5)).to.be.equal('e');
+    chai.expect(AwesomeString.graphemeAt({
       toString: function () {
         return 'Morning';
       }
@@ -4284,34 +4278,34 @@ describe('graphemeAt', function () {
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.graphemeAt()).to.be.equal('');
-    chai.expect(Voca.graphemeAt(undefined)).to.be.equal('');
-    chai.expect(Voca.graphemeAt(null)).to.be.equal('');
-    chai.expect(Voca.graphemeAt(null, null)).to.be.equal('');
-    chai.expect(Voca.graphemeAt(undefined, undefined)).to.be.equal('');
+    chai.expect(AwesomeString.graphemeAt()).to.be.equal('');
+    chai.expect(AwesomeString.graphemeAt(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.graphemeAt(null)).to.be.equal('');
+    chai.expect(AwesomeString.graphemeAt(null, null)).to.be.equal('');
+    chai.expect(AwesomeString.graphemeAt(undefined, undefined)).to.be.equal('');
   });
 });
 
 describe('first', function () {
 
   it('should return the first part of a string', function () {
-    chai.expect(Voca.first('Good day', -1)).to.be.equal('');
-    chai.expect(Voca.first('Good day', 0)).to.be.equal('');
-    chai.expect(Voca.first('Good day', 4)).to.be.equal('Good');
-    chai.expect(Voca.first('Good day', 1)).to.be.equal('G');
-    chai.expect(Voca.first('Good day', 8)).to.be.equal('Good day');
-    chai.expect(Voca.first('Good day', 1000)).to.be.equal('Good day');
-    chai.expect(Voca.first('Good day')).to.be.equal('G');
-    chai.expect(Voca.first('', 5)).to.be.equal('');
-    chai.expect(Voca.first('', 0)).to.be.equal('');
-    chai.expect(Voca.first('')).to.be.equal('');
-    chai.expect(Voca.first(PRINTABLE_ASCII, PRINTABLE_ASCII.length)).to.be.equal(PRINTABLE_ASCII);
-    chai.expect(Voca.first(PRINTABLE_ASCII, 1)).to.be.equal(PRINTABLE_ASCII[0]);
+    chai.expect(AwesomeString.first('Good day', -1)).to.be.equal('');
+    chai.expect(AwesomeString.first('Good day', 0)).to.be.equal('');
+    chai.expect(AwesomeString.first('Good day', 4)).to.be.equal('Good');
+    chai.expect(AwesomeString.first('Good day', 1)).to.be.equal('G');
+    chai.expect(AwesomeString.first('Good day', 8)).to.be.equal('Good day');
+    chai.expect(AwesomeString.first('Good day', 1000)).to.be.equal('Good day');
+    chai.expect(AwesomeString.first('Good day')).to.be.equal('G');
+    chai.expect(AwesomeString.first('', 5)).to.be.equal('');
+    chai.expect(AwesomeString.first('', 0)).to.be.equal('');
+    chai.expect(AwesomeString.first('')).to.be.equal('');
+    chai.expect(AwesomeString.first(PRINTABLE_ASCII, PRINTABLE_ASCII.length)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.first(PRINTABLE_ASCII, 1)).to.be.equal(PRINTABLE_ASCII[0]);
   });
 
   it('should return the first part of a string representation of an object', function () {
-    chai.expect(Voca.first(['Good evening'], 5)).to.be.equal('Good ');
-    chai.expect(Voca.first({
+    chai.expect(AwesomeString.first(['Good evening'], 5)).to.be.equal('Good ');
+    chai.expect(AwesomeString.first({
       toString: function () {
         return 'Morning';
       }
@@ -4319,34 +4313,34 @@ describe('first', function () {
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.first()).to.be.equal('');
-    chai.expect(Voca.first(undefined)).to.be.equal('');
-    chai.expect(Voca.first(null)).to.be.equal('');
-    chai.expect(Voca.first(null, null)).to.be.equal('');
-    chai.expect(Voca.first(undefined, undefined)).to.be.equal('');
+    chai.expect(AwesomeString.first()).to.be.equal('');
+    chai.expect(AwesomeString.first(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.first(null)).to.be.equal('');
+    chai.expect(AwesomeString.first(null, null)).to.be.equal('');
+    chai.expect(AwesomeString.first(undefined, undefined)).to.be.equal('');
   });
 });
 
 describe('last', function () {
 
   it('should return the last part of a string', function () {
-    chai.expect(Voca.last('Good day', -1)).to.be.equal('');
-    chai.expect(Voca.last('Good day', 0)).to.be.equal('');
-    chai.expect(Voca.last('Good day', 4)).to.be.equal(' day');
-    chai.expect(Voca.last('Good day', 1)).to.be.equal('y');
-    chai.expect(Voca.last('Good day', 8)).to.be.equal('Good day');
-    chai.expect(Voca.last('Good day', 1000)).to.be.equal('Good day');
-    chai.expect(Voca.last('Good day')).to.be.equal('y');
-    chai.expect(Voca.last('', 5)).to.be.equal('');
-    chai.expect(Voca.last('', 0)).to.be.equal('');
-    chai.expect(Voca.last('')).to.be.equal('');
-    chai.expect(Voca.last(PRINTABLE_ASCII, PRINTABLE_ASCII.length)).to.be.equal(PRINTABLE_ASCII);
-    chai.expect(Voca.last(PRINTABLE_ASCII, 1)).to.be.equal(PRINTABLE_ASCII[PRINTABLE_ASCII.length - 1]);
+    chai.expect(AwesomeString.last('Good day', -1)).to.be.equal('');
+    chai.expect(AwesomeString.last('Good day', 0)).to.be.equal('');
+    chai.expect(AwesomeString.last('Good day', 4)).to.be.equal(' day');
+    chai.expect(AwesomeString.last('Good day', 1)).to.be.equal('y');
+    chai.expect(AwesomeString.last('Good day', 8)).to.be.equal('Good day');
+    chai.expect(AwesomeString.last('Good day', 1000)).to.be.equal('Good day');
+    chai.expect(AwesomeString.last('Good day')).to.be.equal('y');
+    chai.expect(AwesomeString.last('', 5)).to.be.equal('');
+    chai.expect(AwesomeString.last('', 0)).to.be.equal('');
+    chai.expect(AwesomeString.last('')).to.be.equal('');
+    chai.expect(AwesomeString.last(PRINTABLE_ASCII, PRINTABLE_ASCII.length)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.last(PRINTABLE_ASCII, 1)).to.be.equal(PRINTABLE_ASCII[PRINTABLE_ASCII.length - 1]);
   });
 
   it('should return the last part of a string representation of an object', function () {
-    chai.expect(Voca.last(['Good evening'], 5)).to.be.equal('ening');
-    chai.expect(Voca.last({
+    chai.expect(AwesomeString.last(['Good evening'], 5)).to.be.equal('ening');
+    chai.expect(AwesomeString.last({
       toString: function () {
         return 'Morning';
       }
@@ -4354,45 +4348,45 @@ describe('last', function () {
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.last()).to.be.equal('');
-    chai.expect(Voca.last(undefined)).to.be.equal('');
-    chai.expect(Voca.last(null)).to.be.equal('');
-    chai.expect(Voca.last(null, null)).to.be.equal('');
-    chai.expect(Voca.last(undefined, undefined)).to.be.equal('');
+    chai.expect(AwesomeString.last()).to.be.equal('');
+    chai.expect(AwesomeString.last(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.last(null)).to.be.equal('');
+    chai.expect(AwesomeString.last(null, null)).to.be.equal('');
+    chai.expect(AwesomeString.last(undefined, undefined)).to.be.equal('');
   });
 });
 
 describe('prune', function () {
 
   it('should prune a string', function () {
-    chai.expect(Voca.prune('Once upon a time there lived in a certain village a little country girl', 7)).to.be.equal('Once...');
-    chai.expect(Voca.prune('I\'ll go this way and go you that', 19, ' (read more)')).to.be.equal('I\'ll go (read more)');
-    chai.expect(Voca.prune('Little Red Riding Hood', 6, '...')).to.be.equal('...');
-    chai.expect(Voca.prune('Little Red Riding Hood', 9, '...')).to.be.equal('Little...');
-    chai.expect(Voca.prune('Little Red Riding Hood', 11, '...')).to.be.equal('Little...');
-    chai.expect(Voca.prune('Little Red Riding Hood', 20, '...')).to.be.equal('Little Red Riding...');
-    chai.expect(Voca.prune('Little Red Riding Hood', 22, '...')).to.be.equal('Little Red Riding Hood');
-    chai.expect(Voca.prune('Little Red Riding Hood', 1, '...')).to.be.equal('...');
-    chai.expect(Voca.prune('Little Red Riding Hood', 5, '...')).to.be.equal('...');
-    chai.expect(Voca.prune('Little Red Riding Hood', 0, '(more)')).to.be.equal('(more)');
-    chai.expect(Voca.prune(PRINTABLE_ASCII, PRINTABLE_ASCII.length)).to.be.equal(PRINTABLE_ASCII);
-    chai.expect(Voca.prune(PRINTABLE_ASCII, 0)).to.be.equal('...');
+    chai.expect(AwesomeString.prune('Once upon a time there lived in a certain village a little country girl', 7)).to.be.equal('Once...');
+    chai.expect(AwesomeString.prune('I\'ll go this way and go you that', 19, ' (read more)')).to.be.equal('I\'ll go (read more)');
+    chai.expect(AwesomeString.prune('Little Red Riding Hood', 6, '...')).to.be.equal('...');
+    chai.expect(AwesomeString.prune('Little Red Riding Hood', 9, '...')).to.be.equal('Little...');
+    chai.expect(AwesomeString.prune('Little Red Riding Hood', 11, '...')).to.be.equal('Little...');
+    chai.expect(AwesomeString.prune('Little Red Riding Hood', 20, '...')).to.be.equal('Little Red Riding...');
+    chai.expect(AwesomeString.prune('Little Red Riding Hood', 22, '...')).to.be.equal('Little Red Riding Hood');
+    chai.expect(AwesomeString.prune('Little Red Riding Hood', 1, '...')).to.be.equal('...');
+    chai.expect(AwesomeString.prune('Little Red Riding Hood', 5, '...')).to.be.equal('...');
+    chai.expect(AwesomeString.prune('Little Red Riding Hood', 0, '(more)')).to.be.equal('(more)');
+    chai.expect(AwesomeString.prune(PRINTABLE_ASCII, PRINTABLE_ASCII.length)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.prune(PRINTABLE_ASCII, 0)).to.be.equal('...');
   });
 
   it('should prune a string with extra ASCII characters', function () {
-    chai.expect(Voca.prune('Привет, как дела', 10, '...')).to.be.equal('Привет...');
-    chai.expect(Voca.prune('La variété la plus fréquente est la blanche', 12, '..')).to.be.equal('La variété..');
+    chai.expect(AwesomeString.prune('Привет, как дела', 10, '...')).to.be.equal('Привет...');
+    chai.expect(AwesomeString.prune('La variété la plus fréquente est la blanche', 12, '..')).to.be.equal('La variété..');
   });
 
   it('should not prune a string if length parameter is greater or equal than string length', function () {
-    chai.expect(Voca.prune('Once upon', 20)).to.be.equal('Once upon');
-    chai.expect(Voca.prune('Once', 4, ' (read more)')).to.be.equal('Once');
-    chai.expect(Voca.prune('', 0, '....')).to.be.equal('');
+    chai.expect(AwesomeString.prune('Once upon', 20)).to.be.equal('Once upon');
+    chai.expect(AwesomeString.prune('Once', 4, ' (read more)')).to.be.equal('Once');
+    chai.expect(AwesomeString.prune('', 0, '....')).to.be.equal('');
   });
 
   it('should prune a string representation of an object', function () {
-    chai.expect(Voca.prune(['Welcome'], 4)).to.be.equal('...');
-    chai.expect(Voca.prune({
+    chai.expect(AwesomeString.prune(['Welcome'], 4)).to.be.equal('...');
+    chai.expect(AwesomeString.prune({
       toString: function () {
         return 'Have a nice day';
       }
@@ -4400,33 +4394,33 @@ describe('prune', function () {
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.prune()).to.be.equal('');
-    chai.expect(Voca.prune(undefined)).to.be.equal('');
-    chai.expect(Voca.prune(null)).to.be.equal('');
+    chai.expect(AwesomeString.prune()).to.be.equal('');
+    chai.expect(AwesomeString.prune(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.prune(null)).to.be.equal('');
   });
 });
 
 describe('slice', function () {
 
   it('should slice a string', function () {
-    chai.expect(Voca.slice('infinite loop', 9)).to.be.equal('loop');
-    chai.expect(Voca.slice('infinite loop', 0)).to.be.equal('infinite loop');
-    chai.expect(Voca.slice('infinite loop')).to.be.equal('infinite loop');
-    chai.expect(Voca.slice('infinite loop', 1)).to.be.equal('nfinite loop');
-    chai.expect(Voca.slice(PRINTABLE_ASCII, 0)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.slice('infinite loop', 9)).to.be.equal('loop');
+    chai.expect(AwesomeString.slice('infinite loop', 0)).to.be.equal('infinite loop');
+    chai.expect(AwesomeString.slice('infinite loop')).to.be.equal('infinite loop');
+    chai.expect(AwesomeString.slice('infinite loop', 1)).to.be.equal('nfinite loop');
+    chai.expect(AwesomeString.slice(PRINTABLE_ASCII, 0)).to.be.equal(PRINTABLE_ASCII);
   });
 
   it('should slice a string with an end position', function () {
-    chai.expect(Voca.slice('infinite loop', 9, 12)).to.be.equal('loo');
-    chai.expect(Voca.slice('infinite loop', 9, -1)).to.be.equal('loo');
-    chai.expect(Voca.slice('infinite loop', 0, 'infinite loop'.length)).to.be.equal('infinite loop');
-    chai.expect(Voca.slice('infinite loop', 1, 2)).to.be.equal('n');
-    chai.expect(Voca.slice('infinite loop', -4, -1)).to.be.equal('loo');
+    chai.expect(AwesomeString.slice('infinite loop', 9, 12)).to.be.equal('loo');
+    chai.expect(AwesomeString.slice('infinite loop', 9, -1)).to.be.equal('loo');
+    chai.expect(AwesomeString.slice('infinite loop', 0, 'infinite loop'.length)).to.be.equal('infinite loop');
+    chai.expect(AwesomeString.slice('infinite loop', 1, 2)).to.be.equal('n');
+    chai.expect(AwesomeString.slice('infinite loop', -4, -1)).to.be.equal('loo');
   });
 
   it('should slice a string representation of an object', function () {
-    chai.expect(Voca.slice(['infinite loop'], 10)).to.be.equal('oop');
-    chai.expect(Voca.slice({
+    chai.expect(AwesomeString.slice(['infinite loop'], 10)).to.be.equal('oop');
+    chai.expect(AwesomeString.slice({
       toString: function () {
         return 'loop';
       }
@@ -4434,32 +4428,32 @@ describe('slice', function () {
   });
 
   it('should slice a string from a number', function () {
-    chai.expect(Voca.slice(12345, 3)).to.be.equal('45');
-    chai.expect(Voca.slice(987, 1, 2)).to.be.equal('8');
+    chai.expect(AwesomeString.slice(12345, 3)).to.be.equal('45');
+    chai.expect(AwesomeString.slice(987, 1, 2)).to.be.equal('8');
   });
 });
 
 describe('substr', function () {
 
   it('should substract a string', function () {
-    chai.expect(Voca.substr('infinite loop', 9)).to.be.equal('loop');
-    chai.expect(Voca.substr('infinite loop', 0)).to.be.equal('infinite loop');
-    chai.expect(Voca.substr('infinite loop')).to.be.equal('infinite loop');
-    chai.expect(Voca.substr('infinite loop', 1)).to.be.equal('nfinite loop');
-    chai.expect(Voca.substr('infinite loop', -4)).to.be.equal('loop');
-    chai.expect(Voca.substr(PRINTABLE_ASCII, 0)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.substr('infinite loop', 9)).to.be.equal('loop');
+    chai.expect(AwesomeString.substr('infinite loop', 0)).to.be.equal('infinite loop');
+    chai.expect(AwesomeString.substr('infinite loop')).to.be.equal('infinite loop');
+    chai.expect(AwesomeString.substr('infinite loop', 1)).to.be.equal('nfinite loop');
+    chai.expect(AwesomeString.substr('infinite loop', -4)).to.be.equal('loop');
+    chai.expect(AwesomeString.substr(PRINTABLE_ASCII, 0)).to.be.equal(PRINTABLE_ASCII);
   });
 
   it('should substract a string with a length', function () {
-    chai.expect(Voca.substr('infinite loop', 9, 3)).to.be.equal('loo');
-    chai.expect(Voca.substr('infinite loop', 0, 'infinite loop'.length)).to.be.equal('infinite loop');
-    chai.expect(Voca.substr('infinite loop', 1, 1)).to.be.equal('n');
-    chai.expect(Voca.substr('infinite loop', -4, 1)).to.be.equal('l');
+    chai.expect(AwesomeString.substr('infinite loop', 9, 3)).to.be.equal('loo');
+    chai.expect(AwesomeString.substr('infinite loop', 0, 'infinite loop'.length)).to.be.equal('infinite loop');
+    chai.expect(AwesomeString.substr('infinite loop', 1, 1)).to.be.equal('n');
+    chai.expect(AwesomeString.substr('infinite loop', -4, 1)).to.be.equal('l');
   });
 
   it('should substract a string representation of an object', function () {
-    chai.expect(Voca.substr(['infinite loop'], 10)).to.be.equal('oop');
-    chai.expect(Voca.substr({
+    chai.expect(AwesomeString.substr(['infinite loop'], 10)).to.be.equal('oop');
+    chai.expect(AwesomeString.substr({
       toString: function () {
         return 'loop';
       }
@@ -4467,30 +4461,30 @@ describe('substr', function () {
   });
 
   it('should substract a string from a number', function () {
-    chai.expect(Voca.substr(12345, 3)).to.be.equal('45');
-    chai.expect(Voca.substr(987, 1, 1)).to.be.equal('8');
+    chai.expect(AwesomeString.substr(12345, 3)).to.be.equal('45');
+    chai.expect(AwesomeString.substr(987, 1, 1)).to.be.equal('8');
   });
 });
 
 describe('substring', function () {
 
   it('should substring a string', function () {
-    chai.expect(Voca.substring('infinite loop', 9)).to.be.equal('loop');
-    chai.expect(Voca.substring('infinite loop', 0)).to.be.equal('infinite loop');
-    chai.expect(Voca.substring('infinite loop')).to.be.equal('infinite loop');
-    chai.expect(Voca.substring('infinite loop', 1)).to.be.equal('nfinite loop');
-    chai.expect(Voca.substring(PRINTABLE_ASCII, 0)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.substring('infinite loop', 9)).to.be.equal('loop');
+    chai.expect(AwesomeString.substring('infinite loop', 0)).to.be.equal('infinite loop');
+    chai.expect(AwesomeString.substring('infinite loop')).to.be.equal('infinite loop');
+    chai.expect(AwesomeString.substring('infinite loop', 1)).to.be.equal('nfinite loop');
+    chai.expect(AwesomeString.substring(PRINTABLE_ASCII, 0)).to.be.equal(PRINTABLE_ASCII);
   });
 
   it('should substring a string with an end position', function () {
-    chai.expect(Voca.substring('infinite loop', 9, 12)).to.be.equal('loo');
-    chai.expect(Voca.substring('infinite loop', 0, 'infinite loop'.length)).to.be.equal('infinite loop');
-    chai.expect(Voca.substring('infinite loop', 1, 2)).to.be.equal('n');
+    chai.expect(AwesomeString.substring('infinite loop', 9, 12)).to.be.equal('loo');
+    chai.expect(AwesomeString.substring('infinite loop', 0, 'infinite loop'.length)).to.be.equal('infinite loop');
+    chai.expect(AwesomeString.substring('infinite loop', 1, 2)).to.be.equal('n');
   });
 
   it('should substring a string representation of an object', function () {
-    chai.expect(Voca.substring(['infinite loop'], 10)).to.be.equal('oop');
-    chai.expect(Voca.substring({
+    chai.expect(AwesomeString.substring(['infinite loop'], 10)).to.be.equal('oop');
+    chai.expect(AwesomeString.substring({
       toString: function () {
         return 'loop';
       }
@@ -4498,38 +4492,38 @@ describe('substring', function () {
   });
 
   it('should substring a string from a number', function () {
-    chai.expect(Voca.substring(12345, 3)).to.be.equal('45');
-    chai.expect(Voca.substring(987, 1, 2)).to.be.equal('8');
+    chai.expect(AwesomeString.substring(12345, 3)).to.be.equal('45');
+    chai.expect(AwesomeString.substring(987, 1, 2)).to.be.equal('8');
   });
 });
 
 describe('truncate', function () {
 
   it('should truncate a string', function () {
-    chai.expect(Voca.truncate('Once upon a time there lived in a certain village a little country girl', 4)).to.be.equal('O...');
-    chai.expect(Voca.truncate('I\'ll go this way and go you that', 19, ' (read more)')).to.be.equal('I\'ll go (read more)');
-    chai.expect(Voca.truncate('Little Red Riding Hood', 9, '...')).to.be.equal('Little...');
-    chai.expect(Voca.truncate('Little Red Riding Hood', 0, '(more)')).to.be.equal('(more)');
-    chai.expect(Voca.truncate('Little Red Riding Hood', 1, '(more)')).to.be.equal('(more)');
-    chai.expect(Voca.truncate('Little Red Riding Hood', 2, '(more)')).to.be.equal('(more)');
-    chai.expect(Voca.truncate('Little Red Riding Hood', 3, '(more)')).to.be.equal('(more)');
-    chai.expect(Voca.truncate('Little Red Riding Hood', 6, '(more)')).to.be.equal('(more)');
-    chai.expect(Voca.truncate('Little Red Riding Hood', 7, '(more)')).to.be.equal('L(more)');
-    chai.expect(Voca.truncate('Little Red Riding Hood', 7, '')).to.be.equal('Little ');
-    chai.expect(Voca.truncate('Little Red Riding Hood', 0, '')).to.be.equal('');
-    chai.expect(Voca.truncate(PRINTABLE_ASCII, PRINTABLE_ASCII.length)).to.be.equal(PRINTABLE_ASCII);
-    chai.expect(Voca.truncate(PRINTABLE_ASCII, 0)).to.be.equal('...');
+    chai.expect(AwesomeString.truncate('Once upon a time there lived in a certain village a little country girl', 4)).to.be.equal('O...');
+    chai.expect(AwesomeString.truncate('I\'ll go this way and go you that', 19, ' (read more)')).to.be.equal('I\'ll go (read more)');
+    chai.expect(AwesomeString.truncate('Little Red Riding Hood', 9, '...')).to.be.equal('Little...');
+    chai.expect(AwesomeString.truncate('Little Red Riding Hood', 0, '(more)')).to.be.equal('(more)');
+    chai.expect(AwesomeString.truncate('Little Red Riding Hood', 1, '(more)')).to.be.equal('(more)');
+    chai.expect(AwesomeString.truncate('Little Red Riding Hood', 2, '(more)')).to.be.equal('(more)');
+    chai.expect(AwesomeString.truncate('Little Red Riding Hood', 3, '(more)')).to.be.equal('(more)');
+    chai.expect(AwesomeString.truncate('Little Red Riding Hood', 6, '(more)')).to.be.equal('(more)');
+    chai.expect(AwesomeString.truncate('Little Red Riding Hood', 7, '(more)')).to.be.equal('L(more)');
+    chai.expect(AwesomeString.truncate('Little Red Riding Hood', 7, '')).to.be.equal('Little ');
+    chai.expect(AwesomeString.truncate('Little Red Riding Hood', 0, '')).to.be.equal('');
+    chai.expect(AwesomeString.truncate(PRINTABLE_ASCII, PRINTABLE_ASCII.length)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.truncate(PRINTABLE_ASCII, 0)).to.be.equal('...');
   });
 
   it('should not truncate a string if length parameter is greater or equal than string length', function () {
-    chai.expect(Voca.truncate('Once upon', 20)).to.be.equal('Once upon');
-    chai.expect(Voca.truncate('Once', 4, ' (read more)')).to.be.equal('Once');
-    chai.expect(Voca.truncate('', 0, '....')).to.be.equal('');
+    chai.expect(AwesomeString.truncate('Once upon', 20)).to.be.equal('Once upon');
+    chai.expect(AwesomeString.truncate('Once', 4, ' (read more)')).to.be.equal('Once');
+    chai.expect(AwesomeString.truncate('', 0, '....')).to.be.equal('');
   });
 
   it('should truncate a string representation of an object', function () {
-    chai.expect(Voca.truncate(['Welcome'], 6)).to.be.equal('Wel...');
-    chai.expect(Voca.truncate({
+    chai.expect(AwesomeString.truncate(['Welcome'], 6)).to.be.equal('Wel...');
+    chai.expect(AwesomeString.truncate({
       toString: function () {
         return 'Have a nice day';
       }
@@ -4537,30 +4531,30 @@ describe('truncate', function () {
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.truncate()).to.be.equal('');
-    chai.expect(Voca.truncate(undefined)).to.be.equal('');
-    chai.expect(Voca.truncate(null)).to.be.equal('');
+    chai.expect(AwesomeString.truncate()).to.be.equal('');
+    chai.expect(AwesomeString.truncate(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.truncate(null)).to.be.equal('');
   });
 });
 
 describe('count', function () {
 
   it('should return the number of characters in a string', function () {
-    chai.expect(Voca.count('rain')).to.be.equal(4);
-    chai.expect(Voca.count('')).to.be.equal(0);
-    chai.expect(Voca.count('rainbow')).to.be.equal(7);
-    chai.expect(Voca.count(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII.length);
+    chai.expect(AwesomeString.count('rain')).to.be.equal(4);
+    chai.expect(AwesomeString.count('')).to.be.equal(0);
+    chai.expect(AwesomeString.count('rainbow')).to.be.equal(7);
+    chai.expect(AwesomeString.count(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII.length);
   });
 
   it('should return the number of characters in a number', function () {
-    chai.expect(Voca.count(123)).to.be.equal(3);
-    chai.expect(Voca.count(0)).to.be.equal(1);
-    chai.expect(Voca.count(-1.5)).to.be.equal(4);
+    chai.expect(AwesomeString.count(123)).to.be.equal(3);
+    chai.expect(AwesomeString.count(0)).to.be.equal(1);
+    chai.expect(AwesomeString.count(-1.5)).to.be.equal(4);
   });
 
   it('should return the number of characters in a string representation of an object', function () {
-    chai.expect(Voca.count(['droplet'])).to.be.equal(7);
-    chai.expect(Voca.count({
+    chai.expect(AwesomeString.count(['droplet'])).to.be.equal(7);
+    chai.expect(AwesomeString.count({
       toString: function () {
         return 'rainfall';
       }
@@ -4568,36 +4562,36 @@ describe('count', function () {
   });
 
   it('should return zero for undefined or null', function () {
-    chai.expect(Voca.count()).to.be.equal(0);
-    chai.expect(Voca.count(null)).to.be.equal(0);
-    chai.expect(Voca.count(undefined)).to.be.equal(0);
+    chai.expect(AwesomeString.count()).to.be.equal(0);
+    chai.expect(AwesomeString.count(null)).to.be.equal(0);
+    chai.expect(AwesomeString.count(undefined)).to.be.equal(0);
   });
 });
 
 describe('countGraphemes', function () {
 
   it('should return the number of characters in a string', function () {
-    chai.expect(Voca.countGraphemes('rain')).to.be.equal(4);
-    chai.expect(Voca.countGraphemes('')).to.be.equal(0);
-    chai.expect(Voca.countGraphemes('rainbow')).to.be.equal(7);
-    chai.expect(Voca.countGraphemes('\u00E9\u20DD')).to.be.equal(1);
-    chai.expect(Voca.countGraphemes('\uD835\uDC00\uD835\uDC01')).to.be.equal(2);
-    chai.expect(Voca.countGraphemes('man\u0303ana')).to.be.equal(6);
-    chai.expect(Voca.countGraphemes('cafe\u0301')).to.be.equal(4);
-    chai.expect(Voca.countGraphemes('foo\u0303\u035C\u035D\u035Ebar')).to.be.equal(6);
-    chai.expect(Voca.countGraphemes('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar')).to.be.equal(7);
-    chai.expect(Voca.countGraphemes(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII.length);
+    chai.expect(AwesomeString.countGraphemes('rain')).to.be.equal(4);
+    chai.expect(AwesomeString.countGraphemes('')).to.be.equal(0);
+    chai.expect(AwesomeString.countGraphemes('rainbow')).to.be.equal(7);
+    chai.expect(AwesomeString.countGraphemes('\u00E9\u20DD')).to.be.equal(1);
+    chai.expect(AwesomeString.countGraphemes('\uD835\uDC00\uD835\uDC01')).to.be.equal(2);
+    chai.expect(AwesomeString.countGraphemes('man\u0303ana')).to.be.equal(6);
+    chai.expect(AwesomeString.countGraphemes('cafe\u0301')).to.be.equal(4);
+    chai.expect(AwesomeString.countGraphemes('foo\u0303\u035C\u035D\u035Ebar')).to.be.equal(6);
+    chai.expect(AwesomeString.countGraphemes('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar')).to.be.equal(7);
+    chai.expect(AwesomeString.countGraphemes(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII.length);
   });
 
   it('should return the number of characters in a number', function () {
-    chai.expect(Voca.countGraphemes(123)).to.be.equal(3);
-    chai.expect(Voca.countGraphemes(0)).to.be.equal(1);
-    chai.expect(Voca.countGraphemes(-1.5)).to.be.equal(4);
+    chai.expect(AwesomeString.countGraphemes(123)).to.be.equal(3);
+    chai.expect(AwesomeString.countGraphemes(0)).to.be.equal(1);
+    chai.expect(AwesomeString.countGraphemes(-1.5)).to.be.equal(4);
   });
 
   it('should return the number of characters in a string representation of an object', function () {
-    chai.expect(Voca.countGraphemes(['droplet'])).to.be.equal(7);
-    chai.expect(Voca.countGraphemes({
+    chai.expect(AwesomeString.countGraphemes(['droplet'])).to.be.equal(7);
+    chai.expect(AwesomeString.countGraphemes({
       toString: function () {
         return 'rainfall';
       }
@@ -4605,38 +4599,38 @@ describe('countGraphemes', function () {
   });
 
   it('should return zero for undefined or null', function () {
-    chai.expect(Voca.countGraphemes()).to.be.equal(0);
-    chai.expect(Voca.countGraphemes(null)).to.be.equal(0);
-    chai.expect(Voca.countGraphemes(undefined)).to.be.equal(0);
+    chai.expect(AwesomeString.countGraphemes()).to.be.equal(0);
+    chai.expect(AwesomeString.countGraphemes(null)).to.be.equal(0);
+    chai.expect(AwesomeString.countGraphemes(undefined)).to.be.equal(0);
   });
 });
 
 describe('countSubstrings', function () {
 
   it('should return the number of substring appearances in a string', function () {
-    chai.expect(Voca.countSubstrings('Hey man where-where-where\'s your cup holder?', 'where')).to.be.equal(3);
-    chai.expect(Voca.countSubstrings('And some Skittles', 'Skittles')).to.be.equal(1);
-    chai.expect(Voca.countSubstrings('And some Skittles', 'chocolate')).to.be.equal(0);
-    chai.expect(Voca.countSubstrings('******', '*')).to.be.equal(6);
-    chai.expect(Voca.countSubstrings('*******', '**')).to.be.equal(3);
-    chai.expect(Voca.countSubstrings('*******', '**-')).to.be.equal(0);
-    chai.expect(Voca.countSubstrings('*******', '***')).to.be.equal(2);
-    chai.expect(Voca.countSubstrings('*******', '****')).to.be.equal(1);
-    chai.expect(Voca.countSubstrings('*******', '********')).to.be.equal(0);
-    chai.expect(Voca.countSubstrings('*-*-*', '**')).to.be.equal(0);
-    chai.expect(Voca.countSubstrings('', '')).to.be.equal(0);
-    chai.expect(Voca.countSubstrings(PRINTABLE_ASCII, '#')).to.be.equal(1);
+    chai.expect(AwesomeString.countSubstrings('Hey man where-where-where\'s your cup holder?', 'where')).to.be.equal(3);
+    chai.expect(AwesomeString.countSubstrings('And some Skittles', 'Skittles')).to.be.equal(1);
+    chai.expect(AwesomeString.countSubstrings('And some Skittles', 'chocolate')).to.be.equal(0);
+    chai.expect(AwesomeString.countSubstrings('******', '*')).to.be.equal(6);
+    chai.expect(AwesomeString.countSubstrings('*******', '**')).to.be.equal(3);
+    chai.expect(AwesomeString.countSubstrings('*******', '**-')).to.be.equal(0);
+    chai.expect(AwesomeString.countSubstrings('*******', '***')).to.be.equal(2);
+    chai.expect(AwesomeString.countSubstrings('*******', '****')).to.be.equal(1);
+    chai.expect(AwesomeString.countSubstrings('*******', '********')).to.be.equal(0);
+    chai.expect(AwesomeString.countSubstrings('*-*-*', '**')).to.be.equal(0);
+    chai.expect(AwesomeString.countSubstrings('', '')).to.be.equal(0);
+    chai.expect(AwesomeString.countSubstrings(PRINTABLE_ASCII, '#')).to.be.equal(1);
   });
 
   it('should return the number of appearances of a number in a number', function () {
-    chai.expect(Voca.countSubstrings(111222, 1)).to.be.equal(3);
-    chai.expect(Voca.countSubstrings(0, 0)).to.be.equal(1);
-    chai.expect(Voca.countSubstrings(15, 16)).to.be.equal(0);
+    chai.expect(AwesomeString.countSubstrings(111222, 1)).to.be.equal(3);
+    chai.expect(AwesomeString.countSubstrings(0, 0)).to.be.equal(1);
+    chai.expect(AwesomeString.countSubstrings(15, 16)).to.be.equal(0);
   });
 
   it('should return the number of substring appearances in a string representation of an object', function () {
-    chai.expect(Voca.countSubstrings(['where-where-where'], 'where')).to.be.equal(3);
-    chai.expect(Voca.countSubstrings({
+    chai.expect(AwesomeString.countSubstrings(['where-where-where'], 'where')).to.be.equal(3);
+    chai.expect(AwesomeString.countSubstrings({
       toString: function () {
         return 'where-where-where';
       }
@@ -4644,25 +4638,25 @@ describe('countSubstrings', function () {
   });
 
   it('should return zero for undefined or null', function () {
-    chai.expect(Voca.countSubstrings()).to.be.equal(0);
-    chai.expect(Voca.countSubstrings(undefined)).to.be.equal(0);
-    chai.expect(Voca.countSubstrings(null)).to.be.equal(0);
-    chai.expect(Voca.countSubstrings(undefined, undefined)).to.be.equal(0);
-    chai.expect(Voca.countSubstrings(null, null)).to.be.equal(0);
+    chai.expect(AwesomeString.countSubstrings()).to.be.equal(0);
+    chai.expect(AwesomeString.countSubstrings(undefined)).to.be.equal(0);
+    chai.expect(AwesomeString.countSubstrings(null)).to.be.equal(0);
+    chai.expect(AwesomeString.countSubstrings(undefined, undefined)).to.be.equal(0);
+    chai.expect(AwesomeString.countSubstrings(null, null)).to.be.equal(0);
   });
 });
 
 describe('countWhere', function () {
 
   it('should return the number of characters in a string for a predicate', function () {
-    chai.expect(Voca.countWhere('', Voca.isAlpha)).to.be.equal(0);
-    chai.expect(Voca.countWhere('africa654', Voca.isAlpha)).to.be.equal(6);
-    chai.expect(Voca.countWhere('790', Voca.isAlpha)).to.be.equal(0);
-    chai.expect(Voca.countWhere(PRINTABLE_ASCII, Voca.isDigit)).to.be.equal(10);
-    chai.expect(Voca.countWhere('****--**--**', function (character) {
+    chai.expect(AwesomeString.countWhere('', AwesomeString.isAlpha)).to.be.equal(0);
+    chai.expect(AwesomeString.countWhere('africa654', AwesomeString.isAlpha)).to.be.equal(6);
+    chai.expect(AwesomeString.countWhere('790', AwesomeString.isAlpha)).to.be.equal(0);
+    chai.expect(AwesomeString.countWhere(PRINTABLE_ASCII, AwesomeString.isDigit)).to.be.equal(10);
+    chai.expect(AwesomeString.countWhere('****--**--**', function (character) {
       return character === '*';
     })).to.be.equal(8);
-    chai.expect(Voca.countWhere('****--**--**', function () {
+    chai.expect(AwesomeString.countWhere('****--**--**', function () {
       return false;
     })).to.be.equal(0);
   });
@@ -4671,7 +4665,7 @@ describe('countWhere', function () {
     var verifyIndex = 0;
     var context = {};
     var verifyString = '0123456789';
-    chai.expect(Voca.countWhere(verifyString, function (character, index, string) {
+    chai.expect(AwesomeString.countWhere(verifyString, function (character, index, string) {
       chai.expect(index).to.be.equal(verifyIndex);
       chai.expect(this).to.be.equal(context);
       chai.expect(string).to.be.equal(verifyString);
@@ -4682,80 +4676,80 @@ describe('countWhere', function () {
   });
 
   it('should return the number of characters in a number for a predicate', function () {
-    chai.expect(Voca.countWhere(123, Voca.isDigit)).to.be.equal(3);
-    chai.expect(Voca.countWhere(0, Voca.isDigit)).to.be.equal(1);
-    chai.expect(Voca.countWhere(-1.5, Voca.isDigit)).to.be.equal(2);
+    chai.expect(AwesomeString.countWhere(123, AwesomeString.isDigit)).to.be.equal(3);
+    chai.expect(AwesomeString.countWhere(0, AwesomeString.isDigit)).to.be.equal(1);
+    chai.expect(AwesomeString.countWhere(-1.5, AwesomeString.isDigit)).to.be.equal(2);
   });
 
   it('should return the number of characters in a string representation of an object for a predicate', function () {
-    chai.expect(Voca.countWhere(['droplet'], Voca.isDigit)).to.be.equal(0);
-    chai.expect(Voca.countWhere({
+    chai.expect(AwesomeString.countWhere(['droplet'], AwesomeString.isDigit)).to.be.equal(0);
+    chai.expect(AwesomeString.countWhere({
       toString: function () {
         return 'homo sapiens';
       }
-    }, Voca.isAlphaDigit)).to.be.equal(11);
+    }, AwesomeString.isAlphaDigit)).to.be.equal(11);
   });
 
   it('should return zero for a non function predicate', function () {
-    chai.expect(Voca.countWhere('africa')).to.be.equal(0);
-    chai.expect(Voca.countWhere('africa', undefined)).to.be.equal(0);
-    chai.expect(Voca.countWhere('africa', null)).to.be.equal(0);
-    chai.expect(Voca.countWhere('africa', 'africa')).to.be.equal(0);
-    chai.expect(Voca.countWhere('africa', 0)).to.be.equal(0);
-    chai.expect(Voca.countWhere()).to.be.equal(0);
+    chai.expect(AwesomeString.countWhere('africa')).to.be.equal(0);
+    chai.expect(AwesomeString.countWhere('africa', undefined)).to.be.equal(0);
+    chai.expect(AwesomeString.countWhere('africa', null)).to.be.equal(0);
+    chai.expect(AwesomeString.countWhere('africa', 'africa')).to.be.equal(0);
+    chai.expect(AwesomeString.countWhere('africa', 0)).to.be.equal(0);
+    chai.expect(AwesomeString.countWhere()).to.be.equal(0);
   });
 });
 
 describe('countcountWords', function () {
 
   it('should the words in a string', function () {
-    chai.expect(Voca.countWords('123')).to.equal(1);
-    chai.expect(Voca.countWords('15+20=35')).to.equal(3);
-    chai.expect(Voca.countWords('hello')).to.equal(1);
-    chai.expect(Voca.countWords('  hello   ')).to.equal(1);
-    chai.expect(Voca.countWords('hello world')).to.equal(2);
-    chai.expect(Voca.countWords('12+14-18*400')).to.equal(4);
-    chai.expect(Voca.countWords('gravity can cross dimensions')).to.equal(4);
-    chai.expect(Voca.countWords('-gravity-can-cross-dimensions-')).to.equal(4);
-    chai.expect(Voca.countWords('gravity_can_cross_dimensions')).to.equal(4);
-    chai.expect(Voca.countWords('*gravity***can****cross&&dimensions++')).to.equal(4);
-    chai.expect(Voca.countWords('GravityCanCrossDimensions')).to.equal(4);
-    chai.expect(Voca.countWords('GRAVITYCan')).to.equal(2);
-    chai.expect(Voca.countWords('GravityCan')).to.equal(2);
-    chai.expect(Voca.countWords('GravityCANAttract')).to.equal(3);
-    chai.expect(Voca.countWords('gravityCan')).to.equal(2);
-    chai.expect(Voca.countWords('Gravity-Can11Cross **Dimensions1Foo')).to.equal(7);
-    chai.expect(Voca.countWords('Cooper... Cooper... Come in, Cooper.')).to.equal(5);
-    chai.expect(Voca.countWords('Newton\'s third law')).to.equal(4);
-    chai.expect(Voca.countWords('Newton\'s thIrd lAw')).to.equal(6);
-    chai.expect(Voca.countWords(PRINTABLE_ASCII)).to.equal(3);
-    chai.expect(Voca.countWords('')).to.equal(0);
-    chai.expect(Voca.countWords()).to.equal(0);
-    chai.expect(Voca.countWords(' ')).to.equal(0);
-    chai.expect(Voca.countWords('     ')).to.equal(0);
-    chai.expect(Voca.countWords('\n')).to.equal(0);
-    chai.expect(Voca.countWords('***')).to.equal(0);
-    chai.expect(Voca.countWords('***---')).to.equal(0);
-    chai.expect(Voca.countWords('***---')).to.equal(0);
-    chai.expect(Voca.countWords('man\u0303ana')).to.equal(1);
-    chai.expect(Voca.countWords('maN\u0303ana')).to.equal(2);
-    chai.expect(Voca.countWords('foo\u0303\u035C\u035D\u035E bar')).to.equal(2);
-    chai.expect(Voca.countWords('fo-O-O\u0303\u035C\u035D\u035E-bar')).to.equal(4);
+    chai.expect(AwesomeString.countWords('123')).to.equal(1);
+    chai.expect(AwesomeString.countWords('15+20=35')).to.equal(3);
+    chai.expect(AwesomeString.countWords('hello')).to.equal(1);
+    chai.expect(AwesomeString.countWords('  hello   ')).to.equal(1);
+    chai.expect(AwesomeString.countWords('hello world')).to.equal(2);
+    chai.expect(AwesomeString.countWords('12+14-18*400')).to.equal(4);
+    chai.expect(AwesomeString.countWords('gravity can cross dimensions')).to.equal(4);
+    chai.expect(AwesomeString.countWords('-gravity-can-cross-dimensions-')).to.equal(4);
+    chai.expect(AwesomeString.countWords('gravity_can_cross_dimensions')).to.equal(4);
+    chai.expect(AwesomeString.countWords('*gravity***can****cross&&dimensions++')).to.equal(4);
+    chai.expect(AwesomeString.countWords('GravityCanCrossDimensions')).to.equal(4);
+    chai.expect(AwesomeString.countWords('GRAVITYCan')).to.equal(2);
+    chai.expect(AwesomeString.countWords('GravityCan')).to.equal(2);
+    chai.expect(AwesomeString.countWords('GravityCANAttract')).to.equal(3);
+    chai.expect(AwesomeString.countWords('gravityCan')).to.equal(2);
+    chai.expect(AwesomeString.countWords('Gravity-Can11Cross **Dimensions1Foo')).to.equal(7);
+    chai.expect(AwesomeString.countWords('Cooper... Cooper... Come in, Cooper.')).to.equal(5);
+    chai.expect(AwesomeString.countWords('Newton\'s third law')).to.equal(4);
+    chai.expect(AwesomeString.countWords('Newton\'s thIrd lAw')).to.equal(6);
+    chai.expect(AwesomeString.countWords(PRINTABLE_ASCII)).to.equal(3);
+    chai.expect(AwesomeString.countWords('')).to.equal(0);
+    chai.expect(AwesomeString.countWords()).to.equal(0);
+    chai.expect(AwesomeString.countWords(' ')).to.equal(0);
+    chai.expect(AwesomeString.countWords('     ')).to.equal(0);
+    chai.expect(AwesomeString.countWords('\n')).to.equal(0);
+    chai.expect(AwesomeString.countWords('***')).to.equal(0);
+    chai.expect(AwesomeString.countWords('***---')).to.equal(0);
+    chai.expect(AwesomeString.countWords('***---')).to.equal(0);
+    chai.expect(AwesomeString.countWords('man\u0303ana')).to.equal(1);
+    chai.expect(AwesomeString.countWords('maN\u0303ana')).to.equal(2);
+    chai.expect(AwesomeString.countWords('foo\u0303\u035C\u035D\u035E bar')).to.equal(2);
+    chai.expect(AwesomeString.countWords('fo-O-O\u0303\u035C\u035D\u035E-bar')).to.equal(4);
   });
 
   it('should count the words in a string with diacritics', function () {
-    chai.expect(Voca.countWords('clasificación biológica.')).to.equal(2);
-    chai.expect(Voca.countWords('BunăZiua')).to.equal(2);
-    chai.expect(Voca.countWords('Bună1ZiUa!')).to.equal(4);
-    chai.expect(Voca.countWords('Język /polski wywodzi się z` języka` praindoeuropejskiego za**pośrednictwem+języka-prasłowiańskiego.')).to.equal(11);
-    chai.expect(Voca.countWords('Гравитация притягивает все')).to.equal(3);
-    chai.expect(Voca.countWords('Гравитация-Притягивает-ВСЕ!!')).to.equal(3);
-    chai.expect(Voca.countWords('Στις--αρχές** (του) 21ου, αιώνα!')).to.equal(6);
+    chai.expect(AwesomeString.countWords('clasificación biológica.')).to.equal(2);
+    chai.expect(AwesomeString.countWords('BunăZiua')).to.equal(2);
+    chai.expect(AwesomeString.countWords('Bună1ZiUa!')).to.equal(4);
+    chai.expect(AwesomeString.countWords('Język /polski wywodzi się z` języka` praindoeuropejskiego za**pośrednictwem+języka-prasłowiańskiego.')).to.equal(11);
+    chai.expect(AwesomeString.countWords('Гравитация притягивает все')).to.equal(3);
+    chai.expect(AwesomeString.countWords('Гравитация-Притягивает-ВСЕ!!')).to.equal(3);
+    chai.expect(AwesomeString.countWords('Στις--αρχές** (του) 21ου, αιώνα!')).to.equal(6);
   });
 
   it('should count the countWords in a string representation of an object', function () {
-    chai.expect(Voca.countWords(['GravityCanCrossDimensions'])).to.equal(4);
-    chai.expect(Voca.countWords({
+    chai.expect(AwesomeString.countWords(['GravityCanCrossDimensions'])).to.equal(4);
+    chai.expect(AwesomeString.countWords({
       toString: function () {
         return 'Gr4v1ty';
       }
@@ -4763,29 +4757,29 @@ describe('countcountWords', function () {
   });
 
   it('should count the words in a string into countWords using a pattern', function () {
-    chai.expect(Voca.countWords('1234567890', /\d/g)).to.equal(10);
-    chai.expect(Voca.countWords('gravity', /\w{1,2}/g)).to.equal(4);
-    chai.expect(Voca.countWords('gravity can cross dimensions', '\\w+(?=\\s?)', 'g')).to.equal(4);
-    chai.expect(Voca.countWords('1234567890', /\s/g)).to.equal(0);
+    chai.expect(AwesomeString.countWords('1234567890', /\d/g)).to.equal(10);
+    chai.expect(AwesomeString.countWords('gravity', /\w{1,2}/g)).to.equal(4);
+    chai.expect(AwesomeString.countWords('gravity can cross dimensions', '\\w+(?=\\s?)', 'g')).to.equal(4);
+    chai.expect(AwesomeString.countWords('1234567890', /\s/g)).to.equal(0);
   });
 
   it('should count the words in a string with default pattern for null and undefined', function () {
-    chai.expect(Voca.countWords('gravity_can_cross_dimensions', null)).to.equal(4);
-    chai.expect(Voca.countWords('gravity_can_cross_dimensions', undefined)).to.equal(4);
+    chai.expect(AwesomeString.countWords('gravity_can_cross_dimensions', null)).to.equal(4);
+    chai.expect(AwesomeString.countWords('gravity_can_cross_dimensions', undefined)).to.equal(4);
   });
 });
 
 describe('escapeHtml', function () {
 
   it('should return the escaped string', function () {
-    chai.expect(Voca.escapeHtml('<>&"\'`')).to.be.equal('&lt;&gt;&amp;&quot;&#x27;&#x60;');
-    chai.expect(Voca.escapeHtml('<p>wonderful world</p>')).to.be.equal('&lt;p&gt;wonderful world&lt;/p&gt;');
-    chai.expect(Voca.escapeHtml(PRINTABLE_ASCII)).to.be.equal(' !&quot;#$%&amp;&#x27;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_&#x60;abcdefghijklmnopqrstuvwxyz{|}~');
+    chai.expect(AwesomeString.escapeHtml('<>&"\'`')).to.be.equal('&lt;&gt;&amp;&quot;&#x27;&#x60;');
+    chai.expect(AwesomeString.escapeHtml('<p>wonderful world</p>')).to.be.equal('&lt;p&gt;wonderful world&lt;/p&gt;');
+    chai.expect(AwesomeString.escapeHtml(PRINTABLE_ASCII)).to.be.equal(' !&quot;#$%&amp;&#x27;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_&#x60;abcdefghijklmnopqrstuvwxyz{|}~');
   });
 
   it('should return the escaped string representation of an object', function () {
-    chai.expect(Voca.escapeHtml(['<span>'])).to.be.equal('&lt;span&gt;');
-    chai.expect(Voca.escapeHtml({
+    chai.expect(AwesomeString.escapeHtml(['<span>'])).to.be.equal('&lt;span&gt;');
+    chai.expect(AwesomeString.escapeHtml({
       toString: function () {
         return '<script>';
       }
@@ -4793,26 +4787,26 @@ describe('escapeHtml', function () {
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.escapeHtml()).to.be.equal('');
-    chai.expect(Voca.escapeHtml(undefined)).to.be.equal('');
-    chai.expect(Voca.escapeHtml(null)).to.be.equal('');
+    chai.expect(AwesomeString.escapeHtml()).to.be.equal('');
+    chai.expect(AwesomeString.escapeHtml(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.escapeHtml(null)).to.be.equal('');
   });
 });
 
 describe('escapeRegExp', function () {
 
   it('should return the escaped string', function () {
-    chai.expect(Voca.escapeRegExp('-[]/{}()*+?.\\^$|')).to.be.equal('\\-\\[\\]\\/\\{\\}\\(\\)\\*\\+\\?\\.\\\\\\^\\$\\|');
-    chai.expect(Voca.escapeRegExp('time')).to.be.equal('time');
-    chai.expect(Voca.escapeRegExp('500-200')).to.be.equal('500\\-200');
-    chai.expect(Voca.escapeRegExp('')).to.be.equal('');
-    chai.expect(new RegExp(Voca.escapeRegExp('[a-z0-9]?')).test('[a-z0-9]?')).to.be.true;
-    chai.expect(new RegExp(Voca.escapeRegExp('.*')).test('future')).to.be.false;
+    chai.expect(AwesomeString.escapeRegExp('-[]/{}()*+?.\\^$|')).to.be.equal('\\-\\[\\]\\/\\{\\}\\(\\)\\*\\+\\?\\.\\\\\\^\\$\\|');
+    chai.expect(AwesomeString.escapeRegExp('time')).to.be.equal('time');
+    chai.expect(AwesomeString.escapeRegExp('500-200')).to.be.equal('500\\-200');
+    chai.expect(AwesomeString.escapeRegExp('')).to.be.equal('');
+    chai.expect(new RegExp(AwesomeString.escapeRegExp('[a-z0-9]?')).test('[a-z0-9]?')).to.be.true;
+    chai.expect(new RegExp(AwesomeString.escapeRegExp('.*')).test('future')).to.be.false;
   });
 
   it('should return the escaped string representation of an object', function () {
-    chai.expect(Voca.escapeRegExp(['-[]object'])).to.be.equal('\\-\\[\\]object');
-    chai.expect(Voca.escapeRegExp({
+    chai.expect(AwesomeString.escapeRegExp(['-[]object'])).to.be.equal('\\-\\[\\]object');
+    chai.expect(AwesomeString.escapeRegExp({
       toString: function () {
         return '1.15';
       }
@@ -4820,28 +4814,28 @@ describe('escapeRegExp', function () {
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.escapeRegExp()).to.be.equal('');
-    chai.expect(Voca.escapeRegExp(undefined)).to.be.equal('');
-    chai.expect(Voca.escapeRegExp(null)).to.be.equal('');
+    chai.expect(AwesomeString.escapeRegExp()).to.be.equal('');
+    chai.expect(AwesomeString.escapeRegExp(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.escapeRegExp(null)).to.be.equal('');
   });
 });
 
 describe('unescapeHtml', function () {
 
   it('should return the unescaped', function () {
-    chai.expect(Voca.unescapeHtml('&lt;&gt;&amp;&quot;&#x27;&#x60;')).to.be.equal('<>&"\'`');
-    chai.expect(Voca.unescapeHtml('&lt;p&gt;wonderful world&lt;/p&gt;')).to.be.equal('<p>wonderful world</p>');
-    chai.expect(Voca.unescapeHtml('&#x003C;p&#0062;wonderful world&#x003C;/p&#0062;')).to.be.equal('<p>wonderful world</p>');
-    chai.expect(Voca.unescapeHtml('&lt;p&gt;wonderful world&lt;/p&gt;')).to.be.equal('<p>wonderful world</p>');
-    chai.expect(Voca.unescapeHtml('&lt;p&gt;wonderful world&lt;/p&gt;')).to.be.equal('<p>wonderful world</p>');
-    chai.expect(Voca.unescapeHtml('&lt; &#x03c; &#060; &gt; &#x03e; &#062; &amp; &#x026; &#038; &quot; &#x022; &#034; &#x027; &#039; &#x060; &#096;')).to.be.equal('< < < > > > & & & " " " \' \' ` `');
-    chai.expect(Voca.unescapeHtml(' !&quot;#$%&amp;&#x27;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_&#x60;abcdefghijklmnopqrstuvwxyz{|}~')).to.be.equal(PRINTABLE_ASCII);
-    chai.expect(Voca.unescapeHtml('<>&"\'`')).to.be.equal('<>&"\'`');
+    chai.expect(AwesomeString.unescapeHtml('&lt;&gt;&amp;&quot;&#x27;&#x60;')).to.be.equal('<>&"\'`');
+    chai.expect(AwesomeString.unescapeHtml('&lt;p&gt;wonderful world&lt;/p&gt;')).to.be.equal('<p>wonderful world</p>');
+    chai.expect(AwesomeString.unescapeHtml('&#x003C;p&#0062;wonderful world&#x003C;/p&#0062;')).to.be.equal('<p>wonderful world</p>');
+    chai.expect(AwesomeString.unescapeHtml('&lt;p&gt;wonderful world&lt;/p&gt;')).to.be.equal('<p>wonderful world</p>');
+    chai.expect(AwesomeString.unescapeHtml('&lt;p&gt;wonderful world&lt;/p&gt;')).to.be.equal('<p>wonderful world</p>');
+    chai.expect(AwesomeString.unescapeHtml('&lt; &#x03c; &#060; &gt; &#x03e; &#062; &amp; &#x026; &#038; &quot; &#x022; &#034; &#x027; &#039; &#x060; &#096;')).to.be.equal('< < < > > > & & & " " " \' \' ` `');
+    chai.expect(AwesomeString.unescapeHtml(' !&quot;#$%&amp;&#x27;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_&#x60;abcdefghijklmnopqrstuvwxyz{|}~')).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.unescapeHtml('<>&"\'`')).to.be.equal('<>&"\'`');
   });
 
   it('should return the unescaped string representation of an object', function () {
-    chai.expect(Voca.unescapeHtml(['&lt;span&gt;'])).to.be.equal('<span>');
-    chai.expect(Voca.unescapeHtml({
+    chai.expect(AwesomeString.unescapeHtml(['&lt;span&gt;'])).to.be.equal('<span>');
+    chai.expect(AwesomeString.unescapeHtml({
       toString: function () {
         return '&lt;script&gt;';
       }
@@ -4849,9 +4843,9 @@ describe('unescapeHtml', function () {
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.unescapeHtml()).to.be.equal('');
-    chai.expect(Voca.unescapeHtml(undefined)).to.be.equal('');
-    chai.expect(Voca.unescapeHtml(null)).to.be.equal('');
+    chai.expect(AwesomeString.unescapeHtml()).to.be.equal('');
+    chai.expect(AwesomeString.unescapeHtml(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.unescapeHtml(null)).to.be.equal('');
   });
 });
 
@@ -4906,294 +4900,294 @@ describe('parseTagName', function () {
 describe('sprintf', function () {
 
   it('should return a string according to string type formatting', function () {
-    chai.expect(Voca.sprintf('%s', 'string')).to.be.equal('string');
-    chai.expect(Voca.sprintf('Hello %s!', 'World')).to.be.equal('Hello World!');
-    chai.expect(Voca.sprintf('%s %s!', 'Hello', 'World')).to.be.equal('Hello World!');
-    chai.expect(Voca.sprintf('%s %s!', '%s', '%s')).to.be.equal('%s %s!');
-    chai.expect(Voca.sprintf('Hello %5s!', 'World')).to.be.equal('Hello World!');
-    chai.expect(Voca.sprintf('Hello %3s!', 'World')).to.be.equal('Hello World!');
-    chai.expect(Voca.sprintf('Hello %8s!', 'World')).to.be.equal('Hello    World!');
-    chai.expect(Voca.sprintf('%s%s%s%s%s', 'Alexander', ' ', 'the', ' ', 'Great')).to.be.equal('Alexander the Great');
-    chai.expect(Voca.sprintf('Alexander the %08s', 'Great')).to.be.equal('Alexander the 000Great');
-    chai.expect(Voca.sprintf('Alexander the % 8s', 'Great')).to.be.equal('Alexander the    Great');
-    chai.expect(Voca.sprintf("%'-10s the %s", 'Alexander', 'Great')).to.be.equal('-Alexander the Great');
-    chai.expect(Voca.sprintf("%'.12s the %09s", 'Alexander', 'Great')).to.be.equal('...Alexander the 0000Great');
-    chai.expect(Voca.sprintf('%-12s', 'Alexander')).to.be.equal('Alexander   ');
-    chai.expect(Voca.sprintf('%+-12s', 'Alexander')).to.be.equal('Alexander   ');
-    chai.expect(Voca.sprintf('%.4s the Great', 'Alexander')).to.be.equal('Alex the Great');
-    chai.expect(Voca.sprintf('%.9s the Great', 'Alexander')).to.be.equal('Alexander the Great');
-    chai.expect(Voca.sprintf('%.0s the Great', 'Alexander')).to.be.equal(' the Great');
-    chai.expect(Voca.sprintf('%10.8s the Great', 'Alexander')).to.be.equal('  Alexande the Great');
-    chai.expect(Voca.sprintf('%\'-10.6s %\'1-12.4s', 'Persian', 'Empire')).to.be.equal('----Persia Empi11111111');
-    chai.expect(Voca.sprintf('%2$s the %1$s', 'Great', 'Alexander')).to.be.equal('Alexander the Great');
-    chai.expect(Voca.sprintf('%2$s', 'Great', 'Alexander')).to.be.equal('Alexander');
-    chai.expect(Voca.sprintf('%2$\'012s the %1$.4s', 'Great', 'Alexander')).to.be.equal('000Alexander the Grea');
-    chai.expect(Voca.sprintf('%%%1$\'q-12.4s%%s', 'Alexander')).to.be.equal('%Alexqqqqqqqq%s');
-    chai.expect(Voca.sprintf('%2$s the %s', 'Great', 'Alexander')).to.be.equal('Alexander the Great');
-    chai.expect(Voca.sprintf('%1$s the %s', 'Great')).to.be.equal('Great the Great');
+    chai.expect(AwesomeString.sprintf('%s', 'string')).to.be.equal('string');
+    chai.expect(AwesomeString.sprintf('Hello %s!', 'World')).to.be.equal('Hello World!');
+    chai.expect(AwesomeString.sprintf('%s %s!', 'Hello', 'World')).to.be.equal('Hello World!');
+    chai.expect(AwesomeString.sprintf('%s %s!', '%s', '%s')).to.be.equal('%s %s!');
+    chai.expect(AwesomeString.sprintf('Hello %5s!', 'World')).to.be.equal('Hello World!');
+    chai.expect(AwesomeString.sprintf('Hello %3s!', 'World')).to.be.equal('Hello World!');
+    chai.expect(AwesomeString.sprintf('Hello %8s!', 'World')).to.be.equal('Hello    World!');
+    chai.expect(AwesomeString.sprintf('%s%s%s%s%s', 'Alexander', ' ', 'the', ' ', 'Great')).to.be.equal('Alexander the Great');
+    chai.expect(AwesomeString.sprintf('Alexander the %08s', 'Great')).to.be.equal('Alexander the 000Great');
+    chai.expect(AwesomeString.sprintf('Alexander the % 8s', 'Great')).to.be.equal('Alexander the    Great');
+    chai.expect(AwesomeString.sprintf("%'-10s the %s", 'Alexander', 'Great')).to.be.equal('-Alexander the Great');
+    chai.expect(AwesomeString.sprintf("%'.12s the %09s", 'Alexander', 'Great')).to.be.equal('...Alexander the 0000Great');
+    chai.expect(AwesomeString.sprintf('%-12s', 'Alexander')).to.be.equal('Alexander   ');
+    chai.expect(AwesomeString.sprintf('%+-12s', 'Alexander')).to.be.equal('Alexander   ');
+    chai.expect(AwesomeString.sprintf('%.4s the Great', 'Alexander')).to.be.equal('Alex the Great');
+    chai.expect(AwesomeString.sprintf('%.9s the Great', 'Alexander')).to.be.equal('Alexander the Great');
+    chai.expect(AwesomeString.sprintf('%.0s the Great', 'Alexander')).to.be.equal(' the Great');
+    chai.expect(AwesomeString.sprintf('%10.8s the Great', 'Alexander')).to.be.equal('  Alexande the Great');
+    chai.expect(AwesomeString.sprintf('%\'-10.6s %\'1-12.4s', 'Persian', 'Empire')).to.be.equal('----Persia Empi11111111');
+    chai.expect(AwesomeString.sprintf('%2$s the %1$s', 'Great', 'Alexander')).to.be.equal('Alexander the Great');
+    chai.expect(AwesomeString.sprintf('%2$s', 'Great', 'Alexander')).to.be.equal('Alexander');
+    chai.expect(AwesomeString.sprintf('%2$\'012s the %1$.4s', 'Great', 'Alexander')).to.be.equal('000Alexander the Grea');
+    chai.expect(AwesomeString.sprintf('%%%1$\'q-12.4s%%s', 'Alexander')).to.be.equal('%Alexqqqqqqqq%s');
+    chai.expect(AwesomeString.sprintf('%2$s the %s', 'Great', 'Alexander')).to.be.equal('Alexander the Great');
+    chai.expect(AwesomeString.sprintf('%1$s the %s', 'Great')).to.be.equal('Great the Great');
   });
 
   it('should return a string according to decimal integer type formatting', function () {
-    chai.expect(Voca.sprintf('%d', 1)).to.be.equal('1');
-    chai.expect(Voca.sprintf('%i', 1)).to.be.equal('1');
-    chai.expect(Voca.sprintf('%d %d %d', 1, 0, -100)).to.be.equal('1 0 -100');
-    chai.expect(Voca.sprintf('%+d %+d', 10, -10)).to.be.equal('+10 -10');
-    chai.expect(Voca.sprintf("%+'t4d %4d", 9, 0)).to.be.equal('tt+9    0');
-    chai.expect(Voca.sprintf("%010i", 90)).to.be.equal('0000000090');
-    chai.expect(Voca.sprintf("%+ 8d", 88)).to.be.equal('     +88');
-    chai.expect(Voca.sprintf("%d+%d=%d", 9, 1, 10)).to.be.equal('9+1=10');
-    chai.expect(Voca.sprintf("%3$04d-%2$04d=%1$04d", 9, 1, 10)).to.be.equal('0010-0001=0009');
-    chai.expect(Voca.sprintf("%+'T-5d", 15)).to.be.equal('+15TT');
-    chai.expect(Voca.sprintf("%d", 1.5e+3)).to.be.equal('1500');
-    chai.expect(Voca.sprintf("%d", '15NN')).to.be.equal('15');
-    chai.expect(Voca.sprintf("%d", '1.6')).to.be.equal('1');
-    chai.expect(Voca.sprintf("%d", '1.5e+3')).to.be.equal('1');
-    chai.expect(Voca.sprintf("%d", 'NN15')).to.be.equal('0');
-    chai.expect(Voca.sprintf("%d %d", '', 15)).to.be.equal('0 15');
-    chai.expect(Voca.sprintf("%d", '+')).to.be.equal('0');
+    chai.expect(AwesomeString.sprintf('%d', 1)).to.be.equal('1');
+    chai.expect(AwesomeString.sprintf('%i', 1)).to.be.equal('1');
+    chai.expect(AwesomeString.sprintf('%d %d %d', 1, 0, -100)).to.be.equal('1 0 -100');
+    chai.expect(AwesomeString.sprintf('%+d %+d', 10, -10)).to.be.equal('+10 -10');
+    chai.expect(AwesomeString.sprintf("%+'t4d %4d", 9, 0)).to.be.equal('tt+9    0');
+    chai.expect(AwesomeString.sprintf("%010i", 90)).to.be.equal('0000000090');
+    chai.expect(AwesomeString.sprintf("%+ 8d", 88)).to.be.equal('     +88');
+    chai.expect(AwesomeString.sprintf("%d+%d=%d", 9, 1, 10)).to.be.equal('9+1=10');
+    chai.expect(AwesomeString.sprintf("%3$04d-%2$04d=%1$04d", 9, 1, 10)).to.be.equal('0010-0001=0009');
+    chai.expect(AwesomeString.sprintf("%+'T-5d", 15)).to.be.equal('+15TT');
+    chai.expect(AwesomeString.sprintf("%d", 1.5e+3)).to.be.equal('1500');
+    chai.expect(AwesomeString.sprintf("%d", '15NN')).to.be.equal('15');
+    chai.expect(AwesomeString.sprintf("%d", '1.6')).to.be.equal('1');
+    chai.expect(AwesomeString.sprintf("%d", '1.5e+3')).to.be.equal('1');
+    chai.expect(AwesomeString.sprintf("%d", 'NN15')).to.be.equal('0');
+    chai.expect(AwesomeString.sprintf("%d %d", '', 15)).to.be.equal('0 15');
+    chai.expect(AwesomeString.sprintf("%d", '+')).to.be.equal('0');
   });
 
   it('should return a string according to binary integer type formatting', function () {
-    chai.expect(Voca.sprintf('%b', 1)).to.be.equal('1');
-    chai.expect(Voca.sprintf('%b %b 0b%b', 1, 0, 10)).to.be.equal('1 0 0b1010');
-    chai.expect(Voca.sprintf('%+b %+b', 10, 10)).to.be.equal('1010 1010');
-    chai.expect(Voca.sprintf("%+'t6b %4b", 9, 0)).to.be.equal('tt1001    0');
-    chai.expect(Voca.sprintf("%010b", 90)).to.be.equal('0001011010');
-    chai.expect(Voca.sprintf("%+ 8b", 88)).to.be.equal(' 1011000');
-    chai.expect(Voca.sprintf("%b+%b=%b", 9, 1, 10)).to.be.equal('1001+1=1010');
-    chai.expect(Voca.sprintf("%3$04b-%2$04b=%1$04b", 4, 1, 5)).to.be.equal('0101-0001=0100');
-    chai.expect(Voca.sprintf("%+'T-5b", 15)).to.be.equal('1111T');
-    chai.expect(Voca.sprintf("%b", 1.5e+3)).to.be.equal('10111011100');
-    chai.expect(Voca.sprintf("%b", '15NN')).to.be.equal('1111');
-    chai.expect(Voca.sprintf("%b", '1.6')).to.be.equal('1');
-    chai.expect(Voca.sprintf("%b", '1.5e+3')).to.be.equal('1');
-    chai.expect(Voca.sprintf("%b", 'NN15')).to.be.equal('0');
-    chai.expect(Voca.sprintf("%b %b", '', 15)).to.be.equal('0 1111');
-    chai.expect(Voca.sprintf("%b", '+')).to.be.equal('0');
-    chai.expect(Voca.sprintf("%b %b", -1, -10)).to.be.equal('11111111111111111111111111111111 11111111111111111111111111110110');
+    chai.expect(AwesomeString.sprintf('%b', 1)).to.be.equal('1');
+    chai.expect(AwesomeString.sprintf('%b %b 0b%b', 1, 0, 10)).to.be.equal('1 0 0b1010');
+    chai.expect(AwesomeString.sprintf('%+b %+b', 10, 10)).to.be.equal('1010 1010');
+    chai.expect(AwesomeString.sprintf("%+'t6b %4b", 9, 0)).to.be.equal('tt1001    0');
+    chai.expect(AwesomeString.sprintf("%010b", 90)).to.be.equal('0001011010');
+    chai.expect(AwesomeString.sprintf("%+ 8b", 88)).to.be.equal(' 1011000');
+    chai.expect(AwesomeString.sprintf("%b+%b=%b", 9, 1, 10)).to.be.equal('1001+1=1010');
+    chai.expect(AwesomeString.sprintf("%3$04b-%2$04b=%1$04b", 4, 1, 5)).to.be.equal('0101-0001=0100');
+    chai.expect(AwesomeString.sprintf("%+'T-5b", 15)).to.be.equal('1111T');
+    chai.expect(AwesomeString.sprintf("%b", 1.5e+3)).to.be.equal('10111011100');
+    chai.expect(AwesomeString.sprintf("%b", '15NN')).to.be.equal('1111');
+    chai.expect(AwesomeString.sprintf("%b", '1.6')).to.be.equal('1');
+    chai.expect(AwesomeString.sprintf("%b", '1.5e+3')).to.be.equal('1');
+    chai.expect(AwesomeString.sprintf("%b", 'NN15')).to.be.equal('0');
+    chai.expect(AwesomeString.sprintf("%b %b", '', 15)).to.be.equal('0 1111');
+    chai.expect(AwesomeString.sprintf("%b", '+')).to.be.equal('0');
+    chai.expect(AwesomeString.sprintf("%b %b", -1, -10)).to.be.equal('11111111111111111111111111111111 11111111111111111111111111110110');
   });
 
   it('should return a string according to octal integer type formatting', function () {
-    chai.expect(Voca.sprintf('%o', 1)).to.be.equal('1');
-    chai.expect(Voca.sprintf('%o %o 0%o', 1, 0, 10)).to.be.equal('1 0 012');
-    chai.expect(Voca.sprintf('%+o %+o', 10, 10)).to.be.equal('12 12');
-    chai.expect(Voca.sprintf("%+'t6o %4o", 9, 0)).to.be.equal('tttt11    0');
-    chai.expect(Voca.sprintf("%010o", 90)).to.be.equal('0000000132');
-    chai.expect(Voca.sprintf("%+ 8o", 88)).to.be.equal('     130');
-    chai.expect(Voca.sprintf("%o+%o=%o", 9, 1, 10)).to.be.equal('11+1=12');
-    chai.expect(Voca.sprintf("%3$04o-%2$04o=%1$04o", 35, 5, 40)).to.be.equal('0050-0005=0043');
-    chai.expect(Voca.sprintf("%+'T-5o", 15)).to.be.equal('17TTT');
-    chai.expect(Voca.sprintf("%o", 1.5e+3)).to.be.equal('2734');
-    chai.expect(Voca.sprintf("%o", '15NN')).to.be.equal('17');
-    chai.expect(Voca.sprintf("%o", '1.6')).to.be.equal('1');
-    chai.expect(Voca.sprintf("%o", '1.5e+3')).to.be.equal('1');
-    chai.expect(Voca.sprintf("%o", 'NN15')).to.be.equal('0');
-    chai.expect(Voca.sprintf("%o %o", '', 15)).to.be.equal('0 17');
-    chai.expect(Voca.sprintf("%o", '+')).to.be.equal('0');
-    chai.expect(Voca.sprintf("%o %o", -1, -10)).to.be.equal('37777777777 37777777766');
+    chai.expect(AwesomeString.sprintf('%o', 1)).to.be.equal('1');
+    chai.expect(AwesomeString.sprintf('%o %o 0%o', 1, 0, 10)).to.be.equal('1 0 012');
+    chai.expect(AwesomeString.sprintf('%+o %+o', 10, 10)).to.be.equal('12 12');
+    chai.expect(AwesomeString.sprintf("%+'t6o %4o", 9, 0)).to.be.equal('tttt11    0');
+    chai.expect(AwesomeString.sprintf("%010o", 90)).to.be.equal('0000000132');
+    chai.expect(AwesomeString.sprintf("%+ 8o", 88)).to.be.equal('     130');
+    chai.expect(AwesomeString.sprintf("%o+%o=%o", 9, 1, 10)).to.be.equal('11+1=12');
+    chai.expect(AwesomeString.sprintf("%3$04o-%2$04o=%1$04o", 35, 5, 40)).to.be.equal('0050-0005=0043');
+    chai.expect(AwesomeString.sprintf("%+'T-5o", 15)).to.be.equal('17TTT');
+    chai.expect(AwesomeString.sprintf("%o", 1.5e+3)).to.be.equal('2734');
+    chai.expect(AwesomeString.sprintf("%o", '15NN')).to.be.equal('17');
+    chai.expect(AwesomeString.sprintf("%o", '1.6')).to.be.equal('1');
+    chai.expect(AwesomeString.sprintf("%o", '1.5e+3')).to.be.equal('1');
+    chai.expect(AwesomeString.sprintf("%o", 'NN15')).to.be.equal('0');
+    chai.expect(AwesomeString.sprintf("%o %o", '', 15)).to.be.equal('0 17');
+    chai.expect(AwesomeString.sprintf("%o", '+')).to.be.equal('0');
+    chai.expect(AwesomeString.sprintf("%o %o", -1, -10)).to.be.equal('37777777777 37777777766');
   });
 
   it('should return a string according to hexadecimal integer type formatting', function () {
-    chai.expect(Voca.sprintf('%x-%X', 1, 14)).to.be.equal('1-E');
-    chai.expect(Voca.sprintf('%x %x 0X%x', 1, 0, 20)).to.be.equal('1 0 0X14');
-    chai.expect(Voca.sprintf('%+x %+x', 10, 50)).to.be.equal('a 32');
-    chai.expect(Voca.sprintf("%+'t6x %4x", 30, 0)).to.be.equal('tttt1e    0');
-    chai.expect(Voca.sprintf("%010x", 90)).to.be.equal('000000005a');
-    chai.expect(Voca.sprintf("%+ 8x", 88)).to.be.equal('      58');
-    chai.expect(Voca.sprintf("%x+%x=%x", 90, 10, 100)).to.be.equal('5a+a=64');
-    chai.expect(Voca.sprintf("%3$04x-%2$04x=%1$04x", 35, 5, 40)).to.be.equal('0028-0005=0023');
-    chai.expect(Voca.sprintf("%+'T-5x", 15)).to.be.equal('fTTTT');
-    chai.expect(Voca.sprintf("%1$x %1$X", 1.5e+3)).to.be.equal('5dc 5DC');
-    chai.expect(Voca.sprintf("%x", '15NN')).to.be.equal('f');
-    chai.expect(Voca.sprintf("%x", '1.6')).to.be.equal('1');
-    chai.expect(Voca.sprintf("%x", '1.5e+3')).to.be.equal('1');
-    chai.expect(Voca.sprintf("%x", 'NN15')).to.be.equal('0');
-    chai.expect(Voca.sprintf("%x %x", '', 15)).to.be.equal('0 f');
-    chai.expect(Voca.sprintf("%x", '+')).to.be.equal('0');
-    chai.expect(Voca.sprintf("%x %x", -1, -10)).to.be.equal('ffffffff fffffff6');
+    chai.expect(AwesomeString.sprintf('%x-%X', 1, 14)).to.be.equal('1-E');
+    chai.expect(AwesomeString.sprintf('%x %x 0X%x', 1, 0, 20)).to.be.equal('1 0 0X14');
+    chai.expect(AwesomeString.sprintf('%+x %+x', 10, 50)).to.be.equal('a 32');
+    chai.expect(AwesomeString.sprintf("%+'t6x %4x", 30, 0)).to.be.equal('tttt1e    0');
+    chai.expect(AwesomeString.sprintf("%010x", 90)).to.be.equal('000000005a');
+    chai.expect(AwesomeString.sprintf("%+ 8x", 88)).to.be.equal('      58');
+    chai.expect(AwesomeString.sprintf("%x+%x=%x", 90, 10, 100)).to.be.equal('5a+a=64');
+    chai.expect(AwesomeString.sprintf("%3$04x-%2$04x=%1$04x", 35, 5, 40)).to.be.equal('0028-0005=0023');
+    chai.expect(AwesomeString.sprintf("%+'T-5x", 15)).to.be.equal('fTTTT');
+    chai.expect(AwesomeString.sprintf("%1$x %1$X", 1.5e+3)).to.be.equal('5dc 5DC');
+    chai.expect(AwesomeString.sprintf("%x", '15NN')).to.be.equal('f');
+    chai.expect(AwesomeString.sprintf("%x", '1.6')).to.be.equal('1');
+    chai.expect(AwesomeString.sprintf("%x", '1.5e+3')).to.be.equal('1');
+    chai.expect(AwesomeString.sprintf("%x", 'NN15')).to.be.equal('0');
+    chai.expect(AwesomeString.sprintf("%x %x", '', 15)).to.be.equal('0 f');
+    chai.expect(AwesomeString.sprintf("%x", '+')).to.be.equal('0');
+    chai.expect(AwesomeString.sprintf("%x %x", -1, -10)).to.be.equal('ffffffff fffffff6');
   });
 
   it('should return a string according to unsigned decimal integer type formatting', function () {
-    chai.expect(Voca.sprintf('%u-%u', 1, 14)).to.be.equal('1-14');
-    chai.expect(Voca.sprintf('%u %u %u', 1, 0, 20)).to.be.equal('1 0 20');
-    chai.expect(Voca.sprintf('%+u %+u', 10, 50)).to.be.equal('10 50');
-    chai.expect(Voca.sprintf("%+'t6u %4u", 30, 0)).to.be.equal('tttt30    0');
-    chai.expect(Voca.sprintf("%010u", 90)).to.be.equal('0000000090');
-    chai.expect(Voca.sprintf("%+ 8u", 88)).to.be.equal('      88');
-    chai.expect(Voca.sprintf("%u+%u=%u", 90, 10, 100)).to.be.equal('90+10=100');
-    chai.expect(Voca.sprintf("%3$04u-%2$04u=%1$04u", 35, 5, 40)).to.be.equal('0040-0005=0035');
-    chai.expect(Voca.sprintf("%+'T-5u", 15)).to.be.equal('15TTT');
-    chai.expect(Voca.sprintf("%1$u %1$u", 1.5e+3)).to.be.equal('1500 1500');
-    chai.expect(Voca.sprintf("%u", '15NN')).to.be.equal('15');
-    chai.expect(Voca.sprintf("%u", '1.6')).to.be.equal('1');
-    chai.expect(Voca.sprintf("%u", '1.5e+3')).to.be.equal('1');
-    chai.expect(Voca.sprintf("%u", 'NN15')).to.be.equal('0');
-    chai.expect(Voca.sprintf("%u %u", '', 15)).to.be.equal('0 15');
-    chai.expect(Voca.sprintf("%u", '+')).to.be.equal('0');
-    chai.expect(Voca.sprintf("%u %u", -1, -10)).to.be.equal('4294967295 4294967286');
+    chai.expect(AwesomeString.sprintf('%u-%u', 1, 14)).to.be.equal('1-14');
+    chai.expect(AwesomeString.sprintf('%u %u %u', 1, 0, 20)).to.be.equal('1 0 20');
+    chai.expect(AwesomeString.sprintf('%+u %+u', 10, 50)).to.be.equal('10 50');
+    chai.expect(AwesomeString.sprintf("%+'t6u %4u", 30, 0)).to.be.equal('tttt30    0');
+    chai.expect(AwesomeString.sprintf("%010u", 90)).to.be.equal('0000000090');
+    chai.expect(AwesomeString.sprintf("%+ 8u", 88)).to.be.equal('      88');
+    chai.expect(AwesomeString.sprintf("%u+%u=%u", 90, 10, 100)).to.be.equal('90+10=100');
+    chai.expect(AwesomeString.sprintf("%3$04u-%2$04u=%1$04u", 35, 5, 40)).to.be.equal('0040-0005=0035');
+    chai.expect(AwesomeString.sprintf("%+'T-5u", 15)).to.be.equal('15TTT');
+    chai.expect(AwesomeString.sprintf("%1$u %1$u", 1.5e+3)).to.be.equal('1500 1500');
+    chai.expect(AwesomeString.sprintf("%u", '15NN')).to.be.equal('15');
+    chai.expect(AwesomeString.sprintf("%u", '1.6')).to.be.equal('1');
+    chai.expect(AwesomeString.sprintf("%u", '1.5e+3')).to.be.equal('1');
+    chai.expect(AwesomeString.sprintf("%u", 'NN15')).to.be.equal('0');
+    chai.expect(AwesomeString.sprintf("%u %u", '', 15)).to.be.equal('0 15');
+    chai.expect(AwesomeString.sprintf("%u", '+')).to.be.equal('0');
+    chai.expect(AwesomeString.sprintf("%u %u", -1, -10)).to.be.equal('4294967295 4294967286');
   });
 
   it('should return a string according to ascii integer type formatting', function () {
-    chai.expect(Voca.sprintf('%c %c %c', 65, 0x0020, 48)).to.be.equal('A   0');
-    chai.expect(Voca.sprintf('%5c', 65)).to.be.equal('    A');
-    chai.expect(Voca.sprintf('%02c', 65)).to.be.equal('0A');
-    chai.expect(Voca.sprintf('%-5c', 65)).to.be.equal('A    ');
-    chai.expect(Voca.sprintf('%+\'t-4c', '110')).to.be.equal('nttt');
+    chai.expect(AwesomeString.sprintf('%c %c %c', 65, 0x0020, 48)).to.be.equal('A   0');
+    chai.expect(AwesomeString.sprintf('%5c', 65)).to.be.equal('    A');
+    chai.expect(AwesomeString.sprintf('%02c', 65)).to.be.equal('0A');
+    chai.expect(AwesomeString.sprintf('%-5c', 65)).to.be.equal('A    ');
+    chai.expect(AwesomeString.sprintf('%+\'t-4c', '110')).to.be.equal('nttt');
   });
 
   it('should return a string according to float type formatting', function () {
-    chai.expect(Voca.sprintf('%f %f', 1, 0)).to.be.equal('1.000000 0.000000');
-    chai.expect(Voca.sprintf('%+f+%+f', 50.123456789, 0)).to.be.equal('+50.123457++0.000000');
-    chai.expect(Voca.sprintf('%1$.0f %1$.1f %1$.2f', 1.57)).to.be.equal('2 1.6 1.57');
-    chai.expect(Voca.sprintf('%.2f %0.2f', 0, 0)).to.be.equal('0.00 0.00');
-    chai.expect(Voca.sprintf('%4f %05.2f', -15.789, 1.27)).to.be.equal('-15.789000 01.27');
-    chai.expect(Voca.sprintf("%'f10f", 1.5)).to.be.equal('ff1.500000');
-    chai.expect(Voca.sprintf("%+-12f", 101.101)).to.be.equal('+101.101000 ');
-    chai.expect(Voca.sprintf("%+'s-15.10f", 9.7654321)).to.be.equal('+9.7654321000ss');
-    chai.expect(Voca.sprintf("%06.2f", 8)).to.be.equal('008.00');
-    chai.expect(Voca.sprintf('%f %.1f', '34.111', '-15.67')).to.be.equal('34.111000 -15.7');
-    chai.expect(Voca.sprintf('%.3f %.2f', '1.123456e+0', '1.3E+2')).to.be.equal('1.123 130.00');
-    chai.expect(Voca.sprintf('%.3f', '-567.123456e+6')).to.be.equal('-567123456.000');
-    chai.expect(Voca.sprintf('%f %f %f', '1FF', '-15.67TUU', '.1')).to.be.equal('1.000000 -15.670000 0.100000');
-    chai.expect(Voca.sprintf('%f %f %f', 'FF', '', '+')).to.be.equal('0.000000 0.000000 0.000000');
+    chai.expect(AwesomeString.sprintf('%f %f', 1, 0)).to.be.equal('1.000000 0.000000');
+    chai.expect(AwesomeString.sprintf('%+f+%+f', 50.123456789, 0)).to.be.equal('+50.123457++0.000000');
+    chai.expect(AwesomeString.sprintf('%1$.0f %1$.1f %1$.2f', 1.57)).to.be.equal('2 1.6 1.57');
+    chai.expect(AwesomeString.sprintf('%.2f %0.2f', 0, 0)).to.be.equal('0.00 0.00');
+    chai.expect(AwesomeString.sprintf('%4f %05.2f', -15.789, 1.27)).to.be.equal('-15.789000 01.27');
+    chai.expect(AwesomeString.sprintf("%'f10f", 1.5)).to.be.equal('ff1.500000');
+    chai.expect(AwesomeString.sprintf("%+-12f", 101.101)).to.be.equal('+101.101000 ');
+    chai.expect(AwesomeString.sprintf("%+'s-15.10f", 9.7654321)).to.be.equal('+9.7654321000ss');
+    chai.expect(AwesomeString.sprintf("%06.2f", 8)).to.be.equal('008.00');
+    chai.expect(AwesomeString.sprintf('%f %.1f', '34.111', '-15.67')).to.be.equal('34.111000 -15.7');
+    chai.expect(AwesomeString.sprintf('%.3f %.2f', '1.123456e+0', '1.3E+2')).to.be.equal('1.123 130.00');
+    chai.expect(AwesomeString.sprintf('%.3f', '-567.123456e+6')).to.be.equal('-567123456.000');
+    chai.expect(AwesomeString.sprintf('%f %f %f', '1FF', '-15.67TUU', '.1')).to.be.equal('1.000000 -15.670000 0.100000');
+    chai.expect(AwesomeString.sprintf('%f %f %f', 'FF', '', '+')).to.be.equal('0.000000 0.000000 0.000000');
   });
 
   it('should return a string according to scientific float type formatting', function () {
-    chai.expect(Voca.sprintf('%e %e %E', 100, 0, .1)).to.be.equal('1.000000e+2 0.000000e+0 1.000000E-1');
-    chai.expect(Voca.sprintf('%+e+%+e', 50.123456789, 0)).to.be.equal('+5.012346e+1++0.000000e+0');
-    chai.expect(Voca.sprintf('%1$.0e %1$.1e %1$.2e', 1.57)).to.be.equal('2e+0 1.6e+0 1.57e+0');
-    chai.expect(Voca.sprintf('%.2e %0.2e', 0, 0)).to.be.equal('0.00e+0 0.00e+0');
-    chai.expect(Voca.sprintf('%.0e %.0e', 0, 15.7)).to.be.equal('0e+0 2e+1');
-    chai.expect(Voca.sprintf('%4e %08.2e', -15.789, 1.27)).to.be.equal('-1.578900e+1 01.27e+0');
-    chai.expect(Voca.sprintf("%'f15e", 0.105)).to.be.equal('ffff1.050000e-1');
-    chai.expect(Voca.sprintf("%+-14e", 101.101)).to.be.equal('+1.011010e+2  ');
-    chai.expect(Voca.sprintf("%+'s-20.10e", 0.097654321)).to.be.equal('+9.7654321000e-2ssss');
-    chai.expect(Voca.sprintf("%08.2e", 8)).to.be.equal('08.00e+0');
-    chai.expect(Voca.sprintf('%e %.1e', '34.111', '-15.67')).to.be.equal('3.411100e+1 -1.6e+1');
-    chai.expect(Voca.sprintf('%.3E %.2E', '1.123456e+0', '1.3E+2')).to.be.equal('1.123E+0 1.30E+2');
-    chai.expect(Voca.sprintf('%.4e', '-567.123456e+6')).to.be.equal('-5.6712e+8');
-    chai.expect(Voca.sprintf('%e %e %e', '1FF', '-15.67TUU', '.1')).to.be.equal('1.000000e+0 -1.567000e+1 1.000000e-1');
-    chai.expect(Voca.sprintf('%e %e %e', 'FF', '', '+')).to.be.equal('0.000000e+0 0.000000e+0 0.000000e+0');
+    chai.expect(AwesomeString.sprintf('%e %e %E', 100, 0, .1)).to.be.equal('1.000000e+2 0.000000e+0 1.000000E-1');
+    chai.expect(AwesomeString.sprintf('%+e+%+e', 50.123456789, 0)).to.be.equal('+5.012346e+1++0.000000e+0');
+    chai.expect(AwesomeString.sprintf('%1$.0e %1$.1e %1$.2e', 1.57)).to.be.equal('2e+0 1.6e+0 1.57e+0');
+    chai.expect(AwesomeString.sprintf('%.2e %0.2e', 0, 0)).to.be.equal('0.00e+0 0.00e+0');
+    chai.expect(AwesomeString.sprintf('%.0e %.0e', 0, 15.7)).to.be.equal('0e+0 2e+1');
+    chai.expect(AwesomeString.sprintf('%4e %08.2e', -15.789, 1.27)).to.be.equal('-1.578900e+1 01.27e+0');
+    chai.expect(AwesomeString.sprintf("%'f15e", 0.105)).to.be.equal('ffff1.050000e-1');
+    chai.expect(AwesomeString.sprintf("%+-14e", 101.101)).to.be.equal('+1.011010e+2  ');
+    chai.expect(AwesomeString.sprintf("%+'s-20.10e", 0.097654321)).to.be.equal('+9.7654321000e-2ssss');
+    chai.expect(AwesomeString.sprintf("%08.2e", 8)).to.be.equal('08.00e+0');
+    chai.expect(AwesomeString.sprintf('%e %.1e', '34.111', '-15.67')).to.be.equal('3.411100e+1 -1.6e+1');
+    chai.expect(AwesomeString.sprintf('%.3E %.2E', '1.123456e+0', '1.3E+2')).to.be.equal('1.123E+0 1.30E+2');
+    chai.expect(AwesomeString.sprintf('%.4e', '-567.123456e+6')).to.be.equal('-5.6712e+8');
+    chai.expect(AwesomeString.sprintf('%e %e %e', '1FF', '-15.67TUU', '.1')).to.be.equal('1.000000e+0 -1.567000e+1 1.000000e-1');
+    chai.expect(AwesomeString.sprintf('%e %e %e', 'FF', '', '+')).to.be.equal('0.000000e+0 0.000000e+0 0.000000e+0');
   });
 
   it('should return a string according to short float type formatting', function () {
-    chai.expect(Voca.sprintf('%g %g %g', 100, 0, .1)).to.be.equal('100 0 0.1');
-    chai.expect(Voca.sprintf('%+g+%+g', 50.123456789, 0)).to.be.equal('+50.1235++0');
-    chai.expect(Voca.sprintf('%1$.0g %1$.1g %1$.2g', 1.57)).to.be.equal('2 2 1.6');
-    chai.expect(Voca.sprintf('%.2g %0.2g', 0, 0)).to.be.equal('0 0');
-    chai.expect(Voca.sprintf('%.0g', 0)).to.be.equal('0');
-    chai.expect(Voca.sprintf('%.0g %.0g', 0, 15.7)).to.be.equal('0 2e+1');
-    chai.expect(Voca.sprintf('%4g %08.2g', -15.789, 1.27)).to.be.equal('-15.789 000001.3');
-    chai.expect(Voca.sprintf("%'f15g", 0.105)).to.be.equal('ffffffffff0.105');
-    chai.expect(Voca.sprintf("%+-14g", 101.101)).to.be.equal('+101.101      ');
-    chai.expect(Voca.sprintf("%+'s-20.10g", 0.0976543216)).to.be.equal('+0.0976543216sssssss');
-    chai.expect(Voca.sprintf("%+'s-20.8g", 0.0976543216)).to.be.equal('+0.097654322ssssssss');
-    chai.expect(Voca.sprintf("%08.2g", 8)).to.be.equal('00000008');
-    chai.expect(Voca.sprintf('%g %.1G', '34.111', '-15.67')).to.be.equal('34.111 -2E+1');
-    chai.expect(Voca.sprintf('_%.3G_%.2G_!1234567890*', '1.123456e+0', '1.3E+2')).to.be.equal('_1.12_1.3E+2_!1234567890*');
-    chai.expect(Voca.sprintf('%.4g', '-567.123456e+6')).to.be.equal('-5.671e+8');
-    chai.expect(Voca.sprintf('%g %G %g', '1FF', '-15.67TUU', '.1')).to.be.equal('1 -15.67 0.1');
-    chai.expect(Voca.sprintf('%g %G %g', 'FF', '', '+')).to.be.equal('0 0 0');
+    chai.expect(AwesomeString.sprintf('%g %g %g', 100, 0, .1)).to.be.equal('100 0 0.1');
+    chai.expect(AwesomeString.sprintf('%+g+%+g', 50.123456789, 0)).to.be.equal('+50.1235++0');
+    chai.expect(AwesomeString.sprintf('%1$.0g %1$.1g %1$.2g', 1.57)).to.be.equal('2 2 1.6');
+    chai.expect(AwesomeString.sprintf('%.2g %0.2g', 0, 0)).to.be.equal('0 0');
+    chai.expect(AwesomeString.sprintf('%.0g', 0)).to.be.equal('0');
+    chai.expect(AwesomeString.sprintf('%.0g %.0g', 0, 15.7)).to.be.equal('0 2e+1');
+    chai.expect(AwesomeString.sprintf('%4g %08.2g', -15.789, 1.27)).to.be.equal('-15.789 000001.3');
+    chai.expect(AwesomeString.sprintf("%'f15g", 0.105)).to.be.equal('ffffffffff0.105');
+    chai.expect(AwesomeString.sprintf("%+-14g", 101.101)).to.be.equal('+101.101      ');
+    chai.expect(AwesomeString.sprintf("%+'s-20.10g", 0.0976543216)).to.be.equal('+0.0976543216sssssss');
+    chai.expect(AwesomeString.sprintf("%+'s-20.8g", 0.0976543216)).to.be.equal('+0.097654322ssssssss');
+    chai.expect(AwesomeString.sprintf("%08.2g", 8)).to.be.equal('00000008');
+    chai.expect(AwesomeString.sprintf('%g %.1G', '34.111', '-15.67')).to.be.equal('34.111 -2E+1');
+    chai.expect(AwesomeString.sprintf('_%.3G_%.2G_!1234567890*', '1.123456e+0', '1.3E+2')).to.be.equal('_1.12_1.3E+2_!1234567890*');
+    chai.expect(AwesomeString.sprintf('%.4g', '-567.123456e+6')).to.be.equal('-5.671e+8');
+    chai.expect(AwesomeString.sprintf('%g %G %g', '1FF', '-15.67TUU', '.1')).to.be.equal('1 -15.67 0.1');
+    chai.expect(AwesomeString.sprintf('%g %G %g', 'FF', '', '+')).to.be.equal('0 0 0');
   });
 
   it('should return a string according to format', function () {
-    chai.expect(Voca.sprintf('%s costs $%.2f', 'Coffee', 2)).to.be.equal('Coffee costs $2.00');
-    chai.expect(Voca.sprintf('%%s like %s', 'Coffee')).to.be.equal('%s like Coffee');
-    chai.expect(Voca.sprintf("Full format: %'*10s %+d %i %04b %c %o %u %X %.0f %e %g %%", 'string', 18, -5, 4, 65, 8, 401, 255, 8.9, 50.12, 10.123456789)).to.be.equal('Full format: ****string +18 -5 0100 A 10 401 FF 9 5.012000e+1 10.1235 %');
-    chai.expect(Voca.sprintf('%s%d%%%s', 'word', 10, 'word')).to.be.equal('word10%word');
+    chai.expect(AwesomeString.sprintf('%s costs $%.2f', 'Coffee', 2)).to.be.equal('Coffee costs $2.00');
+    chai.expect(AwesomeString.sprintf('%%s like %s', 'Coffee')).to.be.equal('%s like Coffee');
+    chai.expect(AwesomeString.sprintf("Full format: %'*10s %+d %i %04b %c %o %u %X %.0f %e %g %%", 'string', 18, -5, 4, 65, 8, 401, 255, 8.9, 50.12, 10.123456789)).to.be.equal('Full format: ****string +18 -5 0100 A 10 401 FF 9 5.012000e+1 10.1235 %');
+    chai.expect(AwesomeString.sprintf('%s%d%%%s', 'word', 10, 'word')).to.be.equal('word10%word');
   });
 
   it('should ignore specifiers with double percent characters', function () {
-    chai.expect(Voca.sprintf('%%s')).to.be.equal('%s');
-    chai.expect(Voca.sprintf('%%s %s', 'Persian')).to.be.equal('%s Persian');
-    chai.expect(Voca.sprintf('%% %%')).to.be.equal('% %');
-    chai.expect(Voca.sprintf('%%%% %%%%%s', 'Babylon')).to.be.equal('%% %%Babylon');
+    chai.expect(AwesomeString.sprintf('%%s')).to.be.equal('%s');
+    chai.expect(AwesomeString.sprintf('%%s %s', 'Persian')).to.be.equal('%s Persian');
+    chai.expect(AwesomeString.sprintf('%% %%')).to.be.equal('% %');
+    chai.expect(AwesomeString.sprintf('%%%% %%%%%s', 'Babylon')).to.be.equal('%% %%Babylon');
   });
 
   it('should throw exceptions when the formatter is not valid or not enough arguments', function () {
-    chai.expect(Voca.sprintf.bind(Voca, '%s')).to.throw(Error, 'sprintf(): Too few arguments');
-    chai.expect(Voca.sprintf.bind(Voca, '%s %s')).to.throw(Error, 'sprintf(): Too few arguments');
-    chai.expect(Voca.sprintf.bind(Voca, '%s %s', 'Alexander')).to.throw(Error, 'sprintf(): Too few arguments');
-    chai.expect(Voca.sprintf.bind(Voca, '%2$s %1$s', 'Alexander')).to.throw(Error, 'sprintf(): Too few arguments');
-    chai.expect(Voca.sprintf.bind(Voca, '%2$s %1$s', 'Alexander')).to.throw(Error, 'sprintf(): Too few arguments');
-    chai.expect(Voca.sprintf.bind(Voca, '%a', 'Alexander')).to.throw(Error, 'sprintf(): Unknown type specifier');
-    chai.expect(Voca.sprintf.bind(Voca, PRINTABLE_ASCII, 'Alexander')).to.throw(Error, 'sprintf(): Unknown type specifier');
-    chai.expect(Voca.sprintf.bind(Voca, '%s the %y', 'Alexander', 'Great')).to.throw(Error, 'sprintf(): Unknown type specifier');
-    chai.expect(Voca.sprintf.bind(Voca, '%', 'Alexander')).to.throw(Error, 'sprintf(): Unknown type specifier');
-    chai.expect(Voca.sprintf.bind(Voca, '%%%%% %%', 'Alexander')).to.throw(Error, 'sprintf(): Unknown type specifier');
-    chai.expect(Voca.sprintf.bind(Voca, '%0$s', 'Alexander')).to.throw(Error, 'sprintf(): Argument number must be greater than zero');
+    chai.expect(AwesomeString.sprintf.bind(AwesomeString, '%s')).to.throw(Error, 'sprintf(): Too few arguments');
+    chai.expect(AwesomeString.sprintf.bind(AwesomeString, '%s %s')).to.throw(Error, 'sprintf(): Too few arguments');
+    chai.expect(AwesomeString.sprintf.bind(AwesomeString, '%s %s', 'Alexander')).to.throw(Error, 'sprintf(): Too few arguments');
+    chai.expect(AwesomeString.sprintf.bind(AwesomeString, '%2$s %1$s', 'Alexander')).to.throw(Error, 'sprintf(): Too few arguments');
+    chai.expect(AwesomeString.sprintf.bind(AwesomeString, '%2$s %1$s', 'Alexander')).to.throw(Error, 'sprintf(): Too few arguments');
+    chai.expect(AwesomeString.sprintf.bind(AwesomeString, '%a', 'Alexander')).to.throw(Error, 'sprintf(): Unknown type specifier');
+    chai.expect(AwesomeString.sprintf.bind(AwesomeString, PRINTABLE_ASCII, 'Alexander')).to.throw(Error, 'sprintf(): Unknown type specifier');
+    chai.expect(AwesomeString.sprintf.bind(AwesomeString, '%s the %y', 'Alexander', 'Great')).to.throw(Error, 'sprintf(): Unknown type specifier');
+    chai.expect(AwesomeString.sprintf.bind(AwesomeString, '%', 'Alexander')).to.throw(Error, 'sprintf(): Unknown type specifier');
+    chai.expect(AwesomeString.sprintf.bind(AwesomeString, '%%%%% %%', 'Alexander')).to.throw(Error, 'sprintf(): Unknown type specifier');
+    chai.expect(AwesomeString.sprintf.bind(AwesomeString, '%0$s', 'Alexander')).to.throw(Error, 'sprintf(): Argument number must be greater than zero');
   });
 
   it('should return an unmodified string for missing formatting specifiers', function () {
-    chai.expect(Voca.sprintf('Without formatting')).to.be.equal('Without formatting');
-    chai.expect(Voca.sprintf('')).to.be.equal('');
-    chai.expect(Voca.sprintf()).to.be.equal('');
-    chai.expect(Voca.sprintf(undefined)).to.be.equal('');
-    chai.expect(Voca.sprintf(null)).to.be.equal('');
+    chai.expect(AwesomeString.sprintf('Without formatting')).to.be.equal('Without formatting');
+    chai.expect(AwesomeString.sprintf('')).to.be.equal('');
+    chai.expect(AwesomeString.sprintf()).to.be.equal('');
+    chai.expect(AwesomeString.sprintf(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.sprintf(null)).to.be.equal('');
   });
 });
 
 describe('vprintf', function () {
 
   it('should return a string according to formatting', function () {
-    chai.expect(Voca.vprintf('%s', ['string'])).to.be.equal('string');
-    chai.expect(Voca.vprintf('Hello %s!', ['World'])).to.be.equal('Hello World!');
-    chai.expect(Voca.vprintf('%d %d %d', [1, 0, -100])).to.be.equal('1 0 -100');
-    chai.expect(Voca.vprintf('%b %b 0b%b', [1, 0, 10])).to.be.equal('1 0 0b1010');
-    chai.expect(Voca.vprintf('%o %o 0%o', [1, 0, 10])).to.be.equal('1 0 012');
-    chai.expect(Voca.vprintf('%x %x 0X%x', [1, 0, 20])).to.be.equal('1 0 0X14');
-    chai.expect(Voca.vprintf('%u %u %u', [1, 0, 20])).to.be.equal('1 0 20');
-    chai.expect(Voca.vprintf('%c %c %c', [65, 0x0020, 48])).to.be.equal('A   0');
-    chai.expect(Voca.vprintf('%+f+%+f', [50.123456789, 0])).to.be.equal('+50.123457++0.000000');
-    chai.expect(Voca.vprintf('%e %e %E', [100, 0, .1])).to.be.equal('1.000000e+2 0.000000e+0 1.000000E-1');
-    chai.expect(Voca.vprintf('%+g+%+g', [50.123456789, 0])).to.be.equal('+50.1235++0');
-    chai.expect(Voca.vprintf("Full format: %'*10s %+d %i %04b %c %o %u %X %.0f %e %g %%", ['string', 18, -5, 4, 65, 8, 401, 255, 8.9, 50.12, 10.123456789])).to.be.equal('Full format: ****string +18 -5 0100 A 10 401 FF 9 5.012000e+1 10.1235 %');
-    chai.expect(Voca.vprintf('%%s %s', ['Persian'])).to.be.equal('%s Persian');
+    chai.expect(AwesomeString.vprintf('%s', ['string'])).to.be.equal('string');
+    chai.expect(AwesomeString.vprintf('Hello %s!', ['World'])).to.be.equal('Hello World!');
+    chai.expect(AwesomeString.vprintf('%d %d %d', [1, 0, -100])).to.be.equal('1 0 -100');
+    chai.expect(AwesomeString.vprintf('%b %b 0b%b', [1, 0, 10])).to.be.equal('1 0 0b1010');
+    chai.expect(AwesomeString.vprintf('%o %o 0%o', [1, 0, 10])).to.be.equal('1 0 012');
+    chai.expect(AwesomeString.vprintf('%x %x 0X%x', [1, 0, 20])).to.be.equal('1 0 0X14');
+    chai.expect(AwesomeString.vprintf('%u %u %u', [1, 0, 20])).to.be.equal('1 0 20');
+    chai.expect(AwesomeString.vprintf('%c %c %c', [65, 0x0020, 48])).to.be.equal('A   0');
+    chai.expect(AwesomeString.vprintf('%+f+%+f', [50.123456789, 0])).to.be.equal('+50.123457++0.000000');
+    chai.expect(AwesomeString.vprintf('%e %e %E', [100, 0, .1])).to.be.equal('1.000000e+2 0.000000e+0 1.000000E-1');
+    chai.expect(AwesomeString.vprintf('%+g+%+g', [50.123456789, 0])).to.be.equal('+50.1235++0');
+    chai.expect(AwesomeString.vprintf("Full format: %'*10s %+d %i %04b %c %o %u %X %.0f %e %g %%", ['string', 18, -5, 4, 65, 8, 401, 255, 8.9, 50.12, 10.123456789])).to.be.equal('Full format: ****string +18 -5 0100 A 10 401 FF 9 5.012000e+1 10.1235 %');
+    chai.expect(AwesomeString.vprintf('%%s %s', ['Persian'])).to.be.equal('%s Persian');
   });
 
   it('should throw exceptions when the formatter is not valid or not enough arguments', function () {
-    chai.expect(Voca.vprintf.bind(Voca, '%2$s %1$s', ['Alexander'])).to.throw(Error, 'sprintf(): Too few arguments');
-    chai.expect(Voca.vprintf.bind(Voca, '%a', ['Alexander'])).to.throw(Error, 'sprintf(): Unknown type specifier');
-    chai.expect(Voca.vprintf.bind(Voca, PRINTABLE_ASCII, ['Alexander'])).to.throw(Error, 'sprintf(): Unknown type specifier');
-    chai.expect(Voca.vprintf.bind(Voca, '%0$s', ['Alexander'])).to.throw(Error, 'sprintf(): Argument number must be greater than zero');
+    chai.expect(AwesomeString.vprintf.bind(AwesomeString, '%2$s %1$s', ['Alexander'])).to.throw(Error, 'sprintf(): Too few arguments');
+    chai.expect(AwesomeString.vprintf.bind(AwesomeString, '%a', ['Alexander'])).to.throw(Error, 'sprintf(): Unknown type specifier');
+    chai.expect(AwesomeString.vprintf.bind(AwesomeString, PRINTABLE_ASCII, ['Alexander'])).to.throw(Error, 'sprintf(): Unknown type specifier');
+    chai.expect(AwesomeString.vprintf.bind(AwesomeString, '%0$s', ['Alexander'])).to.throw(Error, 'sprintf(): Argument number must be greater than zero');
   });
 
   it('should return an unmodified string for missing formatting specifiers', function () {
-    chai.expect(Voca.vprintf('Without formatting')).to.be.equal('Without formatting');
-    chai.expect(Voca.vprintf('Without formatting', [])).to.be.equal('Without formatting');
-    chai.expect(Voca.vprintf('Without formatting', [undefined])).to.be.equal('Without formatting');
-    chai.expect(Voca.vprintf('')).to.be.equal('');
-    chai.expect(Voca.vprintf(' ')).to.be.equal(' ');
-    chai.expect(Voca.vprintf()).to.be.equal('');
-    chai.expect(Voca.vprintf(undefined)).to.be.equal('');
-    chai.expect(Voca.vprintf(null)).to.be.equal('');
+    chai.expect(AwesomeString.vprintf('Without formatting')).to.be.equal('Without formatting');
+    chai.expect(AwesomeString.vprintf('Without formatting', [])).to.be.equal('Without formatting');
+    chai.expect(AwesomeString.vprintf('Without formatting', [undefined])).to.be.equal('Without formatting');
+    chai.expect(AwesomeString.vprintf('')).to.be.equal('');
+    chai.expect(AwesomeString.vprintf(' ')).to.be.equal(' ');
+    chai.expect(AwesomeString.vprintf()).to.be.equal('');
+    chai.expect(AwesomeString.vprintf(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.vprintf(null)).to.be.equal('');
   });
 });
 
 describe('indexOf', function () {
 
   it('should return the index of a searched string', function () {
-    chai.expect(Voca.indexOf('we have a mission', 'mission')).to.be.equal(10);
-    chai.expect(Voca.indexOf('we have a mission', 'a')).to.be.equal(4);
-    chai.expect(Voca.indexOf('we have a mission', 'we')).to.be.equal(0);
-    chai.expect(Voca.indexOf('we have a mission', '')).to.be.equal(0);
-    chai.expect(Voca.indexOf('', '')).to.be.equal(0);
-    chai.expect(Voca.indexOf(undefined, '')).to.be.equal(0);
-    chai.expect(Voca.indexOf(null, '')).to.be.equal(0);
-    chai.expect(Voca.indexOf(PRINTABLE_ASCII, '!')).to.be.equal(1);
+    chai.expect(AwesomeString.indexOf('we have a mission', 'mission')).to.be.equal(10);
+    chai.expect(AwesomeString.indexOf('we have a mission', 'a')).to.be.equal(4);
+    chai.expect(AwesomeString.indexOf('we have a mission', 'we')).to.be.equal(0);
+    chai.expect(AwesomeString.indexOf('we have a mission', '')).to.be.equal(0);
+    chai.expect(AwesomeString.indexOf('', '')).to.be.equal(0);
+    chai.expect(AwesomeString.indexOf(undefined, '')).to.be.equal(0);
+    chai.expect(AwesomeString.indexOf(null, '')).to.be.equal(0);
+    chai.expect(AwesomeString.indexOf(PRINTABLE_ASCII, '!')).to.be.equal(1);
   });
 
   it('should return the index of a searched string and start index', function () {
-    chai.expect(Voca.indexOf('we have a mission', 'a', 6)).to.be.equal(8);
-    chai.expect(Voca.indexOf('we have a mission', 'we', 0)).to.be.equal(0);
-    chai.expect(Voca.indexOf('we have a mission', 'we', NaN)).to.be.equal(0);
-    chai.expect(Voca.indexOf('we have a mission', '', 0)).to.be.equal(0);
-    chai.expect(Voca.indexOf(PRINTABLE_ASCII, '#', 3)).to.be.equal(3);
+    chai.expect(AwesomeString.indexOf('we have a mission', 'a', 6)).to.be.equal(8);
+    chai.expect(AwesomeString.indexOf('we have a mission', 'we', 0)).to.be.equal(0);
+    chai.expect(AwesomeString.indexOf('we have a mission', 'we', NaN)).to.be.equal(0);
+    chai.expect(AwesomeString.indexOf('we have a mission', '', 0)).to.be.equal(0);
+    chai.expect(AwesomeString.indexOf(PRINTABLE_ASCII, '#', 3)).to.be.equal(3);
   });
 
   it('should return the index of a searched string in a string representation of an object', function () {
-    chai.expect(Voca.indexOf(['we have a mission'], 'a')).to.be.equal(4);
-    chai.expect(Voca.indexOf({
+    chai.expect(AwesomeString.indexOf(['we have a mission'], 'a')).to.be.equal(4);
+    chai.expect(AwesomeString.indexOf({
       toString: function () {
         return 'we have a mission';
       }
@@ -5201,46 +5195,46 @@ describe('indexOf', function () {
   });
 
   it('should return -1 for an invalid ending string and position', function () {
-    chai.expect(Voca.indexOf('we have a mission', 'me')).to.be.equal(-1);
-    chai.expect(Voca.indexOf('we have a mission', '12')).to.be.equal(-1);
-    chai.expect(Voca.indexOf('we have a mission', 'we', 3)).to.be.equal(-1);
-    chai.expect(Voca.indexOf('we have a mission', 'mission', 100)).to.be.equal(-1);
-    chai.expect(Voca.indexOf('we have a mission', 'mission', Infinity)).to.be.equal(-1);
-    chai.expect(Voca.indexOf('', 'me')).to.be.equal(-1);
+    chai.expect(AwesomeString.indexOf('we have a mission', 'me')).to.be.equal(-1);
+    chai.expect(AwesomeString.indexOf('we have a mission', '12')).to.be.equal(-1);
+    chai.expect(AwesomeString.indexOf('we have a mission', 'we', 3)).to.be.equal(-1);
+    chai.expect(AwesomeString.indexOf('we have a mission', 'mission', 100)).to.be.equal(-1);
+    chai.expect(AwesomeString.indexOf('we have a mission', 'mission', Infinity)).to.be.equal(-1);
+    chai.expect(AwesomeString.indexOf('', 'me')).to.be.equal(-1);
   });
 
   it('should return -1 for undefined and null parameters', function () {
-    chai.expect(Voca.indexOf('we have a mission')).to.be.equal(-1);
-    chai.expect(Voca.indexOf('we have a mission', undefined)).to.be.equal(-1);
-    chai.expect(Voca.indexOf('we have a mission', null)).to.be.equal(-1);
+    chai.expect(AwesomeString.indexOf('we have a mission')).to.be.equal(-1);
+    chai.expect(AwesomeString.indexOf('we have a mission', undefined)).to.be.equal(-1);
+    chai.expect(AwesomeString.indexOf('we have a mission', null)).to.be.equal(-1);
   });
 });
 
 describe('lastIndexOf', function () {
 
   it('should return the index of a searched string', function () {
-    chai.expect(Voca.lastIndexOf('we have a mission', 'mission')).to.be.equal(10);
-    chai.expect(Voca.lastIndexOf('we have a mission', 'a')).to.be.equal(8);
-    chai.expect(Voca.lastIndexOf('we have a mission', 'we')).to.be.equal(0);
-    chai.expect(Voca.lastIndexOf('we have a mission', '')).to.be.equal(17);
-    chai.expect(Voca.lastIndexOf('', '')).to.be.equal(0);
-    chai.expect(Voca.lastIndexOf(undefined, '')).to.be.equal(0);
-    chai.expect(Voca.lastIndexOf(null, '')).to.be.equal(0);
-    chai.expect(Voca.lastIndexOf(PRINTABLE_ASCII, '!')).to.be.equal(1);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission', 'mission')).to.be.equal(10);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission', 'a')).to.be.equal(8);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission', 'we')).to.be.equal(0);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission', '')).to.be.equal(17);
+    chai.expect(AwesomeString.lastIndexOf('', '')).to.be.equal(0);
+    chai.expect(AwesomeString.lastIndexOf(undefined, '')).to.be.equal(0);
+    chai.expect(AwesomeString.lastIndexOf(null, '')).to.be.equal(0);
+    chai.expect(AwesomeString.lastIndexOf(PRINTABLE_ASCII, '!')).to.be.equal(1);
   });
 
   it('should return the index of a searched string and start index', function () {
-    chai.expect(Voca.lastIndexOf('we have a mission', 'a', 17)).to.be.equal(8);
-    chai.expect(Voca.lastIndexOf('we have a mission', 'a', 6)).to.be.equal(4);
-    chai.expect(Voca.lastIndexOf('we have a mission', 'we', 15)).to.be.equal(0);
-    chai.expect(Voca.lastIndexOf('we have a mission', 'we', 17)).to.be.equal(0);
-    chai.expect(Voca.lastIndexOf('we have a mission', '', 1)).to.be.equal(1);
-    chai.expect(Voca.lastIndexOf(PRINTABLE_ASCII, '#', PRINTABLE_ASCII.length - 3)).to.be.equal(3);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission', 'a', 17)).to.be.equal(8);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission', 'a', 6)).to.be.equal(4);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission', 'we', 15)).to.be.equal(0);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission', 'we', 17)).to.be.equal(0);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission', '', 1)).to.be.equal(1);
+    chai.expect(AwesomeString.lastIndexOf(PRINTABLE_ASCII, '#', PRINTABLE_ASCII.length - 3)).to.be.equal(3);
   });
 
   it('should return the index of a searched string in a string representation of an object', function () {
-    chai.expect(Voca.lastIndexOf(['we have a mission'], 'a')).to.be.equal(8);
-    chai.expect(Voca.lastIndexOf({
+    chai.expect(AwesomeString.lastIndexOf(['we have a mission'], 'a')).to.be.equal(8);
+    chai.expect(AwesomeString.lastIndexOf({
       toString: function () {
         return 'we have a mission';
       }
@@ -5248,45 +5242,45 @@ describe('lastIndexOf', function () {
   });
 
   it('should return -1 for an invalid ending string and position', function () {
-    chai.expect(Voca.lastIndexOf('we have a mission', 'me')).to.be.equal(-1);
-    chai.expect(Voca.lastIndexOf('we have a mission', '12')).to.be.equal(-1);
-    chai.expect(Voca.lastIndexOf('we have a mission', 'mission', -100)).to.be.equal(-1);
-    chai.expect(Voca.lastIndexOf('we have a mission', 'mission', -Infinity)).to.be.equal(-1);
-    chai.expect(Voca.lastIndexOf('', 'me')).to.be.equal(-1);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission', 'me')).to.be.equal(-1);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission', '12')).to.be.equal(-1);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission', 'mission', -100)).to.be.equal(-1);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission', 'mission', -Infinity)).to.be.equal(-1);
+    chai.expect(AwesomeString.lastIndexOf('', 'me')).to.be.equal(-1);
   });
 
   it('should return -1 for undefined and null parameters', function () {
-    chai.expect(Voca.lastIndexOf('we have a mission')).to.be.equal(-1);
-    chai.expect(Voca.lastIndexOf('we have a mission', undefined)).to.be.equal(-1);
-    chai.expect(Voca.lastIndexOf('we have a mission', null)).to.be.equal(-1);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission')).to.be.equal(-1);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission', undefined)).to.be.equal(-1);
+    chai.expect(AwesomeString.lastIndexOf('we have a mission', null)).to.be.equal(-1);
   });
 });
 
 describe('search', function () {
 
   it('should return the index of a match', function () {
-    chai.expect(Voca.search('we have a mission', /mission/)).to.be.equal(10);
-    chai.expect(Voca.search('we have a mission', 'a')).to.be.equal(4);
-    chai.expect(Voca.search('we have a mission', /we/)).to.be.equal(0);
-    chai.expect(Voca.search('we have a mission', /\s/)).to.be.equal(2);
-    chai.expect(Voca.search('we have a mission', '')).to.be.equal(0);
-    chai.expect(Voca.search('', '')).to.be.equal(0);
-    chai.expect(Voca.search(undefined, '')).to.be.equal(0);
-    chai.expect(Voca.search(null, '')).to.be.equal(0);
-    chai.expect(Voca.search(PRINTABLE_ASCII, '!')).to.be.equal(1);
+    chai.expect(AwesomeString.search('we have a mission', /mission/)).to.be.equal(10);
+    chai.expect(AwesomeString.search('we have a mission', 'a')).to.be.equal(4);
+    chai.expect(AwesomeString.search('we have a mission', /we/)).to.be.equal(0);
+    chai.expect(AwesomeString.search('we have a mission', /\s/)).to.be.equal(2);
+    chai.expect(AwesomeString.search('we have a mission', '')).to.be.equal(0);
+    chai.expect(AwesomeString.search('', '')).to.be.equal(0);
+    chai.expect(AwesomeString.search(undefined, '')).to.be.equal(0);
+    chai.expect(AwesomeString.search(null, '')).to.be.equal(0);
+    chai.expect(AwesomeString.search(PRINTABLE_ASCII, '!')).to.be.equal(1);
   });
 
   it('should return the index of a match and start index', function () {
-    chai.expect(Voca.search('we have a mission', /a/, 6)).to.be.equal(8);
-    chai.expect(Voca.search('we have a mission', /we/, 0)).to.be.equal(0);
-    chai.expect(Voca.search('we have a mission', 'we', NaN)).to.be.equal(0);
-    chai.expect(Voca.search('we have a mission', '', 0)).to.be.equal(0);
-    chai.expect(Voca.search(PRINTABLE_ASCII, '#', 3)).to.be.equal(3);
+    chai.expect(AwesomeString.search('we have a mission', /a/, 6)).to.be.equal(8);
+    chai.expect(AwesomeString.search('we have a mission', /we/, 0)).to.be.equal(0);
+    chai.expect(AwesomeString.search('we have a mission', 'we', NaN)).to.be.equal(0);
+    chai.expect(AwesomeString.search('we have a mission', '', 0)).to.be.equal(0);
+    chai.expect(AwesomeString.search(PRINTABLE_ASCII, '#', 3)).to.be.equal(3);
   });
 
   it('should return the index of a searched string in a string representation of an object', function () {
-    chai.expect(Voca.search(['we have a mission'], /a/)).to.be.equal(4);
-    chai.expect(Voca.search({
+    chai.expect(AwesomeString.search(['we have a mission'], /a/)).to.be.equal(4);
+    chai.expect(AwesomeString.search({
       toString: function () {
         return 'we have a mission';
       }
@@ -5294,50 +5288,50 @@ describe('search', function () {
   });
 
   it('should threat a null value as "null" match pattern', function () {
-    chai.expect(Voca.search('we have a null mission', null)).to.be.equal(10);
-    chai.expect(Voca.search('we have a mission', null)).to.be.equal(-1);
+    chai.expect(AwesomeString.search('we have a null mission', null)).to.be.equal(10);
+    chai.expect(AwesomeString.search('we have a mission', null)).to.be.equal(-1);
   });
 
   it('should return -1 for an invalid ending string and position', function () {
-    chai.expect(Voca.search('we have a mission', /me/)).to.be.equal(-1);
-    chai.expect(Voca.search('we have a mission', /12/)).to.be.equal(-1);
-    chai.expect(Voca.search('we have a mission', /\s^/)).to.be.equal(-1);
-    chai.expect(Voca.search('we have a mission', 'we', 3)).to.be.equal(-1);
-    chai.expect(Voca.search('we have a mission', /mission/, 100)).to.be.equal(-1);
-    chai.expect(Voca.search('we have a mission', /mission/, Infinity)).to.be.equal(-1);
-    chai.expect(Voca.search('', /me/)).to.be.equal(-1);
+    chai.expect(AwesomeString.search('we have a mission', /me/)).to.be.equal(-1);
+    chai.expect(AwesomeString.search('we have a mission', /12/)).to.be.equal(-1);
+    chai.expect(AwesomeString.search('we have a mission', /\s^/)).to.be.equal(-1);
+    chai.expect(AwesomeString.search('we have a mission', 'we', 3)).to.be.equal(-1);
+    chai.expect(AwesomeString.search('we have a mission', /mission/, 100)).to.be.equal(-1);
+    chai.expect(AwesomeString.search('we have a mission', /mission/, Infinity)).to.be.equal(-1);
+    chai.expect(AwesomeString.search('', /me/)).to.be.equal(-1);
   });
 
   it('should return 0 for an undefined', function () {
-    chai.expect(Voca.search('we have a mission')).to.be.equal(0);
-    chai.expect(Voca.search('we have a mission', undefined)).to.be.equal(0);
+    chai.expect(AwesomeString.search('we have a mission')).to.be.equal(0);
+    chai.expect(AwesomeString.search('we have a mission', undefined)).to.be.equal(0);
   });
 });
 
 describe('insert', function () {
 
   it('should insert into a string at specified position', function () {
-    chai.expect(Voca.insert('autumn', 'nice ', 0)).to.be.equal('nice autumn');
-    chai.expect(Voca.insert('autumn', 'nice ')).to.be.equal('nice autumn');
-    chai.expect(Voca.insert('autumn', 'nice', 1)).to.be.equal('aniceutumn');
-    chai.expect(Voca.insert('autumn', 'nice', 5)).to.be.equal('autumnicen');
-    chai.expect(Voca.insert('autumn', ' is nice', 6)).to.be.equal('autumn is nice');
-    chai.expect(Voca.insert('', 'nice', 0)).to.be.equal('nice');
-    chai.expect(Voca.insert('autumn', '', 1)).to.be.equal('autumn');
-    chai.expect(Voca.insert('autumn', '', 6)).to.be.equal('autumn');
+    chai.expect(AwesomeString.insert('autumn', 'nice ', 0)).to.be.equal('nice autumn');
+    chai.expect(AwesomeString.insert('autumn', 'nice ')).to.be.equal('nice autumn');
+    chai.expect(AwesomeString.insert('autumn', 'nice', 1)).to.be.equal('aniceutumn');
+    chai.expect(AwesomeString.insert('autumn', 'nice', 5)).to.be.equal('autumnicen');
+    chai.expect(AwesomeString.insert('autumn', ' is nice', 6)).to.be.equal('autumn is nice');
+    chai.expect(AwesomeString.insert('', 'nice', 0)).to.be.equal('nice');
+    chai.expect(AwesomeString.insert('autumn', '', 1)).to.be.equal('autumn');
+    chai.expect(AwesomeString.insert('autumn', '', 6)).to.be.equal('autumn');
   });
 
   it('should not insert into a string when position is out of bounds', function () {
-    chai.expect(Voca.insert('autumn', 'nice ', 100)).to.be.equal('autumn');
-    chai.expect(Voca.insert('autumn', 'nice', -100)).to.be.equal('autumn');
-    chai.expect(Voca.insert('autumn', 'nice', 7)).to.be.equal('autumn');
-    chai.expect(Voca.insert('autumn', 'nice', -1)).to.be.equal('autumn');
-    chai.expect(Voca.insert('', 'nice', 1)).to.be.equal('');
+    chai.expect(AwesomeString.insert('autumn', 'nice ', 100)).to.be.equal('autumn');
+    chai.expect(AwesomeString.insert('autumn', 'nice', -100)).to.be.equal('autumn');
+    chai.expect(AwesomeString.insert('autumn', 'nice', 7)).to.be.equal('autumn');
+    chai.expect(AwesomeString.insert('autumn', 'nice', -1)).to.be.equal('autumn');
+    chai.expect(AwesomeString.insert('', 'nice', 1)).to.be.equal('');
   });
 
   it('should insert into a string representation of an object at specified position', function () {
-    chai.expect(Voca.insert(['paradise'], '**', 2)).to.be.equal('pa**radise');
-    chai.expect(Voca.insert({
+    chai.expect(AwesomeString.insert(['paradise'], '**', 2)).to.be.equal('pa**radise');
+    chai.expect(AwesomeString.insert({
       toString: function () {
         return 'Tony';
       }
@@ -5345,44 +5339,44 @@ describe('insert', function () {
   });
 
   it('should not insert into a string on null or undefined arguments', function () {
-    chai.expect(Voca.insert()).to.be.equal('');
-    chai.expect(Voca.insert(null)).to.be.equal('');
-    chai.expect(Voca.insert(undefined)).to.be.equal('');
-    chai.expect(Voca.insert(undefined, undefined)).to.be.equal('');
+    chai.expect(AwesomeString.insert()).to.be.equal('');
+    chai.expect(AwesomeString.insert(null)).to.be.equal('');
+    chai.expect(AwesomeString.insert(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.insert(undefined, undefined)).to.be.equal('');
   });
 });
 
 describe('latinise', function () {
 
   it('should latinise a string', function () {
-    chai.expect(Voca.latinise('')).to.be.equal('');
-    chai.expect(Voca.latinise('moldova')).to.be.equal('moldova');
-    chai.expect(Voca.latinise('cafe\u0301')).to.be.equal('cafe');
-    chai.expect(Voca.latinise('ma\xF1ana')).to.be.equal('manana');
-    chai.expect(Voca.latinise('man\u0303ana')).to.be.equal('manana');
-    chai.expect(Voca.latinise('foo\u0303\u035C\u035D\u035Ebar')).to.be.equal('foobar');
-    chai.expect(Voca.latinise('cafe\u0301')).to.be.equal('cafe');
-    chai.expect(Voca.latinise('colecção cópias críticos é tão')).to.be.equal('coleccao copias criticos e tao');
-    chai.expect(Voca.latinise('književnošću čuvanje')).to.be.equal('knjizevnoscu cuvanje');
-    chai.expect(Voca.latinise('anglikonų šiurkščios užrašinėti')).to.be.equal('anglikonu siurkscios uzrasineti');
-    chai.expect(Voca.latinise('Schuß für Pfarrerstöchter')).to.be.equal('Schus fur Pfarrerstochter');
-    chai.expect(Voca.latinise('publicó éxito nació María')).to.be.equal('publico exito nacio Maria');
-    chai.expect(Voca.latinise('Charlotte Brontë')).to.be.equal('Charlotte Bronte');
-    chai.expect(Voca.latinise('vecākā no māsām Brontē')).to.be.equal('vecaka no masam Bronte');
-    chai.expect(Voca.latinise('Şarlotta Brontenin özü')).to.be.equal('Sarlotta Brontenin ozu');
-    chai.expect(Voca.latinise('Wkrótce po ślubie pisarka zaszła w ciążę')).to.be.equal('Wkrotce po slubie pisarka zaszla w ciaze');
-    chai.expect(Voca.latinise("Dès l'enfance, Charlotte, comme Emily et probablement plus fortement Branwell, est influencée par certaines sources d'inspiration")).to.be.equal("Des l'enfance, Charlotte, comme Emily et probablement plus fortement Branwell, est influencee par certaines sources d'inspiration");
-    chai.expect(Voca.latinise('Există peste 13.800 de localități în România')).to.be.equal('Exista peste 13.800 de localitati in Romania');
-    chai.expect(Voca.latinise('août décembre')).to.be.equal('aout decembre');
-    chai.expect(Voca.latinise('Україна розташована в південно-східній частині Європи')).to.be.equal('Ukrayina roztashovana v pivdenno-shidnij chastini Yevropi');
-    chai.expect(Voca.latinise('\t\n')).to.be.equal('\t\n');
-    chai.expect(Voca.latinise('\u2047')).to.be.equal('\u2047');
-    chai.expect(Voca.latinise(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.latinise('')).to.be.equal('');
+    chai.expect(AwesomeString.latinise('moldova')).to.be.equal('moldova');
+    chai.expect(AwesomeString.latinise('cafe\u0301')).to.be.equal('cafe');
+    chai.expect(AwesomeString.latinise('ma\xF1ana')).to.be.equal('manana');
+    chai.expect(AwesomeString.latinise('man\u0303ana')).to.be.equal('manana');
+    chai.expect(AwesomeString.latinise('foo\u0303\u035C\u035D\u035Ebar')).to.be.equal('foobar');
+    chai.expect(AwesomeString.latinise('cafe\u0301')).to.be.equal('cafe');
+    chai.expect(AwesomeString.latinise('colecção cópias críticos é tão')).to.be.equal('coleccao copias criticos e tao');
+    chai.expect(AwesomeString.latinise('književnošću čuvanje')).to.be.equal('knjizevnoscu cuvanje');
+    chai.expect(AwesomeString.latinise('anglikonų šiurkščios užrašinėti')).to.be.equal('anglikonu siurkscios uzrasineti');
+    chai.expect(AwesomeString.latinise('Schuß für Pfarrerstöchter')).to.be.equal('Schus fur Pfarrerstochter');
+    chai.expect(AwesomeString.latinise('publicó éxito nació María')).to.be.equal('publico exito nacio Maria');
+    chai.expect(AwesomeString.latinise('Charlotte Brontë')).to.be.equal('Charlotte Bronte');
+    chai.expect(AwesomeString.latinise('vecākā no māsām Brontē')).to.be.equal('vecaka no masam Bronte');
+    chai.expect(AwesomeString.latinise('Şarlotta Brontenin özü')).to.be.equal('Sarlotta Brontenin ozu');
+    chai.expect(AwesomeString.latinise('Wkrótce po ślubie pisarka zaszła w ciążę')).to.be.equal('Wkrotce po slubie pisarka zaszla w ciaze');
+    chai.expect(AwesomeString.latinise("Dès l'enfance, Charlotte, comme Emily et probablement plus fortement Branwell, est influencée par certaines sources d'inspiration")).to.be.equal("Des l'enfance, Charlotte, comme Emily et probablement plus fortement Branwell, est influencee par certaines sources d'inspiration");
+    chai.expect(AwesomeString.latinise('Există peste 13.800 de localități în România')).to.be.equal('Exista peste 13.800 de localitati in Romania');
+    chai.expect(AwesomeString.latinise('août décembre')).to.be.equal('aout decembre');
+    chai.expect(AwesomeString.latinise('Україна розташована в південно-східній частині Європи')).to.be.equal('Ukrayina roztashovana v pivdenno-shidnij chastini Yevropi');
+    chai.expect(AwesomeString.latinise('\t\n')).to.be.equal('\t\n');
+    chai.expect(AwesomeString.latinise('\u2047')).to.be.equal('\u2047');
+    chai.expect(AwesomeString.latinise(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
   });
 
   it('should latinise a string representation of an object', function () {
-    chai.expect(Voca.latinise(['María'])).to.be.equal('Maria');
-    chai.expect(Voca.latinise({
+    chai.expect(AwesomeString.latinise(['María'])).to.be.equal('Maria');
+    chai.expect(AwesomeString.latinise({
       toString: function () {
         return 'sacó';
       }
@@ -5390,47 +5384,47 @@ describe('latinise', function () {
   });
 
   it('should not modify numbers', function () {
-    chai.expect(Voca.latinise(100)).to.be.equal('100');
-    chai.expect(Voca.latinise(812)).to.be.equal('812');
+    chai.expect(AwesomeString.latinise(100)).to.be.equal('100');
+    chai.expect(AwesomeString.latinise(812)).to.be.equal('812');
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.latinise()).to.be.equal('');
-    chai.expect(Voca.latinise(undefined)).to.be.equal('');
-    chai.expect(Voca.latinise(null)).to.be.equal('');
+    chai.expect(AwesomeString.latinise()).to.be.equal('');
+    chai.expect(AwesomeString.latinise(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.latinise(null)).to.be.equal('');
   });
 });
 
 describe('repeat', function () {
 
   it('should repeat a string', function () {
-    chai.expect(Voca.repeat('paradise', 2)).to.be.equal('paradiseparadise');
-    chai.expect(Voca.repeat('w', 3)).to.be.equal('www');
-    chai.expect(Voca.repeat('the world is yours', 1)).to.be.equal('the world is yours');
-    chai.expect(Voca.repeat('', 10)).to.be.equal('');
-    chai.expect(Voca.repeat(PRINTABLE_ASCII, 2)).to.be.equal(PRINTABLE_ASCII + PRINTABLE_ASCII);
+    chai.expect(AwesomeString.repeat('paradise', 2)).to.be.equal('paradiseparadise');
+    chai.expect(AwesomeString.repeat('w', 3)).to.be.equal('www');
+    chai.expect(AwesomeString.repeat('the world is yours', 1)).to.be.equal('the world is yours');
+    chai.expect(AwesomeString.repeat('', 10)).to.be.equal('');
+    chai.expect(AwesomeString.repeat(PRINTABLE_ASCII, 2)).to.be.equal(PRINTABLE_ASCII + PRINTABLE_ASCII);
   });
 
   it('should return an empty string for 0 repeat times', function () {
-    chai.expect(Voca.repeat('the world is yours', 0)).to.be.equal('');
-    chai.expect(Voca.repeat('', 0)).to.be.equal('');
+    chai.expect(AwesomeString.repeat('the world is yours', 0)).to.be.equal('');
+    chai.expect(AwesomeString.repeat('', 0)).to.be.equal('');
   });
 
   it('should return the same string when the number of times is null or undefined', function () {
-    chai.expect(Voca.repeat('the world is yours')).to.be.equal('the world is yours');
-    chai.expect(Voca.repeat('the world is yours', null)).to.be.equal('the world is yours');
-    chai.expect(Voca.repeat('the world is yours', undefined)).to.be.equal('the world is yours');
+    chai.expect(AwesomeString.repeat('the world is yours')).to.be.equal('the world is yours');
+    chai.expect(AwesomeString.repeat('the world is yours', null)).to.be.equal('the world is yours');
+    chai.expect(AwesomeString.repeat('the world is yours', undefined)).to.be.equal('the world is yours');
   });
 
   it('should repeat a number', function () {
-    chai.expect(Voca.repeat(123, 2)).to.be.equal('123123');
-    chai.expect(Voca.repeat(0, 5)).to.be.equal('00000');
-    chai.expect(Voca.repeat(-1.5, 2)).to.be.equal('-1.5-1.5');
+    chai.expect(AwesomeString.repeat(123, 2)).to.be.equal('123123');
+    chai.expect(AwesomeString.repeat(0, 5)).to.be.equal('00000');
+    chai.expect(AwesomeString.repeat(-1.5, 2)).to.be.equal('-1.5-1.5');
   });
 
   it('should repeat a string representation of an object', function () {
-    chai.expect(Voca.repeat(['paradise'], 2)).to.be.equal('paradiseparadise');
-    chai.expect(Voca.repeat({
+    chai.expect(AwesomeString.repeat(['paradise'], 2)).to.be.equal('paradiseparadise');
+    chai.expect(AwesomeString.repeat({
       toString: function () {
         return 'Tony';
       }
@@ -5438,41 +5432,41 @@ describe('repeat', function () {
   });
 
   it('should return an empty string for null or undefined string to be repeated', function () {
-    chai.expect(Voca.repeat()).to.be.equal('');
-    chai.expect(Voca.repeat(null)).to.be.equal('');
-    chai.expect(Voca.repeat(undefined)).to.be.equal('');
-    chai.expect(Voca.repeat(undefined, 10)).to.be.equal('');
+    chai.expect(AwesomeString.repeat()).to.be.equal('');
+    chai.expect(AwesomeString.repeat(null)).to.be.equal('');
+    chai.expect(AwesomeString.repeat(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.repeat(undefined, 10)).to.be.equal('');
   });
 });
 
 describe('pad', function () {
 
   it('should pad a string', function () {
-    chai.expect(Voca.pad('FF', 4, '0')).to.be.equal('0FF0');
-    chai.expect(Voca.pad('00FF', 4, '0')).to.be.equal('00FF');
-    chai.expect(Voca.pad('ab', 10, '012')).to.be.equal('0120ab0120');
-    chai.expect(Voca.pad('0', 5, '0')).to.be.equal('00000');
-    chai.expect(Voca.pad('', 10, '01')).to.be.equal('0101001010');
-    chai.expect(Voca.pad('Hello World')).to.be.equal('Hello World');
-    chai.expect(Voca.pad('Hello World', 20, '')).to.be.equal('Hello World');
-    chai.expect(Voca.pad('Welcome', 10)).to.be.equal(' Welcome  ');
-    chai.expect(Voca.pad('Alien', 10, '-=')).to.be.equal('-=Alien-=-');
-    chai.expect(Voca.pad(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
-    chai.expect(Voca.pad(PRINTABLE_ASCII, PRINTABLE_ASCII.length + 3, '--')).to.be.equal('-' + PRINTABLE_ASCII + '--');
-    chai.expect(Voca.pad('')).to.be.equal('');
-    chai.expect(Voca.pad('', 0)).to.be.equal('');
+    chai.expect(AwesomeString.pad('FF', 4, '0')).to.be.equal('0FF0');
+    chai.expect(AwesomeString.pad('00FF', 4, '0')).to.be.equal('00FF');
+    chai.expect(AwesomeString.pad('ab', 10, '012')).to.be.equal('0120ab0120');
+    chai.expect(AwesomeString.pad('0', 5, '0')).to.be.equal('00000');
+    chai.expect(AwesomeString.pad('', 10, '01')).to.be.equal('0101001010');
+    chai.expect(AwesomeString.pad('Hello World')).to.be.equal('Hello World');
+    chai.expect(AwesomeString.pad('Hello World', 20, '')).to.be.equal('Hello World');
+    chai.expect(AwesomeString.pad('Welcome', 10)).to.be.equal(' Welcome  ');
+    chai.expect(AwesomeString.pad('Alien', 10, '-=')).to.be.equal('-=Alien-=-');
+    chai.expect(AwesomeString.pad(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.pad(PRINTABLE_ASCII, PRINTABLE_ASCII.length + 3, '--')).to.be.equal('-' + PRINTABLE_ASCII + '--');
+    chai.expect(AwesomeString.pad('')).to.be.equal('');
+    chai.expect(AwesomeString.pad('', 0)).to.be.equal('');
   });
 
   it('should not modify the string when pad length is less than string length', function () {
-    chai.expect(Voca.pad('Hello World', 0, ' ')).to.be.equal('Hello World');
-    chai.expect(Voca.pad('Hello World', 5, ' ')).to.be.equal('Hello World');
-    chai.expect(Voca.pad('0', 0, ' ')).to.be.equal('0');
-    chai.expect(Voca.pad('123', -1, ' ')).to.be.equal('123');
+    chai.expect(AwesomeString.pad('Hello World', 0, ' ')).to.be.equal('Hello World');
+    chai.expect(AwesomeString.pad('Hello World', 5, ' ')).to.be.equal('Hello World');
+    chai.expect(AwesomeString.pad('0', 0, ' ')).to.be.equal('0');
+    chai.expect(AwesomeString.pad('123', -1, ' ')).to.be.equal('123');
   });
 
   it('should pad a string representation of an object', function () {
-    chai.expect(Voca.pad(['Welcome'], 9)).to.be.equal(' Welcome ');
-    chai.expect(Voca.pad({
+    chai.expect(AwesomeString.pad(['Welcome'], 9)).to.be.equal(' Welcome ');
+    chai.expect(AwesomeString.pad({
       toString: function () {
         return 'great';
       }
@@ -5480,40 +5474,40 @@ describe('pad', function () {
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.pad()).to.be.equal('');
-    chai.expect(Voca.pad(undefined)).to.be.equal('');
-    chai.expect(Voca.pad(null)).to.be.equal('');
+    chai.expect(AwesomeString.pad()).to.be.equal('');
+    chai.expect(AwesomeString.pad(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.pad(null)).to.be.equal('');
   });
 });
 
 describe('padLeft', function () {
 
   it('should left pad a string', function () {
-    chai.expect(Voca.padLeft('FF', 4, '0')).to.be.equal('00FF');
-    chai.expect(Voca.padLeft('00FF', 4, '0')).to.be.equal('00FF');
-    chai.expect(Voca.padLeft('ab', 10, '012')).to.be.equal('01201201ab');
-    chai.expect(Voca.padLeft('0', 5, '0')).to.be.equal('00000');
-    chai.expect(Voca.padLeft('', 10, '01')).to.be.equal('0101010101');
-    chai.expect(Voca.padLeft('Hello World')).to.be.equal('Hello World');
-    chai.expect(Voca.padLeft('Hello World', 20, '')).to.be.equal('Hello World');
-    chai.expect(Voca.padLeft('Welcome', 10)).to.be.equal('   Welcome');
-    chai.expect(Voca.padLeft('Alien', 10, '-=')).to.be.equal('-=-=-Alien');
-    chai.expect(Voca.padLeft(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
-    chai.expect(Voca.padLeft(PRINTABLE_ASCII, PRINTABLE_ASCII.length + 3, '--')).to.be.equal('---' + PRINTABLE_ASCII);
-    chai.expect(Voca.padLeft('')).to.be.equal('');
-    chai.expect(Voca.padLeft('', 0)).to.be.equal('');
+    chai.expect(AwesomeString.padLeft('FF', 4, '0')).to.be.equal('00FF');
+    chai.expect(AwesomeString.padLeft('00FF', 4, '0')).to.be.equal('00FF');
+    chai.expect(AwesomeString.padLeft('ab', 10, '012')).to.be.equal('01201201ab');
+    chai.expect(AwesomeString.padLeft('0', 5, '0')).to.be.equal('00000');
+    chai.expect(AwesomeString.padLeft('', 10, '01')).to.be.equal('0101010101');
+    chai.expect(AwesomeString.padLeft('Hello World')).to.be.equal('Hello World');
+    chai.expect(AwesomeString.padLeft('Hello World', 20, '')).to.be.equal('Hello World');
+    chai.expect(AwesomeString.padLeft('Welcome', 10)).to.be.equal('   Welcome');
+    chai.expect(AwesomeString.padLeft('Alien', 10, '-=')).to.be.equal('-=-=-Alien');
+    chai.expect(AwesomeString.padLeft(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.padLeft(PRINTABLE_ASCII, PRINTABLE_ASCII.length + 3, '--')).to.be.equal('---' + PRINTABLE_ASCII);
+    chai.expect(AwesomeString.padLeft('')).to.be.equal('');
+    chai.expect(AwesomeString.padLeft('', 0)).to.be.equal('');
   });
 
   it('should not modify the string when pad length is less than string length', function () {
-    chai.expect(Voca.padLeft('Hello World', 0, ' ')).to.be.equal('Hello World');
-    chai.expect(Voca.padLeft('Hello World', 5, ' ')).to.be.equal('Hello World');
-    chai.expect(Voca.padLeft('0', 0, ' ')).to.be.equal('0');
-    chai.expect(Voca.padLeft('123', -1, ' ')).to.be.equal('123');
+    chai.expect(AwesomeString.padLeft('Hello World', 0, ' ')).to.be.equal('Hello World');
+    chai.expect(AwesomeString.padLeft('Hello World', 5, ' ')).to.be.equal('Hello World');
+    chai.expect(AwesomeString.padLeft('0', 0, ' ')).to.be.equal('0');
+    chai.expect(AwesomeString.padLeft('123', -1, ' ')).to.be.equal('123');
   });
 
   it('should left pad a string representation of an object', function () {
-    chai.expect(Voca.padLeft(['Welcome'], 9)).to.be.equal('  Welcome');
-    chai.expect(Voca.padLeft({
+    chai.expect(AwesomeString.padLeft(['Welcome'], 9)).to.be.equal('  Welcome');
+    chai.expect(AwesomeString.padLeft({
       toString: function () {
         return 'great';
       }
@@ -5521,40 +5515,40 @@ describe('padLeft', function () {
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.padLeft()).to.be.equal('');
-    chai.expect(Voca.padLeft(undefined)).to.be.equal('');
-    chai.expect(Voca.padLeft(null)).to.be.equal('');
+    chai.expect(AwesomeString.padLeft()).to.be.equal('');
+    chai.expect(AwesomeString.padLeft(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.padLeft(null)).to.be.equal('');
   });
 });
 
 describe('padRight', function () {
 
   it('should right pad a string', function () {
-    chai.expect(Voca.padRight('FF', 4, '0')).to.be.equal('FF00');
-    chai.expect(Voca.padRight('00FF', 4, '0')).to.be.equal('00FF');
-    chai.expect(Voca.padRight('ab', 10, '012')).to.be.equal('ab01201201');
-    chai.expect(Voca.padRight('0', 5, '0')).to.be.equal('00000');
-    chai.expect(Voca.padRight('', 10, '01')).to.be.equal('0101010101');
-    chai.expect(Voca.padRight('Hello World')).to.be.equal('Hello World');
-    chai.expect(Voca.padRight('Hello World', 20, '')).to.be.equal('Hello World');
-    chai.expect(Voca.padRight('Welcome', 10)).to.be.equal('Welcome   ');
-    chai.expect(Voca.padRight('123', 6, '_-')).to.be.equal('123_-_');
-    chai.expect(Voca.padRight(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
-    chai.expect(Voca.padRight(PRINTABLE_ASCII, PRINTABLE_ASCII.length + 3, '--')).to.be.equal(PRINTABLE_ASCII + '---');
-    chai.expect(Voca.padRight('')).to.be.equal('');
-    chai.expect(Voca.padRight('', 0)).to.be.equal('');
+    chai.expect(AwesomeString.padRight('FF', 4, '0')).to.be.equal('FF00');
+    chai.expect(AwesomeString.padRight('00FF', 4, '0')).to.be.equal('00FF');
+    chai.expect(AwesomeString.padRight('ab', 10, '012')).to.be.equal('ab01201201');
+    chai.expect(AwesomeString.padRight('0', 5, '0')).to.be.equal('00000');
+    chai.expect(AwesomeString.padRight('', 10, '01')).to.be.equal('0101010101');
+    chai.expect(AwesomeString.padRight('Hello World')).to.be.equal('Hello World');
+    chai.expect(AwesomeString.padRight('Hello World', 20, '')).to.be.equal('Hello World');
+    chai.expect(AwesomeString.padRight('Welcome', 10)).to.be.equal('Welcome   ');
+    chai.expect(AwesomeString.padRight('123', 6, '_-')).to.be.equal('123_-_');
+    chai.expect(AwesomeString.padRight(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.padRight(PRINTABLE_ASCII, PRINTABLE_ASCII.length + 3, '--')).to.be.equal(PRINTABLE_ASCII + '---');
+    chai.expect(AwesomeString.padRight('')).to.be.equal('');
+    chai.expect(AwesomeString.padRight('', 0)).to.be.equal('');
   });
 
   it('should not modify the string when pad length is less than string length', function () {
-    chai.expect(Voca.padRight('Hello World', 0, ' ')).to.be.equal('Hello World');
-    chai.expect(Voca.padRight('Hello World', 5, ' ')).to.be.equal('Hello World');
-    chai.expect(Voca.padRight('0', 0, ' ')).to.be.equal('0');
-    chai.expect(Voca.padRight('123', -1, ' ')).to.be.equal('123');
+    chai.expect(AwesomeString.padRight('Hello World', 0, ' ')).to.be.equal('Hello World');
+    chai.expect(AwesomeString.padRight('Hello World', 5, ' ')).to.be.equal('Hello World');
+    chai.expect(AwesomeString.padRight('0', 0, ' ')).to.be.equal('0');
+    chai.expect(AwesomeString.padRight('123', -1, ' ')).to.be.equal('123');
   });
 
   it('should right pad a string representation of an object', function () {
-    chai.expect(Voca.padRight(['Welcome'], 9)).to.be.equal('Welcome  ');
-    chai.expect(Voca.padRight({
+    chai.expect(AwesomeString.padRight(['Welcome'], 9)).to.be.equal('Welcome  ');
+    chai.expect(AwesomeString.padRight({
       toString: function () {
         return 'great';
       }
@@ -5562,41 +5556,41 @@ describe('padRight', function () {
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.padRight()).to.be.equal('');
-    chai.expect(Voca.padRight(undefined)).to.be.equal('');
-    chai.expect(Voca.padRight(null)).to.be.equal('');
+    chai.expect(AwesomeString.padRight()).to.be.equal('');
+    chai.expect(AwesomeString.padRight(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.padRight(null)).to.be.equal('');
   });
 });
 
 describe('replace', function () {
 
   it('should return the replace result with a string pattern', function () {
-    chai.expect(Voca.replace('duck', 'duck', 'swan')).to.be.equal('swan');
-    chai.expect(Voca.replace('duck', 'duck', '')).to.be.equal('');
-    chai.expect(Voca.replace('duck', 'd', '')).to.be.equal('uck');
-    chai.expect(Voca.replace('duck', 'u', function () {
+    chai.expect(AwesomeString.replace('duck', 'duck', 'swan')).to.be.equal('swan');
+    chai.expect(AwesomeString.replace('duck', 'duck', '')).to.be.equal('');
+    chai.expect(AwesomeString.replace('duck', 'd', '')).to.be.equal('uck');
+    chai.expect(AwesomeString.replace('duck', 'u', function () {
       return 'a';
     })).to.be.equal('dack');
-    chai.expect(Voca.replace('', '', '')).to.be.equal('');
-    chai.expect(Voca.replace(PRINTABLE_ASCII, PRINTABLE_ASCII, PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
-    chai.expect(Voca.replace(PRINTABLE_ASCII, PRINTABLE_ASCII, 'duck')).to.be.equal('duck');
+    chai.expect(AwesomeString.replace('', '', '')).to.be.equal('');
+    chai.expect(AwesomeString.replace(PRINTABLE_ASCII, PRINTABLE_ASCII, PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.replace(PRINTABLE_ASCII, PRINTABLE_ASCII, 'duck')).to.be.equal('duck');
   });
 
   it('should return the replace result with a RegExp pattern', function () {
-    chai.expect(Voca.replace('duck', /duck/, 'swan')).to.be.equal('swan');
-    chai.expect(Voca.replace('duck', /duck/, '')).to.be.equal('');
-    chai.expect(Voca.replace('duck', /d/, '')).to.be.equal('uck');
-    chai.expect(Voca.replace('duck', /u/, function () {
+    chai.expect(AwesomeString.replace('duck', /duck/, 'swan')).to.be.equal('swan');
+    chai.expect(AwesomeString.replace('duck', /duck/, '')).to.be.equal('');
+    chai.expect(AwesomeString.replace('duck', /d/, '')).to.be.equal('uck');
+    chai.expect(AwesomeString.replace('duck', /u/, function () {
       return 'a';
     })).to.be.equal('dack');
-    chai.expect(Voca.replace('hello world', /(hello)\s(world)/, function (match, hello, world) {
+    chai.expect(AwesomeString.replace('hello world', /(hello)\s(world)/, function (match, hello, world) {
       return world + ', ' + hello;
     })).to.be.equal('world, hello');
   });
 
   it('should return the replace result from a string representation of an object', function () {
-    chai.expect(Voca.replace(['duck'], 'duck', 'swan')).to.be.equal('swan');
-    chai.expect(Voca.replace({
+    chai.expect(AwesomeString.replace(['duck'], 'duck', 'swan')).to.be.equal('swan');
+    chai.expect(AwesomeString.replace({
       toString: function () {
         return 'mandarin duck';
       }
@@ -5604,56 +5598,56 @@ describe('replace', function () {
   });
 
   it('should return the replace result from a number', function () {
-    chai.expect(Voca.replace(1500, '0', '1')).to.be.equal('1510');
-    chai.expect(Voca.replace(6475, /\d/g, '*')).to.be.equal('****');
+    chai.expect(AwesomeString.replace(1500, '0', '1')).to.be.equal('1510');
+    chai.expect(AwesomeString.replace(6475, /\d/g, '*')).to.be.equal('****');
   });
 
   it('should return the an empty string for an undefined or null', function () {
-    chai.expect(Voca.replace(undefined, /./, '1')).to.be.equal('');
-    chai.expect(Voca.replace(null, /./, '1')).to.be.equal('');
+    chai.expect(AwesomeString.replace(undefined, /./, '1')).to.be.equal('');
+    chai.expect(AwesomeString.replace(null, /./, '1')).to.be.equal('');
   });
 });
 
 describe('replaceAll', function () {
 
   it('should return the replace result with a string pattern', function () {
-    chai.expect(Voca.replaceAll('duck', 'duck', 'swan')).to.be.equal('swan');
-    chai.expect(Voca.replaceAll('duck duck', 'duck', 'swan')).to.be.equal('swan swan');
-    chai.expect(Voca.replaceAll('duck', 'duck', '')).to.be.equal('');
-    chai.expect(Voca.replaceAll('dduucckk', 'd', 'dd')).to.be.equal('dddduucckk');
-    chai.expect(Voca.replaceAll('duck', 'd', '')).to.be.equal('uck');
-    chai.expect(Voca.replaceAll('duck duck duc', 'duck', function () {
+    chai.expect(AwesomeString.replaceAll('duck', 'duck', 'swan')).to.be.equal('swan');
+    chai.expect(AwesomeString.replaceAll('duck duck', 'duck', 'swan')).to.be.equal('swan swan');
+    chai.expect(AwesomeString.replaceAll('duck', 'duck', '')).to.be.equal('');
+    chai.expect(AwesomeString.replaceAll('dduucckk', 'd', 'dd')).to.be.equal('dddduucckk');
+    chai.expect(AwesomeString.replaceAll('duck', 'd', '')).to.be.equal('uck');
+    chai.expect(AwesomeString.replaceAll('duck duck duc', 'duck', function () {
       return 'swan';
     })).to.be.equal('swan swan duc');
-    chai.expect(Voca.replaceAll('duck', 'u', function () {
+    chai.expect(AwesomeString.replaceAll('duck', 'u', function () {
       return 'a';
     })).to.be.equal('dack');
-    chai.expect(Voca.replaceAll('[a-b] [a-c][a-b]', '[a-b]', '[ab]')).to.be.equal('[ab] [a-c][ab]');
-    chai.expect(Voca.replaceAll('*.*.', '*.', '*')).to.be.equal('**');
-    chai.expect(Voca.replaceAll('\u0061 \u0061 b \u0061', '\u0061', '\u0062')).to.be.equal('b b b b');
-    chai.expect(Voca.replaceAll('', '', '')).to.be.equal('');
-    chai.expect(Voca.replaceAll('duck', '', '')).to.be.equal('duck');
-    chai.expect(Voca.replaceAll(PRINTABLE_ASCII, PRINTABLE_ASCII, PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
-    chai.expect(Voca.replaceAll(PRINTABLE_ASCII, PRINTABLE_ASCII, 'duck')).to.be.equal('duck');
+    chai.expect(AwesomeString.replaceAll('[a-b] [a-c][a-b]', '[a-b]', '[ab]')).to.be.equal('[ab] [a-c][ab]');
+    chai.expect(AwesomeString.replaceAll('*.*.', '*.', '*')).to.be.equal('**');
+    chai.expect(AwesomeString.replaceAll('\u0061 \u0061 b \u0061', '\u0061', '\u0062')).to.be.equal('b b b b');
+    chai.expect(AwesomeString.replaceAll('', '', '')).to.be.equal('');
+    chai.expect(AwesomeString.replaceAll('duck', '', '')).to.be.equal('duck');
+    chai.expect(AwesomeString.replaceAll(PRINTABLE_ASCII, PRINTABLE_ASCII, PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.replaceAll(PRINTABLE_ASCII, PRINTABLE_ASCII, 'duck')).to.be.equal('duck');
   });
 
   it('should return the replace result with a RegExp pattern', function () {
-    chai.expect(Voca.replaceAll('duck duck', /duck/, 'swan')).to.be.equal('swan swan');
-    chai.expect(Voca.replaceAll('duck DUCK', /duck/, 'swan')).to.be.equal('swan DUCK');
-    chai.expect(Voca.replaceAll('duck DUCK', /DUCK/i, 'swan')).to.be.equal('swan swan');
-    chai.expect(Voca.replaceAll('duck', /duck/, '')).to.be.equal('');
-    chai.expect(Voca.replaceAll('duck', /d/, '')).to.be.equal('uck');
-    chai.expect(Voca.replaceAll('duck duck', /u/, function () {
+    chai.expect(AwesomeString.replaceAll('duck duck', /duck/, 'swan')).to.be.equal('swan swan');
+    chai.expect(AwesomeString.replaceAll('duck DUCK', /duck/, 'swan')).to.be.equal('swan DUCK');
+    chai.expect(AwesomeString.replaceAll('duck DUCK', /DUCK/i, 'swan')).to.be.equal('swan swan');
+    chai.expect(AwesomeString.replaceAll('duck', /duck/, '')).to.be.equal('');
+    chai.expect(AwesomeString.replaceAll('duck', /d/, '')).to.be.equal('uck');
+    chai.expect(AwesomeString.replaceAll('duck duck', /u/, function () {
       return 'a';
     })).to.be.equal('dack dack');
-    chai.expect(Voca.replaceAll('hello world', /(hello)\s(world)/, function (match, hello, world) {
+    chai.expect(AwesomeString.replaceAll('hello world', /(hello)\s(world)/, function (match, hello, world) {
       return world + ', ' + hello;
     })).to.be.equal('world, hello');
   });
 
   it('should return the replace result from a string representation of an object', function () {
-    chai.expect(Voca.replaceAll(['duck'], 'duck', 'swan')).to.be.equal('swan');
-    chai.expect(Voca.replaceAll({
+    chai.expect(AwesomeString.replaceAll(['duck'], 'duck', 'swan')).to.be.equal('swan');
+    chai.expect(AwesomeString.replaceAll({
       toString: function () {
         return 'mandarin duck';
       }
@@ -5661,41 +5655,41 @@ describe('replaceAll', function () {
   });
 
   it('should return the replace result from a number', function () {
-    chai.expect(Voca.replaceAll(1500, '0', '1')).to.be.equal('1511');
-    chai.expect(Voca.replaceAll(6475, /\d/g, '*')).to.be.equal('****');
-    chai.expect(Voca.replaceAll(6475, /\d/, '*')).to.be.equal('****');
+    chai.expect(AwesomeString.replaceAll(1500, '0', '1')).to.be.equal('1511');
+    chai.expect(AwesomeString.replaceAll(6475, /\d/g, '*')).to.be.equal('****');
+    chai.expect(AwesomeString.replaceAll(6475, /\d/, '*')).to.be.equal('****');
   });
 
   it('should return the original string on failed match', function () {
-    chai.expect(Voca.replaceAll('duck', 'dack', 'swan')).to.be.equal('duck');
-    chai.expect(Voca.replaceAll('duck', /dack/, '')).to.be.equal('duck');
+    chai.expect(AwesomeString.replaceAll('duck', 'dack', 'swan')).to.be.equal('duck');
+    chai.expect(AwesomeString.replaceAll('duck', /dack/, '')).to.be.equal('duck');
   });
 
   it('should return the an empty string for an undefined or null', function () {
-    chai.expect(Voca.replaceAll(undefined, /./, '1')).to.be.equal('');
-    chai.expect(Voca.replaceAll(null, /./, '1')).to.be.equal('');
+    chai.expect(AwesomeString.replaceAll(undefined, /./, '1')).to.be.equal('');
+    chai.expect(AwesomeString.replaceAll(null, /./, '1')).to.be.equal('');
   });
 });
 
 describe('reverse', function () {
 
   it('should reverse a string', function () {
-    chai.expect(Voca.reverse('green tree')).to.be.equal('eert neerg');
-    chai.expect(Voca.reverse('o')).to.be.equal('o');
-    chai.expect(Voca.reverse('\n\t')).to.be.equal('\t\n');
-    chai.expect(Voca.reverse('')).to.be.equal('');
-    chai.expect(Voca.reverse(PRINTABLE_ASCII)).to.be.equal(REVERSED_PRINTABLE_ASCII);
+    chai.expect(AwesomeString.reverse('green tree')).to.be.equal('eert neerg');
+    chai.expect(AwesomeString.reverse('o')).to.be.equal('o');
+    chai.expect(AwesomeString.reverse('\n\t')).to.be.equal('\t\n');
+    chai.expect(AwesomeString.reverse('')).to.be.equal('');
+    chai.expect(AwesomeString.reverse(PRINTABLE_ASCII)).to.be.equal(REVERSED_PRINTABLE_ASCII);
   });
 
   it('should reverse a number', function () {
-    chai.expect(Voca.reverse(123)).to.be.equal('321');
-    chai.expect(Voca.reverse(0)).to.be.equal('0');
-    chai.expect(Voca.reverse(-1.5)).to.be.equal('5.1-');
+    chai.expect(AwesomeString.reverse(123)).to.be.equal('321');
+    chai.expect(AwesomeString.reverse(0)).to.be.equal('0');
+    chai.expect(AwesomeString.reverse(-1.5)).to.be.equal('5.1-');
   });
 
   it('should reverse a string representation of an object', function () {
-    chai.expect(Voca.reverse(['flower'])).to.be.equal('rewolf');
-    chai.expect(Voca.reverse({
+    chai.expect(AwesomeString.reverse(['flower'])).to.be.equal('rewolf');
+    chai.expect(AwesomeString.reverse({
       toString: function () {
         return 'flower';
       }
@@ -5703,35 +5697,35 @@ describe('reverse', function () {
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.reverse()).to.be.equal('');
-    chai.expect(Voca.reverse(null)).to.be.equal('');
-    chai.expect(Voca.reverse(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.reverse()).to.be.equal('');
+    chai.expect(AwesomeString.reverse(null)).to.be.equal('');
+    chai.expect(AwesomeString.reverse(undefined)).to.be.equal('');
   });
 });
 
 describe('reverseGrapheme', function () {
 
   it('should reverse a string', function () {
-    chai.expect(Voca.reverseGrapheme('green tree')).to.be.equal('eert neerg');
-    chai.expect(Voca.reverseGrapheme('ma\xF1ana')).to.be.equal('ana\xF1am');
-    chai.expect(Voca.reverseGrapheme('man\u0303ana')).to.be.equal('anan\u0303am');
-    chai.expect(Voca.reverseGrapheme('foo\u0303\u035C\u035D\u035Ebar')).to.be.equal('rabo\u0303\u035C\u035D\u035Eof');
-    chai.expect(Voca.reverseGrapheme('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar')).to.be.equal('rab\uD834\uDF06\u0303\u035C\u035D\u035Eoof');
-    chai.expect(Voca.reverseGrapheme('o')).to.be.equal('o');
-    chai.expect(Voca.reverseGrapheme('\n\t')).to.be.equal('\t\n');
-    chai.expect(Voca.reverseGrapheme('')).to.be.equal('');
-    chai.expect(Voca.reverseGrapheme(PRINTABLE_ASCII)).to.be.equal(REVERSED_PRINTABLE_ASCII);
+    chai.expect(AwesomeString.reverseGrapheme('green tree')).to.be.equal('eert neerg');
+    chai.expect(AwesomeString.reverseGrapheme('ma\xF1ana')).to.be.equal('ana\xF1am');
+    chai.expect(AwesomeString.reverseGrapheme('man\u0303ana')).to.be.equal('anan\u0303am');
+    chai.expect(AwesomeString.reverseGrapheme('foo\u0303\u035C\u035D\u035Ebar')).to.be.equal('rabo\u0303\u035C\u035D\u035Eof');
+    chai.expect(AwesomeString.reverseGrapheme('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar')).to.be.equal('rab\uD834\uDF06\u0303\u035C\u035D\u035Eoof');
+    chai.expect(AwesomeString.reverseGrapheme('o')).to.be.equal('o');
+    chai.expect(AwesomeString.reverseGrapheme('\n\t')).to.be.equal('\t\n');
+    chai.expect(AwesomeString.reverseGrapheme('')).to.be.equal('');
+    chai.expect(AwesomeString.reverseGrapheme(PRINTABLE_ASCII)).to.be.equal(REVERSED_PRINTABLE_ASCII);
   });
 
   it('should reverseCodePoint a number', function () {
-    chai.expect(Voca.reverseGrapheme(123)).to.be.equal('321');
-    chai.expect(Voca.reverseGrapheme(0)).to.be.equal('0');
-    chai.expect(Voca.reverseGrapheme(-1.5)).to.be.equal('5.1-');
+    chai.expect(AwesomeString.reverseGrapheme(123)).to.be.equal('321');
+    chai.expect(AwesomeString.reverseGrapheme(0)).to.be.equal('0');
+    chai.expect(AwesomeString.reverseGrapheme(-1.5)).to.be.equal('5.1-');
   });
 
   it('should reverseCodePoint a string representation of an object', function () {
-    chai.expect(Voca.reverseGrapheme(['flower'])).to.be.equal('rewolf');
-    chai.expect(Voca.reverseGrapheme({
+    chai.expect(AwesomeString.reverseGrapheme(['flower'])).to.be.equal('rewolf');
+    chai.expect(AwesomeString.reverseGrapheme({
       toString: function () {
         return 'flower';
       }
@@ -5739,53 +5733,53 @@ describe('reverseGrapheme', function () {
   });
 
   it('should return an empty string for null or undefined', function () {
-    chai.expect(Voca.reverseGrapheme()).to.be.equal('');
-    chai.expect(Voca.reverseGrapheme(null)).to.be.equal('');
-    chai.expect(Voca.reverseGrapheme(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.reverseGrapheme()).to.be.equal('');
+    chai.expect(AwesomeString.reverseGrapheme(null)).to.be.equal('');
+    chai.expect(AwesomeString.reverseGrapheme(undefined)).to.be.equal('');
   });
 });
 
 describe('slugify', function () {
 
   it('should slugify the string', function () {
-    chai.expect(Voca.slugify('bird')).to.be.equal('bird');
-    chai.expect(Voca.slugify('BIRD')).to.be.equal('bird');
-    chai.expect(Voca.slugify('BirdFlight')).to.be.equal('bird-flight');
-    chai.expect(Voca.slugify('bird flight')).to.be.equal('bird-flight');
-    chai.expect(Voca.slugify('San Diego Zoo Safari Park')).to.be.equal('san-diego-zoo-safari-park');
-    chai.expect(Voca.slugify('-BIRD-FLIGHT-')).to.be.equal('bird-flight');
-    chai.expect(Voca.slugify('__BIRD___FLIGHT___')).to.be.equal('bird-flight');
-    chai.expect(Voca.slugify('Restless flycatcher')).to.be.equal('restless-flycatcher');
-    chai.expect(Voca.slugify('XMLHttpRequest')).to.be.equal('xml-http-request');
-    chai.expect(Voca.slugify('weight of up to 12 kg')).to.be.equal('weight-of-up-to-12-kg');
-    chai.expect(Voca.slugify('/home/dmitri/projects/voca')).to.be.equal('home-dmitri-projects-voca');
-    chai.expect(Voca.slugify(PRINTABLE_ASCII)).to.be.equal('0123456789-abcdefghijklmnopqrstuvwxyz-abcdefghijklmnopqrstuvwxyz');
-    chai.expect(Voca.slugify('****')).to.be.equal('');
-    chai.expect(Voca.slugify('****')).to.be.equal('');
-    chai.expect(Voca.slugify('-----')).to.be.equal('');
-    chai.expect(Voca.slugify('     ')).to.be.equal('');
-    chai.expect(Voca.slugify('\n\n\n\n   ***\t\t')).to.be.equal('');
-    chai.expect(Voca.slugify('')).to.be.equal('');
+    chai.expect(AwesomeString.slugify('bird')).to.be.equal('bird');
+    chai.expect(AwesomeString.slugify('BIRD')).to.be.equal('bird');
+    chai.expect(AwesomeString.slugify('BirdFlight')).to.be.equal('bird-flight');
+    chai.expect(AwesomeString.slugify('bird flight')).to.be.equal('bird-flight');
+    chai.expect(AwesomeString.slugify('San Diego Zoo Safari Park')).to.be.equal('san-diego-zoo-safari-park');
+    chai.expect(AwesomeString.slugify('-BIRD-FLIGHT-')).to.be.equal('bird-flight');
+    chai.expect(AwesomeString.slugify('__BIRD___FLIGHT___')).to.be.equal('bird-flight');
+    chai.expect(AwesomeString.slugify('Restless flycatcher')).to.be.equal('restless-flycatcher');
+    chai.expect(AwesomeString.slugify('XMLHttpRequest')).to.be.equal('xml-http-request');
+    chai.expect(AwesomeString.slugify('weight of up to 12 kg')).to.be.equal('weight-of-up-to-12-kg');
+    chai.expect(AwesomeString.slugify('/home/dmitri/projects/voca')).to.be.equal('home-dmitri-projects-voca');
+    chai.expect(AwesomeString.slugify(PRINTABLE_ASCII)).to.be.equal('0123456789-abcdefghijklmnopqrstuvwxyz-abcdefghijklmnopqrstuvwxyz');
+    chai.expect(AwesomeString.slugify('****')).to.be.equal('');
+    chai.expect(AwesomeString.slugify('****')).to.be.equal('');
+    chai.expect(AwesomeString.slugify('-----')).to.be.equal('');
+    chai.expect(AwesomeString.slugify('     ')).to.be.equal('');
+    chai.expect(AwesomeString.slugify('\n\n\n\n   ***\t\t')).to.be.equal('');
+    chai.expect(AwesomeString.slugify('')).to.be.equal('');
   });
 
   it('should slugify the string of a non-latin string', function () {
-    chai.expect(Voca.slugify('zborul păsării')).to.be.equal('zborul-pasarii');
-    chai.expect(Voca.slugify('fuerza de sustentación')).to.be.equal('fuerza-de-sustentacion');
-    chai.expect(Voca.slugify('skrzydło ptaka składa się')).to.be.equal('skrzydlo-ptaka-sklada-sie');
-    chai.expect(Voca.slugify('Україна розташована в південно-східній частині Європи')).to.be.equal('ukrayina-roztashovana-v-pivdenno-shidnij-chastini-yevropi');
-    chai.expect(Voca.slugify('man\u0303ana')).to.be.equal('manana');
-    chai.expect(Voca.slugify('foo\u0303\u035C\u035D\u035E bar')).to.be.equal('foo-bar');
+    chai.expect(AwesomeString.slugify('zborul păsării')).to.be.equal('zborul-pasarii');
+    chai.expect(AwesomeString.slugify('fuerza de sustentación')).to.be.equal('fuerza-de-sustentacion');
+    chai.expect(AwesomeString.slugify('skrzydło ptaka składa się')).to.be.equal('skrzydlo-ptaka-sklada-sie');
+    chai.expect(AwesomeString.slugify('Україна розташована в південно-східній частині Європи')).to.be.equal('ukrayina-roztashovana-v-pivdenno-shidnij-chastini-yevropi');
+    chai.expect(AwesomeString.slugify('man\u0303ana')).to.be.equal('manana');
+    chai.expect(AwesomeString.slugify('foo\u0303\u035C\u035D\u035E bar')).to.be.equal('foo-bar');
   });
 
   it('should not modify numbers', function () {
-    chai.expect(Voca.slugify(0)).to.be.equal('0');
-    chai.expect(Voca.slugify(1200)).to.be.equal('1200');
-    chai.expect(Voca.slugify('8965')).to.be.equal('8965');
+    chai.expect(AwesomeString.slugify(0)).to.be.equal('0');
+    chai.expect(AwesomeString.slugify(1200)).to.be.equal('1200');
+    chai.expect(AwesomeString.slugify('8965')).to.be.equal('8965');
   });
 
   it('should slugify the string representation of an object', function () {
-    chai.expect(Voca.slugify(['bird flight'])).to.be.equal('bird-flight');
-    chai.expect(Voca.slugify({
+    chai.expect(AwesomeString.slugify(['bird flight'])).to.be.equal('bird-flight');
+    chai.expect(AwesomeString.slugify({
       toString: function () {
         return 'bird flight';
       }
@@ -5793,51 +5787,51 @@ describe('slugify', function () {
   });
 
   it('should return empty string for null or undefined', function () {
-    chai.expect(Voca.slugify()).to.be.equal('');
-    chai.expect(Voca.slugify(undefined)).to.be.equal('');
-    chai.expect(Voca.slugify(null)).to.be.equal('');
+    chai.expect(AwesomeString.slugify()).to.be.equal('');
+    chai.expect(AwesomeString.slugify(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.slugify(null)).to.be.equal('');
   });
 });
 
 describe('splice', function () {
 
   it('should splice the string at a given position, number of characters and addition string', function () {
-    chai.expect(Voca.splice('sting like a bee', 0, 0, 'you should ')).to.be.equal('you should sting like a bee');
-    chai.expect(Voca.splice('sting like a bee', 0, 5, 'fly')).to.be.equal('fly like a bee');
-    chai.expect(Voca.splice('sting like a bee', 6, 4, 'as')).to.be.equal('sting as a bee');
-    chai.expect(Voca.splice('sting like a bee', 0, 16, 'float like a butterfly')).to.be.equal('float like a butterfly');
-    chai.expect(Voca.splice('sting like a bee', 0, 16, '')).to.be.equal('');
-    chai.expect(Voca.splice('bee', 3, 0, ' flies')).to.be.equal('bee flies');
-    chai.expect(Voca.splice('bee', 10, 0, ' flies')).to.be.equal('bee flies');
-    chai.expect(Voca.splice('sting like a bee', 0, 0, '')).to.be.equal('sting like a bee');
-    chai.expect(Voca.splice('bee', 10, 100, ' flies')).to.be.equal('bee flies');
-    chai.expect(Voca.splice('bee', 100, 100, ' is an insect')).to.be.equal('bee is an insect');
-    chai.expect(Voca.splice('bee', 100, -1, ' is an insect')).to.be.equal('bee is an insect');
+    chai.expect(AwesomeString.splice('sting like a bee', 0, 0, 'you should ')).to.be.equal('you should sting like a bee');
+    chai.expect(AwesomeString.splice('sting like a bee', 0, 5, 'fly')).to.be.equal('fly like a bee');
+    chai.expect(AwesomeString.splice('sting like a bee', 6, 4, 'as')).to.be.equal('sting as a bee');
+    chai.expect(AwesomeString.splice('sting like a bee', 0, 16, 'float like a butterfly')).to.be.equal('float like a butterfly');
+    chai.expect(AwesomeString.splice('sting like a bee', 0, 16, '')).to.be.equal('');
+    chai.expect(AwesomeString.splice('bee', 3, 0, ' flies')).to.be.equal('bee flies');
+    chai.expect(AwesomeString.splice('bee', 10, 0, ' flies')).to.be.equal('bee flies');
+    chai.expect(AwesomeString.splice('sting like a bee', 0, 0, '')).to.be.equal('sting like a bee');
+    chai.expect(AwesomeString.splice('bee', 10, 100, ' flies')).to.be.equal('bee flies');
+    chai.expect(AwesomeString.splice('bee', 100, 100, ' is an insect')).to.be.equal('bee is an insect');
+    chai.expect(AwesomeString.splice('bee', 100, -1, ' is an insect')).to.be.equal('bee is an insect');
   });
 
   it('should splice the string at a given negative position, number of characters and addition string', function () {
-    chai.expect(Voca.splice('days', -1, 1, '')).to.be.equal('day');
-    chai.expect(Voca.splice('days', -1, 1, ' and night')).to.be.equal('day and night');
-    chai.expect(Voca.splice('make the days count', -5, 5, 'matter')).to.be.equal('make the days matter');
-    chai.expect(Voca.splice('make the days count', -5, 0, 'matter and ')).to.be.equal('make the days matter and count');
-    chai.expect(Voca.splice('make the days count', -19, 19, 'matter')).to.be.equal('matter');
-    chai.expect(Voca.splice('make the days count', -19, 19, '')).to.be.equal('');
-    chai.expect(Voca.splice('make the days count', -100, 19, 'matter')).to.be.equal('matter');
-    chai.expect(Voca.splice('make the days count', -100, 100, 'matter')).to.be.equal('matter');
+    chai.expect(AwesomeString.splice('days', -1, 1, '')).to.be.equal('day');
+    chai.expect(AwesomeString.splice('days', -1, 1, ' and night')).to.be.equal('day and night');
+    chai.expect(AwesomeString.splice('make the days count', -5, 5, 'matter')).to.be.equal('make the days matter');
+    chai.expect(AwesomeString.splice('make the days count', -5, 0, 'matter and ')).to.be.equal('make the days matter and count');
+    chai.expect(AwesomeString.splice('make the days count', -19, 19, 'matter')).to.be.equal('matter');
+    chai.expect(AwesomeString.splice('make the days count', -19, 19, '')).to.be.equal('');
+    chai.expect(AwesomeString.splice('make the days count', -100, 19, 'matter')).to.be.equal('matter');
+    chai.expect(AwesomeString.splice('make the days count', -100, 100, 'matter')).to.be.equal('matter');
   });
 
   it('should delete from string at a given position by number of characters', function () {
-    chai.expect(Voca.splice('suffer now then be champion', 6, 4)).to.be.equal('suffer then be champion');
-    chai.expect(Voca.splice('champion', -1, 0)).to.be.equal('champion');
-    chai.expect(Voca.splice('champion', 0, 0)).to.be.equal('champion');
-    chai.expect(Voca.splice('champion', 1, 0)).to.be.equal('champion');
-    chai.expect(Voca.splice('champion', 5)).to.be.equal('champ');
-    chai.expect(Voca.splice('champion', 0)).to.be.equal('');
+    chai.expect(AwesomeString.splice('suffer now then be champion', 6, 4)).to.be.equal('suffer then be champion');
+    chai.expect(AwesomeString.splice('champion', -1, 0)).to.be.equal('champion');
+    chai.expect(AwesomeString.splice('champion', 0, 0)).to.be.equal('champion');
+    chai.expect(AwesomeString.splice('champion', 1, 0)).to.be.equal('champion');
+    chai.expect(AwesomeString.splice('champion', 5)).to.be.equal('champ');
+    chai.expect(AwesomeString.splice('champion', 0)).to.be.equal('');
   });
 
   it('should splice the string representation of an object', function () {
-    chai.expect(Voca.splice(['paradise'], 0, 0, 'this is ')).to.be.equal('this is paradise');
-    chai.expect(Voca.splice({
+    chai.expect(AwesomeString.splice(['paradise'], 0, 0, 'this is ')).to.be.equal('this is paradise');
+    chai.expect(AwesomeString.splice({
       toString: function () {
         return 'paradise';
       }
@@ -5845,242 +5839,242 @@ describe('splice', function () {
   });
 
   it('should clear the string for null or undefined arguments', function () {
-    chai.expect(Voca.splice('champion')).to.be.equal('');
-    chai.expect(Voca.splice('champion', undefined, null)).to.be.equal('');
-    chai.expect(Voca.splice('champion', null, null, null)).to.be.equal('');
-    chai.expect(Voca.splice()).to.be.equal('');
+    chai.expect(AwesomeString.splice('champion')).to.be.equal('');
+    chai.expect(AwesomeString.splice('champion', undefined, null)).to.be.equal('');
+    chai.expect(AwesomeString.splice('champion', null, null, null)).to.be.equal('');
+    chai.expect(AwesomeString.splice()).to.be.equal('');
   });
 });
 
 describe('trim', function () {
 
   it('should return the trimmed string with default whitespaces', function () {
-    chai.expect(Voca.trim(' Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trim('   Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trim('   Yes. The fire rises.    ')).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trim('Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trim('\n\f\t Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trim('\n\f\t Yes. The fire rises.', null)).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trim('\n\f\t Yes. The fire rises.', undefined)).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trim(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII.substr(1));
+    chai.expect(AwesomeString.trim(' Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trim('   Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trim('   Yes. The fire rises.    ')).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trim('Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trim('\n\f\t Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trim('\n\f\t Yes. The fire rises.', null)).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trim('\n\f\t Yes. The fire rises.', undefined)).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trim(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII.substr(1));
   });
 
   it('should return the trimmed string with custom whitespaces', function () {
-    chai.expect(Voca.trim('-Do you *feel* in charge?-', '-')).to.be.equal('Do you *feel* in charge?');
-    chai.expect(Voca.trim('---Do-you-*feel*-in-charge?---', '-')).to.be.equal('Do-you-*feel*-in-charge?');
-    chai.expect(Voca.trim('Do you *feel* in charge?___', '_')).to.be.equal('Do you *feel* in charge?');
-    chai.expect(Voca.trim('<-Do you *feel* in charge?', '<-')).to.be.equal('Do you *feel* in charge?');
-    chai.expect(Voca.trim('***Do you *feel* in charge?***', '**')).to.be.equal('*Do you *feel* in charge?*');
-    chai.expect(Voca.trim('Do you *feel* in charge?', 'Do you *feel* in charge?')).to.be.equal('');
-    chai.expect(Voca.trim('\n\nDo you *feel* in charge?', '\n')).to.be.equal('Do you *feel* in charge?');
+    chai.expect(AwesomeString.trim('-Do you *feel* in charge?-', '-')).to.be.equal('Do you *feel* in charge?');
+    chai.expect(AwesomeString.trim('---Do-you-*feel*-in-charge?---', '-')).to.be.equal('Do-you-*feel*-in-charge?');
+    chai.expect(AwesomeString.trim('Do you *feel* in charge?___', '_')).to.be.equal('Do you *feel* in charge?');
+    chai.expect(AwesomeString.trim('<-Do you *feel* in charge?', '<-')).to.be.equal('Do you *feel* in charge?');
+    chai.expect(AwesomeString.trim('***Do you *feel* in charge?***', '*-')).to.be.equal('Do you *feel* in charge?');
+    chai.expect(AwesomeString.trim('Do you *feel* in charge?', 'Doe?')).to.be.equal(' you *feel* in charg');
+    chai.expect(AwesomeString.trim('\n\nDo you *feel* in charge?', '\n')).to.be.equal('Do you *feel* in charge?');
   });
 
   it('should not modify the string for an empty string whitespace', function () {
-    chai.expect(Voca.trim('I\'m *necessary* evil!', '')).to.be.equal('I\'m *necessary* evil!');
-    chai.expect(Voca.trim('', '')).to.be.equal('');
+    chai.expect(AwesomeString.trim('I\'m *necessary* evil!', '')).to.be.equal('I\'m *necessary* evil!');
+    chai.expect(AwesomeString.trim('', '')).to.be.equal('');
   });
 
   it('should return the trimmed string representation of an object', function () {
-    chai.expect(Voca.trim([' Yes. The fire rises.'])).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trim({
+    chai.expect(AwesomeString.trim([' Yes. The fire rises.'])).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trim({
       toString: function () {
         return '\n\nYes. The fire rises.';
       }
     })).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trim(['****You\'re a big guy!****'], ['*'])).to.be.equal('You\'re a big guy!');
+    chai.expect(AwesomeString.trim(['****You\'re a big guy!****'], ['*'])).to.be.equal('You\'re a big guy!');
   });
 
   it('should return the trimmed string for numbers', function () {
-    chai.expect(Voca.trim(100, 1)).to.be.equal('00');
-    chai.expect(Voca.trim(6780, 6780)).to.be.equal('');
-    chai.expect(Voca.trim(-115, -1)).to.be.equal('15');
-    chai.expect(Voca.trim(1111, 1)).to.be.equal('');
-    chai.expect(Voca.trim(8998, 8)).to.be.equal('99');
+    chai.expect(AwesomeString.trim(100, 1)).to.be.equal('00');
+    chai.expect(AwesomeString.trim(6780, 6780)).to.be.equal('');
+    chai.expect(AwesomeString.trim(-115, -1)).to.be.equal('5');
+    chai.expect(AwesomeString.trim(1111, 1)).to.be.equal('');
+    chai.expect(AwesomeString.trim(8998, 8)).to.be.equal('99');
   });
 
   it('should return empty string for null or undefined', function () {
-    chai.expect(Voca.trim(null)).to.be.equal('');
-    chai.expect(Voca.trim(null, '\n')).to.be.equal('');
-    chai.expect(Voca.trim(null, null)).to.be.equal('');
-    chai.expect(Voca.trim(undefined)).to.be.equal('');
-    chai.expect(Voca.trim(undefined, '*')).to.be.equal('');
-    chai.expect(Voca.trim(undefined, undefined)).to.be.equal('');
+    chai.expect(AwesomeString.trim(null)).to.be.equal('');
+    chai.expect(AwesomeString.trim(null, '\n')).to.be.equal('');
+    chai.expect(AwesomeString.trim(null, null)).to.be.equal('');
+    chai.expect(AwesomeString.trim(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.trim(undefined, '*')).to.be.equal('');
+    chai.expect(AwesomeString.trim(undefined, undefined)).to.be.equal('');
   });
 });
 
 describe('trimLeft', function () {
 
   it('should return the left trimmed string with default whitespaces', function () {
-    chai.expect(Voca.trimLeft(' Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimLeft('   Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimLeft('   Yes. The fire rises.    ')).to.be.equal('Yes. The fire rises.    ');
-    chai.expect(Voca.trimLeft('Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimLeft('\n\f\t Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimLeft('\n\f\t Yes. The fire rises.', null)).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimLeft('\n\f\t Yes. The fire rises.', undefined)).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimLeft(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII.substr(1));
+    chai.expect(AwesomeString.trimLeft(' Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trimLeft('   Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trimLeft('   Yes. The fire rises.    ')).to.be.equal('Yes. The fire rises.    ');
+    chai.expect(AwesomeString.trimLeft('Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trimLeft('\n\f\t Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trimLeft('\n\f\t Yes. The fire rises.', null)).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trimLeft('\n\f\t Yes. The fire rises.', undefined)).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trimLeft(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII.substr(1));
   });
 
   it('should return the left trimmed string with custom whitespaces', function () {
-    chai.expect(Voca.trimLeft('-Do you *feel* in charge?-', '-')).to.be.equal('Do you *feel* in charge?-');
-    chai.expect(Voca.trimLeft('---Do-you-*feel*-in-charge?---', '-')).to.be.equal('Do-you-*feel*-in-charge?---');
-    chai.expect(Voca.trimLeft('Do you *feel* in charge?___', '_')).to.be.equal('Do you *feel* in charge?___');
-    chai.expect(Voca.trimLeft('___Do you *feel* in charge?', '_')).to.be.equal('Do you *feel* in charge?');
-    chai.expect(Voca.trimLeft('<-Do you *feel* in charge?', '<-')).to.be.equal('Do you *feel* in charge?');
-    chai.expect(Voca.trimLeft('***Do you *feel* in charge?***', '**')).to.be.equal('*Do you *feel* in charge?***');
-    chai.expect(Voca.trimLeft('Do you *feel* in charge?', 'Do you *feel* in charge?')).to.be.equal('');
-    chai.expect(Voca.trimLeft('\n\nDo you *feel* in charge?', '\n')).to.be.equal('Do you *feel* in charge?');
+    chai.expect(AwesomeString.trimLeft('-Do you *feel* in charge?-', '-')).to.be.equal('Do you *feel* in charge?-');
+    chai.expect(AwesomeString.trimLeft('---Do-you-*feel*-in-charge?---', '-')).to.be.equal('Do-you-*feel*-in-charge?---');
+    chai.expect(AwesomeString.trimLeft('Do you *feel* in charge?___', '_')).to.be.equal('Do you *feel* in charge?___');
+    chai.expect(AwesomeString.trimLeft('___Do you *feel* in charge?', '_')).to.be.equal('Do you *feel* in charge?');
+    chai.expect(AwesomeString.trimLeft('<-Do you *feel* in charge?', '<-')).to.be.equal('Do you *feel* in charge?');
+    chai.expect(AwesomeString.trimLeft('***Do you *feel* in charge?***', '*')).to.be.equal('Do you *feel* in charge?***');
+    chai.expect(AwesomeString.trimLeft('Do you *feel* in charge?', 'Doy')).to.be.equal(' you *feel* in charge?');
+    chai.expect(AwesomeString.trimLeft('\n\nDo you *feel* in charge?', '\n')).to.be.equal('Do you *feel* in charge?');
   });
 
   it('should not modify the string for an empty string whitespace', function () {
-    chai.expect(Voca.trimLeft('I\'m *necessary* evil!', '')).to.be.equal('I\'m *necessary* evil!');
-    chai.expect(Voca.trimLeft('', '')).to.be.equal('');
+    chai.expect(AwesomeString.trimLeft('I\'m *necessary* evil!', '')).to.be.equal('I\'m *necessary* evil!');
+    chai.expect(AwesomeString.trimLeft('', '')).to.be.equal('');
   });
 
   it('should return the left trimmed string representation of an object', function () {
-    chai.expect(Voca.trimLeft([' Yes. The fire rises.'])).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimLeft({
+    chai.expect(AwesomeString.trimLeft([' Yes. The fire rises.'])).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trimLeft({
       toString: function () {
         return '\n\nYes. The fire rises.';
       }
     })).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimLeft(['****You\'re a big guy!'], ['*'])).to.be.equal('You\'re a big guy!');
+    chai.expect(AwesomeString.trimLeft(['****You\'re a big guy!'], ['*'])).to.be.equal('You\'re a big guy!');
   });
 
   it('should return the left trimmed string for numbers', function () {
-    chai.expect(Voca.trimLeft(100, 1)).to.be.equal('00');
-    chai.expect(Voca.trimLeft(6780, 6780)).to.be.equal('');
-    chai.expect(Voca.trimLeft(-115, -1)).to.be.equal('15');
+    chai.expect(AwesomeString.trimLeft(100, 1)).to.be.equal('00');
+    chai.expect(AwesomeString.trimLeft(6780, 6780)).to.be.equal('');
+    chai.expect(AwesomeString.trimLeft(-115, -1)).to.be.equal('5');
   });
 
   it('should return empty string for null or undefined', function () {
-    chai.expect(Voca.trimLeft(null)).to.be.equal('');
-    chai.expect(Voca.trimLeft(null, '\n')).to.be.equal('');
-    chai.expect(Voca.trimLeft(null, null)).to.be.equal('');
-    chai.expect(Voca.trimLeft(undefined)).to.be.equal('');
-    chai.expect(Voca.trimLeft(undefined, '*')).to.be.equal('');
-    chai.expect(Voca.trimLeft(undefined, undefined)).to.be.equal('');
+    chai.expect(AwesomeString.trimLeft(null)).to.be.equal('');
+    chai.expect(AwesomeString.trimLeft(null, '\n')).to.be.equal('');
+    chai.expect(AwesomeString.trimLeft(null, null)).to.be.equal('');
+    chai.expect(AwesomeString.trimLeft(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.trimLeft(undefined, '*')).to.be.equal('');
+    chai.expect(AwesomeString.trimLeft(undefined, undefined)).to.be.equal('');
   });
 });
 
 describe('trimRight', function () {
 
   it('should return the right trimmed string with default whitespaces', function () {
-    chai.expect(Voca.trimRight('Yes. The fire rises. ')).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimRight('Yes. The fire rises.   ')).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimRight('   Yes. The fire rises.    ')).to.be.equal('   Yes. The fire rises.');
-    chai.expect(Voca.trimRight('Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimRight('Yes. The fire rises.\n\f\t ')).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimRight('Yes. The fire rises.\n\f\t ', null)).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimRight('Yes. The fire rises.\n\f\t ', undefined)).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimRight(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
+    chai.expect(AwesomeString.trimRight('Yes. The fire rises. ')).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trimRight('Yes. The fire rises.   ')).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trimRight('   Yes. The fire rises.    ')).to.be.equal('   Yes. The fire rises.');
+    chai.expect(AwesomeString.trimRight('Yes. The fire rises.')).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trimRight('Yes. The fire rises.\n\f\t ')).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trimRight('Yes. The fire rises.\n\f\t ', null)).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trimRight('Yes. The fire rises.\n\f\t ', undefined)).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trimRight(PRINTABLE_ASCII)).to.be.equal(PRINTABLE_ASCII);
   });
 
   it('should return the right trimmed string with custom whitespaces', function () {
-    chai.expect(Voca.trimRight('-Do you *feel* in charge?-', '-')).to.be.equal('-Do you *feel* in charge?');
-    chai.expect(Voca.trimRight('---Do-you-*feel*-in-charge?---', '-')).to.be.equal('---Do-you-*feel*-in-charge?');
-    chai.expect(Voca.trimRight('___Do you *feel* in charge?', '_')).to.be.equal('___Do you *feel* in charge?');
-    chai.expect(Voca.trimRight('Do you *feel* in charge?___', '_')).to.be.equal('Do you *feel* in charge?');
-    chai.expect(Voca.trimRight('Do you *feel* in charge?<-', '<-')).to.be.equal('Do you *feel* in charge?');
-    chai.expect(Voca.trimRight('***Do you *feel* in charge?***', '**')).to.be.equal('***Do you *feel* in charge?*');
-    chai.expect(Voca.trimRight('Do you *feel* in charge?', 'Do you *feel* in charge?')).to.be.equal('');
-    chai.expect(Voca.trimRight('Do you *feel* in charge?\n\n', '\n')).to.be.equal('Do you *feel* in charge?');
+    chai.expect(AwesomeString.trimRight('-Do you *feel* in charge?-', '-')).to.be.equal('-Do you *feel* in charge?');
+    chai.expect(AwesomeString.trimRight('---Do-you-*feel*-in-charge?---', '-')).to.be.equal('---Do-you-*feel*-in-charge?');
+    chai.expect(AwesomeString.trimRight('___Do you *feel* in charge?', '_')).to.be.equal('___Do you *feel* in charge?');
+    chai.expect(AwesomeString.trimRight('Do you *feel* in charge?___', '_')).to.be.equal('Do you *feel* in charge?');
+    chai.expect(AwesomeString.trimRight('Do you *feel* in charge?<-', '<-')).to.be.equal('Do you *feel* in charge?');
+    chai.expect(AwesomeString.trimRight('***Do you *feel* in charge?***', '**')).to.be.equal('***Do you *feel* in charge?');
+    chai.expect(AwesomeString.trimRight('Do you *feel* in charge?', 'charge?')).to.be.equal('Do you *feel* in ');
+    chai.expect(AwesomeString.trimRight('Do you *feel* in charge?\n\n', '\n')).to.be.equal('Do you *feel* in charge?');
   });
 
   it('should not modify the string for an empty string whitespace', function () {
-    chai.expect(Voca.trimRight('I\'m *necessary* evil!', '')).to.be.equal('I\'m *necessary* evil!');
-    chai.expect(Voca.trimRight('', '')).to.be.equal('');
+    chai.expect(AwesomeString.trimRight('I\'m *necessary* evil!', '')).to.be.equal('I\'m *necessary* evil!');
+    chai.expect(AwesomeString.trimRight('', '')).to.be.equal('');
   });
 
   it('should return the right trimmed string representation of an object', function () {
-    chai.expect(Voca.trimRight(['Yes. The fire rises. '])).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimRight({
+    chai.expect(AwesomeString.trimRight(['Yes. The fire rises. '])).to.be.equal('Yes. The fire rises.');
+    chai.expect(AwesomeString.trimRight({
       toString: function () {
         return 'Yes. The fire rises.\n\n';
       }
     })).to.be.equal('Yes. The fire rises.');
-    chai.expect(Voca.trimRight(['You\'re a big guy!****'], ['*'])).to.be.equal('You\'re a big guy!');
+    chai.expect(AwesomeString.trimRight(['You\'re a big guy!****'], ['*'])).to.be.equal('You\'re a big guy!');
   });
 
   it('should return the right trimmed string for numbers', function () {
-    chai.expect(Voca.trimRight(100, 0)).to.be.equal('1');
-    chai.expect(Voca.trimRight(6780, 6780)).to.be.equal('');
-    chai.expect(Voca.trimRight(-115, 15)).to.be.equal('-1');
+    chai.expect(AwesomeString.trimRight(100, 0)).to.be.equal('1');
+    chai.expect(AwesomeString.trimRight(6780, 6780)).to.be.equal('');
+    chai.expect(AwesomeString.trimRight(-115, 15)).to.be.equal('-');
   });
 
   it('should return empty string for null or undefined', function () {
-    chai.expect(Voca.trimRight(null)).to.be.equal('');
-    chai.expect(Voca.trimRight(null, '\n')).to.be.equal('');
-    chai.expect(Voca.trimRight(null, null)).to.be.equal('');
-    chai.expect(Voca.trimRight(undefined)).to.be.equal('');
-    chai.expect(Voca.trimRight(undefined, '*')).to.be.equal('');
-    chai.expect(Voca.trimRight(undefined, undefined)).to.be.equal('');
+    chai.expect(AwesomeString.trimRight(null)).to.be.equal('');
+    chai.expect(AwesomeString.trimRight(null, '\n')).to.be.equal('');
+    chai.expect(AwesomeString.trimRight(null, null)).to.be.equal('');
+    chai.expect(AwesomeString.trimRight(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.trimRight(undefined, '*')).to.be.equal('');
+    chai.expect(AwesomeString.trimRight(undefined, undefined)).to.be.equal('');
   });
 });
 
 describe('wordWrap', function () {
 
   it('should wrap the string with default parameters', function () {
-    chai.expect(Voca.wordWrap('')).to.be.equal('');
-    chai.expect(Voca.wordWrap('Yes. The fire rises. ')).to.be.equal('Yes. The fire rises. ');
-    chai.expect(Voca.wordWrap('Theatricality and deception are powerful agents to the uninitiated... but we are initiated, aren\'t ' + 'we Bruce? Members of the League of Shadows!')).to.be.equal('Theatricality and deception are powerful agents to the uninitiated... but' + '\n' + 'we are initiated, aren\'t we Bruce? Members of the League of Shadows!');
-    chai.expect(Voca.wordWrap('Theatricality-and-deception-are-powerful-agents-to-the-uninitiated...-but-we-are-initiated')).to.be.equal('Theatricality-and-deception-are-powerful-agents-to-the-uninitiated...-but-we-are-initiated');
+    chai.expect(AwesomeString.wordWrap('')).to.be.equal('');
+    chai.expect(AwesomeString.wordWrap('Yes. The fire rises. ')).to.be.equal('Yes. The fire rises. ');
+    chai.expect(AwesomeString.wordWrap('Theatricality and deception are powerful agents to the uninitiated... but we are initiated, aren\'t ' + 'we Bruce? Members of the League of Shadows!')).to.be.equal('Theatricality and deception are powerful agents to the uninitiated... but' + '\n' + 'we are initiated, aren\'t we Bruce? Members of the League of Shadows!');
+    chai.expect(AwesomeString.wordWrap('Theatricality-and-deception-are-powerful-agents-to-the-uninitiated...-but-we-are-initiated')).to.be.equal('Theatricality-and-deception-are-powerful-agents-to-the-uninitiated...-but-we-are-initiated');
   });
 
   it('should wrap the string for a specific width', function () {
-    chai.expect(Voca.wordWrap('Hello', {
+    chai.expect(AwesomeString.wordWrap('Hello', {
       width: 4
     })).to.be.equal('Hello');
-    chai.expect(Voca.wordWrap('  Hello  ', {
+    chai.expect(AwesomeString.wordWrap('  Hello  ', {
       width: 4
     })).to.be.equal('Hello\n ');
-    chai.expect(Voca.wordWrap('Hello World', {
+    chai.expect(AwesomeString.wordWrap('Hello World', {
       width: 4
     })).to.be.equal('Hello\nWorld');
-    chai.expect(Voca.wordWrap('Yes. The fire rises.', {
+    chai.expect(AwesomeString.wordWrap('Yes. The fire rises.', {
       width: 4
     })).to.be.equal('Yes.\nThe\nfire\nrises.');
-    chai.expect(Voca.wordWrap('And I think to myself what a wonderful world.', {
+    chai.expect(AwesomeString.wordWrap('And I think to myself what a wonderful world.', {
       width: 10
     })).to.be.equal('And I\nthink to\nmyself\nwhat a\nwonderful\nworld.');
-    chai.expect(Voca.wordWrap('Hello World', {
+    chai.expect(AwesomeString.wordWrap('Hello World', {
       width: 0
     })).to.be.equal('');
-    chai.expect(Voca.wordWrap('Hello World', {
+    chai.expect(AwesomeString.wordWrap('Hello World', {
       width: -5
     })).to.be.equal('');
   });
 
   it('should wrap the string with indent', function () {
-    chai.expect(Voca.wordWrap('Hello', {
+    chai.expect(AwesomeString.wordWrap('Hello', {
       width: 4,
       indent: '***'
     })).to.be.equal('***Hello');
-    chai.expect(Voca.wordWrap('Hello World', {
+    chai.expect(AwesomeString.wordWrap('Hello World', {
       width: 4,
       indent: '  '
     })).to.be.equal('  Hello\n  World');
-    chai.expect(Voca.wordWrap('Yes. The fire rises.', {
+    chai.expect(AwesomeString.wordWrap('Yes. The fire rises.', {
       width: 4,
       indent: '**'
     })).to.be.equal('**Yes.\n**The\n**fire\n**rises.');
-    chai.expect(Voca.wordWrap('', {
+    chai.expect(AwesomeString.wordWrap('', {
       width: 5,
       indent: '000'
     })).to.be.equal('000');
-    chai.expect(Voca.wordWrap('Wonderful world', {
+    chai.expect(AwesomeString.wordWrap('Wonderful world', {
       width: 0,
       indent: '000'
     })).to.be.equal('000');
   });
 
   it('should wrap the string with a custom newline character', function () {
-    chai.expect(Voca.wordWrap('What A Wonderful World', {
+    chai.expect(AwesomeString.wordWrap('What A Wonderful World', {
       width: 10,
       indent: '  ',
       newLine: '+'
     })).to.be.equal('  What A+  Wonderful+  World');
-    chai.expect(Voca.wordWrap('I hear babies crying, I watch them grow', {
+    chai.expect(AwesomeString.wordWrap('I hear babies crying, I watch them grow', {
       width: 5,
       indent: '-',
       newLine: '<br/>'
@@ -6088,82 +6082,82 @@ describe('wordWrap', function () {
   });
 
   it('should wrap the string with breaking long words', function () {
-    chai.expect(Voca.wordWrap('Hello', {
+    chai.expect(AwesomeString.wordWrap('Hello', {
       width: 4,
       cut: true
     })).to.be.equal('Hell\no');
-    chai.expect(Voca.wordWrap('I hear babies crying, I watch them grow', {
+    chai.expect(AwesomeString.wordWrap('I hear babies crying, I watch them grow', {
       width: 5,
       cut: true
     })).to.be.equal('I\nhear\nbabie\ns\ncryin\ng, I\nwatch\nthem\ngrow');
   });
 
   it('should return empty string for null or undefined', function () {
-    chai.expect(Voca.wordWrap()).to.be.equal('');
-    chai.expect(Voca.wordWrap(undefined)).to.be.equal('');
-    chai.expect(Voca.wordWrap(null)).to.be.equal('');
+    chai.expect(AwesomeString.wordWrap()).to.be.equal('');
+    chai.expect(AwesomeString.wordWrap(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.wordWrap(null)).to.be.equal('');
   });
 });
 
 describe('endsWith', function () {
 
   it('should return true for valid ending string', function () {
-    chai.expect(Voca.endsWith('Hello World!', '')).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', '!')).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'd!')).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'rld!')).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'orld!')).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'World!')).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', ' World!')).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'o World!')).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'lo World!')).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'llo World!')).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'ello World!')).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'Hello World!')).to.be.true;
-    chai.expect(Voca.endsWith('Привет Мир!', 'Мир!')).to.be.true;
-    chai.expect(Voca.endsWith('', '')).to.be.true;
-    chai.expect(Voca.endsWith(PRINTABLE_ASCII, '~')).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', '')).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', '!')).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'd!')).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'rld!')).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'orld!')).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'World!')).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', ' World!')).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'o World!')).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'lo World!')).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'llo World!')).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'ello World!')).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'Hello World!')).to.be.true;
+    chai.expect(AwesomeString.endsWith('Привет Мир!', 'Мир!')).to.be.true;
+    chai.expect(AwesomeString.endsWith('', '')).to.be.true;
+    chai.expect(AwesomeString.endsWith(PRINTABLE_ASCII, '~')).to.be.true;
   });
 
   it('should return true for valid ending string and position', function () {
-    chai.expect(Voca.endsWith('Hello World!', '', 'Hello World'.length)).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'Hello World!', 'Hello World!'.length)).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'Hello World', 'Hello World!'.length - 1)).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'Hello Worl', 'Hello World!'.length - 2)).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'Hello Wor', 'Hello World!'.length - 3)).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'Hello Wo', 'Hello World!'.length - 4)).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'Hello W', 'Hello World!'.length - 5)).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'Hello ', 'Hello World!'.length - 6)).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'Hello', 'Hello World!'.length - 7)).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'Hell', 'Hello World!'.length - 8)).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'Hel', 'Hello World!'.length - 9)).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'He', 'Hello World!'.length - 10)).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'H', 'Hello World!'.length - 11)).to.be.true;
-    chai.expect(Voca.endsWith('', '', 0)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', '', 'Hello World'.length)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'Hello World!', 'Hello World!'.length)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'Hello World', 'Hello World!'.length - 1)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'Hello Worl', 'Hello World!'.length - 2)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'Hello Wor', 'Hello World!'.length - 3)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'Hello Wo', 'Hello World!'.length - 4)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'Hello W', 'Hello World!'.length - 5)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'Hello ', 'Hello World!'.length - 6)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'Hello', 'Hello World!'.length - 7)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'Hell', 'Hello World!'.length - 8)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'Hel', 'Hello World!'.length - 9)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'He', 'Hello World!'.length - 10)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'H', 'Hello World!'.length - 11)).to.be.true;
+    chai.expect(AwesomeString.endsWith('', '', 0)).to.be.true;
   });
 
   it('should return true for a correct downcast of the position', function () {
-    chai.expect(Voca.endsWith('Hello World!', 'ello', '5')).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'ello', 5.1)).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'World!', 30000)).to.be.true;
-    chai.expect(Voca.endsWith('Hello World!', 'World!', Infinity)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'ello', '5')).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'ello', 5.1)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'World!', 30000)).to.be.true;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'World!', Infinity)).to.be.true;
   });
 
   it('should return true for an empty ending string', function () {
     [0, 1, 100, Infinity, undefined, NaN, null].forEach(function (position) {
-      chai.expect(Voca.endsWith('Hello World!', '', position)).to.be.true;
+      chai.expect(AwesomeString.endsWith('Hello World!', '', position)).to.be.true;
     });
   });
 
   it('should return true for valid ending number', function () {
-    chai.expect(Voca.endsWith(1000, 0)).to.be.true;
-    chai.expect(Voca.endsWith(1250, 50)).to.be.true;
-    chai.expect(Voca.endsWith('916', 16)).to.be.true;
+    chai.expect(AwesomeString.endsWith(1000, 0)).to.be.true;
+    chai.expect(AwesomeString.endsWith(1250, 50)).to.be.true;
+    chai.expect(AwesomeString.endsWith('916', 16)).to.be.true;
   });
 
   it('should return true for a valid ending in a string representation of an object', function () {
-    chai.expect(Voca.endsWith(['Welcome to Earth'], 'Earth')).to.be.true;
-    chai.expect(Voca.endsWith({
+    chai.expect(AwesomeString.endsWith(['Welcome to Earth'], 'Earth')).to.be.true;
+    chai.expect(AwesomeString.endsWith({
       toString: function () {
         return 'Let us not stand on ceremony, Mr. Wayne.';
       }
@@ -6171,151 +6165,151 @@ describe('endsWith', function () {
   });
 
   it('should return false for an invalid ending string', function () {
-    chai.expect(Voca.endsWith('The shadows betray you, because they belong to me!', 'The shadows')).to.be.false;
-    chai.expect(Voca.endsWith('The shadows betray you, because they belong to me!', 'to me')).to.be.false;
-    chai.expect(Voca.endsWith('They belong to me!', 'They belong to me')).to.be.false;
-    chai.expect(Voca.endsWith('They belong to me!', 'belong')).to.be.false;
-    chai.expect(Voca.endsWith('', 'The shadows')).to.be.false;
+    chai.expect(AwesomeString.endsWith('The shadows betray you, because they belong to me!', 'The shadows')).to.be.false;
+    chai.expect(AwesomeString.endsWith('The shadows betray you, because they belong to me!', 'to me')).to.be.false;
+    chai.expect(AwesomeString.endsWith('They belong to me!', 'They belong to me')).to.be.false;
+    chai.expect(AwesomeString.endsWith('They belong to me!', 'belong')).to.be.false;
+    chai.expect(AwesomeString.endsWith('', 'The shadows')).to.be.false;
   });
 
   it('should return false for an invalid ending string and position', function () {
-    chai.expect(Voca.endsWith('The shadows betray you, because they belong to me!', 'they belong to me!', 5)).to.be.false;
-    chai.expect(Voca.endsWith('They belong to me!', 'They belong to me!', 'They belong to me!'.length - 1)).to.be.false;
-    chai.expect(Voca.endsWith('They belong to me!', 'They', 'They belong to me!'.length)).to.be.false;
-    chai.expect(Voca.endsWith('They belong to me!', 'belong', 'They belong to me!'.length)).to.be.false;
-    chai.expect(Voca.endsWith('They belong to me!', 'to me!', 0)).to.be.false;
-    chai.expect(Voca.endsWith('They belong to me!', 'belong to me!', -100)).to.be.false;
+    chai.expect(AwesomeString.endsWith('The shadows betray you, because they belong to me!', 'they belong to me!', 5)).to.be.false;
+    chai.expect(AwesomeString.endsWith('They belong to me!', 'They belong to me!', 'They belong to me!'.length - 1)).to.be.false;
+    chai.expect(AwesomeString.endsWith('They belong to me!', 'They', 'They belong to me!'.length)).to.be.false;
+    chai.expect(AwesomeString.endsWith('They belong to me!', 'belong', 'They belong to me!'.length)).to.be.false;
+    chai.expect(AwesomeString.endsWith('They belong to me!', 'to me!', 0)).to.be.false;
+    chai.expect(AwesomeString.endsWith('They belong to me!', 'belong to me!', -100)).to.be.false;
   });
 
   it('should return false for an invalid ending number', function () {
-    chai.expect(Voca.endsWith(1000, 10)).to.be.false;
-    chai.expect(Voca.endsWith(1250, 55)).to.be.false;
-    chai.expect(Voca.endsWith('916', 18)).to.be.false;
+    chai.expect(AwesomeString.endsWith(1000, 10)).to.be.false;
+    chai.expect(AwesomeString.endsWith(1250, 55)).to.be.false;
+    chai.expect(AwesomeString.endsWith('916', 18)).to.be.false;
   });
 
   it('should return false for a NaN position', function () {
-    chai.expect(Voca.endsWith('Hello World!', 'World!', NaN)).to.be.false;
+    chai.expect(AwesomeString.endsWith('Hello World!', 'World!', NaN)).to.be.false;
   });
 
   it('should return false for undefined and null parameters', function () {
-    chai.expect(Voca.endsWith()).to.be.false;
-    chai.expect(Voca.endsWith(undefined)).to.be.false;
-    chai.expect(Voca.endsWith(undefined, undefined)).to.be.false;
-    chai.expect(Voca.endsWith(undefined, undefined, undefined)).to.be.false;
-    chai.expect(Voca.endsWith(undefined, undefined, 0)).to.be.false;
-    chai.expect(Voca.endsWith(undefined, 'Hello World!')).to.be.false;
-    chai.expect(Voca.endsWith(null)).to.be.false;
-    chai.expect(Voca.endsWith(null, null)).to.be.false;
-    chai.expect(Voca.endsWith(null, null, null)).to.be.false;
-    chai.expect(Voca.endsWith(null, null, 0)).to.be.false;
-    chai.expect(Voca.endsWith(null, 'Hello World!')).to.be.false;
+    chai.expect(AwesomeString.endsWith()).to.be.false;
+    chai.expect(AwesomeString.endsWith(undefined)).to.be.false;
+    chai.expect(AwesomeString.endsWith(undefined, undefined)).to.be.false;
+    chai.expect(AwesomeString.endsWith(undefined, undefined, undefined)).to.be.false;
+    chai.expect(AwesomeString.endsWith(undefined, undefined, 0)).to.be.false;
+    chai.expect(AwesomeString.endsWith(undefined, 'Hello World!')).to.be.false;
+    chai.expect(AwesomeString.endsWith(null)).to.be.false;
+    chai.expect(AwesomeString.endsWith(null, null)).to.be.false;
+    chai.expect(AwesomeString.endsWith(null, null, null)).to.be.false;
+    chai.expect(AwesomeString.endsWith(null, null, 0)).to.be.false;
+    chai.expect(AwesomeString.endsWith(null, 'Hello World!')).to.be.false;
   });
 });
 
 describe('includes', function () {
 
   it('should return true for an included string', function () {
-    chai.expect(Voca.includes('mobile infantry', 'mobile')).to.be.true;
-    chai.expect(Voca.includes('mobile infantry', 'infantry')).to.be.true;
-    chai.expect(Voca.includes('mobile infantry', 'mobile infantry')).to.be.true;
-    chai.expect(Voca.includes('mobile infantry', ' ')).to.be.true;
-    chai.expect(Voca.includes('mobile infantry', '')).to.be.true;
-    chai.expect(Voca.includes('', '')).to.be.true;
-    chai.expect(Voca.includes(undefined, '')).to.be.true;
-    chai.expect(Voca.includes('\nwelcome', '\n')).to.be.true;
-    chai.expect(Voca.includes(PRINTABLE_ASCII, '+')).to.be.true;
+    chai.expect(AwesomeString.includes('mobile infantry', 'mobile')).to.be.true;
+    chai.expect(AwesomeString.includes('mobile infantry', 'infantry')).to.be.true;
+    chai.expect(AwesomeString.includes('mobile infantry', 'mobile infantry')).to.be.true;
+    chai.expect(AwesomeString.includes('mobile infantry', ' ')).to.be.true;
+    chai.expect(AwesomeString.includes('mobile infantry', '')).to.be.true;
+    chai.expect(AwesomeString.includes('', '')).to.be.true;
+    chai.expect(AwesomeString.includes(undefined, '')).to.be.true;
+    chai.expect(AwesomeString.includes('\nwelcome', '\n')).to.be.true;
+    chai.expect(AwesomeString.includes(PRINTABLE_ASCII, '+')).to.be.true;
   });
 
   it('should return true for an included string and position', function () {
-    chai.expect(Voca.includes('mobile infantry', 'mobile', 0)).to.be.true;
-    chai.expect(Voca.includes('mobile infantry', 'infantry', 7)).to.be.true;
-    chai.expect(Voca.includes('mobile infantry', 'mobile infantry', 0)).to.be.true;
-    chai.expect(Voca.includes('mobile infantry', ' ', 6)).to.be.true;
-    chai.expect(Voca.includes('mobile infantry', '', 0)).to.be.true;
-    chai.expect(Voca.includes('mobile infantry', '', 6)).to.be.true;
-    chai.expect(Voca.includes('', '', 0)).to.be.true;
-    chai.expect(Voca.includes('', '', 6)).to.be.true;
+    chai.expect(AwesomeString.includes('mobile infantry', 'mobile', 0)).to.be.true;
+    chai.expect(AwesomeString.includes('mobile infantry', 'infantry', 7)).to.be.true;
+    chai.expect(AwesomeString.includes('mobile infantry', 'mobile infantry', 0)).to.be.true;
+    chai.expect(AwesomeString.includes('mobile infantry', ' ', 6)).to.be.true;
+    chai.expect(AwesomeString.includes('mobile infantry', '', 0)).to.be.true;
+    chai.expect(AwesomeString.includes('mobile infantry', '', 6)).to.be.true;
+    chai.expect(AwesomeString.includes('', '', 0)).to.be.true;
+    chai.expect(AwesomeString.includes('', '', 6)).to.be.true;
   });
 
   it('should return true for an included string representation of an object', function () {
-    chai.expect(Voca.includes(['mobile infantry'], 'mobile')).to.be.true;
-    chai.expect(Voca.includes({
+    chai.expect(AwesomeString.includes(['mobile infantry'], 'mobile')).to.be.true;
+    chai.expect(AwesomeString.includes({
       toString: function () {
         return 'mobile infantry';
       }
     }, 'infantry')).to.be.true;
-    chai.expect(Voca.includes(['mobile infantry'], ['mobile infantry'])).to.be.true;
+    chai.expect(AwesomeString.includes(['mobile infantry'], ['mobile infantry'])).to.be.true;
   });
 
   it('should return true for an included number', function () {
-    chai.expect(Voca.includes(155, 55));
-    chai.expect(Voca.includes('1078', 78));
-    chai.expect(Voca.includes(0, 0));
-    chai.expect(Voca.includes(80, ''));
+    chai.expect(AwesomeString.includes(155, 55));
+    chai.expect(AwesomeString.includes('1078', 78));
+    chai.expect(AwesomeString.includes(0, 0));
+    chai.expect(AwesomeString.includes(80, ''));
   });
 
   it('should return false for a not included string', function () {
-    chai.expect(Voca.includes('mobile infantry', 'be mobile')).to.be.false;
-    chai.expect(Voca.includes('mobile infantry', 'infantry ')).to.be.false;
-    chai.expect(Voca.includes('mobile infantry', ' mobile infantry ')).to.be.false;
-    chai.expect(Voca.includes('mobile infantry', '!')).to.be.false;
-    chai.expect(Voca.includes('', 'mobile')).to.be.false;
-    chai.expect(Voca.includes('\nwelcome', '\t')).to.be.false;
+    chai.expect(AwesomeString.includes('mobile infantry', 'be mobile')).to.be.false;
+    chai.expect(AwesomeString.includes('mobile infantry', 'infantry ')).to.be.false;
+    chai.expect(AwesomeString.includes('mobile infantry', ' mobile infantry ')).to.be.false;
+    chai.expect(AwesomeString.includes('mobile infantry', '!')).to.be.false;
+    chai.expect(AwesomeString.includes('', 'mobile')).to.be.false;
+    chai.expect(AwesomeString.includes('\nwelcome', '\t')).to.be.false;
   });
 
   it('should return false for a not included string and position', function () {
-    chai.expect(Voca.includes('mobile infantry', 'mobile', 1)).to.be.false;
-    chai.expect(Voca.includes('mobile infantry', 'infantry', 8)).to.be.false;
-    chai.expect(Voca.includes('mobile infantry', 'mobile infantry', 2)).to.be.false;
-    chai.expect(Voca.includes('mobile infantry', ' ', 7)).to.be.false;
+    chai.expect(AwesomeString.includes('mobile infantry', 'mobile', 1)).to.be.false;
+    chai.expect(AwesomeString.includes('mobile infantry', 'infantry', 8)).to.be.false;
+    chai.expect(AwesomeString.includes('mobile infantry', 'mobile infantry', 2)).to.be.false;
+    chai.expect(AwesomeString.includes('mobile infantry', ' ', 7)).to.be.false;
   });
 
   it('should return false for a not included string representation of an object', function () {
-    chai.expect(Voca.includes(['mobile infantry'], 'mobile number')).to.be.false;
-    chai.expect(Voca.includes({
+    chai.expect(AwesomeString.includes(['mobile infantry'], 'mobile number')).to.be.false;
+    chai.expect(AwesomeString.includes({
       toString: function () {
         return 'mobile infantry';
       }
     }, 'motorized infantry')).to.be.false;
-    chai.expect(Voca.includes(['mobile infantry'], ['mobile infantry'], 1)).to.be.false;
+    chai.expect(AwesomeString.includes(['mobile infantry'], ['mobile infantry'], 1)).to.be.false;
   });
 
   it('should return false for a undefined or null search string', function () {
-    chai.expect(Voca.includes('mobile infantry', undefined)).to.be.false;
-    chai.expect(Voca.includes('mobile infantry', null)).to.be.false;
+    chai.expect(AwesomeString.includes('mobile infantry', undefined)).to.be.false;
+    chai.expect(AwesomeString.includes('mobile infantry', null)).to.be.false;
   });
 });
 
 describe('isAlpha', function () {
 
   it('should return true for an alpha string', function () {
-    chai.expect(Voca.isAlpha('HelloWorld')).to.be.true;
-    chai.expect(Voca.isAlpha('JavaScript')).to.be.true;
-    chai.expect(Voca.isAlpha('AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz')).to.be.true;
-    chai.expect(Voca.isAlpha('man\u0303ana')).to.be.true;
-    chai.expect(Voca.isAlpha('foo\u0303\u035C\u035D\u035Ebar')).to.be.true;
+    chai.expect(AwesomeString.isAlpha('HelloWorld')).to.be.true;
+    chai.expect(AwesomeString.isAlpha('JavaScript')).to.be.true;
+    chai.expect(AwesomeString.isAlpha('AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz')).to.be.true;
+    chai.expect(AwesomeString.isAlpha('man\u0303ana')).to.be.true;
+    chai.expect(AwesomeString.isAlpha('foo\u0303\u035C\u035D\u035Ebar')).to.be.true;
   });
 
   it('should return true for a string with diacritics', function () {
-    chai.expect(Voca.isAlpha('áéèêëíîïóôúûýàòüçäöâùÿãõñ')).to.be.true;
+    chai.expect(AwesomeString.isAlpha('áéèêëíîïóôúûýàòüçäöâùÿãõñ')).to.be.true;
   });
 
   it('should return true for characters with diacritical marks', function () {
-    chai.expect(Voca.isAlpha('man\u0303ana')).to.be.true;
-    chai.expect(Voca.isAlpha('foo\u0303\u035C\u035D\u035Ebar')).to.be.true;
+    chai.expect(AwesomeString.isAlpha('man\u0303ana')).to.be.true;
+    chai.expect(AwesomeString.isAlpha('foo\u0303\u035C\u035D\u035Ebar')).to.be.true;
   });
 
   it('should return true for an array with one alpha string item', function () {
-    chai.expect(Voca.isAlpha(['HelloWorld'])).to.be.true;
+    chai.expect(AwesomeString.isAlpha(['HelloWorld'])).to.be.true;
   });
 
   it('should return true for an alpha string representation of an object', function () {
-    chai.expect(Voca.isAlpha({
+    chai.expect(AwesomeString.isAlpha({
       toString: function () {
         return 'HelloWorld';
       }
     })).to.be.true;
-    chai.expect(Voca.isAlpha({
+    chai.expect(AwesomeString.isAlpha({
       toString: function () {
         return 'HelloWorld';
       }
@@ -6323,38 +6317,38 @@ describe('isAlpha', function () {
   });
 
   it('should return true for a boolean', function () {
-    chai.expect(Voca.isAlpha(true)).to.be.true;
-    chai.expect(Voca.isAlpha(false)).to.be.true;
+    chai.expect(AwesomeString.isAlpha(true)).to.be.true;
+    chai.expect(AwesomeString.isAlpha(false)).to.be.true;
   });
 
   it('should return true for a NaN or Infinity number', function () {
-    chai.expect(Voca.isAlpha(NaN)).to.be.true;
-    chai.expect(Voca.isAlpha(Infinity)).to.be.true;
+    chai.expect(AwesomeString.isAlpha(NaN)).to.be.true;
+    chai.expect(AwesomeString.isAlpha(Infinity)).to.be.true;
   });
 
   it('should return false for a non-alpha string', function () {
-    chai.expect(Voca.isAlpha('Hello World!')).to.be.false;
-    chai.expect(Voca.isAlpha('\nHello World!\n')).to.be.false;
-    chai.expect(Voca.isAlpha('ECMAScript 5.1 (ECMA-262)')).to.be.false;
-    chai.expect(Voca.isAlpha(' ')).to.be.false;
-    chai.expect(Voca.isAlpha('\n')).to.be.false;
-    chai.expect(Voca.isAlpha('\t')).to.be.false;
-    chai.expect(Voca.isAlpha('0123456789')).to.be.false;
-    chai.expect(Voca.isAlpha('áéèêëíîïóôúûýàòüçäöâùÿãõñ 0123456789')).to.be.false;
-    chai.expect(Voca.isAlpha(PRINTABLE_ASCII)).to.be.false;
+    chai.expect(AwesomeString.isAlpha('Hello World!')).to.be.false;
+    chai.expect(AwesomeString.isAlpha('\nHello World!\n')).to.be.false;
+    chai.expect(AwesomeString.isAlpha('ECMAScript 5.1 (ECMA-262)')).to.be.false;
+    chai.expect(AwesomeString.isAlpha(' ')).to.be.false;
+    chai.expect(AwesomeString.isAlpha('\n')).to.be.false;
+    chai.expect(AwesomeString.isAlpha('\t')).to.be.false;
+    chai.expect(AwesomeString.isAlpha('0123456789')).to.be.false;
+    chai.expect(AwesomeString.isAlpha('áéèêëíîïóôúûýàòüçäöâùÿãõñ 0123456789')).to.be.false;
+    chai.expect(AwesomeString.isAlpha(PRINTABLE_ASCII)).to.be.false;
   });
 
   it('should return false for an array with a non-alpha string item', function () {
-    chai.expect(Voca.isAlpha(['Hello World!'])).to.be.false;
+    chai.expect(AwesomeString.isAlpha(['Hello World!'])).to.be.false;
   });
 
   it('should return false for a non-alpha string representation of an object', function () {
-    chai.expect(Voca.isAlpha({
+    chai.expect(AwesomeString.isAlpha({
       toString: function () {
         return 'Hello World!';
       }
     })).to.be.false;
-    chai.expect(Voca.isAlpha({
+    chai.expect(AwesomeString.isAlpha({
       toString: function () {
         return 'Welcome!';
       }
@@ -6362,69 +6356,69 @@ describe('isAlpha', function () {
   });
 
   it('should return false for an undefined', function () {
-    chai.expect(Voca.isAlpha(undefined)).to.be.false;
-    chai.expect(Voca.isAlpha()).to.be.false;
+    chai.expect(AwesomeString.isAlpha(undefined)).to.be.false;
+    chai.expect(AwesomeString.isAlpha()).to.be.false;
   });
 
   it('should return false for a null', function () {
-    chai.expect(Voca.isAlpha(null)).to.be.false;
+    chai.expect(AwesomeString.isAlpha(null)).to.be.false;
   });
 
   it('should return false for a number or numeric string', function () {
-    chai.expect(Voca.isAlpha(0)).to.be.false;
-    chai.expect(Voca.isAlpha(10)).to.be.false;
-    chai.expect(Voca.isAlpha(-12.05)).to.be.false;
-    chai.expect(Voca.isAlpha(0xFF)).to.be.false;
-    chai.expect(Voca.isAlpha('0')).to.be.false;
-    chai.expect(Voca.isAlpha('10')).to.be.false;
-    chai.expect(Voca.isAlpha('-12.05')).to.be.false;
-    chai.expect(Voca.isAlpha('0xFF')).to.be.false;
+    chai.expect(AwesomeString.isAlpha(0)).to.be.false;
+    chai.expect(AwesomeString.isAlpha(10)).to.be.false;
+    chai.expect(AwesomeString.isAlpha(-12.05)).to.be.false;
+    chai.expect(AwesomeString.isAlpha(0xFF)).to.be.false;
+    chai.expect(AwesomeString.isAlpha('0')).to.be.false;
+    chai.expect(AwesomeString.isAlpha('10')).to.be.false;
+    chai.expect(AwesomeString.isAlpha('-12.05')).to.be.false;
+    chai.expect(AwesomeString.isAlpha('0xFF')).to.be.false;
   });
 
   it('should return false for an empty string', function () {
-    chai.expect(Voca.isAlpha('')).to.be.false;
+    chai.expect(AwesomeString.isAlpha('')).to.be.false;
   });
 });
 
 describe('isAlphaDigit', function () {
 
   it('should return true for an alpha and digit string', function () {
-    chai.expect(Voca.isAlphaDigit('HelloWorld')).to.be.true;
-    chai.expect(Voca.isAlphaDigit('HelloWorld007')).to.be.true;
-    chai.expect(Voca.isAlphaDigit('JavaScript6')).to.be.true;
-    chai.expect(Voca.isAlphaDigit('AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz')).to.be.true;
-    chai.expect(Voca.isAlphaDigit('AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789')).to.be.true;
-    chai.expect(Voca.isAlphaDigit('man\u0303ana')).to.be.true;
-    chai.expect(Voca.isAlphaDigit('foo\u0303\u035C\u035D\u035Ebar')).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit('HelloWorld')).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit('HelloWorld007')).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit('JavaScript6')).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit('AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz')).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit('AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789')).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit('man\u0303ana')).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit('foo\u0303\u035C\u035D\u035Ebar')).to.be.true;
   });
 
   it('should return true for a string with diacritics', function () {
-    chai.expect(Voca.isAlphaDigit('áéèêëíîïóôúûýàòüçäöâùÿãõñ')).to.be.true;
-    chai.expect(Voca.isAlphaDigit('áéèêëíîïóôúûýàòüçäöâùÿãõñ0123456789')).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit('áéèêëíîïóôúûýàòüçäöâùÿãõñ')).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit('áéèêëíîïóôúûýàòüçäöâùÿãõñ0123456789')).to.be.true;
   });
 
   it('should return true for an array with one alpha and digit string item', function () {
-    chai.expect(Voca.isAlphaDigit(['HelloWorld'])).to.be.true;
-    chai.expect(Voca.isAlphaDigit(['HelloWorld007'])).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit(['HelloWorld'])).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit(['HelloWorld007'])).to.be.true;
   });
 
   it('should return true for an alpha and digit string representation of an object', function () {
-    chai.expect(Voca.isAlphaDigit({
+    chai.expect(AwesomeString.isAlphaDigit({
       toString: function () {
         return 'HelloWorld';
       }
     })).to.be.true;
-    chai.expect(Voca.isAlphaDigit({
+    chai.expect(AwesomeString.isAlphaDigit({
       toString: function () {
         return 'Welcome';
       }
     })).to.be.true;
-    chai.expect(Voca.isAlphaDigit({
+    chai.expect(AwesomeString.isAlphaDigit({
       toString: function () {
         return 'JavaScript2016';
       }
     })).to.be.true;
-    chai.expect(Voca.isAlphaDigit({
+    chai.expect(AwesomeString.isAlphaDigit({
       toString: function () {
         return 'Welcome';
       }
@@ -6432,39 +6426,39 @@ describe('isAlphaDigit', function () {
   });
 
   it('should return true for a boolean', function () {
-    chai.expect(Voca.isAlphaDigit(true)).to.be.true;
-    chai.expect(Voca.isAlphaDigit(false)).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit(true)).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit(false)).to.be.true;
   });
 
   it('should return true for a positive number or numeric string', function () {
-    chai.expect(Voca.isAlphaDigit(0)).to.be.true;
-    chai.expect(Voca.isAlphaDigit(10)).to.be.true;
-    chai.expect(Voca.isAlphaDigit(0xFF)).to.be.true;
-    chai.expect(Voca.isAlphaDigit('0')).to.be.true;
-    chai.expect(Voca.isAlphaDigit('10')).to.be.true;
-    chai.expect(Voca.isAlphaDigit('0xFF')).to.be.true;
-    chai.expect(Voca.isAlphaDigit(NaN)).to.be.true;
-    chai.expect(Voca.isAlphaDigit(Infinity)).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit(0)).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit(10)).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit(0xFF)).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit('0')).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit('10')).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit('0xFF')).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit(NaN)).to.be.true;
+    chai.expect(AwesomeString.isAlphaDigit(Infinity)).to.be.true;
   });
 
   it('should return false for a non alpha and non digit string', function () {
-    chai.expect(Voca.isAlphaDigit('Hello World!')).to.be.false;
-    chai.expect(Voca.isAlphaDigit('Hello World! It is 2016.')).to.be.false;
-    chai.expect(Voca.isAlphaDigit('\nHello World!\n')).to.be.false;
-    chai.expect(Voca.isAlphaDigit('JavaScript 2015')).to.be.false;
-    chai.expect(Voca.isAlphaDigit(' ')).to.be.false;
-    chai.expect(Voca.isAlphaDigit('\n')).to.be.false;
-    chai.expect(Voca.isAlphaDigit('\t')).to.be.false;
-    chai.expect(Voca.isAlphaDigit(PRINTABLE_ASCII)).to.be.false;
+    chai.expect(AwesomeString.isAlphaDigit('Hello World!')).to.be.false;
+    chai.expect(AwesomeString.isAlphaDigit('Hello World! It is 2016.')).to.be.false;
+    chai.expect(AwesomeString.isAlphaDigit('\nHello World!\n')).to.be.false;
+    chai.expect(AwesomeString.isAlphaDigit('JavaScript 2015')).to.be.false;
+    chai.expect(AwesomeString.isAlphaDigit(' ')).to.be.false;
+    chai.expect(AwesomeString.isAlphaDigit('\n')).to.be.false;
+    chai.expect(AwesomeString.isAlphaDigit('\t')).to.be.false;
+    chai.expect(AwesomeString.isAlphaDigit(PRINTABLE_ASCII)).to.be.false;
   });
 
   it('should return false for a non alpha and non digit string representation of an object', function () {
-    chai.expect(Voca.isAlphaDigit({
+    chai.expect(AwesomeString.isAlphaDigit({
       toString: function () {
         return 'Hello World! How are you?';
       }
     })).to.be.false;
-    chai.expect(Voca.isAlphaDigit({
+    chai.expect(AwesomeString.isAlphaDigit({
       toString: function () {
         return 'Hello World! How are you?';
       }
@@ -6472,36 +6466,36 @@ describe('isAlphaDigit', function () {
   });
 
   it('should return false for an undefined', function () {
-    chai.expect(Voca.isAlphaDigit(undefined)).to.be.false;
-    chai.expect(Voca.isAlphaDigit()).to.be.false;
+    chai.expect(AwesomeString.isAlphaDigit(undefined)).to.be.false;
+    chai.expect(AwesomeString.isAlphaDigit()).to.be.false;
   });
 
   it('should return false for a null', function () {
-    chai.expect(Voca.isAlphaDigit(null)).to.be.false;
+    chai.expect(AwesomeString.isAlphaDigit(null)).to.be.false;
   });
 
   it('should return false for a negative number or numeric string', function () {
-    chai.expect(Voca.isAlphaDigit(-1)).to.be.false;
-    chai.expect(Voca.isAlphaDigit(-12.05)).to.be.false;
-    chai.expect(Voca.isAlphaDigit('-12.05')).to.be.false;
+    chai.expect(AwesomeString.isAlphaDigit(-1)).to.be.false;
+    chai.expect(AwesomeString.isAlphaDigit(-12.05)).to.be.false;
+    chai.expect(AwesomeString.isAlphaDigit('-12.05')).to.be.false;
   });
 
   it('should return false for an empty string', function () {
-    chai.expect(Voca.isAlphaDigit('')).to.be.false;
+    chai.expect(AwesomeString.isAlphaDigit('')).to.be.false;
   });
 });
 
 describe('isBlank', function () {
 
   it('should return false for a non empty string', function () {
-    chai.expect(Voca.isBlank('Hello World!')).to.be.false;
-    chai.expect(Voca.isBlank('a')).to.be.false;
-    chai.expect(Voca.isBlank(PRINTABLE_ASCII)).to.be.false;
+    chai.expect(AwesomeString.isBlank('Hello World!')).to.be.false;
+    chai.expect(AwesomeString.isBlank('a')).to.be.false;
+    chai.expect(AwesomeString.isBlank(PRINTABLE_ASCII)).to.be.false;
   });
 
   it('should return false for a non empty string representation of an object', function () {
-    chai.expect(Voca.isBlank(['Hello world'])).to.be.false;
-    chai.expect(Voca.isBlank({
+    chai.expect(AwesomeString.isBlank(['Hello world'])).to.be.false;
+    chai.expect(AwesomeString.isBlank({
       toString: function () {
         return 'Welcome to New York';
       }
@@ -6509,30 +6503,30 @@ describe('isBlank', function () {
   });
 
   it('should return false for a boolean', function () {
-    chai.expect(Voca.isBlank(true)).to.be.false;
-    chai.expect(Voca.isBlank(false)).to.be.false;
+    chai.expect(AwesomeString.isBlank(true)).to.be.false;
+    chai.expect(AwesomeString.isBlank(false)).to.be.false;
   });
 
   it('should return false for a number', function () {
-    chai.expect(Voca.isBlank(0)).to.be.false;
-    chai.expect(Voca.isBlank(100)).to.be.false;
-    chai.expect(Voca.isBlank(-1.5)).to.be.false;
+    chai.expect(AwesomeString.isBlank(0)).to.be.false;
+    chai.expect(AwesomeString.isBlank(100)).to.be.false;
+    chai.expect(AwesomeString.isBlank(-1.5)).to.be.false;
   });
 
   it('should return true for an empty string', function () {
-    chai.expect(Voca.isBlank('')).to.be.true;
+    chai.expect(AwesomeString.isBlank('')).to.be.true;
   });
 
   it('should return true for a string with whitespaces', function () {
-    chai.expect(Voca.isBlank(' ')).to.be.true;
-    chai.expect(Voca.isBlank('   ')).to.be.true;
-    chai.expect(Voca.isBlank(' \n  ')).to.be.true;
-    chai.expect(Voca.isBlank('\f\n\r\t\v')).to.be.true;
+    chai.expect(AwesomeString.isBlank(' ')).to.be.true;
+    chai.expect(AwesomeString.isBlank('   ')).to.be.true;
+    chai.expect(AwesomeString.isBlank(' \n  ')).to.be.true;
+    chai.expect(AwesomeString.isBlank('\f\n\r\t\v')).to.be.true;
   });
 
   it('should return true for an empty string string representation of an object', function () {
-    chai.expect(Voca.isBlank(['\n\n'])).to.be.true;
-    chai.expect(Voca.isBlank({
+    chai.expect(AwesomeString.isBlank(['\n\n'])).to.be.true;
+    chai.expect(AwesomeString.isBlank({
       toString: function () {
         return ' ';
       }
@@ -6540,42 +6534,42 @@ describe('isBlank', function () {
   });
 
   it('should return true for an undefined', function () {
-    chai.expect(Voca.isBlank(undefined)).to.be.true;
-    chai.expect(Voca.isBlank()).to.be.true;
+    chai.expect(AwesomeString.isBlank(undefined)).to.be.true;
+    chai.expect(AwesomeString.isBlank()).to.be.true;
   });
 
   it('should return true for a null', function () {
-    chai.expect(Voca.isBlank(null)).to.be.true;
+    chai.expect(AwesomeString.isBlank(null)).to.be.true;
   });
 });
 
 describe('isDigit', function () {
 
   it('should return true for a digit string', function () {
-    chai.expect(Voca.isDigit('0')).to.be.true;
-    chai.expect(Voca.isDigit('1000')).to.be.true;
-    chai.expect(Voca.isDigit('1234567890')).to.be.true;
-    chai.expect(Voca.isDigit('00')).to.be.true;
+    chai.expect(AwesomeString.isDigit('0')).to.be.true;
+    chai.expect(AwesomeString.isDigit('1000')).to.be.true;
+    chai.expect(AwesomeString.isDigit('1234567890')).to.be.true;
+    chai.expect(AwesomeString.isDigit('00')).to.be.true;
   });
 
   it('should return true for an array with one digit string item', function () {
-    chai.expect(Voca.isDigit(['00'])).to.be.true;
-    chai.expect(Voca.isDigit(['12'])).to.be.true;
-    chai.expect(Voca.isDigit(['1234567890'])).to.be.true;
+    chai.expect(AwesomeString.isDigit(['00'])).to.be.true;
+    chai.expect(AwesomeString.isDigit(['12'])).to.be.true;
+    chai.expect(AwesomeString.isDigit(['1234567890'])).to.be.true;
   });
 
   it('should return true for a digit string representation of an object', function () {
-    chai.expect(Voca.isDigit({
+    chai.expect(AwesomeString.isDigit({
       toString: function () {
         return '123';
       }
     })).to.be.true;
-    chai.expect(Voca.isDigit({
+    chai.expect(AwesomeString.isDigit({
       toString: function () {
         return '567';
       }
     })).to.be.true;
-    chai.expect(Voca.isDigit({
+    chai.expect(AwesomeString.isDigit({
       toString: function () {
         return '00';
       }
@@ -6583,41 +6577,41 @@ describe('isDigit', function () {
   });
 
   it('should return true for a positive integer number', function () {
-    chai.expect(Voca.isDigit(0)).to.be.true;
-    chai.expect(Voca.isDigit(1000)).to.be.true;
-    chai.expect(Voca.isDigit(0xFF)).to.be.true;
-    chai.expect(Voca.isDigit(0x1fffffffffffff)).to.be.true;
+    chai.expect(AwesomeString.isDigit(0)).to.be.true;
+    chai.expect(AwesomeString.isDigit(1000)).to.be.true;
+    chai.expect(AwesomeString.isDigit(0xFF)).to.be.true;
+    chai.expect(AwesomeString.isDigit(0x1fffffffffffff)).to.be.true;
   });
 
   it('should return false for a boolean', function () {
-    chai.expect(Voca.isDigit(true)).to.be.false;
-    chai.expect(Voca.isDigit(false)).to.be.false;
+    chai.expect(AwesomeString.isDigit(true)).to.be.false;
+    chai.expect(AwesomeString.isDigit(false)).to.be.false;
   });
 
   it('should return false for a non-digit string', function () {
-    chai.expect(Voca.isDigit('hell0w0rld!')).to.be.false;
-    chai.expect(Voca.isDigit('hello world! 12')).to.be.false;
-    chai.expect(Voca.isDigit('\nhell0 w0rld!\n')).to.be.false;
-    chai.expect(Voca.isDigit('JavaScript 2015')).to.be.false;
-    chai.expect(Voca.isDigit('isAlpha(0)')).to.be.false;
-    chai.expect(Voca.isDigit('привет0мир!1200')).to.be.false;
-    chai.expect(Voca.isDigit('12.0')).to.be.false;
-    chai.expect(Voca.isDigit('-1')).to.be.false;
-    chai.expect(Voca.isDigit(PRINTABLE_ASCII)).to.be.false;
+    chai.expect(AwesomeString.isDigit('hell0w0rld!')).to.be.false;
+    chai.expect(AwesomeString.isDigit('hello world! 12')).to.be.false;
+    chai.expect(AwesomeString.isDigit('\nhell0 w0rld!\n')).to.be.false;
+    chai.expect(AwesomeString.isDigit('JavaScript 2015')).to.be.false;
+    chai.expect(AwesomeString.isDigit('isAlpha(0)')).to.be.false;
+    chai.expect(AwesomeString.isDigit('привет0мир!1200')).to.be.false;
+    chai.expect(AwesomeString.isDigit('12.0')).to.be.false;
+    chai.expect(AwesomeString.isDigit('-1')).to.be.false;
+    chai.expect(AwesomeString.isDigit(PRINTABLE_ASCII)).to.be.false;
   });
 
   it('should return false for an array with a non-digit string item', function () {
-    chai.expect(Voca.isDigit(['Hello 1000000 visitor'])).to.be.false;
-    chai.expect(Voca.isDigit(['0.0'])).to.be.false;
+    chai.expect(AwesomeString.isDigit(['Hello 1000000 visitor'])).to.be.false;
+    chai.expect(AwesomeString.isDigit(['0.0'])).to.be.false;
   });
 
   it('should return false for a non digit string representation of an object', function () {
-    chai.expect(Voca.isDigit({
+    chai.expect(AwesomeString.isDigit({
       toString: function () {
         return 'Hello World! 007';
       }
     })).to.be.false;
-    chai.expect(Voca.isDigit({
+    chai.expect(AwesomeString.isDigit({
       toString: function () {
         return 'Ява Скрипт, привет 0!';
       }
@@ -6625,66 +6619,66 @@ describe('isDigit', function () {
   });
 
   it('should return false for an undefined', function () {
-    chai.expect(Voca.isDigit(undefined)).to.be.false;
-    chai.expect(Voca.isDigit()).to.be.false;
+    chai.expect(AwesomeString.isDigit(undefined)).to.be.false;
+    chai.expect(AwesomeString.isDigit()).to.be.false;
   });
 
   it('should return false for a null', function () {
-    chai.expect(Voca.isDigit(null)).to.be.false;
+    chai.expect(AwesomeString.isDigit(null)).to.be.false;
   });
 
   it('should return false for a negative number or negative numeric string', function () {
-    chai.expect(Voca.isDigit(-12)).to.be.false;
-    chai.expect(Voca.isDigit(-100)).to.be.false;
-    chai.expect(Voca.isDigit(-12.05)).to.be.false;
-    chai.expect(Voca.isDigit('-1')).to.be.false;
-    chai.expect(Voca.isDigit('-12.05')).to.be.false;
+    chai.expect(AwesomeString.isDigit(-12)).to.be.false;
+    chai.expect(AwesomeString.isDigit(-100)).to.be.false;
+    chai.expect(AwesomeString.isDigit(-12.05)).to.be.false;
+    chai.expect(AwesomeString.isDigit('-1')).to.be.false;
+    chai.expect(AwesomeString.isDigit('-12.05')).to.be.false;
   });
 
   it('should return false for float numbers', function () {
-    chai.expect(Voca.isDigit(0.5)).to.be.false;
-    chai.expect(Voca.isDigit(12.05)).to.be.false;
-    chai.expect(Voca.isDigit(100.001)).to.be.false;
+    chai.expect(AwesomeString.isDigit(0.5)).to.be.false;
+    chai.expect(AwesomeString.isDigit(12.05)).to.be.false;
+    chai.expect(AwesomeString.isDigit(100.001)).to.be.false;
   });
 
   it('should return false for an Infinity number', function () {
-    chai.expect(Voca.isDigit(Infinity)).to.be.false;
+    chai.expect(AwesomeString.isDigit(Infinity)).to.be.false;
   });
 
   it('should return false for a NaN number', function () {
-    chai.expect(Voca.isDigit(NaN)).to.be.false;
+    chai.expect(AwesomeString.isDigit(NaN)).to.be.false;
   });
 
   it('should return false for an empty string', function () {
-    chai.expect(Voca.isDigit('')).to.be.false;
+    chai.expect(AwesomeString.isDigit('')).to.be.false;
   });
 });
 
 describe('isEmpty', function () {
 
   it('should return true for an empty string', function () {
-    chai.expect(Voca.isEmpty('')).to.be.true;
+    chai.expect(AwesomeString.isEmpty('')).to.be.true;
   });
 
   it('should return true for an undefined', function () {
-    chai.expect(Voca.isEmpty(undefined)).to.be.true;
-    chai.expect(Voca.isEmpty()).to.be.true;
+    chai.expect(AwesomeString.isEmpty(undefined)).to.be.true;
+    chai.expect(AwesomeString.isEmpty()).to.be.true;
   });
 
   it('should return true for a null', function () {
-    chai.expect(Voca.isEmpty(null)).to.be.true;
+    chai.expect(AwesomeString.isEmpty(null)).to.be.true;
   });
 
   it('should return false for a non empty string', function () {
-    chai.expect(Voca.isEmpty('Hello World!')).to.be.false;
-    chai.expect(Voca.isEmpty('a')).to.be.false;
-    chai.expect(Voca.isEmpty(' ')).to.be.false;
-    chai.expect(Voca.isEmpty(PRINTABLE_ASCII)).to.be.false;
+    chai.expect(AwesomeString.isEmpty('Hello World!')).to.be.false;
+    chai.expect(AwesomeString.isEmpty('a')).to.be.false;
+    chai.expect(AwesomeString.isEmpty(' ')).to.be.false;
+    chai.expect(AwesomeString.isEmpty(PRINTABLE_ASCII)).to.be.false;
   });
 
   it('should return false for a non empty string representation of an object', function () {
-    chai.expect(Voca.isEmpty(['Hello world'])).to.be.false;
-    chai.expect(Voca.isEmpty({
+    chai.expect(AwesomeString.isEmpty(['Hello world'])).to.be.false;
+    chai.expect(AwesomeString.isEmpty({
       toString: function () {
         return ' ';
       }
@@ -6692,29 +6686,29 @@ describe('isEmpty', function () {
   });
 
   it('should return false for a boolean', function () {
-    chai.expect(Voca.isEmpty(true)).to.be.false;
-    chai.expect(Voca.isEmpty(false)).to.be.false;
+    chai.expect(AwesomeString.isEmpty(true)).to.be.false;
+    chai.expect(AwesomeString.isEmpty(false)).to.be.false;
   });
 
   it('should return false for a number', function () {
-    chai.expect(Voca.isEmpty(0)).to.be.false;
-    chai.expect(Voca.isEmpty(100)).to.be.false;
-    chai.expect(Voca.isEmpty(-1.5)).to.be.false;
+    chai.expect(AwesomeString.isEmpty(0)).to.be.false;
+    chai.expect(AwesomeString.isEmpty(100)).to.be.false;
+    chai.expect(AwesomeString.isEmpty(-1.5)).to.be.false;
   });
 });
 
 describe('isLowerCase', function () {
 
   it('should return true for a lower case string', function () {
-    chai.expect(Voca.isLowerCase('a')).to.be.true;
-    chai.expect(Voca.isLowerCase('helloworld')).to.be.true;
-    chai.expect(Voca.isLowerCase('welcometoearth')).to.be.true;
-    chai.expect(Voca.isLowerCase('áéèêëíîïóôúûýàòüçäöâùÿãõñ')).to.be.true;
+    chai.expect(AwesomeString.isLowerCase('a')).to.be.true;
+    chai.expect(AwesomeString.isLowerCase('helloworld')).to.be.true;
+    chai.expect(AwesomeString.isLowerCase('welcometoearth')).to.be.true;
+    chai.expect(AwesomeString.isLowerCase('áéèêëíîïóôúûýàòüçäöâùÿãõñ')).to.be.true;
   });
 
   it('should return true for a lower case string representation of an object', function () {
-    chai.expect(Voca.isLowerCase(['robocop'])).to.be.true;
-    chai.expect(Voca.isLowerCase({
+    chai.expect(AwesomeString.isLowerCase(['robocop'])).to.be.true;
+    chai.expect(AwesomeString.isLowerCase({
       toString: function () {
         return 'batman';
       }
@@ -6722,28 +6716,28 @@ describe('isLowerCase', function () {
   });
 
   it('should return true for a boolean', function () {
-    chai.expect(Voca.isLowerCase(true)).to.be.true;
-    chai.expect(Voca.isLowerCase(false)).to.be.true;
+    chai.expect(AwesomeString.isLowerCase(true)).to.be.true;
+    chai.expect(AwesomeString.isLowerCase(false)).to.be.true;
   });
 
   it('should return false for a string containing upper case characters', function () {
-    chai.expect(Voca.isLowerCase('Helloworld')).to.be.false;
-    chai.expect(Voca.isLowerCase('WELCOMETOEARTH')).to.be.false;
+    chai.expect(AwesomeString.isLowerCase('Helloworld')).to.be.false;
+    chai.expect(AwesomeString.isLowerCase('WELCOMETOEARTH')).to.be.false;
   });
 
   it('should return false for a string containing characters different than lower case', function () {
-    chai.expect(Voca.isLowerCase('hello world!')).to.be.false;
-    chai.expect(Voca.isLowerCase('No one cared who I was until I put on the mask.')).to.be.false;
-    chai.expect(Voca.isLowerCase('\n')).to.be.false;
-    chai.expect(Voca.isLowerCase('\t')).to.be.false;
-    chai.expect(Voca.isLowerCase(' ')).to.be.false;
-    chai.expect(Voca.isLowerCase('')).to.be.false;
-    chai.expect(Voca.isLowerCase(PRINTABLE_ASCII)).to.be.false;
+    chai.expect(AwesomeString.isLowerCase('hello world!')).to.be.false;
+    chai.expect(AwesomeString.isLowerCase('No one cared who I was until I put on the mask.')).to.be.false;
+    chai.expect(AwesomeString.isLowerCase('\n')).to.be.false;
+    chai.expect(AwesomeString.isLowerCase('\t')).to.be.false;
+    chai.expect(AwesomeString.isLowerCase(' ')).to.be.false;
+    chai.expect(AwesomeString.isLowerCase('')).to.be.false;
+    chai.expect(AwesomeString.isLowerCase(PRINTABLE_ASCII)).to.be.false;
   });
 
   it('should return false for a non lower case string representation of an object', function () {
-    chai.expect(Voca.isLowerCase(['RoboCop'])).to.be.false;
-    chai.expect(Voca.isLowerCase({
+    chai.expect(AwesomeString.isLowerCase(['RoboCop'])).to.be.false;
+    chai.expect(AwesomeString.isLowerCase({
       toString: function () {
         return 'Batman';
       }
@@ -6751,55 +6745,55 @@ describe('isLowerCase', function () {
   });
 
   it('should return false for a number or numeric string', function () {
-    chai.expect(Voca.isLowerCase(0)).to.be.false;
-    chai.expect(Voca.isLowerCase(-1500)).to.be.false;
-    chai.expect(Voca.isLowerCase(2017)).to.be.false;
-    chai.expect(Voca.isLowerCase('0')).to.be.false;
-    chai.expect(Voca.isLowerCase('1998')).to.be.false;
+    chai.expect(AwesomeString.isLowerCase(0)).to.be.false;
+    chai.expect(AwesomeString.isLowerCase(-1500)).to.be.false;
+    chai.expect(AwesomeString.isLowerCase(2017)).to.be.false;
+    chai.expect(AwesomeString.isLowerCase('0')).to.be.false;
+    chai.expect(AwesomeString.isLowerCase('1998')).to.be.false;
   });
 
   it('should return false for a null', function () {
-    chai.expect(Voca.isLowerCase(null)).to.be.false;
+    chai.expect(AwesomeString.isLowerCase(null)).to.be.false;
   });
 
   it('should return false for an undefined', function () {
-    chai.expect(Voca.isLowerCase(undefined)).to.be.false;
-    chai.expect(Voca.isLowerCase()).to.be.false;
+    chai.expect(AwesomeString.isLowerCase(undefined)).to.be.false;
+    chai.expect(AwesomeString.isLowerCase()).to.be.false;
   });
 });
 
 describe('isNumeric', function () {
 
   it('should return true for a number', function () {
-    chai.expect(Voca.isNumeric(0)).to.be.true;
-    chai.expect(Voca.isNumeric(+0)).to.be.true;
-    chai.expect(Voca.isNumeric(1000)).to.be.true;
-    chai.expect(Voca.isNumeric(-1000)).to.be.true;
-    chai.expect(Voca.isNumeric(0xFF)).to.be.true;
-    chai.expect(Voca.isNumeric(1.56)).to.be.true;
-    chai.expect(Voca.isNumeric(-10.888)).to.be.true;
-    chai.expect(Voca.isNumeric(125e5)).to.be.true;
-    chai.expect(Voca.isNumeric(125e-3)).to.be.true;
+    chai.expect(AwesomeString.isNumeric(0)).to.be.true;
+    chai.expect(AwesomeString.isNumeric(+0)).to.be.true;
+    chai.expect(AwesomeString.isNumeric(1000)).to.be.true;
+    chai.expect(AwesomeString.isNumeric(-1000)).to.be.true;
+    chai.expect(AwesomeString.isNumeric(0xFF)).to.be.true;
+    chai.expect(AwesomeString.isNumeric(1.56)).to.be.true;
+    chai.expect(AwesomeString.isNumeric(-10.888)).to.be.true;
+    chai.expect(AwesomeString.isNumeric(125e5)).to.be.true;
+    chai.expect(AwesomeString.isNumeric(125e-3)).to.be.true;
   });
 
   it('should return true for a numeric string', function () {
-    chai.expect(Voca.isNumeric('0')).to.be.true;
-    chai.expect(Voca.isNumeric('+0')).to.be.true;
-    chai.expect(Voca.isNumeric('0.0')).to.be.true;
-    chai.expect(Voca.isNumeric('1000')).to.be.true;
-    chai.expect(Voca.isNumeric('-1000')).to.be.true;
-    chai.expect(Voca.isNumeric('0xFF')).to.be.true;
-    chai.expect(Voca.isNumeric('1.56')).to.be.true;
-    chai.expect(Voca.isNumeric('-10.888')).to.be.true;
-    chai.expect(Voca.isNumeric('125e5')).to.be.true;
-    chai.expect(Voca.isNumeric('125e-3')).to.be.true;
+    chai.expect(AwesomeString.isNumeric('0')).to.be.true;
+    chai.expect(AwesomeString.isNumeric('+0')).to.be.true;
+    chai.expect(AwesomeString.isNumeric('0.0')).to.be.true;
+    chai.expect(AwesomeString.isNumeric('1000')).to.be.true;
+    chai.expect(AwesomeString.isNumeric('-1000')).to.be.true;
+    chai.expect(AwesomeString.isNumeric('0xFF')).to.be.true;
+    chai.expect(AwesomeString.isNumeric('1.56')).to.be.true;
+    chai.expect(AwesomeString.isNumeric('-10.888')).to.be.true;
+    chai.expect(AwesomeString.isNumeric('125e5')).to.be.true;
+    chai.expect(AwesomeString.isNumeric('125e-3')).to.be.true;
   });
 
   it('should return true for a numeric string representation of an object', function () {
-    chai.expect(Voca.isNumeric([0])).to.be.true;
-    chai.expect(Voca.isNumeric(['0'])).to.be.true;
-    chai.expect(Voca.isNumeric(['0.0'])).to.be.true;
-    chai.expect(Voca.isNumeric({
+    chai.expect(AwesomeString.isNumeric([0])).to.be.true;
+    chai.expect(AwesomeString.isNumeric(['0'])).to.be.true;
+    chai.expect(AwesomeString.isNumeric(['0.0'])).to.be.true;
+    chai.expect(AwesomeString.isNumeric({
       toString: function () {
         return '100';
       }
@@ -6807,20 +6801,20 @@ describe('isNumeric', function () {
   });
 
   it('should return false for a non numeric string', function () {
-    chai.expect(Voca.isNumeric('FF')).to.be.false;
-    chai.expect(Voca.isNumeric('0FF')).to.be.false;
-    chai.expect(Voca.isNumeric('Hello World!')).to.be.false;
-    chai.expect(Voca.isNumeric('!0')).to.be.false;
-    chai.expect(Voca.isNumeric('1.0 0')).to.be.false;
-    chai.expect(Voca.isNumeric('Infinity')).to.be.false;
-    chai.expect(Voca.isNumeric('NaN')).to.be.false;
-    chai.expect(Voca.isNumeric(' ')).to.be.false;
-    chai.expect(Voca.isNumeric(PRINTABLE_ASCII)).to.be.false;
+    chai.expect(AwesomeString.isNumeric('FF')).to.be.false;
+    chai.expect(AwesomeString.isNumeric('0FF')).to.be.false;
+    chai.expect(AwesomeString.isNumeric('Hello World!')).to.be.false;
+    chai.expect(AwesomeString.isNumeric('!0')).to.be.false;
+    chai.expect(AwesomeString.isNumeric('1.0 0')).to.be.false;
+    chai.expect(AwesomeString.isNumeric('Infinity')).to.be.false;
+    chai.expect(AwesomeString.isNumeric('NaN')).to.be.false;
+    chai.expect(AwesomeString.isNumeric(' ')).to.be.false;
+    chai.expect(AwesomeString.isNumeric(PRINTABLE_ASCII)).to.be.false;
   });
 
   it('should return false for a non numeric string representation of an object', function () {
-    chai.expect(Voca.isNumeric(['Hello World!'])).to.be.false;
-    chai.expect(Voca.isNumeric({
+    chai.expect(AwesomeString.isNumeric(['Hello World!'])).to.be.false;
+    chai.expect(AwesomeString.isNumeric({
       toString: function () {
         return 'NaN';
       }
@@ -6828,79 +6822,79 @@ describe('isNumeric', function () {
   });
 
   it('should return false for a boolean', function () {
-    chai.expect(Voca.isNumeric(true)).to.be.false;
-    chai.expect(Voca.isNumeric(false)).to.be.false;
+    chai.expect(AwesomeString.isNumeric(true)).to.be.false;
+    chai.expect(AwesomeString.isNumeric(false)).to.be.false;
   });
 
   it('should return false for an undefined', function () {
-    chai.expect(Voca.isNumeric(undefined)).to.be.false;
-    chai.expect(Voca.isNumeric()).to.be.false;
+    chai.expect(AwesomeString.isNumeric(undefined)).to.be.false;
+    chai.expect(AwesomeString.isNumeric()).to.be.false;
   });
 
   it('should return false for a null', function () {
-    chai.expect(Voca.isNumeric(null)).to.be.false;
+    chai.expect(AwesomeString.isNumeric(null)).to.be.false;
   });
 
   it('should return false for an Inifinty', function () {
-    chai.expect(Voca.isNumeric(null)).to.be.false;
+    chai.expect(AwesomeString.isNumeric(null)).to.be.false;
   });
 
   it('should return false for a NaN', function () {
-    chai.expect(Voca.isNumeric(null)).to.be.false;
+    chai.expect(AwesomeString.isNumeric(null)).to.be.false;
   });
 
   it('should return false for an empty string', function () {
-    chai.expect(Voca.isNumeric('')).to.be.false;
+    chai.expect(AwesomeString.isNumeric('')).to.be.false;
   });
 });
 
 describe('isString', function () {
 
   it('should return true for a string', function () {
-    chai.expect(Voca.isString('Hello World!')).to.be.true;
-    chai.expect(Voca.isString('')).to.be.true;
-    chai.expect(Voca.isString('\n')).to.be.true;
-    chai.expect(Voca.isString(PRINTABLE_ASCII)).to.be.true;
+    chai.expect(AwesomeString.isString('Hello World!')).to.be.true;
+    chai.expect(AwesomeString.isString('')).to.be.true;
+    chai.expect(AwesomeString.isString('\n')).to.be.true;
+    chai.expect(AwesomeString.isString(PRINTABLE_ASCII)).to.be.true;
   });
 
   it('should return false for a null', function () {
-    chai.expect(Voca.isString(null)).to.be.false;
+    chai.expect(AwesomeString.isString(null)).to.be.false;
   });
 
   it('should return false for an undefined', function () {
-    chai.expect(Voca.isString(undefined)).to.be.false;
-    chai.expect(Voca.isString()).to.be.false;
+    chai.expect(AwesomeString.isString(undefined)).to.be.false;
+    chai.expect(AwesomeString.isString()).to.be.false;
   });
 
   it('should return false for a boolean', function () {
-    chai.expect(Voca.isString(true)).to.be.false;
-    chai.expect(Voca.isString(false)).to.be.false;
+    chai.expect(AwesomeString.isString(true)).to.be.false;
+    chai.expect(AwesomeString.isString(false)).to.be.false;
   });
 
   it('should return false for a number', function () {
-    chai.expect(Voca.isString(100)).to.be.false;
-    chai.expect(Voca.isString(-40)).to.be.false;
+    chai.expect(AwesomeString.isString(100)).to.be.false;
+    chai.expect(AwesomeString.isString(-40)).to.be.false;
   });
 
   it('should return false for an object', function () {
-    chai.expect(Voca.isString([])).to.be.false;
-    chai.expect(Voca.isString({})).to.be.false;
-    chai.expect(Voca.isString(new Date())).to.be.false;
+    chai.expect(AwesomeString.isString([])).to.be.false;
+    chai.expect(AwesomeString.isString({})).to.be.false;
+    chai.expect(AwesomeString.isString(new Date())).to.be.false;
   });
 });
 
 describe('isUpperCase', function () {
 
   it('should return true for an upper case string', function () {
-    chai.expect(Voca.isUpperCase('A')).to.be.true;
-    chai.expect(Voca.isUpperCase('HELLOWORLD')).to.be.true;
-    chai.expect(Voca.isUpperCase('WELCOMETOEARTH')).to.be.true;
-    chai.expect(Voca.isUpperCase('ÁÉÈÊËÍÎÏÓÔÚÛÝÀÒÜÇÄÖÂÙŸÃÕÑ')).to.be.true;
+    chai.expect(AwesomeString.isUpperCase('A')).to.be.true;
+    chai.expect(AwesomeString.isUpperCase('HELLOWORLD')).to.be.true;
+    chai.expect(AwesomeString.isUpperCase('WELCOMETOEARTH')).to.be.true;
+    chai.expect(AwesomeString.isUpperCase('ÁÉÈÊËÍÎÏÓÔÚÛÝÀÒÜÇÄÖÂÙŸÃÕÑ')).to.be.true;
   });
 
   it('should return true for a lower case string representation of an object', function () {
-    chai.expect(Voca.isUpperCase(['ROBOCOP'])).to.be.true;
-    chai.expect(Voca.isUpperCase({
+    chai.expect(AwesomeString.isUpperCase(['ROBOCOP'])).to.be.true;
+    chai.expect(AwesomeString.isUpperCase({
       toString: function () {
         return 'BATMAN';
       }
@@ -6908,28 +6902,28 @@ describe('isUpperCase', function () {
   });
 
   it('should return false for a string containing lower case characters', function () {
-    chai.expect(Voca.isUpperCase('Helloworld')).to.be.false;
-    chai.expect(Voca.isUpperCase('WeLCOMETOEARTH')).to.be.false;
+    chai.expect(AwesomeString.isUpperCase('Helloworld')).to.be.false;
+    chai.expect(AwesomeString.isUpperCase('WeLCOMETOEARTH')).to.be.false;
   });
 
   it('should return false for a boolean', function () {
-    chai.expect(Voca.isUpperCase(true)).to.be.false;
-    chai.expect(Voca.isUpperCase(false)).to.be.false;
+    chai.expect(AwesomeString.isUpperCase(true)).to.be.false;
+    chai.expect(AwesomeString.isUpperCase(false)).to.be.false;
   });
 
   it('should return false for a string containing characters different than upper case', function () {
-    chai.expect(Voca.isUpperCase('hello world!')).to.be.false;
-    chai.expect(Voca.isUpperCase('No one cared who I was until I put on the mask.')).to.be.false;
-    chai.expect(Voca.isUpperCase('\n')).to.be.false;
-    chai.expect(Voca.isUpperCase('\t')).to.be.false;
-    chai.expect(Voca.isUpperCase(' ')).to.be.false;
-    chai.expect(Voca.isUpperCase('')).to.be.false;
-    chai.expect(Voca.isUpperCase(PRINTABLE_ASCII)).to.be.false;
+    chai.expect(AwesomeString.isUpperCase('hello world!')).to.be.false;
+    chai.expect(AwesomeString.isUpperCase('No one cared who I was until I put on the mask.')).to.be.false;
+    chai.expect(AwesomeString.isUpperCase('\n')).to.be.false;
+    chai.expect(AwesomeString.isUpperCase('\t')).to.be.false;
+    chai.expect(AwesomeString.isUpperCase(' ')).to.be.false;
+    chai.expect(AwesomeString.isUpperCase('')).to.be.false;
+    chai.expect(AwesomeString.isUpperCase(PRINTABLE_ASCII)).to.be.false;
   });
 
   it('should return false for a non upper case string representation of an object', function () {
-    chai.expect(Voca.isUpperCase(['RoboCop'])).to.be.false;
-    chai.expect(Voca.isUpperCase({
+    chai.expect(AwesomeString.isUpperCase(['RoboCop'])).to.be.false;
+    chai.expect(AwesomeString.isUpperCase({
       toString: function () {
         return 'Batman';
       }
@@ -6937,145 +6931,145 @@ describe('isUpperCase', function () {
   });
 
   it('should return false for a number or numeric string', function () {
-    chai.expect(Voca.isUpperCase(0)).to.be.false;
-    chai.expect(Voca.isUpperCase(-1500)).to.be.false;
-    chai.expect(Voca.isUpperCase(2017)).to.be.false;
-    chai.expect(Voca.isUpperCase('0')).to.be.false;
-    chai.expect(Voca.isUpperCase('1998')).to.be.false;
+    chai.expect(AwesomeString.isUpperCase(0)).to.be.false;
+    chai.expect(AwesomeString.isUpperCase(-1500)).to.be.false;
+    chai.expect(AwesomeString.isUpperCase(2017)).to.be.false;
+    chai.expect(AwesomeString.isUpperCase('0')).to.be.false;
+    chai.expect(AwesomeString.isUpperCase('1998')).to.be.false;
   });
 
   it('should return false for a null', function () {
-    chai.expect(Voca.isUpperCase(null)).to.be.false;
+    chai.expect(AwesomeString.isUpperCase(null)).to.be.false;
   });
 
   it('should return false for an undefined', function () {
-    chai.expect(Voca.isUpperCase(undefined)).to.be.false;
-    chai.expect(Voca.isUpperCase()).to.be.false;
+    chai.expect(AwesomeString.isUpperCase(undefined)).to.be.false;
+    chai.expect(AwesomeString.isUpperCase()).to.be.false;
   });
 });
 
 describe('matches', function () {
 
   it('should return true for a string that matches a regular expression object', function () {
-    chai.expect(Voca.matches('pacific ocean', /ocean/)).to.be.true;
-    chai.expect(Voca.matches('pacific ocean', /^pacific ocean$/)).to.be.true;
-    chai.expect(Voca.matches(undefined, /.?/)).to.be.true;
-    chai.expect(Voca.matches(null, /.?/)).to.be.true;
+    chai.expect(AwesomeString.matches('pacific ocean', /ocean/)).to.be.true;
+    chai.expect(AwesomeString.matches('pacific ocean', /^pacific ocean$/)).to.be.true;
+    chai.expect(AwesomeString.matches(undefined, /.?/)).to.be.true;
+    chai.expect(AwesomeString.matches(null, /.?/)).to.be.true;
   });
 
   it('should return true for a string that matches a regular expression string', function () {
-    chai.expect(Voca.matches('pacific ocean', 'ocean')).to.be.true;
-    chai.expect(Voca.matches('pacific ocean', '^pacific ocean$')).to.be.true;
-    chai.expect(Voca.matches('pacific ocean', 'PACIFIC', 'i')).to.be.true;
-    chai.expect(Voca.matches('pacific ocean', '\\s')).to.be.true;
-    chai.expect(Voca.matches(undefined, '.?')).to.be.true;
-    chai.expect(Voca.matches(null, '.?')).to.be.true;
-    chai.expect(Voca.matches(PRINTABLE_ASCII, '\s')).to.be.true;
+    chai.expect(AwesomeString.matches('pacific ocean', 'ocean')).to.be.true;
+    chai.expect(AwesomeString.matches('pacific ocean', '^pacific ocean$')).to.be.true;
+    chai.expect(AwesomeString.matches('pacific ocean', 'PACIFIC', 'i')).to.be.true;
+    chai.expect(AwesomeString.matches('pacific ocean', '\\s')).to.be.true;
+    chai.expect(AwesomeString.matches(undefined, '.?')).to.be.true;
+    chai.expect(AwesomeString.matches(null, '.?')).to.be.true;
+    chai.expect(AwesomeString.matches(PRINTABLE_ASCII, '\s')).to.be.true;
   });
 
   it('should return true for a string that matches a string representation of an object', function () {
-    chai.expect(Voca.matches(['atlantic ocean'], /atlantic/)).to.be.true;
-    chai.expect(Voca.matches('pacific ocean', ['^pacific ocean$'])).to.be.true;
-    chai.expect(Voca.matches({
+    chai.expect(AwesomeString.matches(['atlantic ocean'], /atlantic/)).to.be.true;
+    chai.expect(AwesomeString.matches('pacific ocean', ['^pacific ocean$'])).to.be.true;
+    chai.expect(AwesomeString.matches({
       toString: function () {
         return 'pacific ocean';
       }
     }, 'PACIFIC', 'i')).to.be.true;
-    chai.expect(Voca.matches(['pacific ocean'], ['\\s'])).to.be.true;
+    chai.expect(AwesomeString.matches(['pacific ocean'], ['\\s'])).to.be.true;
   });
 
   it('should return true for a number that matches a regular expression', function () {
-    chai.expect(Voca.matches(1500, /\d/)).to.be.true;
-    chai.expect(Voca.matches(685, 68)).to.be.true;
-    chai.expect(Voca.matches(-1.5, /^\-1\.5$/)).to.be.true;
+    chai.expect(AwesomeString.matches(1500, /\d/)).to.be.true;
+    chai.expect(AwesomeString.matches(685, 68)).to.be.true;
+    chai.expect(AwesomeString.matches(-1.5, /^\-1\.5$/)).to.be.true;
   });
 
   it('should return true for a boolean that matches a regular expression', function () {
-    chai.expect(Voca.matches(true, /true/)).to.be.true;
-    chai.expect(Voca.matches(false, 'false')).to.be.true;
+    chai.expect(AwesomeString.matches(true, /true/)).to.be.true;
+    chai.expect(AwesomeString.matches(false, 'false')).to.be.true;
   });
 
   it('should return false for a string that does not match a regular expression object', function () {
-    chai.expect(Voca.matches('pacific ocean', /^ocean/)).to.be.false;
-    chai.expect(Voca.matches('pacific ocean', /^atlantic ocean$/)).to.be.false;
-    chai.expect(Voca.matches(undefined, /a/)).to.be.false;
+    chai.expect(AwesomeString.matches('pacific ocean', /^ocean/)).to.be.false;
+    chai.expect(AwesomeString.matches('pacific ocean', /^atlantic ocean$/)).to.be.false;
+    chai.expect(AwesomeString.matches(undefined, /a/)).to.be.false;
   });
 
   it('should return false for a string that does not match a regular expression string', function () {
-    chai.expect(Voca.matches('pacific ocean', 'sea')).to.be.false;
-    chai.expect(Voca.matches('pacific ocean', '^atlantic ocean$')).to.be.false;
-    chai.expect(Voca.matches('pacific ocean', 'PACIFIC')).to.be.false;
-    chai.expect(Voca.matches('pacific ocean', '\\n')).to.be.false;
-    chai.expect(Voca.matches(undefined, '\s')).to.be.false;
+    chai.expect(AwesomeString.matches('pacific ocean', 'sea')).to.be.false;
+    chai.expect(AwesomeString.matches('pacific ocean', '^atlantic ocean$')).to.be.false;
+    chai.expect(AwesomeString.matches('pacific ocean', 'PACIFIC')).to.be.false;
+    chai.expect(AwesomeString.matches('pacific ocean', '\\n')).to.be.false;
+    chai.expect(AwesomeString.matches(undefined, '\s')).to.be.false;
   });
 
   it('should return false for a null or undefined pattern', function () {
-    chai.expect(Voca.matches('pacific ocean', undefined)).to.be.false;
-    chai.expect(Voca.matches('pacific ocean', null)).to.be.false;
+    chai.expect(AwesomeString.matches('pacific ocean', undefined)).to.be.false;
+    chai.expect(AwesomeString.matches('pacific ocean', null)).to.be.false;
   });
 });
 
 describe('startsWith', function () {
 
   it('should return true for a valid starting string', function () {
-    chai.expect(Voca.startsWith('Hello World!', '')).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'H')).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'He')).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'Hel')).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'Hell')).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'Hello')).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'Hello ')).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'Hello W')).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'Hello Wo')).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'Hello Wor')).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'Hello Worl')).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'Hello World')).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'Hello World!')).to.be.true;
-    chai.expect(Voca.startsWith('Привет Мир!', 'Привет')).to.be.true;
-    chai.expect(Voca.startsWith('', '')).to.be.true;
-    chai.expect(Voca.startsWith(PRINTABLE_ASCII, ' ')).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', '')).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'H')).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'He')).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'Hel')).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'Hell')).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'Hello')).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'Hello ')).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'Hello W')).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'Hello Wo')).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'Hello Wor')).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'Hello Worl')).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'Hello World')).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'Hello World!')).to.be.true;
+    chai.expect(AwesomeString.startsWith('Привет Мир!', 'Привет')).to.be.true;
+    chai.expect(AwesomeString.startsWith('', '')).to.be.true;
+    chai.expect(AwesomeString.startsWith(PRINTABLE_ASCII, ' ')).to.be.true;
   });
 
   it('should return true for a valid starting string and position', function () {
-    chai.expect(Voca.startsWith('Hello World!', '', 0)).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', '!', 'Hello World!'.length - 1)).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'd!', 'Hello World!'.length - 2)).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'ld!', 'Hello World!'.length - 3)).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'rld!', 'Hello World!'.length - 4)).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'orld!', 'Hello World!'.length - 5)).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'World!', 'Hello World!'.length - 6)).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', ' World!', 'Hello World!'.length - 7)).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'o World!', 'Hello World!'.length - 8)).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'lo World!', 'Hello World!'.length - 9)).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'llo World!', 'Hello World!'.length - 10)).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'ello World!', 'Hello World!'.length - 11)).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'Hello World!', 0)).to.be.true;
-    chai.expect(Voca.startsWith('', '', 0)).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'Hello', NaN)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', '', 0)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', '!', 'Hello World!'.length - 1)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'd!', 'Hello World!'.length - 2)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'ld!', 'Hello World!'.length - 3)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'rld!', 'Hello World!'.length - 4)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'orld!', 'Hello World!'.length - 5)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'World!', 'Hello World!'.length - 6)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', ' World!', 'Hello World!'.length - 7)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'o World!', 'Hello World!'.length - 8)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'lo World!', 'Hello World!'.length - 9)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'llo World!', 'Hello World!'.length - 10)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'ello World!', 'Hello World!'.length - 11)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'Hello World!', 0)).to.be.true;
+    chai.expect(AwesomeString.startsWith('', '', 0)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'Hello', NaN)).to.be.true;
   });
 
   it('should return true for a correct downcast of the position', function () {
-    chai.expect(Voca.startsWith('Hello World!', 'ello', '1')).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'ello', 1.1)).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'Hello', -1)).to.be.true;
-    chai.expect(Voca.startsWith('Hello World!', 'Hello', -Infinity)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'ello', '1')).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'ello', 1.1)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'Hello', -1)).to.be.true;
+    chai.expect(AwesomeString.startsWith('Hello World!', 'Hello', -Infinity)).to.be.true;
   });
 
   it('should return true for an empty starting string', function () {
     [0, 1, 100, Infinity, undefined, NaN, null].forEach(function (position) {
-      chai.expect(Voca.startsWith('Hello World!', '', position)).to.be.true;
+      chai.expect(AwesomeString.startsWith('Hello World!', '', position)).to.be.true;
     });
   });
 
   it('should return true for a valid starting as a number', function () {
-    chai.expect(Voca.startsWith(1000, 100)).to.be.true;
-    chai.expect(Voca.startsWith(1250, 12)).to.be.true;
-    chai.expect(Voca.startsWith('916', 91)).to.be.true;
+    chai.expect(AwesomeString.startsWith(1000, 100)).to.be.true;
+    chai.expect(AwesomeString.startsWith(1250, 12)).to.be.true;
+    chai.expect(AwesomeString.startsWith('916', 91)).to.be.true;
   });
 
   it('should return true for a valid ending in a string representation of an object', function () {
-    chai.expect(Voca.startsWith(['Welcome to Earth'], 'Welcome')).to.be.true;
-    chai.expect(Voca.startsWith({
+    chai.expect(AwesomeString.startsWith(['Welcome to Earth'], 'Welcome')).to.be.true;
+    chai.expect(AwesomeString.startsWith({
       toString: function () {
         return 'Let us not stand on ceremony, Mr. Wayne.';
       }
@@ -7083,62 +7077,62 @@ describe('startsWith', function () {
   });
 
   it('should return false for an invalid starting string', function () {
-    chai.expect(Voca.startsWith('The shadows betray you, because they belong to me!', 'belong to me!')).to.be.false;
-    chai.expect(Voca.startsWith('The shadows betray you, because they belong to me!', 'he shadows')).to.be.false;
-    chai.expect(Voca.startsWith('They belong to me!', 'hey belong to me!')).to.be.false;
-    chai.expect(Voca.startsWith('They belong to me!', 'belong')).to.be.false;
-    chai.expect(Voca.startsWith('', 'The shadows')).to.be.false;
+    chai.expect(AwesomeString.startsWith('The shadows betray you, because they belong to me!', 'belong to me!')).to.be.false;
+    chai.expect(AwesomeString.startsWith('The shadows betray you, because they belong to me!', 'he shadows')).to.be.false;
+    chai.expect(AwesomeString.startsWith('They belong to me!', 'hey belong to me!')).to.be.false;
+    chai.expect(AwesomeString.startsWith('They belong to me!', 'belong')).to.be.false;
+    chai.expect(AwesomeString.startsWith('', 'The shadows')).to.be.false;
   });
 
   it('should return false for an invalid starting string and position', function () {
-    chai.expect(Voca.startsWith('The shadows betray you, because they belong to me!', 'The shadows betray you', 1)).to.be.false;
-    chai.expect(Voca.startsWith('They belong to me!', 'They belong to me!', 1)).to.be.false;
-    chai.expect(Voca.startsWith('They belong to me!', 'They', 1)).to.be.false;
-    chai.expect(Voca.startsWith('They belong to me!', 'belong', 2)).to.be.false;
-    chai.expect(Voca.startsWith('They belong to me!', 'to me!', 3)).to.be.false;
-    chai.expect(Voca.startsWith('They belong to me!', 'They belong', 100)).to.be.false;
+    chai.expect(AwesomeString.startsWith('The shadows betray you, because they belong to me!', 'The shadows betray you', 1)).to.be.false;
+    chai.expect(AwesomeString.startsWith('They belong to me!', 'They belong to me!', 1)).to.be.false;
+    chai.expect(AwesomeString.startsWith('They belong to me!', 'They', 1)).to.be.false;
+    chai.expect(AwesomeString.startsWith('They belong to me!', 'belong', 2)).to.be.false;
+    chai.expect(AwesomeString.startsWith('They belong to me!', 'to me!', 3)).to.be.false;
+    chai.expect(AwesomeString.startsWith('They belong to me!', 'They belong', 100)).to.be.false;
   });
 
   it('should return false for an invalid starting number', function () {
-    chai.expect(Voca.startsWith(1000, 11)).to.be.false;
-    chai.expect(Voca.startsWith(1250, 10)).to.be.false;
-    chai.expect(Voca.startsWith('916', 90)).to.be.false;
+    chai.expect(AwesomeString.startsWith(1000, 11)).to.be.false;
+    chai.expect(AwesomeString.startsWith(1250, 10)).to.be.false;
+    chai.expect(AwesomeString.startsWith('916', 90)).to.be.false;
   });
 
   it('should return false for undefined and null parameters', function () {
-    chai.expect(Voca.startsWith()).to.be.false;
-    chai.expect(Voca.startsWith(undefined)).to.be.false;
-    chai.expect(Voca.startsWith(undefined, undefined)).to.be.false;
-    chai.expect(Voca.startsWith(undefined, undefined, undefined)).to.be.false;
-    chai.expect(Voca.startsWith(undefined, undefined, 0)).to.be.false;
-    chai.expect(Voca.startsWith(undefined, 'Hello World!')).to.be.false;
-    chai.expect(Voca.startsWith(null)).to.be.false;
-    chai.expect(Voca.startsWith(null, null)).to.be.false;
-    chai.expect(Voca.startsWith(null, null, null)).to.be.false;
-    chai.expect(Voca.startsWith(null, null, 0)).to.be.false;
-    chai.expect(Voca.startsWith(null, 'Hello World!')).to.be.false;
+    chai.expect(AwesomeString.startsWith()).to.be.false;
+    chai.expect(AwesomeString.startsWith(undefined)).to.be.false;
+    chai.expect(AwesomeString.startsWith(undefined, undefined)).to.be.false;
+    chai.expect(AwesomeString.startsWith(undefined, undefined, undefined)).to.be.false;
+    chai.expect(AwesomeString.startsWith(undefined, undefined, 0)).to.be.false;
+    chai.expect(AwesomeString.startsWith(undefined, 'Hello World!')).to.be.false;
+    chai.expect(AwesomeString.startsWith(null)).to.be.false;
+    chai.expect(AwesomeString.startsWith(null, null)).to.be.false;
+    chai.expect(AwesomeString.startsWith(null, null, null)).to.be.false;
+    chai.expect(AwesomeString.startsWith(null, null, 0)).to.be.false;
+    chai.expect(AwesomeString.startsWith(null, 'Hello World!')).to.be.false;
   });
 });
 
 describe('chars', function () {
 
   it('should split a string into characters', function () {
-    chai.expect(Voca.chars('stellar bomb')).to.eql(['s', 't', 'e', 'l', 'l', 'a', 'r', ' ', 'b', 'o', 'm', 'b']);
-    chai.expect(Voca.chars('   ')).to.eql([' ', ' ', ' ']);
-    chai.expect(Voca.chars('\n\t')).to.eql(['\n', '\t']);
-    chai.expect(Voca.chars('')).to.eql([]);
-    chai.expect(Voca.chars(PRINTABLE_ASCII)).to.eql(Array.prototype.slice.call(PRINTABLE_ASCII, 0));
+    chai.expect(AwesomeString.chars('stellar bomb')).to.eql(['s', 't', 'e', 'l', 'l', 'a', 'r', ' ', 'b', 'o', 'm', 'b']);
+    chai.expect(AwesomeString.chars('   ')).to.eql([' ', ' ', ' ']);
+    chai.expect(AwesomeString.chars('\n\t')).to.eql(['\n', '\t']);
+    chai.expect(AwesomeString.chars('')).to.eql([]);
+    chai.expect(AwesomeString.chars(PRINTABLE_ASCII)).to.eql(Array.prototype.slice.call(PRINTABLE_ASCII, 0));
   });
 
   it('should split a number into characters', function () {
-    chai.expect(Voca.chars(0)).to.eql(['0']);
-    chai.expect(Voca.chars(1560)).to.eql(['1', '5', '6', '0']);
-    chai.expect(Voca.chars(-1.6)).to.eql(['-', '1', '.', '6']);
+    chai.expect(AwesomeString.chars(0)).to.eql(['0']);
+    chai.expect(AwesomeString.chars(1560)).to.eql(['1', '5', '6', '0']);
+    chai.expect(AwesomeString.chars(-1.6)).to.eql(['-', '1', '.', '6']);
   });
 
   it('should split the string representation of an object', function () {
-    chai.expect(Voca.chars(['star'])).to.eql(['s', 't', 'a', 'r']);
-    chai.expect(Voca.chars({
+    chai.expect(AwesomeString.chars(['star'])).to.eql(['s', 't', 'a', 'r']);
+    chai.expect(AwesomeString.chars({
       toString: function () {
         return 'Capa';
       }
@@ -7146,39 +7140,39 @@ describe('chars', function () {
   });
 
   it('should return an empty array of characters for null and undefined', function () {
-    chai.expect(Voca.chars()).to.eql([]);
-    chai.expect(Voca.chars(undefined)).to.eql([]);
-    chai.expect(Voca.chars(null)).to.eql([]);
+    chai.expect(AwesomeString.chars()).to.eql([]);
+    chai.expect(AwesomeString.chars(undefined)).to.eql([]);
+    chai.expect(AwesomeString.chars(null)).to.eql([]);
   });
 });
 
 describe('codePoints', function () {
 
   it('should split a string into code point numbers', function () {
-    chai.expect(Voca.codePoints('stellar bomb')).to.eql([0x73, 0x74, 0x65, 0x6C, 0x6C, 0x61, 0x72, 0x20, 0x62, 0x6F, 0x6D, 0x62]);
-    chai.expect(Voca.codePoints('   ')).to.eql([0x20, 0x20, 0x20]);
-    chai.expect(Voca.codePoints('\n\t')).to.eql([0xA, 0x9]);
-    chai.expect(Voca.codePoints('')).to.eql([]);
+    chai.expect(AwesomeString.codePoints('stellar bomb')).to.eql([0x73, 0x74, 0x65, 0x6C, 0x6C, 0x61, 0x72, 0x20, 0x62, 0x6F, 0x6D, 0x62]);
+    chai.expect(AwesomeString.codePoints('   ')).to.eql([0x20, 0x20, 0x20]);
+    chai.expect(AwesomeString.codePoints('\n\t')).to.eql([0xA, 0x9]);
+    chai.expect(AwesomeString.codePoints('')).to.eql([]);
   });
 
   it('should split a string with surrogate pairs and diacritical marks characters into code point numbers', function () {
-    chai.expect(Voca.codePoints('man\u0303ana')).to.eql([0x6D, 0x61, 0x6E, 0x303, 0x61, 0x6E, 0x61]);
-    chai.expect(Voca.codePoints('\u00E9\u20DD')).to.eql([0xE9, 0x20DD]);
-    chai.expect(Voca.codePoints('\uD835\uDC00\uD835\uDC01')).to.eql([0x1D400, 0x1D401]);
-    chai.expect(Voca.codePoints('cafe\u0301')).to.eql([0x63, 0x61, 0x66, 0x65, 0x301]);
-    chai.expect(Voca.codePoints('foo\u0303\u035C\u035D\u035Ebar')).to.eql([0x66, 0x6F, 0x6F, 0x303, 0x35C, 0x35D, 0x35E, 0x62, 0x61, 0x72]);
-    chai.expect(Voca.codePoints('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar')).to.eql([0x66, 0x6F, 0x6F, 0x1D306, 0x303, 0x35C, 0x35D, 0x35E, 0x62, 0x61, 0x72]);
+    chai.expect(AwesomeString.codePoints('man\u0303ana')).to.eql([0x6D, 0x61, 0x6E, 0x303, 0x61, 0x6E, 0x61]);
+    chai.expect(AwesomeString.codePoints('\u00E9\u20DD')).to.eql([0xE9, 0x20DD]);
+    chai.expect(AwesomeString.codePoints('\uD835\uDC00\uD835\uDC01')).to.eql([0x1D400, 0x1D401]);
+    chai.expect(AwesomeString.codePoints('cafe\u0301')).to.eql([0x63, 0x61, 0x66, 0x65, 0x301]);
+    chai.expect(AwesomeString.codePoints('foo\u0303\u035C\u035D\u035Ebar')).to.eql([0x66, 0x6F, 0x6F, 0x303, 0x35C, 0x35D, 0x35E, 0x62, 0x61, 0x72]);
+    chai.expect(AwesomeString.codePoints('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar')).to.eql([0x66, 0x6F, 0x6F, 0x1D306, 0x303, 0x35C, 0x35D, 0x35E, 0x62, 0x61, 0x72]);
   });
 
   it('should split a number into code point numbers', function () {
-    chai.expect(Voca.codePoints(0)).to.eql([0x30]);
-    chai.expect(Voca.codePoints(1560)).to.eql([0x31, 0x35, 0x36, 0x30]);
-    chai.expect(Voca.codePoints(-1.6)).to.eql([0x2D, 0x31, 0x2E, 0x36]);
+    chai.expect(AwesomeString.codePoints(0)).to.eql([0x30]);
+    chai.expect(AwesomeString.codePoints(1560)).to.eql([0x31, 0x35, 0x36, 0x30]);
+    chai.expect(AwesomeString.codePoints(-1.6)).to.eql([0x2D, 0x31, 0x2E, 0x36]);
   });
 
   it('should split the string representation of an object into code point numbers', function () {
-    chai.expect(Voca.codePoints(['star'])).to.eql([0x73, 0x74, 0x61, 0x72]);
-    chai.expect(Voca.codePoints({
+    chai.expect(AwesomeString.codePoints(['star'])).to.eql([0x73, 0x74, 0x61, 0x72]);
+    chai.expect(AwesomeString.codePoints({
       toString: function () {
         return 'Capa';
       }
@@ -7186,40 +7180,40 @@ describe('codePoints', function () {
   });
 
   it('should return an empty array for null and undefined', function () {
-    chai.expect(Voca.codePoints()).to.eql([]);
-    chai.expect(Voca.codePoints(undefined)).to.eql([]);
-    chai.expect(Voca.codePoints(null)).to.eql([]);
+    chai.expect(AwesomeString.codePoints()).to.eql([]);
+    chai.expect(AwesomeString.codePoints(undefined)).to.eql([]);
+    chai.expect(AwesomeString.codePoints(null)).to.eql([]);
   });
 });
 
 describe('graphemes', function () {
 
   it('should split a string into characters', function () {
-    chai.expect(Voca.graphemes('stellar bomb')).to.eql(['s', 't', 'e', 'l', 'l', 'a', 'r', ' ', 'b', 'o', 'm', 'b']);
-    chai.expect(Voca.graphemes('   ')).to.eql([' ', ' ', ' ']);
-    chai.expect(Voca.graphemes('\n\t')).to.eql(['\n', '\t']);
-    chai.expect(Voca.graphemes('')).to.eql([]);
-    chai.expect(Voca.graphemes(PRINTABLE_ASCII)).to.eql(Array.prototype.slice.call(PRINTABLE_ASCII, 0));
+    chai.expect(AwesomeString.graphemes('stellar bomb')).to.eql(['s', 't', 'e', 'l', 'l', 'a', 'r', ' ', 'b', 'o', 'm', 'b']);
+    chai.expect(AwesomeString.graphemes('   ')).to.eql([' ', ' ', ' ']);
+    chai.expect(AwesomeString.graphemes('\n\t')).to.eql(['\n', '\t']);
+    chai.expect(AwesomeString.graphemes('')).to.eql([]);
+    chai.expect(AwesomeString.graphemes(PRINTABLE_ASCII)).to.eql(Array.prototype.slice.call(PRINTABLE_ASCII, 0));
   });
 
   it('should split a string into surrogate pairs and diacritical marks characters', function () {
-    chai.expect(Voca.graphemes('man\u0303ana')).to.eql(['m', 'a', 'n\u0303', 'a', 'n', 'a']);
-    chai.expect(Voca.graphemes('\u00E9\u20DD')).to.eql(['\u00E9\u20DD']);
-    chai.expect(Voca.graphemes('\uD835\uDC00\uD835\uDC01')).to.eql(['\uD835\uDC00', '\uD835\uDC01']);
-    chai.expect(Voca.graphemes('cafe\u0301')).to.eql(['c', 'a', 'f', 'e\u0301']);
-    chai.expect(Voca.graphemes('foo\u0303\u035C\u035D\u035Ebar')).to.eql(['f', 'o', 'o\u0303\u035C\u035D\u035E', 'b', 'a', 'r']);
-    chai.expect(Voca.graphemes('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar')).to.eql(['f', 'o', 'o', '\uD834\uDF06\u0303\u035C\u035D\u035E', 'b', 'a', 'r']);
+    chai.expect(AwesomeString.graphemes('man\u0303ana')).to.eql(['m', 'a', 'n\u0303', 'a', 'n', 'a']);
+    chai.expect(AwesomeString.graphemes('\u00E9\u20DD')).to.eql(['\u00E9\u20DD']);
+    chai.expect(AwesomeString.graphemes('\uD835\uDC00\uD835\uDC01')).to.eql(['\uD835\uDC00', '\uD835\uDC01']);
+    chai.expect(AwesomeString.graphemes('cafe\u0301')).to.eql(['c', 'a', 'f', 'e\u0301']);
+    chai.expect(AwesomeString.graphemes('foo\u0303\u035C\u035D\u035Ebar')).to.eql(['f', 'o', 'o\u0303\u035C\u035D\u035E', 'b', 'a', 'r']);
+    chai.expect(AwesomeString.graphemes('foo\uD834\uDF06\u0303\u035C\u035D\u035Ebar')).to.eql(['f', 'o', 'o', '\uD834\uDF06\u0303\u035C\u035D\u035E', 'b', 'a', 'r']);
   });
 
   it('should split a number into characters', function () {
-    chai.expect(Voca.graphemes(0)).to.eql(['0']);
-    chai.expect(Voca.graphemes(1560)).to.eql(['1', '5', '6', '0']);
-    chai.expect(Voca.graphemes(-1.6)).to.eql(['-', '1', '.', '6']);
+    chai.expect(AwesomeString.graphemes(0)).to.eql(['0']);
+    chai.expect(AwesomeString.graphemes(1560)).to.eql(['1', '5', '6', '0']);
+    chai.expect(AwesomeString.graphemes(-1.6)).to.eql(['-', '1', '.', '6']);
   });
 
   it('should split the string representation of an object', function () {
-    chai.expect(Voca.graphemes(['star'])).to.eql(['s', 't', 'a', 'r']);
-    chai.expect(Voca.graphemes({
+    chai.expect(AwesomeString.graphemes(['star'])).to.eql(['s', 't', 'a', 'r']);
+    chai.expect(AwesomeString.graphemes({
       toString: function () {
         return 'Capa';
       }
@@ -7227,32 +7221,32 @@ describe('graphemes', function () {
   });
 
   it('should return an empty array of characters for null and undefined', function () {
-    chai.expect(Voca.graphemes()).to.eql([]);
-    chai.expect(Voca.graphemes(undefined)).to.eql([]);
-    chai.expect(Voca.graphemes(null)).to.eql([]);
+    chai.expect(AwesomeString.graphemes()).to.eql([]);
+    chai.expect(AwesomeString.graphemes(undefined)).to.eql([]);
+    chai.expect(AwesomeString.graphemes(null)).to.eql([]);
   });
 });
 
 describe('split', function () {
 
   it('should split a string into chunks', function () {
-    chai.expect(Voca.split('stellar bomb', ' ')).to.eql(['stellar', 'bomb']);
-    chai.expect(Voca.split('   ', ' ')).to.eql(['', '', '', '']);
-    chai.expect(Voca.split('dying star', /\s/)).to.eql(['dying', 'star']);
-    chai.expect(Voca.split('*dying*star*', /\*/)).to.eql(['', 'dying', 'star', '']);
-    chai.expect(Voca.split('', '')).to.eql([]);
-    chai.expect(Voca.split('star', '')).to.eql(['s', 't', 'a', 'r']);
+    chai.expect(AwesomeString.split('stellar bomb', ' ')).to.eql(['stellar', 'bomb']);
+    chai.expect(AwesomeString.split('   ', ' ')).to.eql(['', '', '', '']);
+    chai.expect(AwesomeString.split('dying star', /\s/)).to.eql(['dying', 'star']);
+    chai.expect(AwesomeString.split('*dying*star*', /\*/)).to.eql(['', 'dying', 'star', '']);
+    chai.expect(AwesomeString.split('', '')).to.eql([]);
+    chai.expect(AwesomeString.split('star', '')).to.eql(['s', 't', 'a', 'r']);
   });
 
   it('should split a number into chunks', function () {
-    chai.expect(Voca.split(0)).to.eql(['0']);
-    chai.expect(Voca.split(1560, '6')).to.eql(['15', '0']);
-    chai.expect(Voca.split(-1.6, /\./)).to.eql(['-1', '6']);
+    chai.expect(AwesomeString.split(0)).to.eql(['0']);
+    chai.expect(AwesomeString.split(1560, '6')).to.eql(['15', '0']);
+    chai.expect(AwesomeString.split(-1.6, /\./)).to.eql(['-1', '6']);
   });
 
   it('should split the string representation of an object', function () {
-    chai.expect(Voca.split('rising star', ' ')).to.eql(['rising', 'star']);
-    chai.expect(Voca.split({
+    chai.expect(AwesomeString.split('rising star', ' ')).to.eql(['rising', 'star']);
+    chai.expect(AwesomeString.split({
       toString: function () {
         return 'rising-star';
       }
@@ -7260,62 +7254,62 @@ describe('split', function () {
   });
 
   it('should return the string as an item of an array for an empty separator', function () {
-    chai.expect(Voca.split('star')).to.eql(['star']);
-    chai.expect(Voca.split('star', null)).to.eql(['star']);
-    chai.expect(Voca.split('star', undefined)).to.eql(['star']);
+    chai.expect(AwesomeString.split('star')).to.eql(['star']);
+    chai.expect(AwesomeString.split('star', null)).to.eql(['star']);
+    chai.expect(AwesomeString.split('star', undefined)).to.eql(['star']);
   });
 });
 
 describe('words', function () {
 
   it('should split the string into words', function () {
-    chai.expect(Voca.words('123')).to.eql(['123']);
-    chai.expect(Voca.words('15+20=35')).to.eql(['15', '20', '35']);
-    chai.expect(Voca.words('hello')).to.eql(['hello']);
-    chai.expect(Voca.words('  hello   ')).to.eql(['hello']);
-    chai.expect(Voca.words('hello world')).to.eql(['hello', 'world']);
-    chai.expect(Voca.words('12+14-18*400')).to.eql(['12', '14', '18', '400']);
-    chai.expect(Voca.words('gravity can cross dimensions')).to.eql(['gravity', 'can', 'cross', 'dimensions']);
-    chai.expect(Voca.words('-gravity-can-cross-dimensions-')).to.eql(['gravity', 'can', 'cross', 'dimensions']);
-    chai.expect(Voca.words('gravity_can_cross_dimensions')).to.eql(['gravity', 'can', 'cross', 'dimensions']);
-    chai.expect(Voca.words('*gravity***can****cross&&dimensions++')).to.eql(['gravity', 'can', 'cross', 'dimensions']);
-    chai.expect(Voca.words('GravityCanCrossDimensions')).to.eql(['Gravity', 'Can', 'Cross', 'Dimensions']);
-    chai.expect(Voca.words('GRAVITYCan')).to.eql(['GRAVITY', 'Can']);
-    chai.expect(Voca.words('GravityCan')).to.eql(['Gravity', 'Can']);
-    chai.expect(Voca.words('GravityCANAttract')).to.eql(['Gravity', 'CAN', 'Attract']);
-    chai.expect(Voca.words('gravityCan')).to.eql(['gravity', 'Can']);
-    chai.expect(Voca.words('Gravity-Can11Cross **Dimensions1Foo')).to.eql(['Gravity', 'Can', '11', 'Cross', 'Dimensions', '1', 'Foo']);
-    chai.expect(Voca.words('Cooper... Cooper... Come in, Cooper.')).to.eql(['Cooper', 'Cooper', 'Come', 'in', 'Cooper']);
-    chai.expect(Voca.words('Newton\'s third law')).to.eql(['Newton', 's', 'third', 'law']);
-    chai.expect(Voca.words('Newton\'s thIrd lAw')).to.eql(['Newton', 's', 'th', 'Ird', 'l', 'Aw']);
-    chai.expect(Voca.words(PRINTABLE_ASCII)).to.eql(['0123456789', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz']);
-    chai.expect(Voca.words('')).to.eql([]);
-    chai.expect(Voca.words()).to.eql([]);
-    chai.expect(Voca.words(' ')).to.eql([]);
-    chai.expect(Voca.words('     ')).to.eql([]);
-    chai.expect(Voca.words('\n')).to.eql([]);
-    chai.expect(Voca.words('***')).to.eql([]);
-    chai.expect(Voca.words('***---')).to.eql([]);
-    chai.expect(Voca.words('***---')).to.eql([]);
-    chai.expect(Voca.words('man\u0303ana')).to.eql(['man\u0303ana']);
-    chai.expect(Voca.words('maN\u0303ana')).to.eql(['ma', 'N\u0303ana']);
-    chai.expect(Voca.words('foo\u0303\u035C\u035D\u035E bar')).to.eql(['foo\u0303\u035C\u035D\u035E', 'bar']);
-    chai.expect(Voca.words('fo-O-O\u0303\u035C\u035D\u035E-bar')).to.eql(['fo', 'O', 'O\u0303\u035C\u035D\u035E', 'bar']);
+    chai.expect(AwesomeString.words('123')).to.eql(['123']);
+    chai.expect(AwesomeString.words('15+20=35')).to.eql(['15', '20', '35']);
+    chai.expect(AwesomeString.words('hello')).to.eql(['hello']);
+    chai.expect(AwesomeString.words('  hello   ')).to.eql(['hello']);
+    chai.expect(AwesomeString.words('hello world')).to.eql(['hello', 'world']);
+    chai.expect(AwesomeString.words('12+14-18*400')).to.eql(['12', '14', '18', '400']);
+    chai.expect(AwesomeString.words('gravity can cross dimensions')).to.eql(['gravity', 'can', 'cross', 'dimensions']);
+    chai.expect(AwesomeString.words('-gravity-can-cross-dimensions-')).to.eql(['gravity', 'can', 'cross', 'dimensions']);
+    chai.expect(AwesomeString.words('gravity_can_cross_dimensions')).to.eql(['gravity', 'can', 'cross', 'dimensions']);
+    chai.expect(AwesomeString.words('*gravity***can****cross&&dimensions++')).to.eql(['gravity', 'can', 'cross', 'dimensions']);
+    chai.expect(AwesomeString.words('GravityCanCrossDimensions')).to.eql(['Gravity', 'Can', 'Cross', 'Dimensions']);
+    chai.expect(AwesomeString.words('GRAVITYCan')).to.eql(['GRAVITY', 'Can']);
+    chai.expect(AwesomeString.words('GravityCan')).to.eql(['Gravity', 'Can']);
+    chai.expect(AwesomeString.words('GravityCANAttract')).to.eql(['Gravity', 'CAN', 'Attract']);
+    chai.expect(AwesomeString.words('gravityCan')).to.eql(['gravity', 'Can']);
+    chai.expect(AwesomeString.words('Gravity-Can11Cross **Dimensions1Foo')).to.eql(['Gravity', 'Can', '11', 'Cross', 'Dimensions', '1', 'Foo']);
+    chai.expect(AwesomeString.words('Cooper... Cooper... Come in, Cooper.')).to.eql(['Cooper', 'Cooper', 'Come', 'in', 'Cooper']);
+    chai.expect(AwesomeString.words('Newton\'s third law')).to.eql(['Newton', 's', 'third', 'law']);
+    chai.expect(AwesomeString.words('Newton\'s thIrd lAw')).to.eql(['Newton', 's', 'th', 'Ird', 'l', 'Aw']);
+    chai.expect(AwesomeString.words(PRINTABLE_ASCII)).to.eql(['0123456789', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz']);
+    chai.expect(AwesomeString.words('')).to.eql([]);
+    chai.expect(AwesomeString.words()).to.eql([]);
+    chai.expect(AwesomeString.words(' ')).to.eql([]);
+    chai.expect(AwesomeString.words('     ')).to.eql([]);
+    chai.expect(AwesomeString.words('\n')).to.eql([]);
+    chai.expect(AwesomeString.words('***')).to.eql([]);
+    chai.expect(AwesomeString.words('***---')).to.eql([]);
+    chai.expect(AwesomeString.words('***---')).to.eql([]);
+    chai.expect(AwesomeString.words('man\u0303ana')).to.eql(['man\u0303ana']);
+    chai.expect(AwesomeString.words('maN\u0303ana')).to.eql(['ma', 'N\u0303ana']);
+    chai.expect(AwesomeString.words('foo\u0303\u035C\u035D\u035E bar')).to.eql(['foo\u0303\u035C\u035D\u035E', 'bar']);
+    chai.expect(AwesomeString.words('fo-O-O\u0303\u035C\u035D\u035E-bar')).to.eql(['fo', 'O', 'O\u0303\u035C\u035D\u035E', 'bar']);
   });
 
   it('should split the string with diacritics into words', function () {
-    chai.expect(Voca.words('clasificación biológica.')).to.eql(['clasificación', 'biológica']);
-    chai.expect(Voca.words('BunăZiua')).to.eql(['Bună', 'Ziua']);
-    chai.expect(Voca.words('Bună1ZiUa!')).to.eql(['Bună', '1', 'Zi', 'Ua']);
-    chai.expect(Voca.words('Język /polski wywodzi się z` języka` praindoeuropejskiego za**pośrednictwem+języka-prasłowiańskiego.')).to.eql(['Język', 'polski', 'wywodzi', 'się', 'z', 'języka', 'praindoeuropejskiego', 'za', 'pośrednictwem', 'języka', 'prasłowiańskiego']);
-    chai.expect(Voca.words('Гравитация притягивает все')).to.eql(['Гравитация', 'притягивает', 'все']);
-    chai.expect(Voca.words('Гравитация-Притягивает-ВСЕ!!')).to.eql(['Гравитация', 'Притягивает', 'ВСЕ']);
-    chai.expect(Voca.words('Στις--αρχές** (του) 21ου, αιώνα!')).to.eql(['Στις', 'αρχές', 'του', '21', 'ου', 'αιώνα']);
+    chai.expect(AwesomeString.words('clasificación biológica.')).to.eql(['clasificación', 'biológica']);
+    chai.expect(AwesomeString.words('BunăZiua')).to.eql(['Bună', 'Ziua']);
+    chai.expect(AwesomeString.words('Bună1ZiUa!')).to.eql(['Bună', '1', 'Zi', 'Ua']);
+    chai.expect(AwesomeString.words('Język /polski wywodzi się z` języka` praindoeuropejskiego za**pośrednictwem+języka-prasłowiańskiego.')).to.eql(['Język', 'polski', 'wywodzi', 'się', 'z', 'języka', 'praindoeuropejskiego', 'za', 'pośrednictwem', 'języka', 'prasłowiańskiego']);
+    chai.expect(AwesomeString.words('Гравитация притягивает все')).to.eql(['Гравитация', 'притягивает', 'все']);
+    chai.expect(AwesomeString.words('Гравитация-Притягивает-ВСЕ!!')).to.eql(['Гравитация', 'Притягивает', 'ВСЕ']);
+    chai.expect(AwesomeString.words('Στις--αρχές** (του) 21ου, αιώνα!')).to.eql(['Στις', 'αρχές', 'του', '21', 'ου', 'αιώνα']);
   });
 
   it('should split the string representation of an object', function () {
-    chai.expect(Voca.words(['GravityCanCrossDimensions'])).to.eql(['Gravity', 'Can', 'Cross', 'Dimensions']);
-    chai.expect(Voca.words({
+    chai.expect(AwesomeString.words(['GravityCanCrossDimensions'])).to.eql(['Gravity', 'Can', 'Cross', 'Dimensions']);
+    chai.expect(AwesomeString.words({
       toString: function () {
         return 'Gr4v1ty';
       }
@@ -7323,112 +7317,112 @@ describe('words', function () {
   });
 
   it('should split the string into words using a pattern', function () {
-    chai.expect(Voca.words('1234567890', /\d/g)).to.eql(['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']);
-    chai.expect(Voca.words('gravity', /\w{1,2}/g)).to.eql(['gr', 'av', 'it', 'y']);
-    chai.expect(Voca.words('gravity can cross dimensions', '\\w+(?=\\s?)', 'g')).to.eql(['gravity', 'can', 'cross', 'dimensions']);
-    chai.expect(Voca.words('1234567890', /\s/g)).to.eql([]);
+    chai.expect(AwesomeString.words('1234567890', /\d/g)).to.eql(['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']);
+    chai.expect(AwesomeString.words('gravity', /\w{1,2}/g)).to.eql(['gr', 'av', 'it', 'y']);
+    chai.expect(AwesomeString.words('gravity can cross dimensions', '\\w+(?=\\s?)', 'g')).to.eql(['gravity', 'can', 'cross', 'dimensions']);
+    chai.expect(AwesomeString.words('1234567890', /\s/g)).to.eql([]);
   });
 
   it('should split the string with default pattern for null and undefined', function () {
-    chai.expect(Voca.words('gravity_can_cross_dimensions', null)).to.eql(['gravity', 'can', 'cross', 'dimensions']);
-    chai.expect(Voca.words('gravity_can_cross_dimensions', undefined)).to.eql(['gravity', 'can', 'cross', 'dimensions']);
+    chai.expect(AwesomeString.words('gravity_can_cross_dimensions', null)).to.eql(['gravity', 'can', 'cross', 'dimensions']);
+    chai.expect(AwesomeString.words('gravity_can_cross_dimensions', undefined)).to.eql(['gravity', 'can', 'cross', 'dimensions']);
   });
 });
 
 describe('stripTags', function () {
 
   it('should strip tags', function () {
-    chai.expect(Voca.stripTags('<b>Hello world!</b>')).to.be.equal('Hello world!');
-    chai.expect(Voca.stripTags('<b>Hello world!</b>')).to.be.equal('Hello world!');
-    chai.expect(Voca.stripTags('<span class="italic">Hello world!</span>')).to.be.equal('Hello world!');
-    chai.expect(Voca.stripTags('<span class="<italic>">Hello world!</span>')).to.be.equal('Hello world!');
-    chai.expect(Voca.stripTags('<span class="italic"><b>Hello world!</b></span>')).to.be.equal('Hello world!');
-    chai.expect(Voca.stripTags('<html>hello</html>')).to.be.equal('hello');
-    chai.expect(Voca.stripTags('<script language=\"PHP\"> echo hello </script>')).to.be.equal(' echo hello ');
-    chai.expect(Voca.stripTags('<html><b>hello</b><p>world</p></html>')).to.be.equal('helloworld');
+    chai.expect(AwesomeString.stripTags('<b>Hello world!</b>')).to.be.equal('Hello world!');
+    chai.expect(AwesomeString.stripTags('<b>Hello world!</b>')).to.be.equal('Hello world!');
+    chai.expect(AwesomeString.stripTags('<span class="italic">Hello world!</span>')).to.be.equal('Hello world!');
+    chai.expect(AwesomeString.stripTags('<span class="<italic>">Hello world!</span>')).to.be.equal('Hello world!');
+    chai.expect(AwesomeString.stripTags('<span class="italic"><b>Hello world!</b></span>')).to.be.equal('Hello world!');
+    chai.expect(AwesomeString.stripTags('<html>hello</html>')).to.be.equal('hello');
+    chai.expect(AwesomeString.stripTags('<script language=\"PHP\"> echo hello </script>')).to.be.equal(' echo hello ');
+    chai.expect(AwesomeString.stripTags('<html><b>hello</b><p>world</p></html>')).to.be.equal('helloworld');
   });
 
   it('should strip potential xss tags', function () {
     /**
      * @see https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
      */
-    chai.expect(Voca.stripTags('<script>evil();</script>')).to.be.equal('evil();');
-    chai.expect(Voca.stripTags('<SCRIPT SRC=http://xss.rocks/xss.js></SCRIPT>')).to.be.equal('');
-    chai.expect(Voca.stripTags('<IMG """><SCRIPT>alert("XSS")</SCRIPT>">')).to.be.equal('');
-    chai.expect(Voca.stripTags('<SCRIPT/XSS SRC="http://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('');
-    chai.expect(Voca.stripTags('<BODY onload!#$%&()*~+-_.,:;?@[/|\]^`=alert("XSS")>')).to.be.equal('');
-    chai.expect(Voca.stripTags('<SCRIPT/SRC="http://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('');
-    chai.expect(Voca.stripTags('<<SCRIPT>alert("XSS");//<</SCRIPT>')).to.be.equal('');
-    chai.expect(Voca.stripTags('<SCRIPT SRC=http://xss.rocks/xss.js?< B >')).to.be.equal('');
-    chai.expect(Voca.stripTags('<SCRIPT SRC=//xss.rocks/.j>')).to.be.equal('');
-    chai.expect(Voca.stripTags('<IMG SRC="javascript:alert(\'XSS\')"')).to.be.equal('');
-    chai.expect(Voca.stripTags('<SCRIPT a=">" SRC="httx://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('');
-    chai.expect(Voca.stripTags('<SCRIPT =">" SRC="httx://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('');
-    chai.expect(Voca.stripTags('<SCRIPT a=">" \'\' SRC="httx://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('');
-    chai.expect(Voca.stripTags('<SCRIPT "a=\'>\'" SRC="httx://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('');
-    chai.expect(Voca.stripTags('<SCRIPT a=`>` SRC="httx://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('` SRC="httx://xss.rocks/xss.js">');
-    chai.expect(Voca.stripTags('<SCRIPT a=">\'>" SRC="httx://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('');
-    chai.expect(Voca.stripTags('<SCRIPT>document.write("<SCRI");</SCRIPT>PT SRC="httx://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('document.write("');
+    chai.expect(AwesomeString.stripTags('<script>evil();</script>')).to.be.equal('evil();');
+    chai.expect(AwesomeString.stripTags('<SCRIPT SRC=http://xss.rocks/xss.js></SCRIPT>')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('<IMG """><SCRIPT>alert("XSS")</SCRIPT>">')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('<SCRIPT/XSS SRC="http://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('<BODY onload!#$%&()*~+-_.,:;?@[/|\]^`=alert("XSS")>')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('<SCRIPT/SRC="http://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('<<SCRIPT>alert("XSS");//<</SCRIPT>')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('<SCRIPT SRC=http://xss.rocks/xss.js?< B >')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('<SCRIPT SRC=//xss.rocks/.j>')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('<IMG SRC="javascript:alert(\'XSS\')"')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('<SCRIPT a=">" SRC="httx://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('<SCRIPT =">" SRC="httx://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('<SCRIPT a=">" \'\' SRC="httx://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('<SCRIPT "a=\'>\'" SRC="httx://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('<SCRIPT a=`>` SRC="httx://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('` SRC="httx://xss.rocks/xss.js">');
+    chai.expect(AwesomeString.stripTags('<SCRIPT a=">\'>" SRC="httx://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('<SCRIPT>document.write("<SCRI");</SCRIPT>PT SRC="httx://xss.rocks/xss.js"></SCRIPT>')).to.be.equal('document.write("');
   });
 
   it('should strip tags which attributes contain < or > ', function () {
     var helloWorld = 'hello  world';
-    chai.expect(Voca.stripTags('hello <img title="<"> world')).to.be.equal(helloWorld);
-    chai.expect(Voca.stripTags('hello <img title=">"> world')).to.be.equal(helloWorld);
-    chai.expect(Voca.stripTags('hello <img title=">_<"> world')).to.be.equal(helloWorld);
-    chai.expect(Voca.stripTags("hello <img title='>_<'> world")).to.be.equal(helloWorld);
-    chai.expect(Voca.stripTags("hello <img title=\"foo 'bar'\"> world")).to.be.equal(helloWorld);
+    chai.expect(AwesomeString.stripTags('hello <img title="<"> world')).to.be.equal(helloWorld);
+    chai.expect(AwesomeString.stripTags('hello <img title=">"> world')).to.be.equal(helloWorld);
+    chai.expect(AwesomeString.stripTags('hello <img title=">_<"> world')).to.be.equal(helloWorld);
+    chai.expect(AwesomeString.stripTags("hello <img title='>_<'> world")).to.be.equal(helloWorld);
+    chai.expect(AwesomeString.stripTags("hello <img title=\"foo 'bar'\"> world")).to.be.equal(helloWorld);
   });
 
   it('should strip tags on multiple lines', function () {
     var multilineHtml = '<html>This\'s a string with quotes:</html>\n"strings in double quote";\n\'strings in single quote\';\n<html>this\line is single quoted /with\slashes </html>';
-    chai.expect(Voca.stripTags(multilineHtml, '<html>')).to.be.equal(multilineHtml);
+    chai.expect(AwesomeString.stripTags(multilineHtml, '<html>')).to.be.equal(multilineHtml);
   });
 
   it('should strip comments and doctype', function () {
-    chai.expect(Voca.stripTags('<html><!-- COMMENT --></html>')).to.be.equal('');
-    chai.expect(Voca.stripTags('<b>Hello world!</b><!-- Just some information -->')).to.be.equal('Hello world!');
-    chai.expect(Voca.stripTags('<span class="italic">Hello world!<!-- Just some information --></span>')).to.be.equal('Hello world!');
-    chai.expect(Voca.stripTags('<!-- Small<>comment --><span class="italic"><!-- Just some information --><b>Hello world!</b></span>')).to.be.equal('Hello world!');
-    chai.expect(Voca.stripTags('<!doctype html><span class="italic"><!-- Just some information --><b>Hello world!</b></span>')).to.be.equal('Hello world!');
+    chai.expect(AwesomeString.stripTags('<html><!-- COMMENT --></html>')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('<b>Hello world!</b><!-- Just some information -->')).to.be.equal('Hello world!');
+    chai.expect(AwesomeString.stripTags('<span class="italic">Hello world!<!-- Just some information --></span>')).to.be.equal('Hello world!');
+    chai.expect(AwesomeString.stripTags('<!-- Small<>comment --><span class="italic"><!-- Just some information --><b>Hello world!</b></span>')).to.be.equal('Hello world!');
+    chai.expect(AwesomeString.stripTags('<!doctype html><span class="italic"><!-- Just some information --><b>Hello world!</b></span>')).to.be.equal('Hello world!');
   });
 
   it('should not strip allowable tags', function () {
-    chai.expect(Voca.stripTags('<b>Hello world!</b>', ['b'])).to.be.equal('<b>Hello world!</b>');
-    chai.expect(Voca.stripTags('<b class="red">Hello world!</b>', ['b'])).to.be.equal('<b class="red">Hello world!</b>');
-    chai.expect(Voca.stripTags('<b class="red">Hello</b> <span>world!</span>', '<b><a>')).to.be.equal('<b class="red">Hello</b> world!');
+    chai.expect(AwesomeString.stripTags('<b>Hello world!</b>', ['b'])).to.be.equal('<b>Hello world!</b>');
+    chai.expect(AwesomeString.stripTags('<b class="red">Hello world!</b>', ['b'])).to.be.equal('<b class="red">Hello world!</b>');
+    chai.expect(AwesomeString.stripTags('<b class="red">Hello</b> <span>world!</span>', '<b><a>')).to.be.equal('<b class="red">Hello</b> world!');
     var helloWorldHtml = '<html><p>hello</p><b>world</b><a href="#fragment">Other text</a></html>';
-    chai.expect(Voca.stripTags(helloWorldHtml, '<html>')).to.be.equal('<html>helloworldOther text</html>');
-    chai.expect(Voca.stripTags(helloWorldHtml, ['p'])).to.be.equal('<p>hello</p>worldOther text');
-    chai.expect(Voca.stripTags(helloWorldHtml, '<a>')).to.be.equal('helloworld<a href="#fragment">Other text</a>');
-    chai.expect(Voca.stripTags(helloWorldHtml, ['html', 'p', 'a', 'b'])).to.be.equal(helloWorldHtml);
+    chai.expect(AwesomeString.stripTags(helloWorldHtml, '<html>')).to.be.equal('<html>helloworldOther text</html>');
+    chai.expect(AwesomeString.stripTags(helloWorldHtml, ['p'])).to.be.equal('<p>hello</p>worldOther text');
+    chai.expect(AwesomeString.stripTags(helloWorldHtml, '<a>')).to.be.equal('helloworld<a href="#fragment">Other text</a>');
+    chai.expect(AwesomeString.stripTags(helloWorldHtml, ['html', 'p', 'a', 'b'])).to.be.equal(helloWorldHtml);
   });
 
   it('should not modify a string without tags', function () {
-    chai.expect(Voca.stripTags('Hello world!')).to.be.equal('Hello world!');
-    chai.expect(Voca.stripTags('  ')).to.be.equal('  ');
-    chai.expect(Voca.stripTags('')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('Hello world!')).to.be.equal('Hello world!');
+    chai.expect(AwesomeString.stripTags('  ')).to.be.equal('  ');
+    chai.expect(AwesomeString.stripTags('')).to.be.equal('');
   });
 
   it('should add instead of stripped tags a special string', function () {
-    chai.expect(Voca.stripTags('<li><b><a href="#" title="Title">Recently improved articles</a></b></li>', '', '*')).to.be.equal('***Recently improved articles***');
-    chai.expect(Voca.stripTags('<b>Hello</b><i>World</i>', '<a>', ' ')).to.be.equal(' Hello  World ');
-    chai.expect(Voca.stripTags('Line<br/>break', ['i'], ' ')).to.be.equal('Line break');
+    chai.expect(AwesomeString.stripTags('<li><b><a href="#" title="Title">Recently improved articles</a></b></li>', '', '*')).to.be.equal('***Recently improved articles***');
+    chai.expect(AwesomeString.stripTags('<b>Hello</b><i>World</i>', '<a>', ' ')).to.be.equal(' Hello  World ');
+    chai.expect(AwesomeString.stripTags('Line<br/>break', ['i'], ' ')).to.be.equal('Line break');
   });
 
   it('should treat especially broken or invalid tags', function () {
-    chai.expect(Voca.stripTags('< html >')).to.be.equal('< html >');
-    chai.expect(Voca.stripTags('<<>>')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags('< html >')).to.be.equal('< html >');
+    chai.expect(AwesomeString.stripTags('<<>>')).to.be.equal('');
     var allowableTags = '<p><a><html>';
-    chai.expect(Voca.stripTags('<<htmL>>hello<</htmL>>', allowableTags)).to.be.equal('<htmL>hello</htmL>');
-    chai.expect(Voca.stripTags('<a.>HtMl text</.a>', allowableTags)).to.be.equal('HtMl text');
-    chai.expect(Voca.stripTags('<nnn>I am a quoted (\") string with special chars like \$,\!,\@,\%,\&</nnn>', allowableTags)).to.be.equal('I am a quoted (\") string with special chars like \$,\!,\@,\%,\&');
-    chai.expect(Voca.stripTags('<abc>hello</abc> \t\tworld... <ppp>strip_tags_test</ppp>', allowableTags)).to.be.equal('hello \t\tworld... strip_tags_test');
+    chai.expect(AwesomeString.stripTags('<<htmL>>hello<</htmL>>', allowableTags)).to.be.equal('<htmL>hello</htmL>');
+    chai.expect(AwesomeString.stripTags('<a.>HtMl text</.a>', allowableTags)).to.be.equal('HtMl text');
+    chai.expect(AwesomeString.stripTags('<nnn>I am a quoted (\") string with special chars like \$,\!,\@,\%,\&</nnn>', allowableTags)).to.be.equal('I am a quoted (\") string with special chars like \$,\!,\@,\%,\&');
+    chai.expect(AwesomeString.stripTags('<abc>hello</abc> \t\tworld... <ppp>strip_tags_test</ppp>', allowableTags)).to.be.equal('hello \t\tworld... strip_tags_test');
   });
 
   it('should strip tags from a string representation of an object', function () {
-    chai.expect(Voca.stripTags('<a href="#">Hello</a>')).to.equal('Hello');
-    chai.expect(Voca.stripTags({
+    chai.expect(AwesomeString.stripTags('<a href="#">Hello</a>')).to.equal('Hello');
+    chai.expect(AwesomeString.stripTags({
       toString: function () {
         return '<a href="#">Hello</a>';
       }
@@ -7436,36 +7430,36 @@ describe('stripTags', function () {
   });
 
   it('should return empty string for null or undefined', function () {
-    chai.expect(Voca.stripTags(null)).to.be.equal('');
-    chai.expect(Voca.stripTags(null, null)).to.be.equal('');
-    chai.expect(Voca.stripTags(undefined)).to.be.equal('');
-    chai.expect(Voca.stripTags(undefined, '<a>')).to.be.equal('');
-    chai.expect(Voca.stripTags(undefined, undefined)).to.be.equal('');
+    chai.expect(AwesomeString.stripTags(null)).to.be.equal('');
+    chai.expect(AwesomeString.stripTags(null, null)).to.be.equal('');
+    chai.expect(AwesomeString.stripTags(undefined)).to.be.equal('');
+    chai.expect(AwesomeString.stripTags(undefined, '<a>')).to.be.equal('');
+    chai.expect(AwesomeString.stripTags(undefined, undefined)).to.be.equal('');
   });
 });
 
 describe('noConflict', function () {
 
-  it('should return Voca library instance and restore v global variable', function () {
+  it('should return Awesome String library instance and restore as global variable', function () {
     var globalObject = getGlobalObject();
-    globalObject.v = Voca;
-    var voca = Voca.noConflict();
-    chai.expect(voca).to.be.equal(Voca);
-    chai.expect(globalObject.v).to.be.equal(undefined);
+    globalObject.as = AwesomeString;
+    var awesome = AwesomeString.noConflict();
+    chai.expect(awesome).to.be.equal(AwesomeString);
+    chai.expect(globalObject.as).to.be.equal(undefined);
   });
 
-  it('should return Voca library instance and not modify v global variable', function () {
+  it('should return Awesome String library instance and not modify as global variable', function () {
     var globalObject = getGlobalObject();
-    var voca = Voca.noConflict();
-    chai.expect(voca).to.be.equal(Voca);
-    chai.expect(globalObject.v).to.be.equal(undefined);
+    var awesome = AwesomeString.noConflict();
+    chai.expect(awesome).to.be.equal(AwesomeString);
+    chai.expect(globalObject.as).to.be.equal(undefined);
   });
 });
 
 describe('version', function () {
 
   it('should match semantic version number pattern', function () {
-    chai.expect(REGEXP_SEMVER.test(Voca.version)).to.be.true;
+    chai.expect(REGEXP_SEMVER.test(AwesomeString.version)).to.be.true;
   });
 });
 

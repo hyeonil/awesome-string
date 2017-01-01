@@ -14,11 +14,11 @@ import { REGEXP_UNICODE_CHARACTER } from 'helper/reg_exp/const';
  * @param {string} [subject=''] The string to split into characters.
  * @return {Array} Returns the array of graphemes.
  * @example
- * v.graphemes('\uD835\uDC00\uD835\uDC01'); // or '𝐀𝐁'
+ * as.graphemes('\uD835\uDC00\uD835\uDC01'); // or '𝐀𝐁'
  * // => ['\uD835\uDC00', '\uD835\uDC01'], or
  * //    ['𝐀', '𝐁']
  *
- * v.graphemes('cafe\u0301'); // or 'café'
+ * as.graphemes('cafe\u0301'); // or 'café'
  * // => ['c', 'a', 'f', 'e\u0301'], or
  * //    ['c', 'a', 'f', 'é']
  */

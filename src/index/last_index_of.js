@@ -12,10 +12,10 @@ import coerceToString from 'helper/string/coerce_to_string';
  * @param {number} [fromIndex=subject.length - 1] The index to start searching backward in the string.
  * @return {number} Returns the last occurrence index or `-1` if not found.
  * @example
- * v.lastIndexOf('morning', 'n');
+ * as.lastIndexOf('morning', 'n');
  * // => 5
  *
- * v.lastIndexOf('evening', 'o');
+ * as.lastIndexOf('evening', 'o');
  * // => -1
  */
 export default function lastIndexOf(subject, search, fromIndex) {

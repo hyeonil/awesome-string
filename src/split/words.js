@@ -16,16 +16,16 @@ import toString from 'helper/string/to_string';
  * @param {string} [flags=''] The regular expression flags. Applies when `pattern` is string type.
  * @return {Array} Returns the array of words.
  * @example
- * v.words('gravity can cross dimensions');
+ * as.words('gravity can cross dimensions');
  * // => ['gravity', 'can', 'cross', 'dimensions']
  *
- * v.words('GravityCanCrossDimensions');
+ * as.words('GravityCanCrossDimensions');
  * // => ['Gravity', 'Can', 'Cross', 'Dimensions']
  *
- * v.words('Gravity - can cross dimensions!');
+ * as.words('Gravity - can cross dimensions!');
  * // => ['Gravity', 'can', 'cross', 'dimensions']
  *
- * v.words('Earth gravity', /[^\s]+/g);
+ * as.words('Earth gravity', /[^\s]+/g);
  * // => ['Earth', 'gravity']
  */
 export default function words(subject, pattern, flags) {
