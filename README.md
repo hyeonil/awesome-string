@@ -3,6 +3,7 @@
 [![codecov](https://codecov.io/gh/hyeonil/awesome-string/branch/master/graph/badge.svg)](https://codecov.io/gh/hyeonil/awesome-string)
 [![Build Status](https://saucelabs.com/buildstatus/nuti0102_voca)](https://saucelabs.com/beta/builds/8cf2a13caaad435e96a4940fdbe3f101)
 [![npm package](https://img.shields.io/npm/v/awesome-string.svg)](https://www.npmjs.com/package/awesome-string)
+[![bower](https://img.shields.io/bower/v/awesome-string.svg)](https://github.com/hyeonil/awesome-string)
 
 [![Build Status](https://saucelabs.com/browser-matrix/nuti0102_voca.svg)](https://saucelabs.com/beta/builds/41878170c6714ec28872e2e65cfe7743)
 
