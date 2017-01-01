@@ -1,5 +1,5 @@
-import { expect } from 'chai';
 import as from '../awesome-string';
+import { expect } from 'chai';
 
 describe('stripTags', function() {
 

@@ -1,6 +1,6 @@
+import as from '../awesome-string';
 import { expect } from 'chai';
 import { PRINTABLE_ASCII } from '../const';
-import as from '../awesome-string';
 
 describe('first', function() {
 

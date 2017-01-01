@@ -1,6 +1,6 @@
+import as from '../awesome-string';
 import { expect } from 'chai';
 import { REGEXP_SEMVER } from '../const';
-import as from '../awesome-string';
 
 describe('version', function() {
 

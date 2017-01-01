@@ -1,6 +1,6 @@
 import { PRINTABLE_ASCII, REVERSED_PRINTABLE_ASCII } from '../const';
-import { expect } from 'chai';
 import as from '../awesome-string';
+import { expect } from 'chai';
 
 describe('reverseGrapheme', function() {
 

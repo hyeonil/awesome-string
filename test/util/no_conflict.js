@@ -1,6 +1,6 @@
+import awesomeString from '../awesome-string';
 import { expect } from 'chai';
 import getGlobalObject from '../../src/helper/object/get_global';
-import awesomeString from '../awesome-string';
 
 describe('noConflict', function() {
 

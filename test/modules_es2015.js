@@ -102,7 +102,7 @@ import version from '../dist_mod/version';
 
 // Entire library
 
-import v from '../dist_mod/index.es2015';
+// import as from '../dist_mod/index.es2015';
 
 describe('CommonJS modules', function() {
 
