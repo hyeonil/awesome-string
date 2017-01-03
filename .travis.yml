@@ -6,6 +6,8 @@ notifications:
   email: false
 node_js:
   - "6"
+java:
+  - "8"
 env:
   global:
     - DETAILED=false
