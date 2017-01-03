@@ -34,7 +34,7 @@ script:
   - npm run build
   - npm run coverage
   - npm run test-npm-package
-  - sonar-scanner
   - "[ $DETAILED == false ] || [ $TRAVIS_PULL_REQUEST == true] || npm run test-sl || true"
+  - sonar-scanner
 after_success:
   - "[ $DETAILED == false ] || [ $TRAVIS_PULL_REQUEST == true] || npm run report-coverage"
