@@ -1,4 +1,5 @@
 import coerceToString from 'helper/string/coerce_to_string';
+import objectKeys from 'helper/object/object_keys';
 
 const unescapeCharactersMap = {
   '<': /(&lt;)|(&#x0*3c;)|(&#0*60;)/gi,
@@ -8,7 +9,7 @@ const unescapeCharactersMap = {
   "'": /(&#x0*27;)|(&#0*39;)/gi,
   '`': /(&#x0*60;)|(&#0*96;)/gi
 };
-const characters = Object.keys(unescapeCharactersMap);
+const characters = objectKeys(unescapeCharactersMap);
 
 /**
  * Replaces the HTML entities with corresponding characters.

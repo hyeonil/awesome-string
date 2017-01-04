@@ -1,4 +1,5 @@
 import functions from 'functions';
+import objectKeys from 'helper/object/object_keys';
 
 
 /**
@@ -152,7 +153,7 @@ function makeFunctionChainable(functionInstance) {
   };
 }
 
-Object.keys(functions).forEach(function(name) {
+objectKeys(functions).forEach(function(name) {
   ChainWrapper.prototype[name] = makeFunctionChainable(functions[name]);
 });
 

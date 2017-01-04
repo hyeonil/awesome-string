@@ -1,3 +1,5 @@
+import objectKeys from 'helper/object/object_keys';
+
 /**
  * Generated diacritics map. See bellow the base code.
  * @ignore
@@ -130,7 +132,7 @@ function getDiacriticsMap() {
     return diacriticsMap;
   }
   diacriticsMap = {};
-  Object.keys(diacritics).forEach(function(key) {
+  objectKeys(diacritics).forEach(function(key) {
     const characters = diacritics[key];
     for (let index = 0; index < characters.length; index++) {
       const character = characters[index];
