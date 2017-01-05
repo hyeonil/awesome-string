@@ -5,7 +5,7 @@ import coerceToString from 'helper/string/coerce_to_string';
  *
  * @function decapitalize
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Case
  * @param  {string} [subject=''] The string to decapitalize.
  * @return {string}              Returns the decapitalized string.

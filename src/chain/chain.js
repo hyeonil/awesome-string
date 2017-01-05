@@ -5,7 +5,7 @@ import ChainWrapper from 'chain/wrapper';
  * Use `as.prototype.value()` to unwrap the result.
  *
  * @memberOf Chain
- * @since 1.0.0
+ * @since 1.2.0
  * @function chain
  * @param  {string} subject The string to wrap.
  * @return {Object}         Returns the new wrapper object.

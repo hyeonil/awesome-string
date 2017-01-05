@@ -10,7 +10,7 @@ import toInteger from 'helper/number/to_integer';
  *
  * @function padLeft
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to pad.
  * @param {int} [length=0] The length to left pad the string. No changes are made if `length` is less than `subject.length`.

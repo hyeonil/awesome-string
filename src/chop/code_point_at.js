@@ -12,7 +12,7 @@ import nanDefault from 'helper/number/nan_default';
  *
  * @function codePointAt
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Chop
  * @param  {string} [subject=''] The string to extract from.
  * @param  {number} position The position to get the code point number.

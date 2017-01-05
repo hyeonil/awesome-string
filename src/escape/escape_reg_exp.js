@@ -6,7 +6,7 @@ import { REGEXP_SPECIAL_CHARACTERS } from 'helper/reg_exp/const';
  *
  * @function escapeRegExp
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Escape
  * @param {string} [subject=''] The string to escape.
  * @return {string} Returns the escaped string.

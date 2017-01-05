@@ -10,7 +10,7 @@ import toString from 'helper/string/to_string';
  *
  * @function trimRight
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to trim.
  * @param {string} [whitespace=whitespace] The whitespace characters to trim. List all characters that you want to be stripped.

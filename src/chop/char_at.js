@@ -5,7 +5,7 @@ import coerceToString from 'helper/string/coerce_to_string';
  *
  * @function charAt
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Chop
  * @param  {string} [subject=''] The string to extract from.
  * @param  {numbers} position The position to get the character.

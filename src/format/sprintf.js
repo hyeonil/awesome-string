@@ -135,7 +135,7 @@ import replacementMatch from 'helper/format/replacement/match';
  *
  * @function sprintf
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Format
  * @param  {string} [format=''] The format string.
  * @param  {...*}               replacements The replacements to produce the string.

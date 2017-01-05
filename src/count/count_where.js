@@ -7,7 +7,7 @@ import stringReduce from 'helper/string/string_reduce';
  *
  * @function  countWhere
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Count
  * @param  {string}   [subject=''] The string to count characters.
  * @param  {Function} predicate    The predicate function invoked on each character with parameters `(character, index, string)`.

@@ -6,7 +6,7 @@ import toString from 'helper/string/to_string';
  *
  * @function matches
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string to verify.
  * @param {RegExp|string} pattern The pattern to match. If `pattern` is not RegExp, it is transformed to `new RegExp(pattern, flags)`.

@@ -8,7 +8,7 @@ import toInteger from 'helper/number/to_integer';
  *
  * @function search
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Index
  * @param {string} [subject=''] The string where to search.
  * @param {string|RegExp} pattern The pattern to match. If `pattern` is not RegExp, it is transformed to `new RegExp(pattern)`.

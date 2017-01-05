@@ -9,7 +9,7 @@ import toInteger from 'helper/number/to_integer';
  *
  * @function last
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Chop
  * @param  {string} [subject=''] The string to extract from.
  * @param  {int}    [length=1]   The number of characters to extract.

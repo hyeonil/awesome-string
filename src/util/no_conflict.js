@@ -8,7 +8,7 @@ const previousAS = globalObject.as;
  *
  * @function noConflict
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Util
  * @return {Object} Returns AwesomeString library instance.
  * @example

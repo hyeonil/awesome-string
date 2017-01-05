@@ -14,7 +14,7 @@ const STATE_COMMENT = 3;
  *
  * @function stripTags
  * @static
- * @since 1.1.0
+ * @since 1.2.0
  * @memberOf Strip
  * @param {string} [subject=''] The string to strip from.
  * @param {string|Array} [allowableTags] The string `'<tag1><tag2>'` or array `['tag1', 'tag2']` of tags that should not be stripped.

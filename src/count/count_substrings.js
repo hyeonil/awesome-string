@@ -5,7 +5,7 @@ import coerceToString from 'helper/string/coerce_to_string';
  *
  * @function countSubstrings
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Count
  * @param  {string} [subject=''] The string where to count.
  * @param  {string} substring    The substring to be counted.

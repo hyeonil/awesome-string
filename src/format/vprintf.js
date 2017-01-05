@@ -8,7 +8,7 @@ import sprintf from 'format/sprintf';
  *
  * @function vprintf
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Format
  * @param  {string} format='']  The format string.
  * @param  {Array} replacements The array of replacements to produce the string.

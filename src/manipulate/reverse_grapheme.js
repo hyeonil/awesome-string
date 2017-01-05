@@ -8,7 +8,7 @@ import coerceToString from 'helper/string/coerce_to_string';
  *
  * @function reverseGrapheme
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to reverse.
  * @return {string} Returns the reversed string.

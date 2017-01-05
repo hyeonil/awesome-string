@@ -8,7 +8,7 @@ import { REGEXP_NON_LATIN } from 'helper/reg_exp/const';
  *
  * @function slugify
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to slugify.
  * @return {string} Returns the slugified string.

@@ -8,7 +8,7 @@ import words from 'split/words';
  *
  * @function snakeCase
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Case
  * @param  {string} [subject=''] The string to convert to snake case.
  * @return {string}              Returns the snake case string.

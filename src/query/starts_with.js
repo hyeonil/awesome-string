@@ -9,7 +9,7 @@ import toString from 'helper/string/to_string';
  *
  * @function startsWith
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string to verify.
  * @param {string} start The starting string.

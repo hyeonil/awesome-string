@@ -5,7 +5,7 @@ import coerceToString from 'helper/string/coerce_to_string';
  *
  * @function lastIndexOf
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Index
  * @param {string} [subject=''] The string where to search.
  * @param {string} search The string to search.

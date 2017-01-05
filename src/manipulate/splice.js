@@ -7,7 +7,7 @@ import coerceToString from 'helper/string/coerce_to_string';
  *
  * @function splice
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string where to insert.
  * @param {string} start The position to start changing the string. For a negative position will start from the end of

@@ -8,7 +8,7 @@ import toInteger from 'helper/number/to_integer';
  *
  * @function endsWith
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string to verify.
  * @param {string} end The ending string.

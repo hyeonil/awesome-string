@@ -9,7 +9,7 @@ import words from 'split/words';
  *
  * @function kebabCase
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Case
  * @param  {string} [subject=''] The string to convert to kebab case.
  * @return {string}              Returns the kebab case string.

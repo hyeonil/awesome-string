@@ -9,7 +9,7 @@ import { REGEXP_UNICODE_CHARACTER } from 'helper/reg_exp/const';
  *
  * @function graphemes
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Split
  * @param {string} [subject=''] The string to split into characters.
  * @return {Array} Returns the array of graphemes.

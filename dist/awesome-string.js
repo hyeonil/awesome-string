@@ -1,5 +1,5 @@
 /*! 
- * Awesome String string library 1.1.0
+ * Awesome String string library 1.2.0
  * It forked from Voca Library.
  *
  * Copyright Hyeonil Jeong and other contributors
@@ -22,6 +22,46 @@
  */
 function isNil(value) {
   return value === undefined || value === null;
+}
+
+function isArray(obj) {
+  return !isNil(obj) && typeof obj.constructor === 'function' && obj.constructor === Array;
+}
+
+function isFunction(func) {
+  return !isNil(func) && typeof func === 'function';
+}
+
+function arrayForEach(arr, func) {
+  if (!isArray(arr)) {
+    return arr;
+  }
+  if (!isFunction(func)) {
+    return arr;
+  }
+
+  for (var index in arr) {
+    var item = arr[index];
+    func(item, index, arr);
+  }
+}
+
+function arrayMap(arr, func) {
+  if (!isArray(arr)) {
+    return arr;
+  }
+  if (!isFunction(func)) {
+    return arr;
+  }
+
+  var map = [];
+
+  for (var i = 0, item; item = arr[i]; i++) {
+    var mapItem = func(item, i);
+    map.push(mapItem);
+  }
+
+  return map;
 }
 
 /**
@@ -47,7 +87,7 @@ function coerceToBoolean(value) {
  *
  * @function isString
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} subject The value to verify.
  * @return {boolean} Returns `true` if `subject` is string primitive type or `false` otherwise.
@@ -92,7 +132,7 @@ function coerceToString(value) {
  *
  * @function capitalize
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Case
  * @param  {string}  [subject='']        The string to capitalize.
  * @param  {boolean} [restToLower=false] Convert the rest of `subject` to lower case.
@@ -121,7 +161,7 @@ function capitalize(subject, restToLower) {
  *
  * @function lowerCase
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Case
  * @param  {string} [subject=''] The string to convert to lower case.
  * @return {string}              Returns the lower case string.
@@ -427,7 +467,7 @@ function toString(value) {
  *
  * @function words
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Split
  * @param {string} [subject=''] The string to split into words.
  * @param {string|RegExp} [pattern] The pattern to watch words. If `pattern` is not RegExp, it is transformed to `new RegExp(pattern, flags)`.
@@ -477,7 +517,7 @@ function wordToCamel(word, index) {
  *
  * @function camelCase
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Case
  * @param  {string} [subject=''] The string to convert to camel case.
  * @return {string}              The camel case string.
@@ -496,7 +536,7 @@ function camelCase(subject) {
   if (subjectString === '') {
     return '';
   }
-  return words(subjectString).map(wordToCamel).join('');
+  return arrayMap(words(subjectString), wordToCamel).join('');
 }
 
 /**
@@ -504,7 +544,7 @@ function camelCase(subject) {
  *
  * @function decapitalize
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Case
  * @param  {string} [subject=''] The string to decapitalize.
  * @return {string}              Returns the decapitalized string.
@@ -529,7 +569,7 @@ function decapitalize(subject) {
  *
  * @function kebabCase
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Case
  * @param  {string} [subject=''] The string to convert to kebab case.
  * @return {string}              Returns the kebab case string.
@@ -548,7 +588,7 @@ function kebabCase(subject) {
   if (subjectString === '') {
     return '';
   }
-  return words(subjectString).map(lowerCase).join('-');
+  return arrayMap(words(subjectString), lowerCase).join('-');
 }
 
 /**
@@ -556,7 +596,7 @@ function kebabCase(subject) {
  *
  * @function snakeCase
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Case
  * @param  {string} [subject=''] The string to convert to snake case.
  * @return {string}              Returns the snake case string.
@@ -575,7 +615,7 @@ function snakeCase(subject) {
   if (subjectString === '') {
     return '';
   }
-  return words(subjectString).map(lowerCase).join('_');
+  return arrayMap(words(subjectString), lowerCase).join('_');
 }
 
 /**
@@ -583,7 +623,7 @@ function snakeCase(subject) {
  *
  * @function upperCase
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Case
  * @param  {string} [subject=''] The string to convert to upper case.
  * @return {string}              Returns the upper case string.
@@ -647,7 +687,7 @@ function toInteger(value) {
  *
  * @function truncate
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Chop
  * @param  {string} [subject=''] The string to truncate.
  * @param  {int}    length       The length to truncate the string.
@@ -678,7 +718,7 @@ function truncate(subject, length, end) {
  *
  * @function charAt
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Chop
  * @param  {string} [subject=''] The string to extract from.
  * @param  {numbers} position The position to get the character.
@@ -780,7 +820,7 @@ function nanDefault(value, defaultValue) {
  *
  * @function codePointAt
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Chop
  * @param  {string} [subject=''] The string to extract from.
  * @param  {number} position The position to get the code point number.
@@ -816,7 +856,7 @@ function codePointAt(subject, position) {
  *
  * @function first
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Chop
  * @param  {string} [subject=''] The string to extract from.
  * @param  {int}    [length=1]   The number of characters to extract.
@@ -847,7 +887,7 @@ function first(subject, length) {
  *
  * @function graphemeAt
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Chop
  * @param  {string} [subject=''] The string to extract from.
  * @param  {number} position The position to get the grapheme.
@@ -880,7 +920,7 @@ function graphemeAt(subject, position) {
  *
  * @function last
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Chop
  * @param  {string} [subject=''] The string to extract from.
  * @param  {int}    [length=1]   The number of characters to extract.
@@ -910,7 +950,7 @@ function last(subject, length) {
  *
  * @static
  * @function prune
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Chop
  * @param  {string} [subject=''] The string to prune.
  * @param  {int}    length       The length to prune the string.
@@ -950,7 +990,7 @@ function prune(subject, length, end) {
  *
  * @function slice
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Chop
  * @param  {string} [subject='']         The string to extract from.
  * @param  {number} start                The position to start extraction. If negative use `subject.length + start`.
@@ -976,7 +1016,7 @@ function slice(subject, start, end) {
  *
  * @function substr
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Chop
  * @param  {string} [subject='']                 The string to extract from.
  * @param  {number} start                        The position to start extraction.
@@ -1000,7 +1040,7 @@ function substr(subject, start, length) {
  *
  * @function substring
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Chop
  * @param  {string} [subject='']         The string to extract from.
  * @param  {number} start                The position to start extraction.
@@ -1023,7 +1063,7 @@ function substring(subject, start, end) {
  *
  * @function count
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Count
  * @param  {string} [subject=''] The string to count characters.
  * @return {number}              Returns the number of characters in `subject`.
@@ -1042,7 +1082,7 @@ function count(subject) {
  *
  * @function  countGraphemes
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Count
  * @param  {string} [subject=''] The string to count graphemes.
  * @return {number}              Returns the number of graphemes in `subject`.
@@ -1065,7 +1105,7 @@ function countGrapheme(subject) {
  *
  * @function countSubstrings
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Count
  * @param  {string} [subject=''] The string where to count.
  * @param  {string} substring    The substring to be counted.
@@ -1096,14 +1136,55 @@ function countSubstrings(subject, substring) {
   return count;
 }
 
-var reduce = Array.prototype.reduce;
+function functionBind(oThis) {
+  if (typeof this !== 'function') {
+    // closest thing possible to the ECMAScript 5
+    // internal IsCallable function
+    throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
+  }
+
+  var aArgs = Array.prototype.slice.call(arguments, 1),
+      fToBind = this,
+      fNOP = function () {},
+      fBound = function () {
+    return fToBind.apply(this instanceof fNOP && oThis ? this : oThis, aArgs.concat(Array.prototype.slice.call(arguments)));
+  };
+
+  fNOP.prototype = this.prototype;
+  fBound.prototype = new fNOP();
+
+  return fBound;
+}
+
+function stringReduce(subject, callback, initialValue) {
+  if (!isFunction(callback)) {
+    throw Error(callback + ' is not a function');
+  }
+  var applyInitial = !isNil(initialValue);
+
+  var string = coerceToString(subject);
+  var arr = string.split('');
+
+  if (!applyInitial && arr.length === 0) {
+    throw Error('Reduce of empty array with no initial value');
+  }
+
+  var reduceVal = applyInitial ? initialValue : arr[0];
+  var index = applyInitial ? 0 : 1;
+
+  for (; index < arr.length; index++) {
+    reduceVal = callback(reduceVal, arr[index], index, arr);
+  }
+
+  return reduceVal;
+}
 
 /**
  * Counts the characters in `subject` for which `predicate` returns truthy.
  *
  * @function  countWhere
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Count
  * @param  {string}   [subject=''] The string to count characters.
  * @param  {Function} predicate    The predicate function invoked on each character with parameters `(character, index, string)`.
@@ -1123,8 +1204,11 @@ function countWhere(subject, predicate, context) {
   if (subjectString === '' || typeof predicate !== 'function') {
     return 0;
   }
+  if (!predicate.prototype.bind) {
+    predicate.prototype.bind = functionBind;
+  }
   var predicateWithContext = predicate.bind(context);
-  return reduce.call(subjectString, function (countTruthy, character, index) {
+  return stringReduce(subjectString, function (countTruthy, character, index) {
     return predicateWithContext(character, index, subjectString) ? countTruthy + 1 : countTruthy;
   }, 0);
 }
@@ -1134,7 +1218,7 @@ function countWhere(subject, predicate, context) {
  *
  * @function countWords
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Count
  * @param {string} [subject=''] The string to split into words.
  * @param {string|RegExp} [pattern] The pattern to watch words. If `pattern` is not RegExp, it is transformed to `new RegExp(pattern, flags)`.
@@ -1239,7 +1323,7 @@ var Const = Object.freeze({
  *
  * @function repeat
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to repeat.
  * @param {number} [times=1] The number of times to repeat.
@@ -1286,7 +1370,7 @@ function buildPadding(padCharacters, length) {
  *
  * @function padLeft
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to pad.
  * @param {int} [length=0] The length to left pad the string. No changes are made if `length` is less than `subject.length`.
@@ -1317,7 +1401,7 @@ function padLeft(subject, length, pad) {
  *
  * @function padRight
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to pad.
  * @param {int} [length=0] The length to right pad the string. No changes are made if `length` is less than `subject.length`.
@@ -1828,7 +1912,7 @@ function match(replacementIndex, replacements, conversionSpecification, percent,
  *
  * @function sprintf
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Format
  * @param  {string} [format=''] The format string.
  * @param  {...*}               replacements The replacements to produce the string.
@@ -1876,6 +1960,9 @@ function sprintf(format) {
   if (formatString === '') {
     return formatString;
   }
+  if (!match.prototype.bind) {
+    match.prototype.bind = functionBind;
+  }
 
   for (var _len = arguments.length, replacements = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     replacements[_key - 1] = arguments[_key];
@@ -1894,7 +1981,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
  *
  * @function vprintf
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Format
  * @param  {string} format='']  The format string.
  * @param  {Array} replacements The array of replacements to produce the string.
@@ -1935,7 +2022,7 @@ function replaceSpecialCharacter(character) {
  *
  * @function escapeHtml
  * @static
- * @since 1.0.0         
+ * @since 1.2.0
  * @memberOf Escape
  * @param {string} [subject=''] The string to escape.
  * @return {string} Returns the escaped string.
@@ -1952,7 +2039,7 @@ function escapeHtml(subject) {
  *
  * @function escapeRegExp
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Escape
  * @param {string} [subject=''] The string to escape.
  * @return {string} Returns the escaped string.
@@ -1964,6 +2051,40 @@ function escapeRegExp(subject) {
   return coerceToString(subject).replace(REGEXP_SPECIAL_CHARACTERS, '\\$&');
 }
 
+function arrayReduce(arr, callback, initialValue) {
+  if (!isArray(arr)) {
+    throw Error(arr + ' is not an array');
+  }
+  if (!isFunction(callback)) {
+    throw Error(callback + ' is not a function');
+  }
+  var applyInitial = !isNil(initialValue);
+
+  if (!applyInitial && arr.length === 0) {
+    throw Error('Reduce of empty array with no initial value');
+  }
+
+  var reduceVal = applyInitial ? initialValue : arr[0];
+  var index = applyInitial ? 0 : 1;
+
+  for (; index < arr.length; index++) {
+    reduceVal = callback(reduceVal, arr[index], index, arr);
+  }
+
+  return reduceVal;
+}
+
+function objectKeys(obj) {
+  var keys = [];
+  if (!isNil(obj) && typeof obj === 'object') {
+    for (var key in obj) {
+      keys.push(key);
+    }
+  }
+
+  return keys;
+}
+
 var unescapeCharactersMap = {
   '<': /(&lt;)|(&#x0*3c;)|(&#0*60;)/gi,
   '>': /(&gt;)|(&#x0*3e;)|(&#0*62;)/gi,
@@ -1972,7 +2093,7 @@ var unescapeCharactersMap = {
   "'": /(&#x0*27;)|(&#0*39;)/gi,
   '`': /(&#x0*60;)|(&#0*96;)/gi
 };
-var characters = Object.keys(unescapeCharactersMap);
+var characters = objectKeys(unescapeCharactersMap);
 
 /**
  * Replaces the HTML entities with corresponding characters.
@@ -1992,7 +2113,7 @@ function reduceUnescapedString(string, key) {
  *
  * @function unescapeHtml
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Escape
  * @param  {string} [subject=''] The string to unescape.
  * @return {string}              Returns the unescaped string.
@@ -2002,7 +2123,7 @@ function reduceUnescapedString(string, key) {
  */
 function unescapeHtml(subject) {
   var subjectString = coerceToString(subject);
-  return characters.reduce(reduceUnescapedString, subjectString);
+  return arrayReduce(characters, reduceUnescapedString, subjectString);
 }
 
 /**
@@ -2010,7 +2131,7 @@ function unescapeHtml(subject) {
  *
  * @function indexOf
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Index
  * @param {string} [subject=''] The string where to search.
  * @param {string} search The string to search.
@@ -2033,7 +2154,7 @@ function indexOf(subject, search, fromIndex) {
  *
  * @function lastIndexOf
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Index
  * @param {string} [subject=''] The string where to search.
  * @param {string} search The string to search.
@@ -2056,7 +2177,7 @@ function lastIndexOf(subject, search, fromIndex) {
  *
  * @function search
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Index
  * @param {string} [subject=''] The string where to search.
  * @param {string|RegExp} pattern The pattern to match. If `pattern` is not RegExp, it is transformed to `new RegExp(pattern)`.
@@ -2084,7 +2205,7 @@ function search(subject, pattern, fromIndex) {
  *
  * @function insert
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string where to insert.
  * @param {string} [toInsert=''] The string to be inserted.
@@ -2239,13 +2360,15 @@ function getDiacriticsMap() {
     return diacriticsMap;
   }
   diacriticsMap = {};
-  Object.keys(diacritics).forEach(function (key) {
+
+  arrayForEach(objectKeys(diacritics), function (key) {
     var characters = diacritics[key];
     for (var index = 0; index < characters.length; index++) {
       var character = characters[index];
       diacriticsMap[character] = key;
     }
   });
+
   return diacriticsMap;
 }
 
@@ -2278,7 +2401,7 @@ function removeCombiningMarks(character, cleanCharacter) {
  *
  * @function latinise
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to latinise.
  * @return {string} Returns the latinised string.
@@ -2305,7 +2428,7 @@ function latinise(subject) {
  *
  * @function pad
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to pad.
  * @param {int} [length=0] The length to pad the string. No changes are made if `length` is less than `subject.length`.
@@ -2339,7 +2462,7 @@ function pad(subject, length, pad) {
  *
  * @function replace
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to verify.
  * @param {string|RegExp} pattern The pattern which match is replaced. If `pattern` is a string,
@@ -2379,7 +2502,7 @@ function getRegExpFlags(regExp) {
  *
  * @function includes
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string where to search.
  * @param {string} search The string to search.
@@ -2426,7 +2549,7 @@ function appendFlagToRegExp(pattern, appendFlag) {
  *
  * @function replaceAll
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to verify.
  * @param {string|RegExp} pattern The pattern which match is replaced. If `pattern` is a string, a simple string match is evaluated.
@@ -2456,7 +2579,7 @@ function replaceAll(subject, pattern, replacement) {
  *
  * @function reverse
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to reverse.
  * @return {string} Returns the reversed string.
@@ -2476,7 +2599,7 @@ function reverse(subject) {
  *
  * @function reverseGrapheme
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to reverse.
  * @return {string} Returns the reversed string.
@@ -2508,7 +2631,7 @@ function reverseGrapheme(subject) {
  *
  * @function slugify
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to slugify.
  * @return {string} Returns the slugified string.
@@ -2537,7 +2660,7 @@ function slugify(subject) {
  *
  * @function splice
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string where to insert.
  * @param {string} start The position to start changing the string. For a negative position will start from the end of
@@ -2574,14 +2697,12 @@ function splice(subject, start, deleteCount, toAdd) {
   return subjectString.slice(0, startPosition) + toAddString + subjectString.slice(startPosition + deleteCountNumber);
 }
 
-var reduce$1 = Array.prototype.reduce;
-
 /**
  * Removes whitespaces from the left side of the `subject`.
  *
  * @function trimLeft
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to trim.
  * @param {string} [whitespace=whitespace] The whitespace characters to trim. List all characters that you want to be stripped.
@@ -2603,7 +2724,7 @@ function trimLeft(subject, whitespace$$1) {
     return subjectString.replace(REGEXP_TRIM_LEFT, '');
   }
   var matchWhitespace = true;
-  return reduce$1.call(subjectString, function (trimmed, character) {
+  return stringReduce(subjectString, function (trimmed, character) {
     if (matchWhitespace && includes(whitespaceString, character)) {
       return trimmed;
     }
@@ -2612,14 +2733,36 @@ function trimLeft(subject, whitespace$$1) {
   }, '');
 }
 
-var reduceRight = Array.prototype.reduceRight;
+function stringReduce$1(subject, callback, initialValue) {
+  if (!isFunction(callback)) {
+    throw Error(callback + ' is not a function');
+  }
+  var applyInitial = !isNil(initialValue);
+
+  var string = coerceToString(subject);
+  var arr = string.split('');
+  var length = arr.length;
+
+  if (!applyInitial && length === 0) {
+    throw Error('Reduce of empty array with no initial value');
+  }
+
+  var reduceVal = applyInitial ? initialValue : arr[length - 1];
+  var index = applyInitial ? length - 1 : length - 2;
+
+  for (; index >= 0; index--) {
+    reduceVal = callback(reduceVal, arr[index], index, arr);
+  }
+
+  return reduceVal;
+}
 
 /**
  * Removes whitespaces from the right side of the `subject`.
  *
  * @function trimRight
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to trim.
  * @param {string} [whitespace=whitespace] The whitespace characters to trim. List all characters that you want to be stripped.
@@ -2641,7 +2784,7 @@ function trimRight(subject, whitespace$$1) {
     return subjectString.replace(REGEXP_TRIM_RIGHT, '');
   }
   var matchWhitespace = true;
-  return reduceRight.call(subjectString, function (trimmed, character) {
+  return stringReduce$1(subjectString, function (trimmed, character) {
     if (matchWhitespace && includes(whitespaceString, character)) {
       return trimmed;
     }
@@ -2655,7 +2798,7 @@ function trimRight(subject, whitespace$$1) {
  *
  * @function trim
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to trim.
  * @param {string} [whitespace=whitespace] The whitespace characters to trim. List all characters that you want to be stripped.
@@ -2705,7 +2848,7 @@ function determineOptions(options) {
  *
  * @function wordWrap
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param  {string} [subject=''] The string to wrap.
  * @param  {Object} [options={}] The wrap options.
@@ -2750,6 +2893,9 @@ function wordWrap(subject) {
   if (subjectString === '' || width <= 0) {
     return indent;
   }
+  if (!String.prototype.bind) {
+    String.prototype.bind = functionBind;
+  }
   var subjectLength = subjectString.length;
   var substring = subjectString.substring.bind(subjectString);
   var offset = 0;
@@ -2790,7 +2936,7 @@ function wordWrap(subject) {
  *
  * @function endsWith
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string to verify.
  * @param {string} end The ending string.
@@ -2826,7 +2972,7 @@ function endsWith(subject, end, position) {
  *
  * @function isAlpha
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` contains only alpha characters or `false` otherwise.
@@ -2850,7 +2996,7 @@ function isAlpha(subject) {
  *
  * @function isAlphaDigit
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` contains only alpha and digit characters or `false` otherwise.
@@ -2874,7 +3020,7 @@ function isAlphaDigit(subject) {
  *
  * @function isBlank
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is empty or contains only whitespaces or `false` otherwise.
@@ -2898,7 +3044,7 @@ function isBlank(subject) {
  *
  * @function isDigit
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` contains only digit characters or `false` otherwise.
@@ -2922,7 +3068,7 @@ function isDigit(subject) {
  *
  * @function isEmpty
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is empty or `false` otherwise
@@ -2946,7 +3092,7 @@ function isEmpty(subject) {
  *
  * @function isLowerCase
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is lower case or `false` otherwise.
@@ -2970,7 +3116,7 @@ function isLowerCase(subject) {
  *
  * @function isNumeric
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is numeric or `false` otherwise.
@@ -2997,7 +3143,7 @@ function isNumeric(subject) {
  *
  * @function isUpperCase
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is upper case or `false` otherwise.
@@ -3018,7 +3164,7 @@ function isUpperCase(subject) {
  *
  * @function matches
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string to verify.
  * @param {RegExp|string} pattern The pattern to match. If `pattern` is not RegExp, it is transformed to `new RegExp(pattern, flags)`.
@@ -3053,7 +3199,7 @@ function matches(subject, pattern, flags) {
  *
  * @function startsWith
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string to verify.
  * @param {string} start The starting string.
@@ -3087,7 +3233,7 @@ function startsWith(subject, start, position) {
  *
  * @function chars
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Split
  * @param {string} [subject=''] The string to split into characters.
  * @return {Array} Returns the array of characters.
@@ -3105,7 +3251,7 @@ function chars(subject) {
  *
  * @function codePoints
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Split
  * @param  {string} [subject=''] The string to extract from.
  * @return {Array} Returns an array of non-negative numbers less than or equal to `0x10FFFF`.
@@ -3139,7 +3285,7 @@ function codePoints(subject) {
  *
  * @function graphemes
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Split
  * @param {string} [subject=''] The string to split into characters.
  * @return {Array} Returns the array of graphemes.
@@ -3162,7 +3308,7 @@ function graphemes(subject) {
  *
  * @function split
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Split
  * @param {string} [subject=''] The string to split into characters.
  * @param {string|RegExp} [separator] The pattern to match the separator.
@@ -3269,7 +3415,7 @@ var STATE_COMMENT = 3;
  *
  * @function stripTags
  * @static
- * @since 1.1.0
+ * @since 1.2.0
  * @memberOf Strip
  * @param {string} [subject=''] The string to strip from.
  * @param {string|Array} [allowableTags] The string `'<tag1><tag2>'` or array `['tag1', 'tag2']` of tags that should not be stripped.
@@ -3294,6 +3440,9 @@ function trim$1(subject, allowableTags, replacement) {
   if (!Array.isArray(allowableTags)) {
     var allowableTagsString = coerceToString(allowableTags);
     allowableTags = allowableTagsString === '' ? [] : parseTagList(allowableTagsString);
+  }
+  if (!hasSubstringAtIndex.prototype.bind) {
+    hasSubstringAtIndex.prototype.bind = functionBind;
   }
   var replacementString = coerceToString(replacement);
   var length = subject.length;
@@ -3441,7 +3590,7 @@ var previousAS = globalObject.as;
  *
  * @function noConflict
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Util
  * @return {Object} Returns AwesomeString library instance.
  * @example
@@ -3460,14 +3609,14 @@ function noConflict() {
  * A property that contains the library <a href="http://semver.org/">semantic version number</a>.
  * @name version
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Util
  * @type string
  * @example
  * as.version
- * // => '1.1.0'
+ * // => '1.2.0'
  */
-var version = '1.1.0';
+var version = '1.2.0';
 
 /* eslint sort-imports: "off" */
 
@@ -3618,7 +3767,7 @@ function ChainWrapper(subject, explicitChain) {
  * Unwraps the chain sequence wrapped value.
  *
  * @memberof Chain
- * @since 1.0.0
+ * @since 1.2.0
  * @function __proto__value
  * @return {*} Returns the unwrapped value.
  * @example
@@ -3676,7 +3825,7 @@ ChainWrapper.prototype.toString = function () {
  * Does not modify the wrapped value.
  *
  * @memberof Chain
- * @since 1.0.0
+ * @since 1.2.0
  * @function __proto__chain
  * @return {Object} Returns the wrapper in <i>explicit</i> mode.
  * @example
@@ -3703,7 +3852,7 @@ ChainWrapper.prototype.chain = function () {
  * argument of `changer` invocation.
  *
  * @memberof Chain
- * @since 1.0.0
+ * @since 1.2.0
  * @function __proto__thru
  * @param  {Function} changer The function to invoke.
  * @return {Object}           Returns the new wrapper that wraps the invocation result of `changer`.
@@ -3734,7 +3883,7 @@ ChainWrapper.prototype.thru = function (changer) {
 ChainWrapper.prototype._explicitChain = true;
 
 /**
- * Make a voca function chainable.
+ * Make a AwesomeString function chainable.
  *
  * @ignore
  * @param  {Function} functionInstance The function to make chainable
@@ -3755,7 +3904,7 @@ function makeFunctionChainable(functionInstance) {
   };
 }
 
-Object.keys(functions).forEach(function (name) {
+arrayForEach(objectKeys(functions), function (name) {
   ChainWrapper.prototype[name] = makeFunctionChainable(functions[name]);
 });
 
@@ -3764,7 +3913,7 @@ Object.keys(functions).forEach(function (name) {
  * Use `as.prototype.value()` to unwrap the result.
  *
  * @memberOf Chain
- * @since 1.0.0
+ * @since 1.2.0
  * @function chain
  * @param  {string} subject The string to wrap.
  * @return {Object}         Returns the new wrapper object.
@@ -3788,7 +3937,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
  * Otherwise use `v.prototype.value()` to unwrap the result.
  *
  * @memberOf Chain
- * @since 1.0.0
+ * @since 1.2.0
  * @function as
  * @param {string} subject The string to wrap.
  * @return {Object}  Returns the new wrapper object.

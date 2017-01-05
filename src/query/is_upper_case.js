@@ -6,7 +6,7 @@ import isAlpha from 'query/is_alpha';
  *
  * @function isUpperCase
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Query
  * @param {string} [subject=''] The string to verify.
  * @return {boolean} Returns `true` if `subject` is upper case or `false` otherwise.

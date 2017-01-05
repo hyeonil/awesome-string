@@ -5,7 +5,7 @@ import words from 'split/words';
  *
  * @function countWords
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Count
  * @param {string} [subject=''] The string to split into words.
  * @param {string|RegExp} [pattern] The pattern to watch words. If `pattern` is not RegExp, it is transformed to `new RegExp(pattern, flags)`.

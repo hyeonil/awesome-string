@@ -29,7 +29,7 @@ function determineOptions(options) {
  *
  * @function wordWrap
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param  {string} [subject=''] The string to wrap.
  * @param  {Object} [options={}] The wrap options.

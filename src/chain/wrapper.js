@@ -21,7 +21,7 @@ function ChainWrapper(subject, explicitChain) {
  * Unwraps the chain sequence wrapped value.
  *
  * @memberof Chain
- * @since 1.0.0
+ * @since 1.2.0
  * @function __proto__value
  * @return {*} Returns the unwrapped value.
  * @example
@@ -79,7 +79,7 @@ ChainWrapper.prototype.toString = function() {
  * Does not modify the wrapped value.
  *
  * @memberof Chain
- * @since 1.0.0
+ * @since 1.2.0
  * @function __proto__chain
  * @return {Object} Returns the wrapper in <i>explicit</i> mode.
  * @example
@@ -106,7 +106,7 @@ ChainWrapper.prototype.chain = function() {
  * argument of `changer` invocation.
  *
  * @memberof Chain
- * @since 1.0.0
+ * @since 1.2.0
  * @function __proto__thru
  * @param  {Function} changer The function to invoke.
  * @return {Object}           Returns the new wrapper that wraps the invocation result of `changer`.

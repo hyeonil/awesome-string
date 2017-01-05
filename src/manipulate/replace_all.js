@@ -7,7 +7,7 @@ import escapeRegExp from 'escape/escape_reg_exp';
  *
  * @function replaceAll
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Manipulate
  * @param {string} [subject=''] The string to verify.
  * @param {string|RegExp} pattern The pattern which match is replaced. If `pattern` is a string, a simple string match is evaluated.

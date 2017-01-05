@@ -6,7 +6,7 @@ import coerceToString from 'helper/string/coerce_to_string';
  *
  * @function codePoints
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Split
  * @param  {string} [subject=''] The string to extract from.
  * @return {Array} Returns an array of non-negative numbers less than or equal to `0x10FFFF`.

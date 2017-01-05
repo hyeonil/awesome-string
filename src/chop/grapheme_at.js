@@ -10,7 +10,7 @@ import { REGEXP_UNICODE_CHARACTER } from 'helper/reg_exp/const';
  *
  * @function graphemeAt
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Chop
  * @param  {string} [subject=''] The string to extract from.
  * @param  {number} position The position to get the grapheme.

@@ -5,7 +5,7 @@ import coerceToString from 'helper/string/coerce_to_string';
  *
  * @function split
  * @static
- * @since 1.0.0
+ * @since 1.2.0
  * @memberOf Split
  * @param {string} [subject=''] The string to split into characters.
  * @param {string|RegExp} [separator] The pattern to match the separator.
