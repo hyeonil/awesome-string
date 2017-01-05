@@ -1,3 +1,4 @@
+import arrayMap from 'helper/array/array_map';
 import capitalize from 'case/capitalize';
 import coerceToString from 'helper/string/coerce_to_string';
 import lowerCase from 'case/lower_case';
@@ -39,5 +40,5 @@ export default function camelCase(subject) {
   if (subjectString === '') {
     return '';
   }
-  return words(subjectString).map(wordToCamel).join('');
+  return arrayMap(words(subjectString), wordToCamel).join('');
 }

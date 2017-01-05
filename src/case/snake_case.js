@@ -1,3 +1,4 @@
+import arrayMap from 'helper/array/array_map';
 import coerceToString from 'helper/string/coerce_to_string';
 import lowerCase from 'case/lower_case';
 import words from 'split/words';
@@ -26,5 +27,5 @@ export default function snakeCase(subject) {
   if (subjectString === '') {
     return '';
   }
-  return words(subjectString).map(lowerCase).join('_');
+  return arrayMap(words(subjectString), lowerCase).join('_');
 }
