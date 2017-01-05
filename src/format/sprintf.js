@@ -1,4 +1,5 @@
 import coerceToString from 'helper/string/coerce_to_string';
+import functionBind from 'helper/func/function_bind';
 import { REGEXP_CONVERSION_SPECIFICATION } from 'helper/reg_exp/const';
 import ReplacementIndex from 'helper/format/replacement/index';
 import replacementMatch from 'helper/format/replacement/match';
@@ -181,6 +182,9 @@ export default function sprintf(format, ...replacements) {
   const formatString = coerceToString(format);
   if (formatString === '') {
     return formatString;
+  }
+  if (! replacementMatch.prototype.bind) {
+    replacementMatch.prototype.bind = functionBind;
   }
   const boundReplacementMatch = replacementMatch.bind(undefined, new ReplacementIndex(), replacements);
   return formatString.replace(REGEXP_CONVERSION_SPECIFICATION, boundReplacementMatch);

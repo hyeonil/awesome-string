@@ -1,4 +1,5 @@
 import coerceToString from 'helper/string/coerce_to_string';
+import functionBind from 'helper/func/function_bind';
 import hasSubstringAtIndex from 'helper/string/has_substring_at_index';
 import parseTagList from 'helper/strip/parse_tag_list';
 import parseTagName from 'helper/strip/parse_tag_name';
@@ -38,6 +39,9 @@ export default function trim(subject, allowableTags, replacement) {
   if (!Array.isArray(allowableTags)) {
     const allowableTagsString = coerceToString(allowableTags);
     allowableTags = allowableTagsString === '' ? [] : parseTagList(allowableTagsString);
+  }
+  if (! hasSubstringAtIndex.prototype.bind) {
+    hasSubstringAtIndex.prototype.bind = functionBind;
   }
   const replacementString = coerceToString(replacement);
   const length = subject.length;

@@ -1,4 +1,5 @@
 import coerceToString from 'helper/string/coerce_to_string';
+import functionBind from 'helper/func/function_bind';
 import stringReduce from 'helper/string/string_reduce';
 
 /**
@@ -25,6 +26,9 @@ export default function countWhere(subject, predicate, context) {
   const subjectString = coerceToString(subject);
   if (subjectString === '' || typeof predicate !== 'function') {
     return 0;
+  }
+  if (! predicate.prototype.bind) {
+    predicate.prototype.bind = functionBind;
   }
   const predicateWithContext = predicate.bind(context);
   return stringReduce(subjectString, function(countTruthy, character, index) {

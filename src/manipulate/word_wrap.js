@@ -1,6 +1,7 @@
 import coerceToBoolean from 'helper/boolean/coerce_to_boolean';
 import coerceToNumber from 'helper/number/coerce_to_number';
 import coerceToString from 'helper/string/coerce_to_string';
+import functionBind from 'helper/func/function_bind';
 
 const OPTION_WIDTH = 'width';
 const OPTION_NEW_LINE = 'newLine';
@@ -64,6 +65,9 @@ export default function wordWrap(subject, options = {}) {
   const { width, newLine, indent, cut } = determineOptions(options);
   if (subjectString === '' || width <= 0) {
     return indent;
+  }
+  if (! String.prototype.bind) {
+    String.prototype.bind = functionBind;
   }
   const subjectLength = subjectString.length;
   const substring = subjectString.substring.bind(subjectString);
