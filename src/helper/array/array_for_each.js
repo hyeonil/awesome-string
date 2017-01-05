@@ -9,8 +9,8 @@ export default function arrayForEach(arr, func) {
     return arr;
   }
 
-  for (let index in arr) {
-    var item = arr[index];
+  for (const index in arr) {
+    const item = arr[index];
     func(item, index, arr);
   }
 }

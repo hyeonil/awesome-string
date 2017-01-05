@@ -1,5 +1,5 @@
 import coerceToString from 'helper/string/coerce_to_string';
-import isFunction from 'helper/func/is_function'
+import isFunction from 'helper/func/is_function';
 import isNil from 'helper/object/is_nil';
 
 export default function stringReduce(subject, callback, initialValue) {
@@ -8,8 +8,8 @@ export default function stringReduce(subject, callback, initialValue) {
   }
   const applyInitial = ! isNil(initialValue);
 
-  let string = coerceToString(subject);
-  let arr = string.split('');
+  const string = coerceToString(subject);
+  const arr = string.split('');
 
   if (! applyInitial && arr.length === 0) {
     throw Error('Reduce of empty array with no initial value');
@@ -23,4 +23,4 @@ export default function stringReduce(subject, callback, initialValue) {
   }
 
   return reduceVal;
-};
+}

@@ -45,8 +45,9 @@ function arrayMap(arr, func) {
 
   var map = [];
 
-  for (var i = 0, item; item = arr[i]; i++) {
-    var mapItem = func(item, i);
+  for (var index = 0; index < arr.length; index++) {
+    var item = arr[index];
+    var mapItem = func(item, index);
     map.push(mapItem);
   }
 
@@ -1132,10 +1133,10 @@ function functionBind(oThis) {
     throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
   }
 
-  var aArgs = Array.prototype.slice.call(arguments, 1),
-      fToBind = this,
-      fNOP = function () {},
-      fBound = function () {
+  var aArgs = Array.prototype.slice.call(arguments, 1);
+  var fToBind = this;
+  var fNOP = function () {};
+  var fBound = function () {
     return fToBind.apply(this instanceof fNOP && oThis ? this : oThis, aArgs.concat(Array.prototype.slice.call(arguments)));
   };
 

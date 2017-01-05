@@ -9,12 +9,13 @@ export default function arrayMap(arr, func) {
     return arr;
   }
 
-  let map = [];
+  const map = [];
 
-  for (let i = 0, item; item = arr[i]; i++) {
-    let mapItem = func(item, i);
+  for (let index = 0; index < arr.length; index++) {
+    const item = arr[index];
+    const mapItem = func(item, index);
     map.push(mapItem);
   }
 
-  return map
+  return map;
 }

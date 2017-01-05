@@ -1,5 +1,5 @@
 import isArray from 'helper/array/is_array';
-import isFunction from 'helper/func/is_function'
+import isFunction from 'helper/func/is_function';
 import isNil from 'helper/object/is_nil';
 
 export default function arrayReduce(arr, callback, initialValue) {
@@ -23,4 +23,4 @@ export default function arrayReduce(arr, callback, initialValue) {
   }
 
   return reduceVal;
-};
+}
