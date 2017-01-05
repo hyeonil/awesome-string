@@ -1,3 +1,4 @@
+import arrayForEach from 'helper/array/array_for_each';
 import objectKeys from 'helper/object/object_keys';
 
 /**
@@ -132,13 +133,15 @@ function getDiacriticsMap() {
     return diacriticsMap;
   }
   diacriticsMap = {};
-  objectKeys(diacritics).forEach(function(key) {
+
+  arrayForEach(objectKeys(diacritics), function(key) {
     const characters = diacritics[key];
     for (let index = 0; index < characters.length; index++) {
       const character = characters[index];
       diacriticsMap[character] = key;
     }
   });
+
   return diacriticsMap;
 }
 
