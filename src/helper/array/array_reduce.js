@@ -2,7 +2,7 @@ import isArray from 'helper/array/is_array';
 import isFunction from 'helper/func/is_function'
 import isNil from 'helper/object/is_nil';
 
-function arrayReduce(arr, callback, initialValue) {
+export default function arrayReduce(arr, callback, initialValue) {
   if (! isArray(arr)) {
     throw Error(arr + ' is not an array');
   }
@@ -23,6 +23,4 @@ function arrayReduce(arr, callback, initialValue) {
   }
 
   return reduceVal;
-}
-
-export default arrayReduce;
+};

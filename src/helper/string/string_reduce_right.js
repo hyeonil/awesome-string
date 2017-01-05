@@ -10,15 +10,16 @@ export default function stringReduce(subject, callback, initialValue) {
 
   let string = coerceToString(subject);
   let arr = string.split('');
+  let length = arr.length;
 
-  if (! applyInitial && arr.length === 0) {
+  if (! applyInitial && length === 0) {
     throw Error('Reduce of empty array with no initial value');
   }
 
-  let reduceVal = applyInitial ? initialValue : arr[0];
-  let index = applyInitial ? 0 : 1;
+  let reduceVal = applyInitial ? initialValue : arr[length - 1];
+  let index = applyInitial ? (length - 1) : (length - 2);
 
-  for (; index < arr.length; index++) {
+  for (; index >= 0; index--) {
     reduceVal = callback(reduceVal, arr[index], index, arr);
   }
 
