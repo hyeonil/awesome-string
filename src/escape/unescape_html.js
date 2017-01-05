@@ -1,3 +1,4 @@
+import arrayReduce from 'helper/array/array_reduce';
 import coerceToString from 'helper/string/coerce_to_string';
 import objectKeys from 'helper/object/object_keys';
 
@@ -39,5 +40,5 @@ function reduceUnescapedString(string, key) {
  */
 export default function unescapeHtml(subject) {
   const subjectString = coerceToString(subject);
-  return characters.reduce(reduceUnescapedString, subjectString);
+  return arrayReduce(characters, reduceUnescapedString, subjectString);
 }

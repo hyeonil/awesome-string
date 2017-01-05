@@ -2,9 +2,8 @@ import coerceToString from 'helper/string/coerce_to_string';
 import includes from 'query/includes';
 import isNil from 'helper/object/is_nil';
 import { REGEXP_TRIM_LEFT } from 'helper/reg_exp/const';
+import stringReduce from 'helper/string/string_reduce';
 import toString from 'helper/string/to_string';
-
-const reduce = Array.prototype.reduce;
 
 /**
  * Removes whitespaces from the left side of the `subject`.
@@ -33,7 +32,7 @@ export default function trimLeft(subject, whitespace) {
     return subjectString.replace(REGEXP_TRIM_LEFT, '');
   }
   let matchWhitespace = true;
-  return reduce.call(subjectString, function(trimmed, character) {
+  return stringReduce(subjectString, function(trimmed, character) {
     if (matchWhitespace && includes(whitespaceString, character)) {
       return trimmed;
     }
