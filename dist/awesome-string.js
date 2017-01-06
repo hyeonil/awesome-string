@@ -3932,6 +3932,28 @@ function chain(subject) {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+function objectAssign(target) {
+  for (var _len = arguments.length, sources = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    sources[_key - 1] = arguments[_key];
+  }
+
+  if (Object.assign) {
+    for (var key in sources) {
+      _extends(target, sources[key]);
+    }
+  } else {
+    for (var _key2 in sources) {
+      var source = sources[_key2];
+      for (var propKey in source) {
+        var property = source[propKey];
+        target[propKey] = property;
+      }
+    }
+  }
+
+  return target;
+}
+
 /**
  * Creates a chain object that wraps `subject`, enabling <i>implicit</i> chain sequences.<br/>
  * A function that returns `number`, `boolean` or `array` type <i>terminates</i> the chain sequence and returns the unwrapped value.
@@ -3958,7 +3980,7 @@ function AwesomeString(subject) {
   return new ChainWrapper(subject, false);
 }
 
-_extends(AwesomeString, functions, {
+objectAssign(AwesomeString, functions, {
   chain: chain
 });
 
