@@ -1,6 +1,7 @@
 import chain from './chain/chain'; // include chain here to resolve af circular reference
 import ChainWrapper from './chain/wrapper';
 import functions from './functions';
+import objectAssign from './helper/object/object_assign';
 
 /**
  * Creates a chain object that wraps `subject`, enabling <i>implicit</i> chain sequences.<br/>
@@ -28,7 +29,7 @@ function AwesomeString(subject) {
   return new ChainWrapper(subject, false);
 }
 
-Object.assign(AwesomeString, functions, {
+objectAssign(AwesomeString, functions, {
   chain: chain
 });
 
