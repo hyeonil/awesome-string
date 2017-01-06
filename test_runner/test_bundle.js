@@ -3959,7 +3959,7 @@ function objectAssign(target) {
  *  .words()
  * // => ['back', 'to', 'school']
  *
- * v(" Back to School ")
+ * as(" Back to School ")
  *  .trim()
  *  .truncate(7)
  *  .value()
@@ -3969,9 +3969,15 @@ function AwesomeString(subject) {
   return new ChainWrapper(subject, false);
 }
 
-objectAssign(AwesomeString, functions, {
-  chain: chain
-});
+if (Object.assign) {
+  objectAssign(AwesomeString, functions, {
+    chain: chain
+  });
+} else {
+  objectAssign(functions, {
+    chain: chain
+  });
+}
 
 /**
  * The string containing all printable ASCII characters.
