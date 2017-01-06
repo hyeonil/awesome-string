@@ -25,11 +25,12 @@ import objectAssign from './helper/object/object_assign';
  *  .value()
  * // => 'Back...'
  */
-function AwesomeString(subject) {
-  return new ChainWrapper(subject, false);
-}
+let AwesomeString = null;
 
 if (Array.prototype.forEach) {
+  AwesomeString = function (subject) {
+    return new ChainWrapper(subject, false);
+  };
   objectAssign(AwesomeString, functions, {
     chain: chain
   });
