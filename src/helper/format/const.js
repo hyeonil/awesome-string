@@ -1,4 +1,4 @@
-export default Object.freeze({
+export default {
   // Type specifiers
   TYPE_INTEGER                       : 'i',
   TYPE_INTEGER_BINARY                : 'b',
@@ -27,4 +27,4 @@ export default Object.freeze({
   RADIX_OCTAL       : 8,
   RADIX_DECIMAL     : 10,
   RADIX_HEXADECIMAL : 16
-});
+};

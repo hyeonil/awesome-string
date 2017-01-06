@@ -1288,7 +1288,7 @@ ReplacementIndex.prototype.getIndexByPosition = function (position) {
   return isNil(position) ? this.index : position - 1;
 };
 
-var Const = Object.freeze({
+var Const = {
   // Type specifiers
   TYPE_INTEGER: 'i',
   TYPE_INTEGER_BINARY: 'b',
@@ -1317,7 +1317,7 @@ var Const = Object.freeze({
   RADIX_OCTAL: 8,
   RADIX_DECIMAL: 10,
   RADIX_HEXADECIMAL: 16
-});
+};
 
 /**
  * Repeats the `subject` number of `times`.
