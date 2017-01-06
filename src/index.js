@@ -29,14 +29,12 @@ function AwesomeString(subject) {
   return new ChainWrapper(subject, false);
 }
 
-if (Object.assign) {
+if (Array.prototype.forEach) {
   objectAssign(AwesomeString, functions, {
     chain: chain
   });
-} else {
-  objectAssign(functions, {
-    chain: chain
-  });
+} else { // old version browser
+  AwesomeString = functions;
 }
 
 export default AwesomeString;
