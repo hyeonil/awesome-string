@@ -3976,20 +3976,22 @@ function objectAssign(target) {
  *  .value()
  * // => 'Back...'
  */
-function AwesomeString(subject) {
-  return new ChainWrapper(subject, false);
-}
+var AwesomeString = null;
 
-if (Object.assign) {
+if (Array.prototype.forEach) {
+  AwesomeString = function (subject) {
+    return new ChainWrapper(subject, false);
+  };
   objectAssign(AwesomeString, functions, {
     chain: chain
   });
 } else {
-  objectAssign(functions, {
-    chain: chain
-  });
+  // old version browser
+  AwesomeString = functions;
 }
 
-return AwesomeString;
+var AwesomeString$1 = AwesomeString;
+
+return AwesomeString$1;
 
 })));

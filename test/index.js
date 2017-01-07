@@ -1,3 +1,5 @@
+const expect = require('chai').expect;
+/*
 //case
 import './case/camel_case';
 import './case/capitalize';
@@ -94,4 +96,12 @@ import './strip/strip_tags';
 
 //util
 import './util/no_conflict';
-import './util/version';
+import './util/version';*/
+describe('CommonJS modules', function() {
+
+  // Case
+
+  it('empty()', function () {
+    expect(1).to.be.equal(1);
+  });
+});
